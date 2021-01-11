@@ -1,0 +1,18 @@
+.card {
+  border-radius: 0.75rem !important;
+  .card-header {
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-bottom: none !important;
+    background-color: none !important;
+  }
+  .cd-header {
+    font-size: 25px;
+  }
+  .card-body {
+    margin: 10px 0 15px 0;
+    font-size: 20px;
+  }
+}
