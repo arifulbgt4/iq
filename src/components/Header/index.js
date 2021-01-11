@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Button, Col, Container, Nav, Navbar, NavItem, Row } from 'reactstrap';
 import logo from 'src/assets/image/logo.png';
 
@@ -8,11 +8,11 @@ const Header = () => {
     <header className="border-bottom shadow-sm py-4">
       <Container>
         <Row>
-          <Col lg={3} className="d-flex">
+          <Col lg={3} className="d-flex align-items-center">
             <img src={logo} alt="logo" />
-            <h3 className="mb-0">
+            <Link to="/" className="mb-0 h4 text-decoration-none">
               <span className="text-primary">Exel</span>Stock
-            </h3>
+            </Link>
           </Col>
           <Col lg={6}>
             <Navbar className="p-0 d-block">
