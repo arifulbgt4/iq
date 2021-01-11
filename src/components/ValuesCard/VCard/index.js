@@ -3,8 +3,8 @@ import { Card, CardHeader, CardBody, CardImg } from 'reactstrap';
 import cardhead from 'src/assets/image/cardhead.png';
 const VCard = () => {
   return (
-    <div>
-      <Card className="">
+    <div className="hover-cd">
+      <Card>
         <CardImg top width="100%" src={cardhead} alt="Card image cap" />
         <CardHeader className="cd-header">Investing</CardHeader>
         <CardBody className="text-secondary">
