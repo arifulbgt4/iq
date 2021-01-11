@@ -1,0 +1,14 @@
+header {
+  .navbar {
+    .nav {
+      .nav-item {
+        .nav-link {
+          font-weight: 500;
+          &.active {
+            color: $primary !important;
+          }
+        }
+      }
+    }
+  }
+}
