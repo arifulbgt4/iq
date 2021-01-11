@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleComponent from 'src/components/TitleFirst';
-const TitleFirst = () => {
+const Testament = () => {
   return (
     <>
       <TitleComponent title="Why Chose Us" />
@@ -19,4 +19,4 @@ const TitleFirst = () => {
   );
 };
 
-export default TitleFirst;
+export default Testament;
