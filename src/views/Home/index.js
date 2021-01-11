@@ -1,7 +1,12 @@
 import React from 'react';
-
+import { Container } from 'reactstrap';
+import TitleFirst from './Testament';
 const Home = () => {
-  return <div>Home page</div>;
+  return (
+    <Container>
+      <TitleFirst />
+    </Container>
+  );
 };
 
 export default Home;
