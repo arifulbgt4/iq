@@ -15,11 +15,11 @@ const HeroBanner = () => {
             <BannerContent />
           </Col>
           <Col md={8}>
-            <img src={stockImg} alt="stock" />
+            <img src={stockImg} alt="stock" className="stock-img" />
           </Col>
         </Row>
       </Container>
-      <img src={cloudImg} alt="cloud" />
+      <img src={cloudImg} alt="cloud" className="cloud-img" />
     </section>
   );
 };
