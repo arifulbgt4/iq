@@ -1,0 +1,27 @@
+// hero banner
+.hero-banner {
+  height: 82.17716115261473vh;
+  .banner-content {
+    margin-top: 90px;
+    &-heading {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #1d3b71;
+      margin-bottom: 3rem;
+    }
+    &-description {
+      font-size: 1.875rem;
+      color: #383838;
+      font-weight: normal;
+    }
+  }
+  .stock-img {
+    position: absolute;
+    margin-top: 62px;
+    z-index: 1;
+  }
+  .cloud-img {
+    position: absolute;
+    bottom: 0;
+  }
+}

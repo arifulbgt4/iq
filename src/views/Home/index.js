@@ -1,11 +1,16 @@
 import React from 'react';
 import { Container } from 'reactstrap';
+import HeroBanner from './HeroBanner';
 import TitleFirst from './Testament';
+
 const Home = () => {
   return (
-    <Container>
-      <TitleFirst />
-    </Container>
+    <>
+      <HeroBanner />
+      <Container>
+        <TitleFirst />
+      </Container>
+    </>
   );
 };
 
