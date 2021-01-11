@@ -6,6 +6,7 @@ import 'src/assets/scss/style.scss';
 import Fallback from 'src/components/Fallback';
 import NotFound from 'src/components/404';
 import withTitle from 'src/components/TitleComponent';
+import Header from 'src/components/Header';
 
 // Pages
 const Docs = lazy(() => import('../Documentation'));
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <>
       <Suspense fallback={<Fallback />}>
+        <Header />
         <Router>
           <Switch>
             {/* Page routes */}
