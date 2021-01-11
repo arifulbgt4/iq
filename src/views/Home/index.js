@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import ValuesCard from 'src/components/ValuesCard';
+import Values from 'src/components/Values';
 const Home = () => {
   return (
     <div>
       <h2 className="text-center my-4 titlef">Our Valus</h2>
-      <ValuesCard />
+      <Values />
     </div>
   );
 };

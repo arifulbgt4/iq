@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, CardImg } from 'reactstrap';
 import cardhead from 'src/assets/image/cardhead.png';
-const VCard = () => {
+const ValuesCard = () => {
   return (
-    <div className="hover-cd">
+    <div className="hover-cd mt-4">
       <Card>
         <CardImg top width="100%" src={cardhead} alt="Card image cap" />
         <CardHeader className="cd-header">Investing</CardHeader>
@@ -16,4 +16,4 @@ const VCard = () => {
   );
 };
 
-export default VCard;
+export default ValuesCard;
