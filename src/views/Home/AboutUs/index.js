@@ -10,7 +10,7 @@ const AboutUs = () => {
       <Col md={12}>
         <iframe
           width="100%"
-          height="400"
+          height="450"
           src="https://www.youtube.com/embed/tgbNymZ7vqY"
           className="my-5"
         />
