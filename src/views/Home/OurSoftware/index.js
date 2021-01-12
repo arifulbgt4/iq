@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import applePc from 'src/assets/image/applePc.png';
-import wavemain from 'src/assets/image/wave/wavemain.png';
 import wavedotmark from 'src/assets/image/wave/wavedotmark.png';
 import wavedot from 'src/assets/image/wave/wavedot.png';
 import wave from 'src/assets/image/wave/wave.png';
