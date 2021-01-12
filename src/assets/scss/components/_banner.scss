@@ -1,0 +1,84 @@
+// hero banner
+.hero-banner {
+  overflow: hidden;
+  height: 82.17716115261473vh;
+  .banner-content {
+    margin-top: 90px;
+    &-heading {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #1d3b71;
+      margin-bottom: 3rem;
+    }
+    &-description {
+      font-size: 1.775rem;
+      color: #383838;
+      font-weight: normal;
+    }
+  }
+  .triangle1-img {
+    position: absolute;
+    top: 47px;
+    left: 57px;
+  }
+  .triangle2-img {
+    position: absolute;
+    top: 28px;
+    right: 230px;
+  }
+  .triangle-blank-img {
+    position: absolute;
+    top: 420px;
+    left: 284px;
+  }
+  .star1-img {
+    position: absolute;
+    top: 171px;
+    left: 126px;
+  }
+  .star2-img {
+    position: absolute;
+    top: 104px;
+    right: 42px;
+  }
+  .star3-img {
+    position: absolute;
+    top: 251px;
+    right: 140px;
+    animation: fa-rotate 2s infinite linear;
+  }
+  .plus1-img {
+    position: absolute;
+    top: 279px;
+    left: 295px;
+  }
+  .plus2-img {
+    position: absolute;
+    top: 25px;
+    right: 42px;
+  }
+  .egg-shape-img {
+    position: absolute;
+    top: 395px;
+    left: 70px;
+  }
+  .stock-img {
+    position: absolute;
+    margin-top: 62px;
+    z-index: 1;
+  }
+  .cloud-img {
+    position: absolute;
+    bottom: 0;
+  }
+
+  // rotate animation
+  @keyframes fa-rotate {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+}

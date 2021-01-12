@@ -1,0 +1,89 @@
+.about-us-slider {
+  .react-multi-carousel-dot-list {
+    justify-content: flex-start;
+    left: 35px;
+    width: 50px;
+    .react-multi-carousel-dot--active button {
+      background: #1d3b71 !important;
+    }
+    button {
+      border-color: #1d3b71;
+      background: transparent;
+    }
+  }
+  .custom-arrows {
+    left: 5px;
+    bottom: -2px;
+    .btn-right {
+      left: 80px;
+    }
+  }
+}
+.our-team {
+  padding: 50px 0 150px 0;
+  .team-member {
+    figure {
+      background: $info;
+      z-index: 999;
+      img {
+        height: 130px;
+      }
+    }
+    .member-info {
+      z-index: 10000;
+      display: none;
+      left: 10px;
+      .title {
+        &::after {
+          content: '';
+          border-left: 14px solid transparent;
+          border-right: 14px solid transparent;
+          position: absolute;
+          border-bottom: 33px solid $white;
+          top: -51px;
+          left: 0px;
+        }
+      }
+    }
+    &:hover {
+      .member-info {
+        display: block;
+      }
+      .ripple {
+        background-color: $info;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        animation: ripple 0.7s linear infinite;
+        position: absolute;
+        top: 65px;
+        bottom: 0px;
+        left: 66px;
+      }
+    }
+  }
+  .custom-arrows {
+    bottom: 68px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    .btn {
+      svg {
+        color: #9d8adb !important;
+      }
+    }
+    .btn-right {
+      margin-left: 100px;
+    }
+  }
+  .react-multi-carousel-dot-list {
+    bottom: 70px;
+    .react-multi-carousel-dot--active button {
+      background: #9d8adb !important;
+    }
+    button {
+      border-color: #9d8adb;
+      background: transparent;
+    }
+  }
+}

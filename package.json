@@ -16,6 +16,9 @@
     }
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@reduxjs/toolkit": "^1.4.0",
     "bootstrap": "^5.0.0-beta1",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -27,6 +30,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-multi-carousel": "^2.6.1",
     "react-perfect-scrollbar": "^1.5.8",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
