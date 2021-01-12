@@ -4,15 +4,21 @@
   border-radius: 0px 50px 0px 50px;
   .prof-img {
     border-radius: 0px 50px 0px 50px;
+    .img-posation {
+      position: absolute;
+      top: 140px;
+      right: 13px;
+    }
   }
   .text-area {
     font-size: 20px;
     font-weight: 300;
     div {
       .txt-b-border {
-        height: 2px;
+        height: 3px;
         width: 95%;
-        background-color: #4599e7;
+        background-color: #693e35;
+        opacity: 0.35;
       }
     }
     .heading-txt {

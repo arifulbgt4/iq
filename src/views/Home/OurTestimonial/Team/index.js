@@ -9,15 +9,16 @@ const Team = () => {
   return (
     <div className="card-area">
       <Row>
-        <Col md={6}>
-          <div className="prof-img">
-            <img src={persionpic} alt="" />
+        <Col sm={12} md={6} lg={6}>
+          <div className="prof-img position-relative">
+            <img src={persionpic} alt="persionpic" />
+            <img className="img-posation" src={playbutton} alt="playbutton" />
           </div>
         </Col>
-        <Col md={6}>
+        <Col sm={12} md={6} lg={6}>
           <div className="text-center p-3 text-area">
             <img className="pt-3 pb-4" src={stars} alt="stars" />
-            <p className="">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
               ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
