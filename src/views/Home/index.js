@@ -7,9 +7,7 @@ import TitleFirst from './Testament';
 const Home = () => {
   return (
     <>
-      <div>
-        <HeroBanner />
-      </div>
+      <HeroBanner />
       <Container>
         <TitleFirst />
       </Container>
