@@ -8,8 +8,10 @@ import ReadMore from './ReadMore';
 
 const BlogPost = () => {
   return (
-    <>
-      <SectionTitle title="blog post" />
+    <section className="blog-post mb-5">
+      <Row>
+        <SectionTitle title="blog post" />
+      </Row>
       <Row className="mt-5">
         <Col md={8}>
           <Row>
@@ -20,7 +22,7 @@ const BlogPost = () => {
           <ReadMore />
         </Col>
       </Row>
-    </>
+    </section>
   );
 };
 
