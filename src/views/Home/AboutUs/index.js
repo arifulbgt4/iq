@@ -5,7 +5,7 @@ import Slider from 'src/components/Slider';
 
 const AboutUs = () => {
   return (
-    <Row className="my-5 about-us">
+    <Row className="my-5 about-us" data-scroll data-scroll-speed={1}>
       <SectionTitle title="About US" />
       <Col md={12}>
         <iframe

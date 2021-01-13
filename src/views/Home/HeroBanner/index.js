@@ -13,7 +13,11 @@ import BannerContent from './BannerContent';
 
 const HeroBanner = () => {
   return (
-    <section className="hero-banner position-relative">
+    <section
+      className="hero-banner position-relative"
+      data-scroll
+      data-scroll-speed={6}
+    >
       <img src={triangleImg} alt="triangle" className="triangle1-img" />
       <img src={starImg} alt="star" className="star1-img" />
       <img src={plusImg} alt="plus" className="plus1-img" />
