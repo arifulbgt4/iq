@@ -14,9 +14,12 @@ const ReadMore = () => {
           <CardImg top width="100%" src={readMoreImg} alt="read-more" />
         </figure>
       </CardBody>
-      <CardFooter>
-        <Link className="btn btn-primary d-block">
-          read more visit our blog <FontAwesomeIcon icon={faArrowRight} />
+      <CardFooter className="position-relative">
+        <Link className="btn btn-primary d-block text-capitalize">
+          read more visit our blog
+          <span className="icon">
+            <FontAwesomeIcon icon={faArrowRight} />
+          </span>
         </Link>
       </CardFooter>
     </Card>
