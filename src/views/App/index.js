@@ -7,6 +7,7 @@ import Fallback from 'src/components/Fallback';
 import NotFound from 'src/components/404';
 import withTitle from 'src/components/TitleComponent';
 import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
 
 // Pages
 const Docs = lazy(() => import('../Documentation'));
@@ -72,6 +73,7 @@ const App = () => {
             />
           </Switch>
         </Router>
+        <Footer />
       </Suspense>
     </>
   );

@@ -1,0 +1,24 @@
+footer {
+  background: #3c037c;
+  color: $white;
+  .social-icon {
+    a {
+      background: #5407ab;
+      span {
+        background: #3c037c;
+        svg {
+          height: 20px;
+          width: 20px !important;
+        }
+      }
+    }
+  }
+  .details {
+    text-align: justify;
+  }
+  .point {
+    left: 90px;
+    top: -14px;
+  }
+  // background-image: url(./images/dots.png);
+}
