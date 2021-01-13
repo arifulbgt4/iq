@@ -1,12 +1,13 @@
 import React from 'react';
-
 import { Container } from 'reactstrap';
+
 import Values from 'src/components/Values';
 import AboutUs from './AboutUs';
 import HeroBanner from './HeroBanner';
 import OurTeam from './OurTeam';
 import TitleFirst from './Testament';
 import OurSoftware from './OurSoftware';
+import BlogPost from './BlogPost';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <AboutUs />
         <OurSoftware />
         <OurTeam />
+        <BlogPost />
       </Container>
     </>
   );

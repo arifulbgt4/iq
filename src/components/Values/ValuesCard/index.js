@@ -4,7 +4,7 @@ import cardhead from 'src/assets/image/cardhead.png';
 const ValuesCard = () => {
   return (
     <div className="hover-cd mt-4">
-      <Card>
+      <Card className="values-card">
         <CardImg top width="100%" src={cardhead} alt="Card image cap" />
         <CardHeader className="cd-header">Investing</CardHeader>
         <CardBody className="text-secondary">
