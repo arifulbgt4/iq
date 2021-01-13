@@ -19,24 +19,24 @@ const kFormatter = (num) => {
 const PostCard = (props) => {
   const { id, img, title, date, views } = props;
   return (
-    <Card>
-      {/* <figure className="h-50 overflow-hidden"> */}
-      <CardImg top width="100%" src={img} alt="post-image" />
-      {/* </figure> */}
+    <Card className="post-card">
+      <figure className="overflow-hidden position-relative">
+        <CardImg top width="100%" src={img} alt="post-image" />
+      </figure>
       <CardBody>
-        <CardTitle className="text-capitalize" tag="h5">
+        <CardTitle className="text-capitalize" tag="h3">
           {title}
         </CardTitle>
         <CardText className="d-flex justify-content-between">
           <CardSubtitle tag="span">
             <FontAwesomeIcon icon={faCalendarAlt} />
             &nbsp;
-            <small>{date}</small>
+            <small className="date">{date}</small>
           </CardSubtitle>
           <CardSubtitle tag="span">
             <FontAwesomeIcon icon={faEye} />
             &nbsp;
-            <small>{kFormatter(views)}</small>
+            <small className="views">{kFormatter(views)}</small>
           </CardSubtitle>
         </CardText>
       </CardBody>
