@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  Card,
   CardBody,
   CardImg,
   CardSubtitle,
   CardText,
   CardTitle,
 } from 'reactstrap';
+import { useSpring, animated } from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faEye } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,10 +16,31 @@ const kFormatter = (num) => {
     : Math.sign(num) * Math.abs(num);
 };
 
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 30,
+  (x - window.innerWidth / 2) / 30,
+  1.1,
+];
+
+const trans = (x, y, s) =>
+  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 const PostCard = (props) => {
   const { id, img, title, date, views } = props;
+  const [property, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: {
+      mass: 10,
+      tension: 350,
+      friction: 40,
+    },
+  }));
   return (
-    <Card className="post-card">
+    <animated.div
+      className="post-card card"
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+      onMouseLeave={() => set({ xys: [0, 0, 1] })}
+      style={{ transform: property.xys.interpolate(trans) }}
+    >
       <figure className="overflow-hidden position-relative">
         <CardImg top width="100%" src={img} alt="post-image" />
       </figure>
@@ -40,7 +61,7 @@ const PostCard = (props) => {
           </CardSubtitle>
         </CardText>
       </CardBody>
-    </Card>
+    </animated.div>
   );
 };
 
