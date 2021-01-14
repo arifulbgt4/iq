@@ -23,7 +23,7 @@ const calc = (x, y) => [
 ];
 
 const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+  `perspective(800px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 const PostCard = (props) => {
   const { id, img, title, date, views } = props;
   const [property, set] = useSpring(() => ({

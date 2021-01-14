@@ -7,7 +7,7 @@ const Values = () => {
   return (
     <Container>
       <Row>
-        <Col md={{ size: 8, offset: 2 }}>
+        <Col md={{ size: 10, offset: 2 }}>
           <Row>
             <Col md={4}>
               <ValuesCard />
