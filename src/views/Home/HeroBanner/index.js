@@ -17,7 +17,7 @@ const translate4 = (x, y) => `translate3d(${x / 10}px, ${y / 10}px,0)`;
 const HeroBanner = () => {
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
-    config: { mass: 10, tension: 550, friction: 140 },
+    config: { mass: 10, tension: 550, friction: 160 },
   }));
   return (
     <section
