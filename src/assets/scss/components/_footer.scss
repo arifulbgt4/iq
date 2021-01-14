@@ -1,11 +1,13 @@
 footer {
   background: #3c037c;
   color: $white;
+  padding-bottom: 100px;
   .social-icon {
     a {
       background: #5407ab;
       span {
         background: #3c037c;
+        height: 36px;
         svg {
           height: 20px;
           width: 20px !important;
@@ -20,5 +22,186 @@ footer {
     left: 90px;
     top: -14px;
   }
-  // background-image: url(./images/dots.png);
+  .line-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    span {
+      width: 30px;
+      height: 60px;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: fixed;
+    }
+    .line1 {
+      background: #7875fe;
+      animation: animate4 1.9s linear infinite;
+      top: 200px;
+      left: 60px;
+    }
+    .line2 {
+      background: #7875fe;
+      animation: animate2 2.1s linear infinite;
+      top: 200px;
+      left: 120px;
+    }
+    .line3 {
+      background: #7875fe;
+      animation: animate3 2.3s linear infinite;
+      top: 200px;
+      left: 180px;
+    }
+    .line4 {
+      background: #7875fe;
+      animation: animate4 2.3s linear infinite;
+      top: 200px;
+      left: 240px;
+    }
+    .line5 {
+      background: #7875fe;
+      animation: animate4 1.7s linear infinite;
+      top: 200px;
+      left: 300px;
+    }
+    .line6 {
+      background: #7875fe;
+      animation: animate4 2s linear infinite;
+      top: 200px;
+      left: 360px;
+    }
+    .line7 {
+      background: #7875fe;
+      animation: animate4 1.8s linear infinite;
+      top: 200px;
+      left: 420px;
+    }
+    .line8 {
+      background: #7875fe;
+      animation: animate4 1.3s linear infinite;
+      top: 200px;
+      left: 480px;
+    }
+    .line9 {
+      background: #7875fe;
+      animation: animate4 2.3s linear infinite;
+      top: 200px;
+      left: 540px;
+    }
+    .line10 {
+      background: #7875fe;
+      animation: animate4 1.5s linear infinite;
+      top: 200px;
+      left: 600px;
+    }
+    .line11 {
+      background: #7875fe;
+      animation: animate4 1.7s linear infinite;
+      top: 200px;
+      left: 660px;
+    }
+    .line12 {
+      background: #7875fe;
+      animation: animate4 1.2s linear infinite;
+      top: 200px;
+      left: 720px;
+    }
+    .line13 {
+      background: #7875fe;
+      animation: animate4 1.7s linear infinite;
+      top: 200px;
+      left: 780px;
+    }
+    .line14 {
+      background: #7875fe;
+      animation: animate4 2.5s linear infinite;
+      top: 200px;
+      left: 840px;
+    }
+    .line15 {
+      background: #7875fe;
+      animation: animate3 2.3s linear infinite;
+      top: 200px;
+      left: 900px;
+    }
+    .line16 {
+      background: #7875fe;
+      animation: animate4 2.3s linear infinite;
+      top: 200px;
+      left: 960px;
+    }
+    .line17 {
+      background: #7875fe;
+      animation: animate4 1.7s linear infinite;
+      top: 200px;
+      left: 1020px;
+    }
+    .line18 {
+      background: #7875fe;
+      animation: animate4 2s linear infinite;
+      top: 200px;
+      left: 1080px;
+    }
+    .line19 {
+      background: #7875fe;
+      animation: animate4 1.8s linear infinite;
+      top: 200px;
+      left: 1140px;
+    }
+    .line20 {
+      background: #7875fe;
+      animation: animate4 1.3s linear infinite;
+      top: 200px;
+      left: 1200px;
+    }
+    .line21 {
+      background: #7875fe;
+      animation: animate4 2.3s linear infinite;
+      top: 200px;
+      left: 1260px;
+    }
+    .line22 {
+      background: #7875fe;
+      animation: animate4 1.5s linear infinite;
+      top: 200px;
+      left: 1320px;
+    }
+    .line23 {
+      background: #7875fe;
+      animation: animate4 1.7s linear infinite;
+      top: 200px;
+      left: 1380px;
+    }
+    .line24 {
+      background: #7875fe;
+      animation: animate4 1.2s linear infinite;
+      top: 200px;
+      left: 1440px;
+    }
+    .line25 {
+      background: #7875fe;
+      animation: animate4 1.7s linear infinite;
+      top: 200px;
+      left: 1500px;
+    }
+    .line26 {
+      background: #7875fe;
+      animation: animate4 2.5s linear infinite;
+      top: 200px;
+      left: 1560px;
+    }
+    .line27 {
+      background: #7875fe;
+      animation: animate4 2.3s linear infinite;
+      top: 200px;
+      left: 1620px;
+    }
+    .line28 {
+      background: #7875fe;
+      animation: animate4 1.5s linear infinite;
+      top: 200px;
+      left: 1680px;
+    }
+  }
+  // background-image: url(../images/dots.png);
 }

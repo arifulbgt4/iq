@@ -9,3 +9,33 @@ $color: $info;
       0 0 0 5em rgba($color, 0.3), 0 0 0 6.5em rgba($color, 0);
   }
 }
+
+// music line
+@keyframes animate1 {
+  50% {
+    background-color: #9c43f5;
+    top: 10px;
+    height: 160x;
+  }
+}
+@keyframes animate2 {
+  50% {
+    background-color: #9c43f5;
+    top: 50px;
+    height: 160x;
+  }
+}
+@keyframes animate3 {
+  50% {
+    background-color: #9c43f5;
+    top: 10px;
+    height: 250x;
+  }
+}
+@keyframes animate4 {
+  50% {
+    background-color: #9c43f5;
+    top: 100px;
+    height: 160px;
+  }
+}

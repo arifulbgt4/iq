@@ -72,7 +72,7 @@ const FooterBottom = () => {
                 className="mr-3 p-0 mb-2 border-0 bg-transparent"
                 key={i}
               >
-                <Link to="#" className="p-3 rounded-circle">
+                <Link to="#" className="p-2 rounded-circle d-flex">
                   <span className="rounded-circle p-2">
                     <FontAwesomeIcon icon={item} />
                   </span>
