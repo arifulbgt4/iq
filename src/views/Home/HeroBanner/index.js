@@ -10,6 +10,8 @@ import plusImg from 'src/assets/image/plus.png';
 import eggShapeImg from 'src/assets/image/egg-shape.png';
 import triangleBlankImg from 'src/assets/image/triangle-blank.png';
 
+import BannerContent from './BannerContent';
+
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 
 const translate4 = (x, y) => `translate3d(${x / 10}px, ${y / 10}px,0)`;
@@ -58,18 +60,7 @@ const HeroBanner = () => {
       <Container>
         <Row>
           <Col md={4}>
-            <animated.div
-              className="banner-content"
-              style={{ transform: props.xy.interpolate(translate4) }}
-            >
-              <h1 className="banner-content-heading text-capitalize">
-                the stock market
-              </h1>
-              <p className="banner-content-description text-capitalize">
-                Is filled with individuals who know the price everything,but the
-                value of nothing.
-              </p>
-            </animated.div>
+            <BannerContent />
           </Col>
           <Col md={8}>
             <animated.img
