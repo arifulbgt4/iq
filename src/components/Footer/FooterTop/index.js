@@ -9,9 +9,15 @@ const FooterTop = () => {
       </Col>
       <Col md={8}>
         <ul className="d-flex justify-content-between align-items-center m-0 p-0">
-          <li className="list-unstyled">Quick Links</li>
-          <li className="list-unstyled">About US</li>
-          <li className="list-unstyled">Contact US</li>
+          <li className="list-unstyled">
+            <h5>Quick Links</h5>{' '}
+          </li>
+          <li className="list-unstyled">
+            <h5>About US</h5>{' '}
+          </li>
+          <li className="list-unstyled">
+            <h5> Contact US</h5>
+          </li>
 
           <li className="list-unstyled">
             <Input
