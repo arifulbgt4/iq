@@ -30,7 +30,7 @@ const Posts = () => {
         posts.map((item) => {
           if (item.id > 2) return false;
           return (
-            <Col md={6}>
+            <Col md={6} key={item.id}>
               <PostCard
                 id={item.id}
                 img={item.img}

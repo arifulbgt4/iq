@@ -8,14 +8,17 @@ import { Link } from 'react-router-dom';
 
 const ReadMore = () => {
   return (
-    <Card className="blog-read-more">
+    <Card className="blog-read-more bg-transparent">
       <CardBody>
         <figure className="position-relative overflow-hidden">
           <CardImg top width="100%" src={readMoreImg} alt="read-more" />
         </figure>
       </CardBody>
-      <CardFooter className="position-relative">
-        <Link className="btn btn-primary d-block text-capitalize">
+      <CardFooter>
+        <Link
+          className="btn btn-primary d-block text-capitalize position-relative"
+          to="#"
+        >
           read more visit our blog
           <span className="icon">
             <FontAwesomeIcon icon={faArrowRight} />
