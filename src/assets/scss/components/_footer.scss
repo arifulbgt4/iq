@@ -25,11 +25,12 @@ footer {
   .line-wrapper {
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 3%;
     transform: translate(-50%, -50%);
     span {
-      width: 30px;
+      width: 25px;
       height: 60px;
+      border-radius: 5px;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
       position: fixed;
