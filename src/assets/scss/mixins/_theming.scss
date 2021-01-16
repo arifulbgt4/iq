@@ -1,5 +1,0 @@
-@mixin variable-value($variables) {
-  @each $key, $value in $variables {
-    --#{$variable-prefix}#{$key}: #{$value};
-  }
-}
