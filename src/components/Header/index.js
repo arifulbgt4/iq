@@ -60,10 +60,10 @@ const Header = () => {
             className="text-end align-self-center justify-content-around d-flex"
             lg={3}
           >
-            <Button className="rounded-pill px-4" color="primary">
+            <Button outline className="rounded-pill px-4 " color="primary">
               Login
             </Button>
-            <Button className="rounded-pill px-4" color="primary">
+            <Button outline className="rounded-pill px-4" color="primary">
               Back To office
             </Button>
           </Col>
