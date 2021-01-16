@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 
 import TitleComponent from 'src/components/TitleFirst';
+import working from 'src/assets/image/working.png';
 
 const TitleFirst = () => {
   return (
@@ -15,8 +16,8 @@ const TitleFirst = () => {
           Diligently striving towards excellence, we are here to get the most
           for your money.
         </p>
-        <div className="check-card mt-5">
-          <h4>Client-Centered</h4>
+        <div className="check-card posation-card">
+          <p className="card-title">Client-Centered</p>
           <div className="d-flex">
             <div className="textbottomboder1  me-2 " />
             <div className="textbottomboder2 ms-2" />
@@ -59,6 +60,7 @@ const TitleFirst = () => {
               <span className="mx-2">Less pricing.</span>
             </li>
           </ul>
+          <img className=" img-posation" src={working} alt="working" />
         </div>
       </Col>
     </>

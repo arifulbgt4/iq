@@ -10,6 +10,15 @@
   border: 1px solid #f7f7f7;
   border-radius: 25px;
 }
+.posation-card {
+  position: relative;
+  margin-top: 150px;
+  margin-right: 80px;
+  .card-title {
+    font-size: 30px;
+  }
+}
+
 .textbottomboder1 {
   height: 2px;
   width: 77px;
@@ -20,6 +29,14 @@
   width: 33px;
   background-color: #6911d7;
 }
+ul {
+  font-size: 24px;
+}
 .list-txt {
   color: #6911d7;
+}
+.img-posation {
+  position: absolute;
+  right: -65px;
+  top: -130px;
 }
