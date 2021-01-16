@@ -1,25 +1,67 @@
 import React from 'react';
-import { Col, Row } from 'reactstrap';
+import { Col } from 'reactstrap';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+
 import TitleComponent from 'src/components/TitleFirst';
 
 const TitleFirst = () => {
   return (
-    <Row>
+    <>
       <Col lg={12}>
-        <TitleComponent title="Why Chose Us" />
+        <TitleComponent title="Why Choose Us?" />
         <p className="text-center  text-secondary testamonytext">
-          That is another testament to the fact that investing without an
-          education and research will ultimaely ledebts that seem sensible
-          during periods of prosperity. When a crisis comes,
-          individuals,companies and even governments that run up debts during
-          the boom usually suffer the most.
+          Diligently striving towards excellence, we are here to get the most
+          for your money.
         </p>
-        <div className="d-flex justify-content-center my-4">
-          <div className="textbottomboder  me-2 " />
-          <div className="textbottomboder ms-2" />
+        <div className="check-card mt-5">
+          <h4>Client-Centered</h4>
+          <div className="d-flex">
+            <div className="textbottomboder1  me-2 " />
+            <div className="textbottomboder2 ms-2" />
+          </div>
+          <ul className="list-unstyled mt-4 ">
+            <li>
+              {' '}
+              <FontAwesomeIcon className="list-txt" icon={faCheckSquare} />{' '}
+              <span className="mx-2">
+                Our clientele is at the heart of everything we do.
+              </span>
+            </li>
+            <li>
+              {' '}
+              <FontAwesomeIcon className="list-txt" icon={faCheckSquare} />{' '}
+              <span className="mx-2">
+                We foster a work culture devoted to enhancing our client's
+                satisfaction.
+              </span>
+            </li>
+            <li>
+              {' '}
+              <FontAwesomeIcon className="list-txt" icon={faCheckSquare} />{' '}
+              <span className="mx-2">
+                We value team spirit and a constructive team that works together
+                with our clients.
+              </span>
+            </li>
+            <li>
+              {' '}
+              <FontAwesomeIcon className="list-txt" icon={faCheckSquare} />{' '}
+              <span className="mx-2">
+                The streamlined interface caters to the needs of every type of
+                investor.
+              </span>
+            </li>
+            <li>
+              {' '}
+              <FontAwesomeIcon className="list-txt" icon={faCheckSquare} />{' '}
+              <span className="mx-2">Less pricing.</span>
+            </li>
+          </ul>
         </div>
       </Col>
-    </Row>
+    </>
   );
 };
 
