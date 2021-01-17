@@ -6,7 +6,7 @@ import ValuesCard from 'src/components/Values/ValuesCard';
 const ValuCardDoc = () => {
   return (
     <DocCard title="Value Card" id="valueCard">
-      <div className="w-50">
+      <div className="w-25">
         <ValuesCard />
       </div>
     </DocCard>
