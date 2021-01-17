@@ -1,30 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Scrollspy from 'react-scrollspy';
+import { NavLink } from 'react-router-dom';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
-import pageScroll from 'src/utils/pageScroll';
+import Sidebar from '../Sidebar';
 
 const Navigation = (props) => {
-  const { children, rightNav, leftNav } = props;
+  const { navs } = props;
   return (
-    <PerfectScrollbar>
-      <Scrollspy items={rightNav} currentClassName="active">
-        {Array.isArray(children) &&
-          children.map((item, i) => (
-            <li key={i}>
-              <Link
-                to={(rightNav && `#${item}`) || (leftNav && `/docs/${item}`)}
-                className="text-capitalize"
-                onClick={rightNav && pageScroll}
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
-      </Scrollspy>
-    </PerfectScrollbar>
+    <Sidebar heading="Documents">
+      <PerfectScrollbar>
+        <ul>
+          {Array.isArray(navs) &&
+            navs.map((item, i) => (
+              <li key={i}>
+                <NavLink
+                  exact
+                  to={`/docs${item[1]}`}
+                  className="text-capitalize"
+                >
+                  {item[0]}
+                </NavLink>
+              </li>
+            ))}
+        </ul>
+      </PerfectScrollbar>
+    </Sidebar>
   );
 };
 
