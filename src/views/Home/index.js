@@ -7,7 +7,6 @@ import HeroBanner from './HeroBanner';
 import OurTeam from './OurTeam';
 import TitleFirst from './Testament';
 import OurSoftware from './OurSoftware';
-import BlogPost from './BlogPost';
 import BlogSection from './BlogSection';
 
 const Home = () => {
@@ -24,7 +23,6 @@ const Home = () => {
         <OurSoftware />
         <OurTeam />
         <BlogSection />
-        {/* <BlogPost /> */}
       </Container>
     </>
   );

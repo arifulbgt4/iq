@@ -1,16 +1,15 @@
 import React from 'react';
 
 import DocMain from 'src/views/Documentation/components/DocMain';
-
-import PostCard from './components/PostCard';
+import BlogCardDoc from './components/BlogCardDoc';
 import ValuCardDoc from './components/ValuCardDoc';
 
 const Theme = () => {
-  const list = ['postCard', 'valueCard'];
+  const list = ['valueCard', 'blogCard'];
   return (
     <DocMain list={list}>
-      <PostCard />
       <ValuCardDoc />
+      <BlogCardDoc />
     </DocMain>
   );
 };
