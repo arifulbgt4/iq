@@ -8,6 +8,7 @@ import OurTeam from './OurTeam';
 import TitleFirst from './Testament';
 import OurSoftware from './OurSoftware';
 import BlogPost from './BlogPost';
+import ContactUs from './ContactUs';
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <OurSoftware />
         <OurTeam />
         <BlogPost />
+        <ContactUs />
       </Container>
     </>
   );
