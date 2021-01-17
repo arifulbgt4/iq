@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Button,
   CardBody,
   CardImg,
   CardSubtitle,
@@ -66,7 +65,9 @@ const BlogCard = (props) => {
           </CardSubtitle>
         </div>
         <div className="blog-card-button d-flex justify-content-end">
-          <Link className="btn btn-primary">Read More</Link>
+          <Link to="#" className="btn btn-primary">
+            Read More
+          </Link>
         </div>
       </CardBody>
     </animated.div>

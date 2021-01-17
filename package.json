@@ -36,7 +36,9 @@
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-spring": "^8.0.27",
-    "reactstrap": "^8.5.1"
+    "reactstrap": "^8.5.1",
+    "three": "^0.124.0",
+    "three-orbitcontrols": "^2.110.3"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
