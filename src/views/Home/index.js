@@ -8,12 +8,17 @@ import OurTeam from './OurTeam';
 import TitleFirst from './Testament';
 import OurSoftware from './OurSoftware';
 import BlogPost from './BlogPost';
+import OurFounder from './OurFounder';
+import GuidingPrinciple from './GuidingPrinciples';
 
 const Home = () => {
   return (
     <>
       <HeroBanner />
       <Container>
+        <GuidingPrinciple />
+        <OurFounder />
+
         <TitleFirst />
         <div>
           <h2 className="text-center my-4 titlef">Our Valus</h2>

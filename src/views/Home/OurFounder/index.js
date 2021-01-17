@@ -1,11 +1,12 @@
 import React from 'react';
 import { Row, Col, Button } from 'reactstrap';
 import founder from 'src/assets/image/founder.png';
+
 const OurFounder = () => {
   return (
     <div>
       <h3 className="text-center text-primary">Few Words From Our Founder</h3>
-      <Row>
+      <Row className="align-items-center">
         <Col md={4}>
           <img className="w-100" src={founder} alt="founder" />
         </Col>
@@ -25,7 +26,7 @@ const OurFounder = () => {
               <div className="textbottomboder  " />
               <div className="textbottomboder " />
             </div>
-            <p className="mt-5">
+            <p className="mt-5 d-inline-block mb-0">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's Lorem Ipsum is
               simply dummy text of the printing and typesetting industry. Lorem
@@ -36,10 +37,12 @@ const OurFounder = () => {
               Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's Lorem Ipsum is
               simply dummy text of the printing and typesetting industry.
+              <span className="ms-5">
+                <Button size="sm" color="primary">
+                  Read more
+                </Button>
+              </span>
             </p>
-            <div className="d-flex justify-content-end m-4">
-              <Button color="primary">Read more</Button>
-            </div>
           </div>
         </Col>
       </Row>
