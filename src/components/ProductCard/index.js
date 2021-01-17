@@ -11,7 +11,7 @@ import {
 const ProductCard = (props) => {
   const { title, text } = props;
   return (
-    <Card className="product">
+    <Card className="product shadow">
       <CardBody className="text-center p-4">
         <CardTitle tag="h4" className="">
           Product
