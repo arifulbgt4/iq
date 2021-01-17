@@ -10,7 +10,7 @@ const Header = () => {
         <Row>
           <Col lg={3} className="d-flex align-items-center">
             <img src={logo} alt="logo" />
-            <Link to="/" className="mb-0 h4 text-decoration-none">
+            <Link to="/" className="mb-0 h4 text-decoration-none text-dark">
               <span className="text-primary">Exel</span>Stock
             </Link>
           </Col>

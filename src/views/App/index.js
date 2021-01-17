@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Button } from 'reactstrap';
+
 import 'src/assets/scss/style.scss';
 
 import Fallback from 'src/components/Fallback';
@@ -12,15 +12,14 @@ import Footer from 'src/components/Footer';
 // Pages
 const Docs = lazy(() => import('../Documentation'));
 const Home = lazy(() => import('../Home'));
-const ThemeDocPage = lazy(() => import('../Documentation/ThemeDocPage'));
 
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
   return (
     <>
-      <Suspense fallback={<Fallback />}>
-        <Header />
-        <Router>
+      <Router>
+        <Suspense fallback={<Fallback />}>
+          <Header />
           <Switch>
             {/* Page routes */}
             <Route
@@ -37,25 +36,11 @@ const App = () => {
 
             {/* Doc Page */}
             <Route
-              exact
               path="/docs"
               render={(props) =>
                 withTitle({
                   component: Docs,
                   title: 'Docs',
-                  ...props,
-                })
-              }
-            />
-
-            {/** Theme Page */}
-            <Route
-              exact
-              path="/docs/"
-              render={(props) =>
-                withTitle({
-                  component: ThemeDocPage,
-                  title: 'Theme Page',
                   ...props,
                 })
               }
@@ -72,9 +57,9 @@ const App = () => {
               }
             />
           </Switch>
-        </Router>
-        <Footer />
-      </Suspense>
+          <Footer />
+        </Suspense>
+      </Router>
     </>
   );
 };

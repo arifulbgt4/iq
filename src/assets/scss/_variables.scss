@@ -13,3 +13,8 @@ $theme-colors: map-merge(
     'dark': $dark,
   )
 );
+
+// Link
+$link-color: $white;
+$link-decoration: none;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
