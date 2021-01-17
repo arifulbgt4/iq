@@ -2,8 +2,15 @@ import React from 'react';
 
 import DocMain from 'src/views/Documentation/components/DocMain';
 
+import PostCard from './components/PostCard';
+
 const Theme = () => {
-  return <DocMain>Hello</DocMain>;
+  const list = ['postCard'];
+  return (
+    <DocMain list={list}>
+      <PostCard />
+    </DocMain>
+  );
 };
 
 export default Theme;
