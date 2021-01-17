@@ -8,12 +8,13 @@ const AboutUs = () => {
     <Row className="my-5 about-us">
       <SectionTitle title="About US" />
       <Col md={12}>
-        <iframe
-          width="100%"
-          height="450"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY"
-          className="my-5"
-        />
+        <div className="d-flex justify-content-center">
+          <iframe
+            height="450"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            className="my-5 w-75"
+          />
+        </div>
         <Slider className="about-us-slider pt-4 pb-5">
           <div className="slider-content">
             <h4>Education and research</h4>
