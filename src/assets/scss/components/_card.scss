@@ -85,3 +85,23 @@
     }
   }
 }
+
+// blog-card
+.blog-card {
+  &-img {
+  }
+  &-body {
+    &_title {
+    }
+    &_description {
+    }
+    &_details {
+      span {
+        .name {
+        }
+        .date {
+        }
+      }
+    }
+  }
+}
