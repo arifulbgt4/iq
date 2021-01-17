@@ -204,8 +204,12 @@ footer {
       left: 1680px;
     }
   }
+  .footer-top,
+  .footer-main {
+    z-index: 999;
+  }
   .canvas-animation {
     position: absolute;
-    bottom: -50px;
+    bottom: -70px;
   }
 }

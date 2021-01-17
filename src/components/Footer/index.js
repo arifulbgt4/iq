@@ -17,11 +17,11 @@ const Footer = () => {
 
   return (
     <footer className="mt-6 overflow-hidden position-relative">
-      <Container>
+      <Container className="position-relative footer-top">
         <FooterTop />
       </Container>
       <div className="border" />
-      <Container>
+      <Container className="position-relative footer-main">
         <FooterMain />
         <FooterBottom />
       </Container>
