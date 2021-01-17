@@ -13,28 +13,28 @@ $color: $info;
 // music line
 @keyframes animate1 {
   50% {
-    background-color: #9c43f5;
+    background-color: $primary;
     top: 10px;
     height: 160x;
   }
 }
 @keyframes animate2 {
   50% {
-    background-color: #9c43f5;
+    background-color: $primary;
     top: 50px;
     height: 160x;
   }
 }
 @keyframes animate3 {
   50% {
-    background-color: #9c43f5;
+    background-color: $primary;
     top: 10px;
     height: 250x;
   }
 }
 @keyframes animate4 {
   50% {
-    background-color: #9c43f5;
+    background-color: $primary;
     top: 100px;
     height: 260px;
   }

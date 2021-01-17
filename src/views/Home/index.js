@@ -8,7 +8,6 @@ import { Container } from 'reactstrap';
 // import OurSoftware from './OurSoftware';
 // import BlogPost from './BlogPost';
 import HeroBanner from './HeroBanner';
-
 import BlogSection from './BlogSection';
 import OurProducts from './OurProducts';
 
