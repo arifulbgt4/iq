@@ -8,7 +8,7 @@ import blogPostImg1 from 'src/assets/image/blog-post-1.png';
 const PostCardDoc = () => {
   return (
     <DocCard title="Post Card" id="postCard">
-      <div className="w-50">
+      <div className="w-25">
         <PostCard
           id={1}
           img={blogPostImg1}
