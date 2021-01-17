@@ -32,7 +32,7 @@ const OurProducts = () => {
           </Col>
           {data &&
             data.map((item) => (
-              <Col key={item.id} md={4} className="px-5">
+              <Col key={item.id} md={4} style={{ padding: '0 3.2rem' }}>
                 <ProductCard title={item.title} text={item.text} />{' '}
               </Col>
             ))}
