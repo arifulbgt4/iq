@@ -1,12 +1,14 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
 
+import blogImg from 'src/assets/image/blog.png';
+
 import BlogCard from 'src/components/BlogCard';
 
 const blogPosts = [
   {
     id: 1,
-    img: '',
+    img: blogImg,
     title: 'blog title here',
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `,
     bloggerName: 'arif',
@@ -14,7 +16,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    img: '',
+    img: blogImg,
     title: 'blog title here',
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `,
     bloggerName: 'sunny',
@@ -22,7 +24,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    img: '',
+    img: blogImg,
     title: 'blog title here',
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `,
     bloggerName: 'antor',
@@ -32,7 +34,7 @@ const blogPosts = [
 
 const BlogPosts = () => {
   return (
-    <Row>
+    <Row className="py-5">
       {Array.isArray(blogPosts) &&
         blogPosts.map((item) => (
           <Col md={4} key={item.id} style={{ padding: '0 3.2rem' }}>
