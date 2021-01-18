@@ -33,7 +33,7 @@ const StepsToChoose = () => {
     <Row>
       {Array.isArray(stepsToChoose) &&
         stepsToChoose.map((step) => (
-          <Col md={4} key={step.id} className="d-flex justify-content-center">
+          <Col md={4} key={step.id}>
             <ChooseCard
               id={step.id}
               img={step.img}
