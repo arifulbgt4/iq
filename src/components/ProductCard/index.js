@@ -12,14 +12,14 @@ const ProductCard = (props) => {
   const { title, text } = props;
   return (
     <Card className="product shadow">
-      <CardBody className="text-center p-4">
-        <CardTitle tag="h4" className="">
+      <CardBody className="text-center">
+        <CardTitle tag="h3" className="">
           Product
         </CardTitle>
-        <CardSubtitle tag="h2" className="my-5 ">
+        <CardSubtitle tag="h1" className="my-5 ">
           {title}
         </CardSubtitle>
-        <h4 className="fw-normal">Details</h4>
+        <h3 className="fw-normal">Details</h3>
         <CardText className="details">{text}</CardText>
         <Button color="primary" outline className="rounded-pill mt-3 px-4">
           Shedule an appointment

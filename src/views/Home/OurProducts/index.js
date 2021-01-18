@@ -14,7 +14,12 @@ const OurProducts = () => {
         <Row>
           {data &&
             data.map((item) => (
-              <Col key={item.id} md={4} style={{ padding: '0 3.2rem' }}>
+              <Col
+                key={item.id}
+                md={4}
+                style={{ padding: '0 3.2rem' }}
+                className="product-item"
+              >
                 <ProductCard title={item.title} text={item.text} />{' '}
               </Col>
             ))}
