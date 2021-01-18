@@ -12,13 +12,13 @@ import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 30,
-  (x - window.innerWidth / 2) / 30,
+  -(y - window.innerHeight / 2) / 50,
+  (x - window.innerWidth / 2) / 50,
   1.1,
 ];
 
 const trans = (x, y, s) =>
-  `perspective(800px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+  `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const BlogCard = (props) => {
   const { id, img, title, description, bloggerName, createDate } = props;

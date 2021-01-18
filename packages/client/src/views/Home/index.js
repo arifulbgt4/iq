@@ -14,11 +14,13 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import BlogSection from './BlogSection';
 import OurProducts from './OurProducts';
+import WhyChooseUs from './WhyChooseUs';
 
 const Home = () => {
   return (
     <>
       <HeroBanner />
+      <WhyChooseUs />
       <Container>
         <GuidingPrinciple />
         <OurFounder />
