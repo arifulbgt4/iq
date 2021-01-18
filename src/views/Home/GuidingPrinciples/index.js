@@ -1,6 +1,7 @@
-import React from 'react';
-import { Col, Row } from 'reactstrap';
+import React, { useEffect } from 'react';
+import { Col, Container, Row } from 'reactstrap';
 import GuidingPrinciples from 'src/components/GuidingPrinciples';
+import LocomotiveScroll from 'locomotive-scroll';
 
 const data = [
   {
@@ -37,9 +38,25 @@ const data = [
   },
 ];
 const GuidingPrinciple = () => {
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      // lerp: 0.1,
+      smooth: true,
+      getSpeed: true,
+      repeat: false,
+    });
+  });
   return (
-    <Row>
-      <Col md={12}>
+    <Row data-scroll-container>
+      <Col
+        md={12}
+        data-scroll
+        data-scroll-direction="horizontal"
+        data-scroll-position="top"
+        data-scroll-speed="2"
+        className="guiding"
+      >
         <h2 className="text-center py-5">Our Guiding Principles</h2>
       </Col>
       <Col md={12}>

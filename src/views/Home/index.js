@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <HeroBanner />
-      <Container>
+      <Container data-scroll-container>
         <GuidingPrinciple />
         <OurFounder />
         <AboutUs />
