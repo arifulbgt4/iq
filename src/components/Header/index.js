@@ -53,6 +53,15 @@ const Header = () => {
                     Contact Us
                   </NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink
+                    exact
+                    className="nav-link text-capitalize text-secondary"
+                    to="/docs"
+                  >
+                    Docs
+                  </NavLink>
+                </NavItem>
               </Nav>
             </Navbar>
           </Col>
