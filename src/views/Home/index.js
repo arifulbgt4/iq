@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'reactstrap';
 
 // import Values from 'src/components/Values';
-// import OurTeam from './OurTeam';
+import OurTeam from './OurTeam';
 // import TitleFirst from './Testament';
 // import OurSoftware from './OurSoftware';
 // import BlogPost from './BlogPost';
@@ -23,6 +23,7 @@ const Home = () => {
         <GuidingPrinciple />
         <OurFounder />
         <AboutUs />
+        <OurTeam />
       </Container>
       <OurProducts />
       <BlogSection />
@@ -37,7 +38,6 @@ const Home = () => {
         </div>
         <Values />
         <OurSoftware />
-        <OurTeam />
         <BlogPost />
       </Container>
         <BlogPost />
