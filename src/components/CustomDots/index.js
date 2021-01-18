@@ -11,9 +11,10 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
     >
       {index + 1}
       {data &&
-        data.map((item) => (
-          <img src={index + 1 === item.id && item.img} alt="" height="20px" />
-        ))}
+        data.map(
+          (item) =>
+            index + 1 === item.id && <img src={item.img} alt="" height="20px" />
+        )}
     </li>
   );
 };
