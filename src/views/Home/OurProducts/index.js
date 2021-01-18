@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
+
 import ProductCard from 'src/components/ProductCard';
+import SectionTitle from 'src/components/SectionTitle';
 
 const data = [
   {
@@ -26,10 +28,8 @@ const OurProducts = () => {
   return (
     <section className="our-product py-5 my-5">
       <Container>
+        <SectionTitle color="white" title="our products" />
         <Row>
-          <Col md={12} className="mb-5">
-            <h1 className="text-center text-white">Our Products</h1>
-          </Col>
           {data &&
             data.map((item) => (
               <Col key={item.id} md={4} style={{ padding: '0 3.2rem' }}>

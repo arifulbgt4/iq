@@ -7,10 +7,6 @@ import { Container } from 'reactstrap';
 // import TitleFirst from './Testament';
 // import OurSoftware from './OurSoftware';
 // import BlogPost from './BlogPost';
-// import OurTeam from './OurTeam';
-// import TitleFirst from './Testament';
-// import OurSoftware from './OurSoftware';
-// import BlogPost from './BlogPost';
 
 import OurFounder from './OurFounder';
 import GuidingPrinciple from './GuidingPrinciples';

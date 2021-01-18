@@ -34,7 +34,7 @@ const blogPosts = [
 
 const BlogPosts = () => {
   return (
-    <Row className="py-5">
+    <Row>
       {Array.isArray(blogPosts) &&
         blogPosts.map((item) => (
           <Col md={4} key={item.id} style={{ padding: '0 3.2rem' }}>

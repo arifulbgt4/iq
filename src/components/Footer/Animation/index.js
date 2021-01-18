@@ -1,12 +1,8 @@
 import React from 'react';
-import point from 'src/assets/image/point.png';
-import line from 'src/assets/image/line.png';
 
 const Animation = () => {
   return (
     <div className="position-relative mt-3 ">
-      <img src={line} alt="" className="" />
-      <img src={point} alt="" className="position-absolute point" />
       <div className="line-wrapper py-5 mt-5">
         <span className="line1" />
         <span className="line2" />

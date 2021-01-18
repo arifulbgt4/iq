@@ -1,12 +1,12 @@
 footer {
-  background: #3c037c;
+  background: $primary;
   color: $white;
-  padding-bottom: 100px;
+  padding: 20px 0 250px;
   .social-icon {
     a {
-      background: #5407ab;
+      background: #2d2c7a;
       span {
-        background: #3c037c;
+        background: $primary;
         height: 36px;
         svg {
           height: 20px;
