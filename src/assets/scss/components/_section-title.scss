@@ -1,6 +1,22 @@
 .section-title {
+  h1 {
+    &.heading {
+      padding-bottom: 1rem;
+      margin-bottom: 12px;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        background: $primary;
+        bottom: 0;
+        left: 47.8%;
+      }
+    }
+  }
   p {
     font-size: 20px;
     font-weight: 500;
+    margin-bottom: 3rem;
   }
 }
