@@ -13,11 +13,13 @@ import GuidingPrinciple from './GuidingPrinciples';
 import HeroBanner from './HeroBanner';
 import BlogSection from './BlogSection';
 import OurProducts from './OurProducts';
+import WhyChooseUs from './WhyChooseUs';
 
 const Home = () => {
   return (
     <>
       <HeroBanner />
+      <WhyChooseUs />
       <Container>
         <GuidingPrinciple />
       </Container>
