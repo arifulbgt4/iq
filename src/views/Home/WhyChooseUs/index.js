@@ -1,7 +1,8 @@
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import { Container } from 'reactstrap';
 
 import SectionTitle from 'src/components/SectionTitle';
+import StepsToChoose from 'src/containers/StepsToChoose';
 
 const WhyChooseUs = () => {
   return (
@@ -12,9 +13,7 @@ const WhyChooseUs = () => {
           color="primary"
           description="Diligently striving towards excellence, we are here to get the most for your money."
         />
-        <Row>
-          <Col></Col>
-        </Row>
+        <StepsToChoose />
       </Container>
     </section>
   );
