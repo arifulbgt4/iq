@@ -7,4 +7,13 @@
   width: 60px;
 }
 .history-heading {
+  display: inline-block;
+  &::after {
+    content: '';
+    border-bottom: 3px solid;
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
 }

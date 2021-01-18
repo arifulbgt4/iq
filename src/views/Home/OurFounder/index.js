@@ -30,9 +30,9 @@ const OurFounder = () => {
           </p>
           <h5 className="">-Narotam</h5>
 
-          <h4 className="text-center mt-3 history-heading">
-            How It Started / Our History
-          </h4>
+          <div className="text-center mt-3">
+            <h4 className="history-heading">How It Started / Our History</h4>
+          </div>
           <div className="d-flex justify-content-center"></div>
           <p className="mt-2 d-inline-block mb-0 info-text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
