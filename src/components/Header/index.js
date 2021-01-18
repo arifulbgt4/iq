@@ -10,7 +10,7 @@ const Header = () => {
         <Row>
           <Col lg={3} className="d-flex align-items-center">
             <img src={logo} alt="logo" />
-            <Link to="/" className="mb-0 h4 text-decoration-none">
+            <Link to="/" className="mb-0 h4 text-decoration-none text-dark">
               <span className="text-primary">Exel</span>Stock
             </Link>
           </Col>
@@ -60,10 +60,10 @@ const Header = () => {
             className="text-end align-self-center justify-content-around d-flex"
             lg={3}
           >
-            <Button className="rounded-pill px-4" color="primary">
+            <Button outline className="rounded-pill px-4 " color="primary">
               Login
             </Button>
-            <Button className="rounded-pill px-4" color="primary">
+            <Button outline className="rounded-pill px-4" color="primary">
               Back To office
             </Button>
           </Col>

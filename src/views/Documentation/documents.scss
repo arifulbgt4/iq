@@ -19,8 +19,8 @@ body {
           font-weight: 500;
           color: #868e98;
           transition: all 0.3s;
-          &:hover {
-            transition: all 0.3s;
+          &:hover,
+          &.active {
             color: #338d33;
           }
         }
