@@ -40,11 +40,16 @@ const GuidingPrinciple = () => {
   return (
     <Row>
       <Col md={12}>
-        <h2 className="text-center py-5">Our Guiding Principles</h2>
+        <h1 className="text-center py-5 heading-text">
+          Our Guiding Principles
+        </h1>
       </Col>
       <Col md={12}>
         {data && data.map((item, i) => <GuidingPrinciples key={i} {...item} />)}
       </Col>
+      <p className="bottom-text">
+        “We are an organisation of our word, we keep our promises to you.”
+      </p>
     </Row>
   );
 };
