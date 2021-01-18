@@ -26,7 +26,7 @@ const data = [
 ];
 const OurProducts = () => {
   return (
-    <section className="our-product py-5 my-5">
+    <section className="our-product py-5">
       <Container>
         <SectionTitle color="white" title="our products" />
         <Row>

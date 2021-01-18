@@ -32,7 +32,7 @@ const BlogCard = (props) => {
   }));
   return (
     <animated.div
-      className="blog-card shadow"
+      className="blog-card shadow bg-white"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: property.xys.interpolate(trans) }}

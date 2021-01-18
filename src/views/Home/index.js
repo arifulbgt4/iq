@@ -20,10 +20,12 @@ const Home = () => {
       <HeroBanner />
       <Container>
         <GuidingPrinciple />
-        <OurFounder />
-        <OurProducts />
-        <BlogSection />
       </Container>
+      <Container>
+        <OurFounder />
+      </Container>
+      <OurProducts />
+      <BlogSection />
 
       {/* <Container>
         <TitleFirst />
