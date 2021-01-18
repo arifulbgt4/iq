@@ -1,9 +1,9 @@
 .our-product {
-  background-image: linear-gradient(
+  background: linear-gradient(
       to right,
       rgba(33, 37, 106, 0.98) 39%,
       rgba(36, 73, 145, 0.86) 100%
     ),
-    url(https://webstrot.com/html/jbdesk/main_version/main_pages/images/counter_bg.jpg);
-  // background-color: #244991;
+    url(./../image/our-product-bg.png);
+  background-repeat: no-repeat right;
 }
