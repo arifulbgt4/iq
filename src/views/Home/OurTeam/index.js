@@ -14,7 +14,7 @@ const OurTeam = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1200 },
-      items: 3,
+      items: 1,
       slidesToSlide: 1,
     },
     tablet: {
@@ -31,12 +31,12 @@ const OurTeam = () => {
   return (
     <Row className="mb-5">
       {/* <SectionTitle title="Our Team" /> */}
-      <Col>
+      <Col md={{ size: 8, offset: 2 }}>
         <Carousel
-          className="our-team"
+          className="our-team py-5"
           responsive={responsive}
           infinite
-          autoPlay
+          // autoPlay
           autoPlaySpeed={4000}
           slidesToSlide={1}
           customTransition="transform 1000ms ease-in-out"
@@ -49,23 +49,12 @@ const OurTeam = () => {
         >
           {data &&
             data.map((items, i) => (
-              <div key={i} className="team-member position-relative">
-                <div className="ripple" />
-                <figure className="d-inline-block border p-2 rounded-circle position-relative">
-                  <img
-                    src={items.img}
-                    alt="profile"
-                    className="rounded-circle border p-1 bg-white"
-                  />
-                </figure>
-                {/* <div className="member-info position-absolute shadow-sm p-3">
-                  <div className="title d-flex justify-content-between position-relative">
-                    <span>Hi</span>{' '}
-                    <FontAwesomeIcon className="text-danger" icon={faHeart} />{' '}
-                  </div>
-                  <h6 className="mb-1">{items.name}</h6>
-                  <p className="mb-0">{items.jobPosition}</p>
-                </div> */}
+              <div
+                key={i}
+                className="team-member position-relative text-center pt-5"
+              >
+                <p>{items.text}</p>
+                <h5>{items.name}</h5>
               </div>
             ))}
         </Carousel>
