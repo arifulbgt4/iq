@@ -49,6 +49,39 @@
   }
 }
 
+// choose-card
+.choose-card {
+  &-img {
+    height: 100px;
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  &-body {
+    color: $primary;
+    &_title {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+    &_description {
+      text-align: justify;
+      font-size: 16px;
+      font-weight: 500;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        border-radius: 100%;
+        background: #6546fb;
+        top: 9px;
+        left: -14px;
+      }
+    }
+  }
+}
+
 // product card
 .product {
   .card-body {
