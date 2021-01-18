@@ -2,6 +2,9 @@ footer {
   background: $primary;
   color: $white;
   padding: 20px 0 250px;
+  option {
+    background-color: $primary !important;
+  }
   .social-icon {
     a {
       background: #2d2c7a;
