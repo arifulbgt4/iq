@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Col,
   Form,
@@ -18,7 +19,6 @@ import {
   faPinterestP,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
 
 const data = [faTwitter, faFacebookF, faInstagram, faPinterestP, faLinkedinIn];
 
