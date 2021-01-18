@@ -8,7 +8,7 @@ const ContactForm = () => {
   const onSubmit = (data) => console.log(data);
   return (
     <>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)} className="contact-us">
         <Row>
           <Col lg={6}>
             <FormGroup row>
@@ -78,9 +78,9 @@ const ContactForm = () => {
                 ref={register({
                   maxLength: 200,
                 })}
-                className="form-control inp"
+                className="form-control inp "
                 rows="4"
-              ></textarea>
+              />
             </Col>
           </FormGroup>
         </div>
