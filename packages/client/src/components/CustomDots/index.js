@@ -13,7 +13,9 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
         data.map(
           (item) =>
             index + 1 === item.id && (
-              <figure className="rounded-pill border p-1 bg-primary">
+              <figure
+                className={`rounded-pill ${active && 'border p-1 bg-primary'} `}
+              >
                 <img
                   src={item.img}
                   alt=""
