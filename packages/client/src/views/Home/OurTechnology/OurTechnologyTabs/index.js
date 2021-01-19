@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import {
   TabContent,
   TabPane,
-  Nav,
-  NavItem,
-  NavLink,
   Card,
   Button,
   CardTitle,
@@ -12,7 +9,7 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import classnames from 'classnames';
+import TabsNavigation from './TabsNavigation';
 
 const OurTechnologyTabs = (props) => {
   const [activeTab, setActiveTab] = useState('1');
@@ -22,28 +19,7 @@ const OurTechnologyTabs = (props) => {
   };
   return (
     <div>
-      <Nav tabs>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '1' })}
-            onClick={() => {
-              toggle('1');
-            }}
-          >
-            Tab1
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '2' })}
-            onClick={() => {
-              toggle('2');
-            }}
-          >
-            More Tabs
-          </NavLink>
-        </NavItem>
-      </Nav>
+      <TabsNavigation toggle={toggle} activeTab={activeTab} />
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
           <Row>
