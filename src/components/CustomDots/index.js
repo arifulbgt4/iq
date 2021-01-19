@@ -5,7 +5,7 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
   const data = useSelector((store) => store.testimonial);
   return (
     <li
-      className={`${active ? 'active' : 'inactive'} mx-2`}
+      className={`${active ? 'active' : 'inactive'} mx-2 rounded-pill`}
       onClick={() => onClick()}
       onMouseMove={() => onMove()}
       style={{ height: 30 }}
@@ -15,13 +15,15 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
         data.map(
           (item) =>
             index + 1 === item.id && (
-              <img
-                src={item.img}
-                alt=""
-                height="60px"
-                className="rounded-pill border"
-                width="60px"
-              />
+              <figure className="rounded-pill border p-1 bg-primary">
+                <img
+                  src={item.img}
+                  alt=""
+                  height="80px"
+                  className="rounded-pill"
+                  width="80px"
+                />
+              </figure>
             )
         )}
     </li>
