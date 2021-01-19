@@ -5,18 +5,18 @@ const FooterTop = () => {
   return (
     <Row className="py-4">
       <Col md={4}>
-        <h4 className="mb-0">Meta Stock</h4>
+        <h4 className="mb-0 text-white className=">Meta Stock</h4>
       </Col>
       <Col md={8}>
         <ul className="d-flex justify-content-between align-items-center m-0 p-0">
           <li className="list-unstyled">
-            <h5>Quick Links</h5>{' '}
+            <h5 className="text-white">Quick Links</h5>{' '}
           </li>
           <li className="list-unstyled">
-            <h5>About US</h5>{' '}
+            <h5 className="text-white">About US</h5>{' '}
           </li>
           <li className="list-unstyled">
-            <h5> Contact US</h5>
+            <h5 className="text-white"> Contact US</h5>
           </li>
 
           <li className="list-unstyled">
