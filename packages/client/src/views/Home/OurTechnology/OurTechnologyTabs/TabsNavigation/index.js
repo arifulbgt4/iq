@@ -6,7 +6,7 @@ const TabsNavigation = (props) => {
   const { toggle, activeTab } = props;
   return (
     <Row>
-      <Col>
+      <Col sm={10}>
         <Nav tabs>
           <NavItem>
             <NavLink
