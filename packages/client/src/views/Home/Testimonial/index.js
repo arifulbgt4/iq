@@ -30,13 +30,17 @@ const Testimonial = () => {
   return (
     <section className="testimonial position-relative">
       <Container>
-        <SectionTitle title="Testimonial" />
+        <SectionTitle
+          title="Testimonial"
+          description="Our vectory is in our client contentment and success"
+          border={false}
+        />
         <Row className="mb-5">
-          <Col md={12} className="mb-5">
+          {/* <Col md={12} className="mb-5">
             <h6 className="text-center">
               Our vectory is in our client contentment and success
             </h6>
-          </Col>
+          </Col> */}
           <Col md={{ size: 8, offset: 2 }}>
             <Carousel
               className="testimonial-slider"

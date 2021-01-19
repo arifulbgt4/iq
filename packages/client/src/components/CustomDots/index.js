@@ -8,7 +8,6 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
       className={`${active ? 'active' : 'inactive'} mx-2 rounded-pill`}
       onClick={() => onClick()}
       onMouseMove={() => onMove()}
-      style={{ height: 30 }}
     >
       {/* {index + 1} */}
       {data &&
@@ -19,9 +18,9 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
                 <img
                   src={item.img}
                   alt=""
-                  height="80px"
+                  height="136px"
                   className="rounded-pill"
-                  width="80px"
+                  width="136px"
                 />
               </figure>
             )

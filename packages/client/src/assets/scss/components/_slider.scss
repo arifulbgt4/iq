@@ -1,5 +1,5 @@
 .testimonial-slider {
-  padding: 60px 0px;
+  padding: 110px 0px;
   h1 {
     font-size: 5rem;
     padding-top: 103px;
@@ -25,6 +25,7 @@
   }
   .react-multi-carousel-dot-list {
     top: 0px;
+    bottom: unset !important;
   }
   .inactive {
     filter: blur(1.5px);
