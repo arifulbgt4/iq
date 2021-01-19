@@ -47,7 +47,7 @@ const GuidingPrinciple = () => {
       <Col md={12}>
         {data && data.map((item, i) => <GuidingPrinciples key={i} {...item} />)}
       </Col>
-      <p className="bottom-text">
+      <p className="text-center bottom-text">
         “We are an organisation of our word, we keep our promises to you.”
       </p>
     </Row>
