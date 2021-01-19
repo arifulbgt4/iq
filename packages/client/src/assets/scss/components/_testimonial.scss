@@ -1,9 +1,10 @@
 .testimonial {
+  margin: 7rem 0 0 0;
   &::after {
     position: absolute;
     content: url(./../image/heroBanner/testimonial2.png);
-    bottom: -35%;
-    right: -40%;
+    bottom: -15%;
+    right: -35%;
     transform: scale(0.7);
   }
   &::before {
