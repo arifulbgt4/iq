@@ -1,11 +1,8 @@
 module.exports = {
   settings: {
     'import/resolver': {
-      webpack: {
-        config: './webpack.config.js',
-      },
       alias: {
-        map: [['src', './src']],
+        map: [['src', './packages/client/src']],
         extensions: ['.ts', '.js', '.jsx', '.json'],
       },
     },
@@ -95,5 +92,5 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
   },
-  plugins: ['html', 'prettier', 'react', 'react-hooks'],
+  plugins: ['html', 'prettier', 'react-hooks'],
 };

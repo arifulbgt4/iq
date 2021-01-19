@@ -1,0 +1,26 @@
+.founder-section {
+  background: url(./../image/heroBanner/Group_founder.png) no-repeat;
+}
+.founder-sec {
+  padding-top: 300px;
+}
+.info-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.img-cortetion {
+  width: 60px;
+  margin: 65px 0px -61px 41px;
+}
+.history-heading {
+  display: inline-block;
+  &::after {
+    content: '';
+    border-bottom: 3px solid;
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
+}

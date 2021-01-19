@@ -1,0 +1,39 @@
+$primary: #26256a;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+  )
+);
+
+// Link
+$link-color: $white;
+$link-decoration: none;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
+$headings-color: $primary;
+
+//
+// Typography
+//
+$font-family-base: 'Montserrat';
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1400px,
+);

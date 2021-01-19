@@ -1,0 +1,14 @@
+.our-product {
+  background: linear-gradient(
+      to right,
+      rgba(33, 37, 106, 0.98) 39%,
+      rgba(36, 73, 145, 0.86) 100%
+    ),
+    url(./../image/our-product-bg.png);
+  background-repeat: no-repeat right;
+  .product-item {
+    &:nth-child(2) {
+      transform: scale(1.1);
+    }
+  }
+}

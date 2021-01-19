@@ -1,0 +1,18 @@
+.testimonial {
+  margin: 7rem 0 0 0;
+  &::after {
+    position: absolute;
+    content: url(./../image/heroBanner/testimonial2.png);
+    bottom: -15%;
+    right: -35%;
+    transform: scale(0.7);
+  }
+  &::before {
+    position: absolute;
+    content: url(./../image/heroBanner/testimonial.png);
+    top: -20%;
+    left: -40%;
+    bottom: 0;
+    transform: scale(0.7);
+  }
+}
