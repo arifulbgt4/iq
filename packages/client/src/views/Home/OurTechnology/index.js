@@ -6,7 +6,7 @@ import OurTechnologyTabs from './OurTechnologyTabs';
 
 const OurTechnology = () => {
   return (
-    <section className="our-technology py-5 ">
+    <section className="our-technology py-5 my-5">
       <Container>
         <SectionTitle color="white" title="our technology" />
         <Row>
