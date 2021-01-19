@@ -7,7 +7,6 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
     <li
       className={`${active ? 'active' : 'inactive'} mx-2 rounded-pill`}
       onClick={() => onClick()}
-      onMouseMove={() => onMove()}
     >
       {/* {index + 1} */}
       {data &&
