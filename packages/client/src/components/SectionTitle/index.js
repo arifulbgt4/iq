@@ -7,7 +7,7 @@ const SectionTitle = (props) => {
     <Row>
       <Col className="section-title" md={12}>
         <h1
-          className={`text-center text-capitalize position-relative ${
+          className={`text-center text-capitalize fw-bold position-relative ${
             description ? 'heading' : 'mb-5'
           } text-${color}`}
         >
