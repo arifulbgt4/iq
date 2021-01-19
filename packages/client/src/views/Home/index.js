@@ -16,9 +16,8 @@ const Home = () => {
     <>
       <HeroBanner />
       <WhyChooseUs />
-      <Container>
-        <GuidingPrinciple />
-      </Container>
+      <GuidingPrinciple />
+      <Container></Container>
       <OurFounder />
       <Container>
         <AboutUs />
