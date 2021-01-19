@@ -11,15 +11,18 @@ const Feature = () => {
         <Col sm="6" className="d-flex align-items-center">
           <Card
             body
-            className="feature-left text-capitalize bg-transparent text-white border-0"
+            className="feature-left text-capitalize bg-transparent border-0"
           >
-            <CardSubtitle tag="h5" className="feature-left-subtitle mb-2 pb-1">
+            <CardSubtitle
+              tag="h5"
+              className="feature-left-subtitle mb-2 pb-1 text-white"
+            >
               feature 1
             </CardSubtitle>
-            <CardTitle tag="h1" className="feature-left-title pb-1">
+            <CardTitle tag="h1" className="feature-left-title pb-1 text-white">
               Example @
             </CardTitle>
-            <CardText className="feature-left-text">
+            <CardText className="feature-left-text text-white">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's Lorem Ipsum is
               simply dummy text of the printing and typesetting industry. Lorem
