@@ -15,6 +15,7 @@ import ContactUs from './ContactUs';
 import BlogSection from './BlogSection';
 import OurProducts from './OurProducts';
 import WhyChooseUs from './WhyChooseUs';
+import OurTechnology from './OurTechnology';
 
 const Home = () => {
   return (
@@ -23,7 +24,12 @@ const Home = () => {
       <WhyChooseUs />
       <Container>
         <GuidingPrinciple />
+      </Container>
+      <Container>
         <OurFounder />
+      </Container>
+      <OurTechnology />
+      <Container>
         <AboutUs />
       </Container>
       <OurProducts />
