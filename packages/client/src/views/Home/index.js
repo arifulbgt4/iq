@@ -1,12 +1,6 @@
 import React from 'react';
 import { Container } from 'reactstrap';
 
-// import Values from 'src/components/Values';
-// import OurTeam from './OurTeam';
-// import TitleFirst from './Testament';
-// import OurSoftware from './OurSoftware';
-// import BlogPost from './BlogPost';
-
 import OurFounder from './OurFounder';
 import GuidingPrinciple from './GuidingPrinciples';
 import HeroBanner from './HeroBanner';
@@ -15,6 +9,7 @@ import ContactUs from './ContactUs';
 import BlogSection from './BlogSection';
 import OurProducts from './OurProducts';
 import WhyChooseUs from './WhyChooseUs';
+import Testimonial from './Testimonial';
 
 const Home = () => {
   return (
@@ -28,22 +23,10 @@ const Home = () => {
       </Container>
       <OurProducts />
       <BlogSection />
+      <Testimonial />
       <Container>
         <ContactUs />
       </Container>
-
-      {/* <Container>
-        <TitleFirst />
-        <div>
-          <h2 className="text-center my-4 titlef">Our Valus</h2>
-        </div>
-        <Values />
-        <OurSoftware />
-        <OurTeam />
-        <BlogPost />
-      </Container>
-        <BlogPost />
-      </Container> */}
     </>
   );
 };
