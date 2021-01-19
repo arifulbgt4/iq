@@ -1,0 +1,17 @@
+.testimonial {
+  &::after {
+    position: absolute;
+    content: url(./../image/testimonial.png);
+    bottom: -35%;
+    right: -40%;
+    transform: scale(0.7);
+  }
+  &::before {
+    position: absolute;
+    content: url(./../image/testimonial.png);
+    top: 0;
+    left: -40%;
+    bottom: 0;
+    transform: scale(0.7);
+  }
+}
