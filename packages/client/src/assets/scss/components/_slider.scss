@@ -5,11 +5,19 @@
     padding-top: 103px;
     &::after {
       content: '';
-      border: 2px solid $primary;
-      width: 2px;
+      border: 1px solid $primary;
+      width: 1px;
       height: 100px;
       position: absolute;
       top: 0px;
+      left: 0;
+      right: 0;
+      margin: 0px auto;
+    }
+    &::before {
+      content: url(./../image/cotation.png);
+      position: absolute;
+      top: 70px;
       left: 0;
       right: 0;
       margin: 0px auto;
