@@ -19,6 +19,11 @@ $link-color: $white;
 $link-decoration: none;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);
 
+//
+// Typography
+//
+$font-family-base: 'Montserrat';
+
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.

@@ -14,7 +14,7 @@ import BannerContent from './BannerContent';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 
-const translate4 = (x, y) => `translate3d(${x / 10}px, ${y / 10}px,0)`;
+const translate = (x, y) => `translate3d(${x / 10}px, ${y / 10}px,0)`;
 
 const HeroBanner = () => {
   const [props, set] = useSpring(() => ({
@@ -30,32 +30,32 @@ const HeroBanner = () => {
         src={triangleImg}
         alt="triangle"
         className="triangle1-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
       <animated.img
         src={starImg}
         alt="star"
         className="star1-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
       <animated.img
         src={plusImg}
         alt="plus"
         className="plus1-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
 
       <animated.img
         src={eggShapeImg}
         alt=""
         className="egg-shape-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
       <animated.img
         src={triangleBlankImg}
         alt=""
         className="triangle-blank-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
       <Container>
         <Row>
@@ -67,7 +67,7 @@ const HeroBanner = () => {
               src={stockImg}
               alt="stock"
               className="stock-img"
-              style={{ transform: props.xy.interpolate(translate4) }}
+              style={{ transform: props.xy.interpolate(translate) }}
             />
           </Col>
         </Row>
@@ -77,25 +77,25 @@ const HeroBanner = () => {
         src={triangleImg}
         alt="triangle"
         className="triangle2-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
       <animated.img
         src={plusImg}
         alt="plus"
         className="plus2-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
       <animated.img
         src={starImg}
         alt="star"
         className="star2-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
       <animated.img
         src={starImg}
         alt="star"
         className="star3-img"
-        style={{ transform: props.xy.interpolate(translate4) }}
+        style={{ transform: props.xy.interpolate(translate) }}
       />
     </section>
   );
