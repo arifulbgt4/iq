@@ -2,13 +2,13 @@ import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { useSpring, animated } from 'react-spring';
 
-import stockImg from 'src/assets/image/stock.png';
-import cloudImg from 'src/assets/image/cloud.png';
-import triangleImg from 'src/assets/image/triangle.png';
-import starImg from 'src/assets/image/star.png';
-import plusImg from 'src/assets/image/plus.png';
-import eggShapeImg from 'src/assets/image/egg-shape.png';
-import triangleBlankImg from 'src/assets/image/triangle-blank.png';
+import stockImg from 'src/assets/image/heroBanner/stock.png';
+import cloudImg from 'src/assets/image/heroBanner/cloud.png';
+import triangleImg from 'src/assets/image/heroBanner/triangle.png';
+import starImg from 'src/assets/image/heroBanner/star.png';
+import plusImg from 'src/assets/image/heroBanner/plus.png';
+import eggShapeImg from 'src/assets/image/heroBanner/egg-shape.png';
+import triangleBlankImg from 'src/assets/image/heroBanner/triangle-blank.png';
 
 import BannerContent from './BannerContent';
 

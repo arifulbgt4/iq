@@ -3,7 +3,7 @@ import React from 'react';
 import BlogCard from 'src/components/BlogCard';
 import DocCard from 'src/views/Documentation/components/DocCard';
 
-import blogImg from 'src/assets/image/blog.png';
+import blogImg from 'src/assets/image/blog/blog.png';
 
 const BlogCardDoc = () => {
   return (

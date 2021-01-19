@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import blogImg from 'src/assets/image/blog.png';
+
+import blogImg from 'src/assets/image/blog/blog.png';
 
 const blogPosts = [
   {
