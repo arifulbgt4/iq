@@ -36,11 +36,6 @@ const Testimonial = () => {
           border={false}
         />
         <Row className="mb-5">
-          {/* <Col md={12} className="mb-5">
-            <h6 className="text-center">
-              Our vectory is in our client contentment and success
-            </h6>
-          </Col> */}
           <Col md={{ size: 8, offset: 2 }}>
             <Carousel
               className="testimonial-slider"
