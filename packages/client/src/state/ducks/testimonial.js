@@ -25,14 +25,6 @@ const data = [
     text:
       '“As a student with only a few savings in my account, I needed the right platform and path to invest my money. With Intel Quest, I knew I had reached my destination. The perfect guidance combined with the application of the best trading tools have made me quite self-sufficient in trading, thanks to Intel Quest.”',
   },
-  {
-    id: 4,
-    img:
-      'https://image.shutterstock.com/image-vector/vector-simple-male-profile-icon-260nw-1388357696.jpg',
-    name: 'Airin Sultana',
-    text:
-      '“As a student with only a few savings in my account, I needed the right platform and path to invest my money. With Intel Quest, I knew I had reached my destination. The perfect guidance combined with the application of the best trading tools have made me quite self-sufficient in trading, thanks to Intel Quest.”',
-  },
 ];
 
 const testimonailSlice = createSlice({

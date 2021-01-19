@@ -49,7 +49,7 @@ const Testimonial = () => {
               transitionDuration={1000}
               arrows={false}
               showDots
-              itemClass="ps-5 justify-content-center"
+              itemClass="justify-content-center"
               customDot={<CustomDot />}
             >
               {data &&
