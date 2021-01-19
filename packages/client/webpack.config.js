@@ -113,7 +113,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     filename: 'index.html',
-    port: process.env.CLIENT_PORT,
+    port: process.env.PORT,
     open: true, // Opens the browser after launching the dev server.
     compress: true, // Enables asset compression for faster reloads.
     historyApiFallback: true, // Enables a fallback to index.html for history-based routing.
