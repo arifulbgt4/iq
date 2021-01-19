@@ -59,7 +59,7 @@ const Testimonial = () => {
                     className="team-member position-relative text-center pt-5"
                   >
                     <h1 className="text-center position-relative">"</h1>
-                    <p>{items.text}</p>
+                    <p className="px-4">{items.text}</p>
                     <h5>{items.name}</h5>
                   </div>
                 ))}

@@ -18,6 +18,7 @@ $theme-colors: map-merge(
 $link-color: $white;
 $link-decoration: none;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);
+$headings-color: $primary;
 
 //
 // Typography
