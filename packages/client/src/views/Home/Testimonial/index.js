@@ -58,8 +58,8 @@ const Testimonial = () => {
                     key={i}
                     className="team-member position-relative text-center pt-5"
                   >
-                    <h1 className="text-center position-relative">"</h1>
-                    <p className="px-4">{items.text}</p>
+                    <h1 className="text-center position-relative mb-5 mt-3" />
+                    <p className="px-4 text-primary pt-5">{items.text}</p>
                     <h5>{items.name}</h5>
                   </div>
                 ))}
