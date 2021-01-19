@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
+import { CardBody, CardText, CardTitle } from 'reactstrap';
 
 const ChooseCard = (props) => {
   const { id, img, title, description } = props;
