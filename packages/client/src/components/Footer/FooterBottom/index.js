@@ -44,19 +44,13 @@ const FooterBottom = () => {
           className="list-unstyled justify-content-center flex-wrap ml-0 bg-transparent"
         >
           <ListGroupItem className="pe-2 p-0 mb-2 border-start-0 border-top-0 border-bottom-0 border-end bg-transparent">
-            <Link to="#" className="text-decoration-none h6">
-              Privecy
-            </Link>
+            <Link to="#">Privecy</Link>
           </ListGroupItem>
           <ListGroupItem className="px-2 p-0 mb-2  border-end bg-transparent">
-            <Link to="#" className="text-decoration-none h6">
-              FAQs
-            </Link>
+            <Link to="#">FAQs</Link>
           </ListGroupItem>
           <ListGroupItem className="ps-2 p-0 mb-2 border-0 bg-transparent">
-            <Link to="#" className="text-decoration-none h6">
-              Press
-            </Link>
+            <Link to="#">Press</Link>
           </ListGroupItem>
         </ListGroup>
         <p>2021 copyrights @ Metastock</p>
