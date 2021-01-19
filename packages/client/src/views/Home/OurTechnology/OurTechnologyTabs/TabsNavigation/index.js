@@ -7,7 +7,7 @@ const TabsNavigation = (props) => {
   return (
     <Row>
       <Col sm={10}>
-        <Nav tabs>
+        <Nav tabs className="mb-2">
           <NavItem>
             <NavLink
               className={classnames({ active: activeTab === '1' })}
