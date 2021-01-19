@@ -10,6 +10,7 @@ import BlogSection from './BlogSection';
 import OurProducts from './OurProducts';
 import WhyChooseUs from './WhyChooseUs';
 import Testimonial from './Testimonial';
+import OurTechnology from './OurTechnology';
 
 const Home = () => {
   return (
@@ -17,8 +18,8 @@ const Home = () => {
       <HeroBanner />
       <WhyChooseUs />
       <GuidingPrinciple />
-      <Container></Container>
       <OurFounder />
+      <OurTechnology />
       <Container>
         <AboutUs />
       </Container>

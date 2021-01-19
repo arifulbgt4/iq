@@ -1,0 +1,40 @@
+.our-technology {
+  position: relative;
+  background: linear-gradient(
+      to right,
+      rgba(33, 37, 106, 0.98) 39%,
+      rgba(36, 73, 145, 0.86) 100%
+    ),
+    url(./../image/ourTechnology/our-technology-bg.png) no-repeat right;
+  .nav-tabs {
+    .nav-item {
+      margin-right: 20px;
+      .nav-link {
+        margin-bottom: 0;
+        border: 0;
+        &.active {
+          color: white !important;
+          border-bottom: 3px solid white !important;
+          border-left: 0;
+          border-right: 0;
+          border-top: 0;
+          background: none !important;
+        }
+        &:hover {
+          border: 0;
+        }
+        &:focus {
+          outline: 0 !important;
+        }
+      }
+    }
+  }
+  .feature {
+    padding: 200px 0;
+    &-right {
+      position: absolute;
+      bottom: -60px;
+      right: -8.3%;
+    }
+  }
+}
