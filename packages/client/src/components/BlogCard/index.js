@@ -11,11 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 50,
-  (x - window.innerWidth / 2) / 50,
-  1.1,
-];
+import calc from 'src/utils/calc';
 
 const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
