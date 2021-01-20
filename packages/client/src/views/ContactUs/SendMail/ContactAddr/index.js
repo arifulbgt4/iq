@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFax,
+  faMapMarkerAlt,
+  faPhoneAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 const ContactAddr = () => {
   return (
@@ -13,7 +17,7 @@ const ContactAddr = () => {
       <div className="addr-list my-5">
         <h3>
           <span className="mx-2">
-            <FontAwesomeIcon icon={faSearch} />
+            <FontAwesomeIcon className="fs-4" icon={faMapMarkerAlt} />
           </span>
           <span className="">Headquarter</span>
         </h3>
@@ -24,7 +28,7 @@ const ContactAddr = () => {
       <div className="addr-list my-5">
         <h3>
           <span className="mx-2">
-            <FontAwesomeIcon icon={faSearch} />
+            <FontAwesomeIcon className="fs-4" icon={faPhoneAlt} />
           </span>
           <span className="">Phone / Fax</span>
         </h3>
@@ -33,7 +37,7 @@ const ContactAddr = () => {
       <div className="addr-list my-5">
         <h3>
           <span className="mx-2">
-            <FontAwesomeIcon icon={faSearch} />
+            <FontAwesomeIcon className="fs-4" icon={faFax} />
           </span>
           <span className="">Fax: </span>
         </h3>
