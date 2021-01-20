@@ -73,8 +73,8 @@ const HeroBanner = () => {
         <Slider>
           {data &&
             data.map((items) => {
-              console.log('object', items);
               const image = process.env.API_URL + items.image.url;
+
               return (
                 <Row className="pb-5" key={items.id}>
                   <Col md={6}>

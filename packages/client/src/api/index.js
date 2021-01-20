@@ -6,3 +6,8 @@ const { API_URL } = process.env;
 export const getHeroSlider = () => {
   return axios.get(`${API_URL}/hero-sliders`);
 };
+
+// API to get hero slider
+export const getChooseUs = () => {
+  return axios.get(`${API_URL}/hero-sliders`);
+};

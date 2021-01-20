@@ -6,6 +6,8 @@ import blog from './blog';
 import guidings from './guidings';
 import testimonial from './testimonial';
 import herobanner from './herobanner';
+import whyChooseUs from './whyChooseUs';
+
 export default combineReducers({
   ...ui,
   ...products,
@@ -13,4 +15,5 @@ export default combineReducers({
   ...guidings,
   ...testimonial,
   ...herobanner,
+  ...whyChooseUs,
 });
