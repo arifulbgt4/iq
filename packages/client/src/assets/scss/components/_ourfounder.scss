@@ -1,8 +1,31 @@
-.founder-section {
+.our-founder {
+  padding: 300px 0 100px;
   background: url(./../image/heroBanner/Group_founder.png) no-repeat;
-}
-.founder-sec {
-  padding-top: 300px;
+  &-image {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      background: url(/static/media/ellipse.1d1468e1.png);
+      height: 120px;
+      width: 120px;
+      bottom: -50px;
+      right: 24px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: 140px;
+      width: 140px;
+      background: $secondary;
+      top: -50px;
+      left: -66px;
+    }
+    img {
+      position: relative;
+      z-index: 1;
+    }
+  }
 }
 .info-text {
   font-size: 25px;
