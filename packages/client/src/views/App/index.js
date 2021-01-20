@@ -12,6 +12,7 @@ import Footer from 'src/components/Footer';
 // Pages
 const Docs = lazy(() => import('../Documentation'));
 const Home = lazy(() => import('../Home'));
+const Carrer = lazy(() => import('../Carrer'));
 
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
@@ -29,6 +30,17 @@ const App = () => {
                 withTitle({
                   component: Home,
                   title: 'Welcome',
+                  ...props,
+                })
+              }
+            />
+            <Route
+              exact
+              path="/carrer"
+              render={(props) =>
+                withTitle({
+                  component: Carrer,
+                  title: 'Carrer',
                   ...props,
                 })
               }
