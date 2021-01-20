@@ -1,4 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
+
+import { getHeroSlider } from 'src/api';
+
+function startLoading(state) {
+  state.loading = true;
+}
+
+function loadingFailed(state, { payload }) {
+  state.data = [];
+  state.loading = false;
+  state.error = payload;
+}
+
 import stockImg from 'src/assets/image/heroBanner/stock.png';
 const data = [
   {
