@@ -2,12 +2,16 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import ContactInfo from './ContactInfo';
 import GetInTuch from './GetInTuch';
+import SendMail from './SendMail';
 const index = () => {
   return (
-    <Container>
+    <>
       <GetInTuch />
-      <ContactInfo />
-    </Container>
+      <Container>
+        <ContactInfo />
+        <SendMail />
+      </Container>
+    </>
   );
 };
 

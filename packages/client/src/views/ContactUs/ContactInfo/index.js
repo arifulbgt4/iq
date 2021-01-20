@@ -36,9 +36,11 @@ const ContactInfo = () => {
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry.{' '}
                   </p>
-                  <Button color="primary" size="lg" block>
-                    Contact Us
-                  </Button>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">
+                      Contact Us
+                    </button>
+                  </div>
                 </div>
               </div>
             </Col>
