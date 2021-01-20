@@ -30,7 +30,7 @@ const stepsToChoose = [
 
 const StepsToChoose = () => {
   return (
-    <Row>
+    <Row className="mt-3">
       {Array.isArray(stepsToChoose) &&
         stepsToChoose.map((step) => (
           <Col md={4} key={step.id}>

@@ -4,8 +4,8 @@ import { Col, Row } from 'reactstrap';
 const SectionTitle = (props) => {
   const { color, title, description, border = true } = props;
   return (
-    <Row>
-      <Col className="section-title" md={12}>
+    <Row className="section-title">
+      <Col md={12}>
         <h1
           className={`text-center text-capitalize fw-bold ${
             border ? 'position-relative border-line' : 'mb-0 pb-2'
