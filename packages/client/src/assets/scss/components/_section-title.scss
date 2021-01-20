@@ -3,6 +3,8 @@
     &.heading {
       padding-bottom: 1rem;
       margin-bottom: 12px;
+    }
+    &.border-line {
       &::after {
         content: '';
         position: absolute;

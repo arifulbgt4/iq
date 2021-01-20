@@ -20,9 +20,7 @@ const Home = () => {
       <GuidingPrinciple />
       <OurFounder />
       <OurTechnology />
-      <Container>
-        <AboutUs />
-      </Container>
+      <AboutUs />
       <OurProducts />
       <BlogSection />
       <Testimonial />

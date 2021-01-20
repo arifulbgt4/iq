@@ -8,7 +8,7 @@ const BlogSection = () => {
   return (
     <section className="blog-section py-5">
       <Container>
-        <SectionTitle color="primary" title="latest blogs" />
+        <SectionTitle color="primary" title="latest blogs" border={false} />
         <BlogPosts />
       </Container>
     </section>
