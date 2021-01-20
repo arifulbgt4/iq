@@ -59,10 +59,10 @@ const HeroBanner = () => {
       />
       <Container>
         <Row>
-          <Col md={4}>
+          <Col md={6}>
             <BannerContent />
           </Col>
-          <Col md={8}>
+          <Col md={6}>
             <animated.img
               src={stockImg}
               alt="stock"
