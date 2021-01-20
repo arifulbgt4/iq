@@ -21,7 +21,7 @@ const AboutUs = () => {
       <Col md={12} className="my-5">
         <div className="d-flex justify-content-center  vdsec ">
           <iframe
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            src="https://www.youtube.com/embed/0TImic4N1ko"
             className="border border-0 rounded my-5"
           />
           <img src={bgimg1} alt="bg" className="bgtop" />
