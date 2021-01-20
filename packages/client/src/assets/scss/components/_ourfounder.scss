@@ -5,10 +5,20 @@
   padding-top: 300px;
 }
 .info-text {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 25px;
+  font-style: italic;
   line-height: 30px;
 }
+.our-history {
+  .history {
+    font-size: 24px;
+  }
+  a {
+    right: 0;
+    bottom: 0;
+  }
+}
+
 .img-cortetion {
   width: 60px;
   margin: 65px 0px -61px 41px;

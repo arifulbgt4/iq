@@ -2,16 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 import founder from 'src/assets/image/founder.png';
+import SectionTitle from 'src/components/SectionTitle';
 
 const Founder = () => {
   return (
     <>
+      <SectionTitle title="Few Words From Our Founder" border={false} />
       <Row className="align-items-center">
-        <Col md={12}>
-          <h1 className="text-center text-primary mb-0">
-            Few Words From Our Founder
-          </h1>
-        </Col>
         <Col md={4}>
           <img className="img-fluid" src={founder} alt="founder" />
         </Col>
@@ -23,31 +20,34 @@ const Founder = () => {
               src="https://antor.thememaster.net/AllImage/cotetion.png"
               alt="a"
             />
-            <p className="m-0  info-text">
+            <p className="m-0  info-text text-primary">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's Lorem Ipsum is
               simply dummy text of the printing and typesetting industry. Lorem
               Ipsum has been the industry's
             </p>
-            <h5 className="">-Narotam</h5>
+            <p className="fw-bold">- Narotam</p>
 
             <div className="text-center mt-3">
-              <h4 className="history-heading">How It Started / Our History</h4>
+              <p className="history-heading fw-bold">
+                How It Started / Our History
+              </p>
             </div>
-            <div className="d-flex justify-content-center"></div>
-            <p className="mt-2 d-inline-block mb-0 info-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's Lorem Ipsum has been the industry's
-              . Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry..
-            </p>
-            <div className="text-end">
+
+            <div className="our-history position-relative">
+              <p className="mt-2 d-inline-block mb-0 text-primary history">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's Lorem Ipsum is
+                simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's Lorem Ipsum has been the
+                industry's . Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                Lorem Ipsum is simply dummy text of the and type setting
+                industry.Lorem Ipsum is simply dummy text printing..
+              </p>
               <Link
                 to="#"
-                className="ms-5 mt-2 text-white bg-primary btn-sm px-4 py-2"
+                className=" mt-2 text-white bg-primary btn-sm px-4 py-2 position-absolute"
               >
                 Read more
               </Link>
