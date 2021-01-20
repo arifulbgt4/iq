@@ -13,13 +13,23 @@
 
 .vdsec {
   position: relative;
-  img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-  }
+
   iframe {
-    width: 717px;
+    height: 290px;
+    width: 40%;
+  }
+  .bgtop {
+    position: absolute;
+    z-index: -1;
+    height: 370px;
+    width: 55%;
+  }
+  .bgbtm {
+    position: absolute;
+    top: 37px;
+    left: 223px;
+    z-index: -2;
+    height: 370px;
+    width: 55%;
   }
 }
