@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
 
+import bgimg from 'src/assets/image/vidbg.png';
+
 import TitleFirst from 'src/components/TitleFirst';
 
 const AboutUs = () => {
@@ -15,14 +17,10 @@ const AboutUs = () => {
           industry.
         </p>
       </Col>
-      <Col md={12}>
-        <div className="d-flex justify-content-center">
-          <iframe
-            height="330"
-            width="530"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-            className="my-5 rounded"
-          />
+      <Col md={{ size: 8, offset: 2 }}>
+        <div className="d-flex justify-content-center vdsec">
+          <img src={bgimg} alt="bg" />
+          <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" />
         </div>
       </Col>
     </Row>
