@@ -7,7 +7,7 @@ const MapLocation = () => {
     <Row className="pt-5 pb-5">
       <Col>
         <div className="py-5 p-5 filter-me">
-          <LocationMap height={550} />
+          <LocationMap height={442} />
         </div>
       </Col>
     </Row>
