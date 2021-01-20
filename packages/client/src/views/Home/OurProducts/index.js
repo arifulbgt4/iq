@@ -8,21 +8,25 @@ import SectionTitle from 'src/components/SectionTitle';
 const OurProducts = () => {
   const data = useSelector((store) => store.products);
   return (
-    <section className="our-product py-5">
+    <section className="our-product">
       <Container>
         <SectionTitle color="white" title="our products" />
-        <Row>
-          {data &&
-            data.map((item) => (
-              <Col
-                key={item.id}
-                md={4}
-                style={{ padding: '0 3.2rem' }}
-                className="product-item"
-              >
-                <ProductCard title={item.title} text={item.text} />{' '}
-              </Col>
-            ))}
+        <Row className="mt-3">
+          <Col md={{ size: 10, offset: 1 }}>
+            <Row>
+              {data &&
+                data.map((item) => (
+                  <Col
+                    key={item.id}
+                    md={4}
+                    style={{ padding: '0 4.3rem' }}
+                    className="product-item"
+                  >
+                    <ProductCard title={item.title} text={item.text} />{' '}
+                  </Col>
+                ))}
+            </Row>
+          </Col>
         </Row>
       </Container>
     </section>
