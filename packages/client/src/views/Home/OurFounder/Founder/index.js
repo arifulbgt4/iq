@@ -1,15 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
+import { useSpring, animated } from 'react-spring';
+
+import calc from 'src/utils/calc';
 
 import founderImg from 'src/assets/image/ourFounder/founder.png';
 
+const trans = (x, y, s) =>
+  `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
 const Founder = () => {
+  const [property, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: {
+      mass: 10,
+      tension: 350,
+      friction: 40,
+    },
+  }));
   return (
     <Row className="align-items-center">
       <Col md={4}>
         <figure className="our-founder-image m-0">
-          <img className="img-fluid" src={founderImg} alt="founder" />
+          <animated.img
+            className="img-fluid"
+            src={founderImg}
+            alt="founder"
+            onMouseMove={({ clientX: x, clientY: y }) =>
+              set({ xys: calc(x, y) })
+            }
+            onMouseLeave={() => set({ xys: [0, 0, 1] })}
+            style={{ transform: property.xys.interpolate(trans) }}
+          />
         </figure>
       </Col>
       <Col md={8}>
