@@ -10,7 +10,7 @@ const BlogPosts = () => {
     <Row>
       {Array.isArray(blogPost) &&
         blogPost.map((item) => (
-          <Col md={4} key={item.id} style={{ padding: '0 3.2rem' }}>
+          <Col md={4} key={item.id} style={{ padding: '0 5rem' }}>
             <BlogCard
               id={item.id}
               img={item.img}
