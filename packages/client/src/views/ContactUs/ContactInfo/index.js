@@ -6,7 +6,7 @@ import Icon_chatbubbles from 'src/assets/image/contactUs/Icon_chatbubbles.png';
 
 const ContactInfo = () => {
   return (
-    <>
+    <div className="posation">
       <Row>
         <Col lg={{ size: 8, offset: 2 }} md={{ size: 8, offset: 2 }} sm={12}>
           <Row>
@@ -47,7 +47,7 @@ const ContactInfo = () => {
           </Row>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 
