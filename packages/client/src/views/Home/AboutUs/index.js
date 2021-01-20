@@ -22,7 +22,7 @@ const AboutUs = () => {
         <div className="d-flex justify-content-center  vdsec ">
           <iframe
             src="https://www.youtube.com/embed/tgbNymZ7vqY"
-            className="border rounded my-5"
+            className="border border-0 rounded my-5"
           />
           <img src={bgimg1} alt="bg" className="bgtop" />
           <img src={bgimg2} alt="bg" className="bgbtm" />
