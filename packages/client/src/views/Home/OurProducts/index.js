@@ -19,7 +19,7 @@ const OurProducts = () => {
                   <Col
                     key={item.id}
                     md={4}
-                    style={{ padding: '0 4.3rem' }}
+                    style={{ padding: '0 4.5rem' }}
                     className="product-item"
                   >
                     <ProductCard title={item.title} text={item.text} />{' '}
