@@ -12,29 +12,46 @@ function loadingFailed(state, { payload }) {
   state.error = payload;
 }
 
-import stockImg from 'src/assets/image/heroBanner/stock.png';
-const data = [
-  {
-    id: 1,
-    title: '  Trust. Trade. Triumph.',
-    text:
-      ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys Lorem Ipsum is simply',
-    image: stockImg,
-  },
-  {
-    id: 2,
-    title: '  Trust. Trade. Triumph.',
-    text:
-      ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys Lorem Ipsum is simply',
-    image: stockImg,
-  },
-];
 const bannerSlice = createSlice({
-  name: 'modal',
-  initialState: data,
-  reducers: {},
+  name: 'heroBanner',
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
+  reducers: {
+    getHeroBannerStart: startLoading,
+
+    getHeroBannerSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getHeroBannerFailure: loadingFailed,
+  },
 });
 
+export const {
+  getHeroBannerStart,
+  getHeroBannerSuccess,
+  getHeroBannerFailure,
+} = bannerSlice.actions;
+
 export default {
-  herobanner: bannerSlice.reducer,
+  heroBanner: bannerSlice.reducer,
+};
+
+export const fatchHeroBanner = () => async (dispatch) => {
+  try {
+    dispatch(getHeroBannerStart());
+
+    const { data } = await getHeroSlider();
+
+    dispatch(getHeroBannerSuccess(data));
+  } catch (error) {
+    dispatch(getHeroBannerFailure(error.toString()));
+  }
 };

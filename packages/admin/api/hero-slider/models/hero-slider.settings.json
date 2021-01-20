@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "hero_sliders",
   "info": {
-    "name": "Hero Slider"
+    "name": "Hero Slider",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,6 +16,13 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images", "files", "videos"],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
