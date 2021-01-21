@@ -18,12 +18,12 @@ const Testimonial = () => {
     },
     tablet: {
       breakpoint: { max: 1199, min: 576 },
-      items: 3,
+      items: 1,
       slidesToSlide: 1,
     },
     mobile: {
       breakpoint: { max: 575, min: 0 },
-      items: 2,
+      items: 1,
       slidesToSlide: 1,
     },
   };
@@ -46,7 +46,7 @@ const Testimonial = () => {
               slidesToSlide={1}
               customTransition="transform 1000ms ease-in-out"
               transitionDuration={1000}
-              arrows={false}
+              arrows={true}
               showDots
               itemClass="justify-content-center"
               customDot={<CustomDot />}
@@ -58,7 +58,9 @@ const Testimonial = () => {
                     className="team-member position-relative text-center pt-5"
                   >
                     <h1 className="text-center position-relative mb-5 mt-3" />
-                    <p className="px-4 text-primary pt-5 px-5">{items.text}</p>
+                    <p className="text-primary pt-5 px-3 px-sm-5">
+                      {items.text}
+                    </p>
                     <h3>{items.name}</h3>
                   </div>
                 ))}

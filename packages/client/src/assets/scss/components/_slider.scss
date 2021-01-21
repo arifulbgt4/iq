@@ -26,8 +26,32 @@
   .react-multi-carousel-dot-list {
     top: 0px;
     bottom: unset !important;
+    .inactive {
+      @media (max-width: 575.98px) {
+        display: none;
+      }
+    }
   }
   .inactive {
     filter: blur(0.9px);
+  }
+  .react-multiple-carousel__arrow--right {
+    right: calc(0% + 1px);
+  }
+  .react-multiple-carousel__arrow--left {
+    left: calc(0% + 1px);
+  }
+  .react-multiple-carousel__arrow {
+    background: $primary;
+    min-width: 23px;
+    min-height: 23px;
+    @media (min-width: 576px) {
+      display: none;
+    }
+  }
+  @media (max-width: 575.98px) {
+    p {
+      font-size: 16px;
+    }
   }
 }
