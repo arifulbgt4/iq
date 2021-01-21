@@ -7,8 +7,8 @@ import SendMail from './SendMail';
 const ContactUs = () => {
   return (
     <>
-      <GetInTuch />
       <Container>
+        <GetInTuch />
         <ContactInfo />
         <SendMail />
         <MapLocation />
