@@ -104,8 +104,8 @@ const ContactForm = () => {
           </FormGroup>
         </div>
 
-        <Row className="justify-content-end px-2">
-          <Button type="submit" color="primary" className="w-25 me-1">
+        <Row className="justify-content-end sub-btn-row      px-2">
+          <Button type="submit" color="primary" className=" me-1 w-25 rbtn">
             Submit
           </Button>
         </Row>

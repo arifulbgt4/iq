@@ -11,21 +11,39 @@
     font-weight: 500;
   }
   iframe {
-    height: 290px;
+    height: 390px;
     width: 40%;
+    top: 20px;
+    position: absolute;
   }
   .bgtop {
     position: absolute;
     z-index: -1;
-    height: 370px;
-    width: 55%;
+    height: 520px;
+    width: 58%;
   }
   .bgbtm {
     position: absolute;
     top: 37px;
-    left: 223px;
+    left: 275px;
     z-index: -2;
-    height: 370px;
-    width: 55%;
+    height: 520px;
+    width: 58%;
+  }
+}
+
+@media screen and (min-width: 765px) and (max-width: 991px) {
+  .sub-btn-row {
+    justify-content: center !important;
+    .rbtn {
+      width: 100% !important;
+    }
+  }
+}
+@media screen and (max-width: 415px) {
+  .sub-btn-row {
+    .rbtn {
+      width: 100% !important;
+    }
   }
 }
