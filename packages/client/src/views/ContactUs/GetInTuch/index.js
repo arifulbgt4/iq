@@ -18,7 +18,7 @@ const index = () => {
         </Col>
         <Col lg={4} md={4} sm={12}>
           <div>
-            <img src={Contact} alt="" />
+            <img src={Contact} alt="contact" />
           </div>
         </Col>
       </Row>

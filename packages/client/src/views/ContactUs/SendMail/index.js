@@ -6,10 +6,10 @@ import ContactForm from './ContactForm';
 const SendMail = () => {
   return (
     <Row className="my-5">
-      <Col className="col-md-5 ms-md-auto">
+      <Col sm={12} md={6} lg={6} className="ms-md-auto">
         <ContactAddr />
       </Col>
-      <Col className="px-5 col-md-5 me-md-auto">
+      <Col sm={12} md={6} lg={6} className="px-5">
         <p className="fs-1 text-primary ">
           Have doubts? Don't Worry just <b>Contact Us.</b>
         </p>

@@ -8,7 +8,7 @@ const ContactInfo = () => {
   return (
     <div className="posation">
       <Row>
-        <Col lg={{ size: 8, offset: 2 }} md={{ size: 8, offset: 2 }} sm={12}>
+        <Col lg={{ size: 8, offset: 2 }} md={12} sm={12}>
           <Row>
             <Col lg={6} md={6} sm={12}>
               <div className="contact-info-card">
