@@ -7,14 +7,15 @@ const Header = () => {
   return (
     <header className="border-bottom shadow-sm py-4">
       <Container>
-        <Row>
-          <Col lg={3} className="d-flex align-items-center">
+        <Row className=" align-items-center">
+          <Col md={12} lg={3} className="d-flex align-items-center hlogo">
             <img src={logo} alt="logo" />
             <Link to="/" className="mb-0 h4 text-decoration-none text-dark">
               <span className="text-primary">Exel</span>Stock
             </Link>
           </Col>
-          <Col lg={6}>
+
+          <Col md={12} lg={6} className="hnav">
             <Navbar className="p-0 d-block">
               <Nav className="justify-content-end">
                 <NavItem>
@@ -65,9 +66,11 @@ const Header = () => {
               </Nav>
             </Navbar>
           </Col>
+
           <Col
-            className="text-end align-self-center justify-content-around d-flex"
+            md={12}
             lg={3}
+            className="text-end align-self-center justify-content-around d-flex hbtns"
           >
             <Button outline className="rounded-pill px-4 " color="primary">
               Login

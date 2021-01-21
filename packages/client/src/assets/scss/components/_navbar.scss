@@ -12,3 +12,13 @@ header {
     }
   }
 }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .hnav {
+    column-span: 5;
+  }
+  .nav-link {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
