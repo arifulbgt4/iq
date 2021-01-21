@@ -1,5 +1,7 @@
 .our-product {
-  height: 100vh;
+  @media (min-width: 1400px) {
+    height: 100vh;
+  }
   padding: 3rem 0 0rem;
   background: linear-gradient(
       to right,

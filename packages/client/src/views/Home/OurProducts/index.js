@@ -18,9 +18,11 @@ const OurProducts = () => {
                 data.map((item) => (
                   <Col
                     key={item.id}
-                    md={4}
+                    lg={4}
+                    md={12}
+                    sm={12}
                     style={{ padding: '0 4.5rem' }}
-                    className="product-item"
+                    className="product-item py-4"
                   >
                     <ProductCard title={item.title} text={item.text} />{' '}
                   </Col>

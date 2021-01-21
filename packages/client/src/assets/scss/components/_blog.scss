@@ -1,4 +1,6 @@
 .blog-section {
-  height: 100vh;
+  @media (min-width: 1400px) {
+    height: 100vh;
+  }
   background: url(./../image/blog/blog_bg.png) no-repeat bottom;
 }
