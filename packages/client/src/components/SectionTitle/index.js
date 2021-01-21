@@ -9,7 +9,7 @@ const SectionTitle = (props) => {
         <h1
           className={`text-center text-capitalize fw-bold ${
             border ? 'position-relative border-line' : 'mb-0 pb-2'
-          } ${description ? 'heading' : 'mb-5'} text-${color}`}
+          } ${description ? 'heading' : 'mb-3 mb-sm-5'} text-${color}`}
         >
           {title}
         </h1>

@@ -13,7 +13,7 @@ const OurProducts = () => {
         <SectionTitle color="white" title="our products" />
         <Row className="mt-3">
           <Col xl={{ size: 10, offset: 1 }} md={12} lg={12}>
-            <Row>
+            <Row className="justify-content-center">
               {data &&
                 data.map((item) => (
                   <Col
@@ -21,7 +21,7 @@ const OurProducts = () => {
                     xxl={4}
                     xl={4}
                     lg={6}
-                    md={12}
+                    md={6}
                     sm={12}
                     className="product-item pb-4"
                   >

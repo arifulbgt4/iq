@@ -31,9 +31,7 @@ const ProductCard = (props) => {
       style={{ transform: property.xys.interpolate(trans) }}
     >
       <CardBody className="text-center">
-        <CardTitle tag="h2" className="">
-          Product
-        </CardTitle>
+        <CardTitle tag="h2">Product</CardTitle>
         <CardSubtitle tag="h1" className="my-5 ">
           {title}
         </CardSubtitle>
