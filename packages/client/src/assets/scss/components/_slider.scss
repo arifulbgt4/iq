@@ -1,3 +1,13 @@
+.hero-banner {
+  .react-multiple-carousel__arrow {
+    background: $primary;
+    @media (max-width: 767.98px) {
+      min-width: 23px;
+      min-height: 23px;
+    }
+  }
+}
+
 .testimonial-slider {
   padding: 110px 0px;
   h1 {
