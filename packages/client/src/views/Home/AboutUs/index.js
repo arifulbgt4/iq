@@ -14,7 +14,7 @@ const AboutUs = () => {
         border={false}
         color="primary"
       />
-      <Row className="mt-4 mb-5">
+      <Row className="mt-2 mt-md-4 mb-5">
         <Col md={12}>
           <div className="d-flex justify-content-center">
             <iframe
