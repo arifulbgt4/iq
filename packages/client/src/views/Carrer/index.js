@@ -1,12 +1,15 @@
 import React from 'react';
-import { Container, Row } from 'reactstrap';
+import { Container } from 'reactstrap';
+
 import CarrerItem from 'src/components/CarrerItem';
+
 import image1 from 'src/assets/image/carrer/carrer1.png';
 import image2 from 'src/assets/image/carrer/carrer2.png';
 import image3 from 'src/assets/image/carrer/carrer3.png';
 import image4 from 'src/assets/image/carrer/carrer4.png';
 import image5 from 'src/assets/image/carrer/carrer5.png';
 import Apply from './Apply';
+
 const Carrer = () => {
   return (
     <Container className="carrer mb-5">

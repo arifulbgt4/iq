@@ -6,6 +6,7 @@ import ProductCardDoc from './components/ProductCardDoc';
 import ValuCardDoc from './components/ValuCardDoc';
 import GuidingPrinciplesDoc from './components/GuidingPrinciplesDoc';
 import ChooseCardDoc from './components/ChooseCardDoc';
+import CarrerDoc from './components/CarrerDoc';
 
 const Theme = () => {
   const list = [
@@ -14,6 +15,7 @@ const Theme = () => {
     'GuidingPrinciples',
     'blogCard',
     'ProductCard',
+    'CarrerDoc',
   ];
 
   return (
@@ -23,6 +25,7 @@ const Theme = () => {
       <GuidingPrinciplesDoc />
       <BlogCardDoc />
       <ProductCardDoc />
+      <CarrerDoc />
     </DocMain>
   );
 };
