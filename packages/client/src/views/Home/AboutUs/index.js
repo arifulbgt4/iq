@@ -1,34 +1,35 @@
 import React from 'react';
-import { Col, Row } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
+import SectionTitle from 'src/components/SectionTitle';
 
 import bgimg1 from 'src/assets/image/vidbg1.png';
 import bgimg2 from 'src/assets/image/vidbg2.png';
 
-import TitleFirst from 'src/components/TitleFirst';
-
 const AboutUs = () => {
   return (
-    <Row className="my-5 about-us">
-      <TitleFirst title="About US" />
-      <Col md={{ size: 10, offset: 1 }}>
-        <p className="text-center fs-5 mx-5 text-primary">
-          We are an active investment management firm focused on delivering
+    <Container className="about-us">
+      <SectionTitle
+        title="About US"
+        description="We are an active investment management firm focused on delivering
           premier integrated financial client portfolio solutions, deploying the
           latest technology to ensure we stay at the forefront of our evolving
-          industry.
-        </p>
-      </Col>
-      <Col md={12} className="my-5">
-        <div className="d-flex justify-content-center  vdsec ">
-          <iframe
-            src="https://www.youtube.com/embed/0TImic4N1ko"
-            className="border border-0 rounded my-5"
-          />
-          <img src={bgimg1} alt="bg" className="bgtop" />
-          <img src={bgimg2} alt="bg" className="bgbtm" />
-        </div>
-      </Col>
-    </Row>
+          industry."
+        border={false}
+        color="primary"
+      />
+      <Row>
+        <Col md={12} className="my-5">
+          <div className="d-flex justify-content-center  vdsec ">
+            <iframe
+              src="https://www.youtube.com/embed/0TImic4N1ko"
+              className="border border-0 rounded my-5"
+            />
+            <img src={bgimg1} alt="bg" className="bgtop" />
+            <img src={bgimg2} alt="bg" className="bgbtm" />
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

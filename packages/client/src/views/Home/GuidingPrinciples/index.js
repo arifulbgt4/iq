@@ -10,7 +10,7 @@ const GuidingPrinciple = () => {
   return (
     <section className="guiding-principle">
       <Container>
-        <SectionTitle title="Our Guiding Principles" />
+        <SectionTitle title="Our Guiding Principles" border={false} />
         <Row>
           <Col md={12}>
             {data &&

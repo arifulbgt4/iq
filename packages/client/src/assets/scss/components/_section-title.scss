@@ -1,8 +1,11 @@
 .section-title {
   h1 {
+    font-size: 58px;
     &.heading {
       padding-bottom: 1rem;
       margin-bottom: 12px;
+    }
+    &.border-line {
       &::after {
         content: '';
         position: absolute;

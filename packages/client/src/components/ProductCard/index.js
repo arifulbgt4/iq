@@ -31,13 +31,13 @@ const ProductCard = (props) => {
       style={{ transform: property.xys.interpolate(trans) }}
     >
       <CardBody className="text-center">
-        <CardTitle tag="h3" className="">
+        <CardTitle tag="h2" className="">
           Product
         </CardTitle>
         <CardSubtitle tag="h1" className="my-5 ">
           {title}
         </CardSubtitle>
-        <h3 className="fw-normal">Details</h3>
+        <h2 className="fw-normal">Details</h2>
         <CardText className="details">{text}</CardText>
         <Button color="primary" outline className="rounded-pill mt-3 px-4">
           Shedule an appointment

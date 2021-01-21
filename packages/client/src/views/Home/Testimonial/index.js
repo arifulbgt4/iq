@@ -32,7 +32,7 @@ const Testimonial = () => {
       <Container>
         <SectionTitle
           title="Testimonial"
-          description="Our vectory is in our client contentment and success"
+          description='"Our vectory is in our client contentment and success"'
           border={false}
         />
         <Row className="mb-5">
@@ -58,8 +58,8 @@ const Testimonial = () => {
                     className="team-member position-relative text-center pt-5"
                   >
                     <h1 className="text-center position-relative mb-5 mt-3" />
-                    <p className="px-4 text-primary pt-5">{items.text}</p>
-                    <h5>{items.name}</h5>
+                    <p className="px-4 text-primary pt-5 px-5">{items.text}</p>
+                    <h3>{items.name}</h3>
                   </div>
                 ))}
             </Carousel>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import CustomButtonGroupAsArrows from 'src/components/CustomArrows';
 
 const Slider = (props) => {
   const {
@@ -42,9 +41,8 @@ const Slider = (props) => {
       customTransition="transform 1000ms ease-in-out"
       transitionDuration={1000}
       arrows={false}
-      showDots
-      itemClass="px-2 justify-content-center"
-      customButtonGroup={<CustomButtonGroupAsArrows />}
+      showDots={false}
+      itemClass=" justify-content-center"
     >
       {children}
     </Carousel>

@@ -12,6 +12,8 @@ import Footer from 'src/components/Footer';
 // Pages
 const Docs = lazy(() => import('../Documentation'));
 const Home = lazy(() => import('../Home'));
+const Carrer = lazy(() => import('../Carrer'));
+const ContactUs = lazy(() => import('../ContactUs'));
 
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
@@ -33,7 +35,28 @@ const App = () => {
                 })
               }
             />
-
+            <Route
+              exact
+              path="/carrer"
+              render={(props) =>
+                withTitle({
+                  component: Carrer,
+                  title: 'Carrer',
+                  ...props,
+                })
+              }
+            />
+            <Route
+              exact
+              path="/contact"
+              render={(props) =>
+                withTitle({
+                  component: ContactUs,
+                  title: 'contact',
+                  ...props,
+                })
+              }
+            />
             {/* Doc Page */}
             <Route
               path="/docs"

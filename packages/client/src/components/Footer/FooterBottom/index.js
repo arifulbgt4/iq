@@ -3,20 +3,21 @@ import { Link } from 'react-router-dom';
 import {
   Col,
   Form,
-  FormGroup,
   Input,
-  Label,
   Row,
   ListGroup,
   ListGroupItem,
+  InputGroup,
+  InputGroupAddon,
+  Button,
 } from 'reactstrap';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
   faPinterestP,
+  faTelegram,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -26,16 +27,21 @@ const FooterBottom = () => {
   return (
     <Row className="mt-4">
       <Col md={4}>
-        <Form className="me-5 pe-5">
-          <FormGroup>
-            <Label className="mb-2">Get In Touch</Label>
+        <Form className="me-5 pe-5 w-75" onSubmit={(e) => e.preventDefault()}>
+          <InputGroup className="border p-1">
             <Input
               type="email"
               name="email"
               placeholder="Enter Your Mail"
-              className="bg-transparent"
+              className="bg-transparent border-0"
             />
-          </FormGroup>
+            <InputGroupAddon addonType="append">
+              <Button className="bg-transparent border-0 text-white">
+                {' '}
+                <FontAwesomeIcon icon={faTelegram} style={{ fontSize: 25 }} />
+              </Button>
+            </InputGroupAddon>
+          </InputGroup>
         </Form>
       </Col>
       <Col md={4} className="text-center">

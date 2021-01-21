@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hero_sliders",
+  "info": {
+    "name": "Hero Slider",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images", "files", "videos"],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

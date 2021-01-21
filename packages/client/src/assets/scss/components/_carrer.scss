@@ -1,0 +1,41 @@
+.carrer {
+  .carrer-right {
+    &::after {
+      position: absolute;
+      content: url(./../image/carrer/lines2.png);
+      bottom: -100px;
+      left: 10%;
+    }
+  }
+  .carrer-left {
+    &::after {
+      position: absolute;
+      content: url(./../image/carrer/line1.png);
+      bottom: -100px;
+      left: 10%;
+    }
+  }
+  .carrer-items {
+    .details {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &:first-child {
+      h2 {
+        font-size: 73px;
+        font-weight: bold;
+      }
+    }
+    &:last-child {
+      .carrer-left {
+        &::after {
+          content: '' !important;
+        }
+      }
+    }
+  }
+  h2 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+}
