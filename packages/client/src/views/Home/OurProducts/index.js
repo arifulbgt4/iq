@@ -12,15 +12,18 @@ const OurProducts = () => {
       <Container>
         <SectionTitle color="white" title="our products" />
         <Row className="mt-3">
-          <Col md={{ size: 10, offset: 1 }}>
+          <Col xl={{ size: 10, offset: 1 }} md={12} lg={12}>
             <Row>
               {data &&
                 data.map((item) => (
                   <Col
                     key={item.id}
-                    md={4}
-                    style={{ padding: '0 4.5rem' }}
-                    className="product-item"
+                    xxl={4}
+                    xl={4}
+                    lg={6}
+                    md={12}
+                    sm={12}
+                    className="product-item pb-4"
                   >
                     <ProductCard title={item.title} text={item.text} />{' '}
                   </Col>

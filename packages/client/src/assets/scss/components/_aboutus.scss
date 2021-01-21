@@ -1,4 +1,7 @@
 .about-us {
+  @media (min-width: 1400px) {
+    height: 100vh;
+  }
   p {
     font-size: 30px;
     margin: 1rem 0 0;
