@@ -6,12 +6,29 @@ import { Col, Input, Row } from 'reactstrap';
 const FooterTop = () => {
   return (
     <Row className="py-4">
-      <Col md={4}>
-        <h4 className="mb-0 text-white">
+      <Col
+        xl={4}
+        lg={12}
+        className="d-flex justify-content-between justify-content-lg-center text-center mb-0 mb-md-3 mb-xl-0"
+      >
+        <h4 className="mb-0 text-white text-center">
           <span className="text-info">IQ</span>Stock
         </h4>
+        <div className="list-unstyled d-flex d-lg-none align-items-center me-0 me-md-5 pe-0 pe-md-4">
+          <FontAwesomeIcon icon={faCubes} style={{ fontSize: 25 }} />
+          <Input
+            type="select"
+            name="select"
+            className="bg-transparent text-white border-0 ps-1"
+          >
+            <option>English(USA)</option>
+            <option>English(USA)</option>
+            <option>English(USA)</option>
+            <option>English(USA)</option>
+          </Input>
+        </div>
       </Col>
-      <Col md={8}>
+      <Col md={12} lg={12} xl={8} className="d-none d-md-block">
         <ul className="d-flex justify-content-between align-items-center m-0 p-0">
           <li className="list-unstyled">
             <h5 className="text-white">Quick Links</h5>{' '}
@@ -19,11 +36,11 @@ const FooterTop = () => {
           <li className="list-unstyled">
             <h5 className="text-white">About US</h5>{' '}
           </li>
-          <li className="list-unstyled">
-            <h5 className="text-white"> Contact US</h5>
+          <li className="list-unstyled me-5 me-lg-0">
+            <h5 className="text-white me-5 me-lg-0"> Contact US</h5>
           </li>
 
-          <li className="list-unstyled d-flex align-items-center">
+          <li className="list-unstyled d-none d-lg-flex align-items-center">
             <FontAwesomeIcon icon={faCubes} style={{ fontSize: 25 }} />
             <Input
               type="select"
