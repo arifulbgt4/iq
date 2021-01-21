@@ -7,10 +7,19 @@ import BlogCard from 'src/components/BlogCard';
 const BlogPosts = () => {
   const blogPost = useSelector((store) => store.blogs);
   return (
-    <Row>
+    <Row className="d-flex justify-content-center">
       {Array.isArray(blogPost) &&
         blogPost.map((item) => (
-          <Col md={4} key={item.id} style={{ padding: '0 5rem' }}>
+          <Col
+            xl={4}
+            lg={6}
+            md={6}
+            sm={12}
+            xs={12}
+            key={item.id}
+            style={{ padding: '0 5rem' }}
+            className="blog-col"
+          >
             <BlogCard
               id={item.id}
               img={item.img}
