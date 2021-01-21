@@ -233,5 +233,9 @@ footer {
   .canvas-animation {
     position: absolute;
     bottom: -70px;
+    @media (max-width: 991.98px) {
+      top: 0;
+      bottom: unset;
+    }
   }
 }
