@@ -10,9 +10,13 @@
 
 .testimonial-slider {
   padding: 110px 0px;
+  @media (max-width: 1199.98px) {
+    padding: 110px 0 0px;
+  }
   h1 {
     font-size: 5rem;
     padding-top: 103px;
+
     &::after {
       content: '';
       border: 1px solid $primary;

@@ -30,7 +30,7 @@ const ContactForm = () => {
           </Col>
 
           <Col lg={6}>
-            <FormGroup row>
+            <FormGroup row className="einp">
               <Label htmlFor="email" className="fs-5 text-primary fw-bold">
                 Email*
               </Label>
@@ -85,11 +85,11 @@ const ContactForm = () => {
           </FormGroup>
         </div>
 
-        <div className="d-flex justify-content-end">
-          <Button type="submit" color="primary" className="w-25">
+        <Row className="justify-content-end sub-btn-row      px-2">
+          <Button type="submit" color="primary" className=" me-1 w-25 rbtn">
             Submit
           </Button>
-        </div>
+        </Row>
       </Form>
     </>
   );
