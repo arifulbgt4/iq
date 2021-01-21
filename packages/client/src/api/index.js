@@ -9,5 +9,5 @@ export const getHeroSlider = () => {
 
 // API to get hero slider
 export const getChooseUs = () => {
-  return axios.get(`${API_URL}/hero-sliders`);
+  return axios.get(`${API_URL}/why-choose-uses`);
 };
