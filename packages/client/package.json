@@ -19,6 +19,7 @@
     "bootstrap": "^5.0.0-beta1",
     "eslint-import-resolver-alias": "^1.1.2",
     "express": "^4.17.1",
+    "google-maps-react": "^2.0.6",
     "http": "^0.0.1-security",
     "http-proxy-middleware": "^1.0.6",
     "is-docker": "^2.1.1",
