@@ -2,8 +2,11 @@
   .react-multiple-carousel__arrow {
     background: $primary;
     @media (max-width: 767.98px) {
-      min-width: 23px;
-      min-height: 23px;
+      min-width: 30px;
+      min-height: 30px;
+    }
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -70,6 +73,9 @@
     min-height: 23px;
     @media (min-width: 576px) {
       display: none;
+    }
+    &:focus {
+      outline: none;
     }
   }
   @media (max-width: 575.98px) {
