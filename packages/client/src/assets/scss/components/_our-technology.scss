@@ -8,6 +8,7 @@
     url(./../image/ourTechnology/our-technology-bg.png) no-repeat right;
   .feature {
     padding: 150px 0;
+    @media (max-width: 767.98px) { padding: 50px 0; }
     &-left {
       &-subtitle {
         font-size: 23px;
@@ -21,17 +22,30 @@
       }
     }
   }
+  .feature-image {
+    transition: all 0.3s ease;
+  }
+  .sticky-image {
+    margin-top: 100px !important;
+  }
   .technology-nav {
     transition: all 1s ease;
     z-index: 1000;
-    .sticky-nav {
+    width: 100% !important;
+    ul {
+      transition: all 1s ease;
       background: $primary;
       border-bottom: 2px solid white !important;
+      flex-wrap: wrap !important;
+      padding: 0 !important;
       li {
         margin-right: 20px;
         a {
           margin-bottom: 0;
           border: 0;
+          padding: 0px 10px 22px;
+          @media (max-width: 575.98px) {padding: 0px 10px 5px; }
+
           &.activeCategoryLink {
             color: white !important;
             border-bottom: 3px solid white !important;

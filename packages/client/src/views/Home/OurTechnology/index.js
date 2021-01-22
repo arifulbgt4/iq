@@ -7,11 +7,12 @@ import { Sticky } from 'react-sticky';
 import { StickyContainer } from 'react-sticky';
 import Feature from './TabsContent/Feature';
 import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
+
 const categories = [
-  { id: 1, name: 'Feature1' },
-  { id: 2, name: 'Feature2' },
-  { id: 3, name: 'Feature3' },
-  { id: 4, name: 'Feature4' },
+  { id: 1, name: 'Feature1', title: 'Feature 1' },
+  { id: 2, name: 'Feature2', title: 'Feature 2' },
+  { id: 3, name: 'Feature3', title: 'Feature 3' },
+  { id: 4, name: 'Feature4', title: 'Feature 4' },
 ];
 export default class OurTechnology extends Component {
   constructor(props) {
@@ -52,15 +53,14 @@ export default class OurTechnology extends Component {
                           flexWrap: 'nowrap',
                           height: '70px',
                           justifyItems: 'center',
+                          alignItems: 'center',
                         }}
-                        className="sticky-nav"
                       >
                         {categories.map((category) => (
                           <li
                             key={category.id}
                             style={{
                               display: 'inline-block',
-                              margin: '20px',
                             }}
                             ref={this[category.id]}
                           >
@@ -94,38 +94,30 @@ export default class OurTechnology extends Component {
                             className={category.id}
                             key={'display' + category.id}
                           >
-
-                              {category.id === 1 && (
-                                <Feature title="feature 1" />
-                              )}
-                              {category.id === 2 && (
-                                <Feature title="feature 2" />
-                              )}
-                              {category.id === 3 && (
-                                <Feature title="feature 3" />
-                              )}
-                              {category.id === 4 && (
-                                <Feature title="feature 4" />
-                              )}
-
+                            {<Feature title={category.title} />}
                           </div>
                         ))}
                       </div>
                     </Col>
-                    <Col md={6}>
-                    <Sticky disableCompensation topOffset={0}>
-                      {({ style, isSticky }) => (
-                        <div  style={style} className='mt-5 pt-5'>
-                          <figure className="feature-right m-0">
-                            <img
-                              src={featureRightImg}
-                              alt="feature right image"
-                              className="img-fluid"
-                            />
-                          </figure>
-                        </div>
-                      )}
-                    </Sticky>
+                    <Col md={6} className='d-none d-md-block'>
+                      <Sticky disableCompensation topOffset={10}>
+                        {({ style, isSticky }) => (
+                          <div
+                            style={style}
+                            className={`feature-image mt-4 ${
+                              isSticky ? 'sticky-image' : 'non-sticky'
+                            }`}
+                          >
+                            <figure className="feature-right m-0">
+                              <img
+                                src={featureRightImg}
+                                alt="feature right image"
+                                className="img-fluid"
+                              />
+                            </figure>
+                          </div>
+                        )}
+                      </Sticky>
                     </Col>
                   </Row>
                 </StickyContainer>
