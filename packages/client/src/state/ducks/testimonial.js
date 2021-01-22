@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { getTestimonials } from 'src/api';
+
 const data = [
   {
     id: 1,
@@ -26,12 +28,52 @@ const data = [
   },
 ];
 
+function startLoading(state) {
+  state.loading = true;
+}
+
+function loadingFailed(state, { payload }) {
+  state.data = [];
+  state.loading = false;
+  state.error = payload;
+}
+
 const testimonailSlice = createSlice({
   name: 'testimonial',
   initialState: data,
-  reducers: {},
+  reducers: {
+    getTestimonialsStart: startLoading,
+
+    getTestimonialsSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getTestimonialsFailure: loadingFailed,
+  },
 });
+
+export const {
+  getTestimonialsStart,
+  getTestimonialsSuccess,
+  getTestimonialsFailure,
+} = testimonailSlice.actions;
 
 export default {
   testimonial: testimonailSlice.reducer,
+};
+
+export const fatchTestimonials = () => async (dispatch) => {
+  try {
+    dispatch(getTestimonialsStart());
+
+    const { data } = await getTestimonials();
+
+    dispatch(getTestimonialsSuccess(data));
+  } catch (error) {
+    dispatch(getTestimonialsFailure(error.toString()));
+  }
 };
