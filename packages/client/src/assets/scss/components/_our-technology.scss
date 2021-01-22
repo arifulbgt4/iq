@@ -38,6 +38,11 @@
       border-bottom: 2px solid white !important;
       flex-wrap: wrap !important;
       padding: 0 !important;
+      display: flex;
+      flex-direction: row !important;
+      overflow: hidden;
+      align-items: center;
+      height: 70px;
       li {
         margin-right: 20px;
         a {

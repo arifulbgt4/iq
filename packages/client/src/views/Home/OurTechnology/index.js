@@ -42,20 +42,7 @@ export default class OurTechnology extends Component {
                         isSticky ? 'sticky-nav' : 'non-sticky position-sticky'
                       }`}
                     >
-                      <ul
-                        style={{
-                          display: 'flex',
-                          flexDirection: 'row',
-                          overflowY: 'hidden',
-                          whiteSpace: 'nowrap',
-                          listStyleType: 'none',
-                          paddingLeft: '20px',
-                          flexWrap: 'nowrap',
-                          height: '70px',
-                          justifyItems: 'center',
-                          alignItems: 'center',
-                        }}
-                      >
+                      <ul>
                         {categories.map((category) => (
                           <li
                             key={category.id}
@@ -99,7 +86,7 @@ export default class OurTechnology extends Component {
                         ))}
                       </div>
                     </Col>
-                    <Col md={6} className='d-none d-md-block'>
+                    <Col md={6} className="d-none d-md-block">
                       <Sticky disableCompensation topOffset={10}>
                         {({ style, isSticky }) => (
                           <div
