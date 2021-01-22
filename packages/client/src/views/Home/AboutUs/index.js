@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { fatchAboutUs } from 'src/state/ducks/aboutUs';
 import SectionTitle from 'src/components/SectionTitle';
 
 const AboutUs = () => {
+  const { data, loading } = useSelector((store) => store.aboutUs);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fatchAboutUs());
+  }, [dispatch]);
+
+  if (loading) {
+    return 'Loadding';
+  }
+  const { title, description } = data;
+  console.log('data', data);
+
   return (
     <Container className="about-us">
       <SectionTitle
-        title="About US"
-        description="We are an active investment management firm focused on delivering
-          premier integrated financial client portfolio solutions, deploying the
-          latest technology to ensure we stay at the forefront of our evolving
-          industry."
+        title={title}
+        description={description}
         border={false}
         color="primary"
       />

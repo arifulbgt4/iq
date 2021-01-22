@@ -13,7 +13,7 @@ function loadingFailed(state, { payload }) {
 }
 
 const aboutUsSlice = createSlice({
-  name: 'AboutUs',
+  name: 'aboutUs',
   initialState: {
     data: {},
     loading: true,
