@@ -9,6 +9,7 @@ import herobanner from './herobanner';
 import whyChooseUs from './whyChooseUs';
 import founder from './founder';
 import technology from './technology';
+import aboutUs from './aboutUs';
 
 export default combineReducers({
   ...ui,
@@ -20,4 +21,5 @@ export default combineReducers({
   ...whyChooseUs,
   ...founder,
   ...technology,
+  ...aboutUs,
 });
