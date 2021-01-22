@@ -12,3 +12,44 @@ header {
     }
   }
 }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .hbtns {
+    width: 30%;
+  }
+  .hnav {
+    width: 40%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .nav-link {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+
+@media screen and (min-width: 459px) and (max-width: 991px) {
+  .hlogo {
+    justify-content: center;
+  }
+  .nav {
+    width: 100%;
+    justify-content: center !important;
+  }
+  .hbtns {
+    justify-content: center !important;
+    .btn {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 459px) {
+  .hnav {
+    display: none;
+  }
+  .hbtns {
+    display: none !important;
+  }
+}
