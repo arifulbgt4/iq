@@ -8,7 +8,9 @@
     url(./../image/ourTechnology/our-technology-bg.png) no-repeat right;
   .feature {
     padding: 150px 0;
-    @media (max-width: 767.98px) { padding: 50px 0; }
+    @media (max-width: 767.98px) {
+      padding: 50px 0;
+    }
     &-left {
       &-subtitle {
         font-size: 23px;
@@ -31,10 +33,13 @@
   .technology-nav {
     transition: all 1s ease;
     z-index: 1000;
-    width: 100% !important;
     ul {
       transition: all 1s ease;
-      background: $primary;
+      background: linear-gradient(
+        to right,
+        rgba(33, 37, 106, 0.98) 39%,
+        rgba(36, 73, 145, 0.86) 100%
+      );
       border-bottom: 2px solid white !important;
       flex-wrap: wrap !important;
       padding: 0 !important;
@@ -49,7 +54,9 @@
           margin-bottom: 0;
           border: 0;
           padding: 0px 10px 22px;
-          @media (max-width: 575.98px) {padding: 0px 10px 5px; }
+          @media (max-width: 575.98px) {
+            padding: 0px 10px 5px;
+          }
 
           &.activeCategoryLink {
             color: white !important;
