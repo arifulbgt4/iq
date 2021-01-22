@@ -1,6 +1,14 @@
 .about-us {
   @media (min-width: 1400px) {
-    height: 100vh;
+    .about-us-row {
+      height: 85vh;
+      align-items: center;
+    }
+    .section-title {
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
   }
   p {
     font-size: 30px;

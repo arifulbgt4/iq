@@ -24,9 +24,7 @@ const Home = () => {
       <OurProducts />
       <BlogSection />
       <Testimonial />
-      <Container>
-        <ContactUs />
-      </Container>
+      <ContactUs />
     </>
   );
 };

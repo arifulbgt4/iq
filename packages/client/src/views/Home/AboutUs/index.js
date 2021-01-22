@@ -14,14 +14,14 @@ const AboutUs = () => {
         border={false}
         color="primary"
       />
-      <Row className="mt-2 mt-md-4 mb-5">
+      <Row className="mt-2 mt-xl-0 mb-5 mb-xl-0 about-us-row">
         <Col md={12}>
           <div className="d-flex justify-content-center">
             <iframe
               height="330"
               width="530"
               src="https://www.youtube.com/embed/tgbNymZ7vqY"
-              className="my-5 rounded"
+              className="my-2 my-md-5 my-xl-0 rounded"
             />
           </div>
         </Col>
