@@ -6,7 +6,7 @@ import { Link, Element } from 'react-scroll';
 import { Sticky } from 'react-sticky';
 import { StickyContainer } from 'react-sticky';
 import Feature from './TabsContent/Feature';
-
+import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 const categories = [
   { id: 1, name: 'Feature1' },
   { id: 2, name: 'Feature2' },
@@ -84,22 +84,51 @@ export default class OurTechnology extends Component {
                     </div>
                   )}
                 </Sticky>
-                <div style={{ marginTop: '30px' }}>
-                  {categories.map((category) => (
-                    <Element
-                      name={category.id.toString()}
-                      className={category.id}
-                      key={'display' + category.id}
-                    >
-                      <div md={6}>
-                        {category.id === 1 && <Feature title="feature 1" />}
-                        {category.id === 2 && <Feature title="feature 2" />}
-                        {category.id === 3 && <Feature title="feature 3" />}
-                        {category.id === 4 && <Feature title="feature 4" />}
+                <StickyContainer>
+                  <Row>
+                    <Col md={6}>
+                      <div style={{ marginTop: '30px' }}>
+                        {categories.map((category) => (
+                          <div
+                            name={category.id.toString()}
+                            className={category.id}
+                            key={'display' + category.id}
+                          >
+
+                              {category.id === 1 && (
+                                <Feature title="feature 1" />
+                              )}
+                              {category.id === 2 && (
+                                <Feature title="feature 2" />
+                              )}
+                              {category.id === 3 && (
+                                <Feature title="feature 3" />
+                              )}
+                              {category.id === 4 && (
+                                <Feature title="feature 4" />
+                              )}
+
+                          </div>
+                        ))}
                       </div>
-                    </Element>
-                  ))}
-                </div>
+                    </Col>
+                    <Col md={6}>
+                    <Sticky disableCompensation topOffset={0}>
+                      {({ style, isSticky }) => (
+                        <div  style={style} className='mt-5 pt-5'>
+                          <figure className="feature-right m-0">
+                            <img
+                              src={featureRightImg}
+                              alt="feature right image"
+                              className="img-fluid"
+                            />
+                          </figure>
+                        </div>
+                      )}
+                    </Sticky>
+                    </Col>
+                  </Row>
+                </StickyContainer>
               </StickyContainer>
             </Col>
           </Row>
