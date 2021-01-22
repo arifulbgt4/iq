@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardTitle, CardText, Row, Col, CardSubtitle } from 'reactstrap';
-import { Sticky } from 'react-sticky';
-import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
+import { Card, CardTitle, CardText, CardSubtitle } from 'reactstrap';
+
 
 const Feature = (props) => {
   const { title } = props;
