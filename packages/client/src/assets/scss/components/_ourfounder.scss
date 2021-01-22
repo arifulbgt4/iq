@@ -1,5 +1,12 @@
 .our-founder {
   padding: 300px 0 100px;
+  @media (max-width: 767.98px) {
+    padding: 100px 0 50px;
+  }
+  @media (max-width: 575.98px) {
+    padding: 50px 0 50px;
+  }
+
   background: url(./../image/heroBanner/Group_founder.png) no-repeat;
   &-image {
     position: relative;

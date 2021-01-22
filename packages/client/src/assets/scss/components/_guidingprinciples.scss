@@ -7,6 +7,12 @@
 }
 .guiding-principle {
   padding: 12rem 0 0 0;
+  @media (max-width: 767.98px) {
+    padding: 4rem 0 0 0;
+  }
+  @media (max-width: 575.98px) {
+    padding: 3rem 0 0 0;
+  }
   background: url(./../image/guidingbg.png) no-repeat;
   h2 {
     font-size: 40px;
