@@ -74,7 +74,7 @@ export default class OurTechnology extends Component {
                 <StickyContainer>
                   <Row>
                     <Col md={6}>
-                      <div style={{ marginTop: '30px' }}>
+                      <div>
                         {categories.map((category) => (
                           <div
                             name={category.id.toString()}

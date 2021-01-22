@@ -10,7 +10,7 @@ const Feature = (props) => {
     <div className="feature">
       <Card
         body
-        className="feature-left text-capitalize bg-transparent border-0"
+        className="feature-left text-capitalize bg-transparent border-0 text-center text-lg-start"
       >
         <CardSubtitle
           tag="h5"
@@ -27,7 +27,7 @@ const Feature = (props) => {
           dummy text of the printing and typesetting industry. Lorem Ipsum has
           been the industry's
         </CardText>
-        <div className="feature-left-button d-flex mt-3">
+        <div className="feature-left-button d-flex mt-3 justify-content-center justify-content-lg-start">
           <Link to="#" className="btn btn-secondary text-white">
             contact us
           </Link>

@@ -5,11 +5,13 @@
       rgba(33, 37, 106, 0.98) 39%,
       rgba(36, 73, 145, 0.86) 100%
     ),
-    url(./../image/ourTechnology/our-technology-bg.png) no-repeat right;
+    url(./../image/ourTechnology/our-technology-bg.png) no-repeat;
+  // background-repeat: no-repeat;
+  background-size: 100% 100%;
   .feature {
     padding: 150px 0;
-    @media (max-width: 767.98px) {
-      padding: 50px 0;
+    @media (max-width: 1199.98px) {
+      padding: 20px 0;
     }
     &-left {
       &-subtitle {
@@ -18,9 +20,18 @@
       &-title {
         font-size: 70px;
         font-weight: 500;
+        @media (max-width: 991.98px) {
+          font-size: 35px;
+        }
+        @media (max-width: 575.98px) {
+          font-size: 30px;
+        }
       }
       &-text {
         font-size: 20px;
+          @media (max-width: 991.98px) {
+          font-size: 16px;
+        }
       }
     }
   }
