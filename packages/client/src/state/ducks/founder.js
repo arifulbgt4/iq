@@ -13,7 +13,7 @@ function loadingFailed(state, { payload }) {
 }
 
 const founderSlice = createSlice({
-  name: 'Founder',
+  name: 'founder',
   initialState: {
     data: {},
     loading: true,

@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "founders",
   "info": {
-    "name": "Founder"
+    "name": "Founder",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,12 +20,19 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
     "name": {
       "type": "string"
+    },
+    "history": {
+      "type": "richtext"
     }
   }
 }
