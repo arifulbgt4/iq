@@ -40,3 +40,14 @@
 .posation {
   margin-bottom: 150px;
 }
+
+@media (min-width: 576px) {
+  .contact-info-card {
+    margin-bottom: 70px !important;
+  }
+}
+@media (min-width: 320px) {
+  .contact-info-card {
+    margin-bottom: 70px !important;
+  }
+}
