@@ -3,7 +3,7 @@ import { Button, Col, Row } from 'reactstrap';
 
 const Apply = () => {
   return (
-    <Row className="px-5 py-5">
+    <Row className="px-0 px-md-5 py-5 text-center text-md-start">
       <Col>
         <h2>How To Apply</h2>
         <p>
@@ -12,7 +12,10 @@ const Apply = () => {
           the right fit for us, we'll contact you through email regarding
           further details!
         </p>
-        <Button color="primary" className=" d-block ms-auto rounded-pill px-5">
+        <Button
+          color="primary"
+          className=" d-inline-block d-md-block  ms-auto rounded-pill px-5"
+        >
           Apply Now
         </Button>
       </Col>

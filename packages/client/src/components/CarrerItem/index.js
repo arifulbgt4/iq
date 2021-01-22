@@ -5,8 +5,8 @@ const CarrerItem = (props) => {
   const { img, title, children, id } = props;
   return (
     <Row
-      className={`align-items-center my-5 py-4 position-relative carrer-items ${
-        id > 2 && 'px-5'
+      className={`align-items-center my-5 py-4 position-relative carrer-items text-center text-md-start ${
+        id > 2 && 'px-0 px-md-5'
       } ${id % 2 === 0 ? 'carrer-right' : 'carrer-left'}`}
     >
       <Col
