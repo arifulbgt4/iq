@@ -8,6 +8,7 @@ import testimonial from './testimonial';
 import herobanner from './herobanner';
 import whyChooseUs from './whyChooseUs';
 import founder from './founder';
+import technology from './technology';
 
 export default combineReducers({
   ...ui,
@@ -18,4 +19,5 @@ export default combineReducers({
   ...herobanner,
   ...whyChooseUs,
   ...founder,
+  ...technology,
 });
