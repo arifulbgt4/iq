@@ -4,7 +4,8 @@ import { Card, CardTitle, CardText, Row, Col, CardSubtitle } from 'reactstrap';
 
 import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 
-const Feature = () => {
+const Feature = (props) => {
+  const {title} = props;
   return (
     <div className="feature">
       <Row>
@@ -17,7 +18,7 @@ const Feature = () => {
               tag="h5"
               className="feature-left-subtitle mb-2 pb-1 text-white"
             >
-              feature 1
+              {title}
             </CardSubtitle>
             <CardTitle tag="h1" className="feature-left-title pb-1 text-white">
               Example @

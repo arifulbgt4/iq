@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'reactstrap';
-
+import { StickyContainer } from 'react-sticky'
 import OurFounder from './OurFounder';
 import GuidingPrinciple from './GuidingPrinciples';
 import HeroBanner from './HeroBanner';
@@ -19,6 +19,9 @@ const Home = () => {
       <WhyChooseUs />
       <GuidingPrinciple />
       <OurFounder />
+      {/* <StickyContainer>
+
+      </StickyContainer> */}
       <OurTechnology />
       <AboutUs />
       <OurProducts />

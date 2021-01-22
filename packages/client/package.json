@@ -32,7 +32,10 @@
     "react-perfect-scrollbar": "^1.5.8",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.1",
+    "react-scroll-section": "^3.0.2",
     "react-spring": "^8.0.27",
+    "react-sticky": "^6.0.3",
     "reactstrap": "^8.5.1",
     "three": "^0.124.0",
     "three-orbitcontrols": "^2.110.3"
