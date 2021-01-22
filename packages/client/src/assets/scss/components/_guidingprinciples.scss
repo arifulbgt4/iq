@@ -14,13 +14,38 @@
     padding: 3rem 0 0 0;
   }
   background: url(./../image/guidingbg.png) no-repeat;
-  h2 {
-    font-size: 40px;
-    margin-bottom: 8px;
-  }
-  p {
-    text-align: justify;
-    font-weight: 500;
+  &-card {
+    &_description {
+      @media (max-width: 767px) {
+        margin-left: 0 !important;
+      }
+      h2 {
+        font-size: 40px;
+        margin-bottom: 8px;
+        @media (max-width: 991px) and (min-width: 576px) {
+          font-size: 36px !important;
+        }
+        @media (max-width: 575px) {
+          font-size: 32px !important;
+        }
+        @media (max-width: 399px) {
+          font-size: 30px !important;
+        }
+      }
+      p {
+        text-align: justify;
+        font-weight: 500;
+        @media (max-width: 991px) and (min-width: 576px) {
+          font-size: 20px !important;
+        }
+        @media (max-width: 575px) and (min-width: 400px) {
+          font-size: 18px !important;
+        }
+        @media (max-width: 399px) {
+          font-size: 16px !important;
+        }
+      }
+    }
   }
 }
 
