@@ -36,14 +36,13 @@ const Founder = () => {
         </figure>
       </Col>
       <Col md={8}>
-        <div className="text-primary">
-          {/* <h1 className="mt-0">"</h1> */}
+        <div>
           <img
             className="img-cortetion"
             src="https://antor.thememaster.net/AllImage/cotetion.png"
             alt="a"
           />
-          <p className="m-0  info-text text-primary">
+          <p className="m-0  info-text ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply
             dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -58,7 +57,7 @@ const Founder = () => {
           </div>
 
           <div className="our-history position-relative">
-            <p className="mt-2 d-inline-block mb-0 text-primary history">
+            <p className="mt-2 d-inline-block mb-0  history">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's Lorem Ipsum is
               simply dummy text of the printing and typesetting industry. Lorem

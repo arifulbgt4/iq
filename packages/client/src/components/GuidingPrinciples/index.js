@@ -8,7 +8,7 @@ const GuidingPrinciples = (props) => {
         <img className="px-4 custrom-img" src={img} alt="idea" />
         <div className="text-capitalize ms-3">
           <h2 className="fw-bold">{title}</h2>
-          <p className="text-primary">{description}</p>
+          <p>{description}</p>
         </div>
       </div>
     </div>

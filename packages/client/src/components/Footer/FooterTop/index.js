@@ -9,9 +9,9 @@ const FooterTop = () => {
       <Col
         xl={4}
         lg={12}
-        className="d-flex justify-content-between justify-content-lg-center text-center mb-0 mb-md-3 mb-xl-0"
+        className="d-flex justify-content-between justify-content-lg-center justify-content-xl-start mb-0 mb-md-3 mb-xl-0"
       >
-        <h4 className="mb-0 text-white text-center">
+        <h4 className="mb-0 text-white ">
           <span className="text-info">IQ</span>Stock
         </h4>
         <div className="list-unstyled d-flex d-lg-none align-items-center me-0 me-md-5 pe-0 pe-md-4">

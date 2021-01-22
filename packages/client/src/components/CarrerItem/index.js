@@ -18,7 +18,7 @@ const CarrerItem = (props) => {
       >
         <div>
           <h2 className="mb-4 font-weight-normal">{title}</h2>
-          <div className="details mb-4 text-primary">{children}</div>
+          <div className="details mb-4">{children}</div>
         </div>
       </Col>
       <Col

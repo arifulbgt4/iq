@@ -79,10 +79,10 @@ const HeroBanner = () => {
                 <Row className="pb-5" key={items.id}>
                   <Col md={6}>
                     <div className="banner-content">
-                      <h1 className="banner-content-heading text-capitalize fw-bolder text-primary">
+                      <h1 className="banner-content-heading text-capitalize fw-bolder">
                         {items.title}
                       </h1>
-                      <p className="banner-content-description text-capitalize text-primary w-75">
+                      <p className="banner-content-description text-capitalize w-75">
                         {items.description}
                       </p>
                       <Button className="rounded-pill px-4" color="primary">
