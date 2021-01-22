@@ -17,3 +17,21 @@
     font-weight: 500;
   }
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) {
+  .card-width {
+    display: inline !important;
+    text-align: center;
+    .custrom-img {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 1200px) {
+  .card-width {
+    width: 100%;
+  }
+}
