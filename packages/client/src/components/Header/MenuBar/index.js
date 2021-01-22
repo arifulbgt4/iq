@@ -102,9 +102,13 @@ const options = [
       {
         id: 6,
         name: (
-          <Button outline className="rounded-pill px-4 " color="primary">
+          <NavLink
+            exact
+            className="nav-link text-capitalize text-secondary"
+            to="/docs"
+          >
             Login
-          </Button>
+          </NavLink>
         ),
       },
     ],
@@ -115,9 +119,13 @@ const options = [
       {
         id: 7,
         name: (
-          <Button outline className="rounded-pill px-4 " color="primary">
+          <NavLink
+            exact
+            className="nav-link text-capitalize text-secondary"
+            to="/docs"
+          >
             Back To office
-          </Button>
+          </NavLink>
         ),
       },
     ],

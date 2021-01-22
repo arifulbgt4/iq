@@ -62,8 +62,10 @@
 @media screen and (min-width: 320px) and (max-width: 458px) {
   .hiconclm {
     display: flex !important;
+    position: relative !important;
     .bar {
-      margin-left: 65%;
+      position: absolute !important;
+      right: 2% !important;
     }
   }
 }
