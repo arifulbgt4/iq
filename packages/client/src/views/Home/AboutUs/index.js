@@ -18,8 +18,8 @@ const AboutUs = () => {
         <Col md={12}>
           <div className="d-flex justify-content-center">
             <iframe
-              height="330"
-              width="530"
+              height="450"
+              width="715"
               src="https://www.youtube.com/embed/tgbNymZ7vqY"
               className="my-2 my-md-5 my-xl-0 rounded"
             />
