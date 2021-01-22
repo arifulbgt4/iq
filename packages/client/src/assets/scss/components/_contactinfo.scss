@@ -40,3 +40,93 @@
 .posation {
   margin-bottom: 150px;
 }
+
+@media (min-width: 768px) {
+  .contact-info-card {
+    .img-redus {
+      right: 38%;
+    }
+  }
+}
+
+// @media (min-width: 576px) {
+//   .contact-info-card {
+//     margin-bottom: 70px !important;
+//     .img-redus {
+//       right: 38%;
+//     }
+//   }
+// }
+// @media (min-width: 320px) {
+//   .contact-info-card {
+//     margin-bottom: 70px !important;
+//     // .img-redus {
+//     //   right: 35%;
+//     // }
+//   }
+// }
+
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 300px) {
+  .contact-info-card {
+    margin-bottom: 70px !important;
+    .img-redus {
+      right: 33%;
+    }
+  }
+}
+
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 375px) {
+  .contact-info-card {
+    margin-bottom: 70px !important;
+    .img-redus {
+      right: 35%;
+    }
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .contact-info-card {
+    margin-bottom: 70px !important;
+    .img-redus {
+      right: 38%;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .contact-info-card {
+    .img-redus {
+      right: 35%;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .contact-info-card {
+    .img-redus {
+      right: 33%;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .contact-info-card {
+    .img-redus {
+      right: 36%;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1620px and up)
+@media (min-width: 1620px) {
+  .contact-info-card {
+    .img-redus {
+      right: 39%;
+    }
+  }
+}

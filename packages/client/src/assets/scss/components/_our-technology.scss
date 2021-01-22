@@ -5,32 +5,14 @@
       rgba(33, 37, 106, 0.98) 39%,
       rgba(36, 73, 145, 0.86) 100%
     ),
-    url(./../image/ourTechnology/our-technology-bg.png) no-repeat right;
-  .nav-tabs {
-    .nav-item {
-      margin-right: 20px;
-      .nav-link {
-        margin-bottom: 0;
-        border: 0;
-        &.active {
-          color: white !important;
-          border-bottom: 3px solid white !important;
-          border-left: 0;
-          border-right: 0;
-          border-top: 0;
-          background: none !important;
-        }
-        &:hover {
-          border: 0;
-        }
-        &:focus {
-          outline: 0 !important;
-        }
-      }
-    }
-  }
+    url(./../image/ourTechnology/our-technology-bg.png) no-repeat;
+  // background-repeat: no-repeat;
+  background-size: 100% 100%;
   .feature {
-    padding: 200px 0;
+    padding: 150px 0;
+    @media (max-width: 1199.98px) {
+      padding: 20px 0;
+    }
     &-left {
       &-subtitle {
         font-size: 23px;
@@ -38,15 +20,73 @@
       &-title {
         font-size: 70px;
         font-weight: 500;
+        @media (max-width: 991.98px) {
+          font-size: 35px;
+        }
+        @media (max-width: 575.98px) {
+          font-size: 30px;
+        }
       }
       &-text {
         font-size: 20px;
+          @media (max-width: 991.98px) {
+          font-size: 16px;
+        }
       }
     }
-    &-right {
-      position: absolute;
-      bottom: -60px;
-      right: -8.3%;
+  }
+  .feature-image {
+    transition: all 0.3s ease;
+  }
+  .sticky-image {
+    margin-top: 100px !important;
+  }
+  .technology-nav {
+    transition: all 1s ease;
+    z-index: 1000;
+    ul {
+      transition: all 1s ease;
+      background: linear-gradient(
+        to right,
+        rgba(33, 37, 106, 0.98) 39%,
+        rgba(36, 73, 145, 0.86) 100%
+      );
+      border-bottom: 2px solid white !important;
+      flex-wrap: wrap !important;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: row !important;
+      overflow: hidden;
+      align-items: center;
+      height: 70px;
+      @media (max-width: 478.98px) {  height: 100px; }
+
+      li {
+        margin-right: 20px;
+        a {
+          margin-bottom: 0;
+          border: 0;
+          padding: 0px 10px 22px;
+          @media (max-width: 575.98px) {
+            padding: 0px 10px 5px;
+          }
+
+          &.activeCategoryLink {
+            color: white !important;
+            border-bottom: 3px solid white !important;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            background: none !important;
+          }
+          &:hover {
+            border: 0;
+          }
+          &:focus {
+            outline: 0 !important;
+          }
+        }
+      }
     }
   }
 }

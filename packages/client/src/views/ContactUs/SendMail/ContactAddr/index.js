@@ -11,8 +11,8 @@ const ContactAddr = () => {
   return (
     <div className="addr-main">
       <div className="addr-title">
-        <h3>Contact Info</h3>
-        <p>We’d love to hear from you! Send us a message?</p>
+        <p className="fs-1 head">Contact Info</p>
+        <p className="title">We’d love to hear from you! Send us a message?</p>
       </div>
       <div className="addr-list my-5">
         <h3>
