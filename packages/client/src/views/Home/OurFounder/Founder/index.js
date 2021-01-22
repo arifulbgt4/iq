@@ -21,7 +21,7 @@ const Founder = () => {
   }));
   return (
     <Row className="align-items-center">
-      <Col md={4}>
+      <Col xl={4} sm={12} xs={12}>
         <figure className="our-founder-image m-0">
           <animated.img
             className="img-fluid"
@@ -35,7 +35,7 @@ const Founder = () => {
           />
         </figure>
       </Col>
-      <Col md={8}>
+      <Col xl={8} sm={12} xs={12}>
         <div>
           <img
             className="img-cortetion"
