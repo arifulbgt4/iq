@@ -14,7 +14,7 @@ const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const ProductCard = (props) => {
-  const { title, text } = props;
+  const { title, description,name } = props;
   const [property, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: {
@@ -31,12 +31,12 @@ const ProductCard = (props) => {
       style={{ transform: property.xys.interpolate(trans) }}
     >
       <CardBody className="text-center">
-        <CardTitle tag="h2">Product</CardTitle>
+        <CardTitle tag="h2">{name}</CardTitle>
         <CardSubtitle tag="h1" className="my-5 ">
           {title}
         </CardSubtitle>
         <h2 className="fw-normal">Details</h2>
-        <CardText className="details">{text}</CardText>
+        <CardText className="details">{description}</CardText>
         <Button color="primary" outline className="rounded-pill mt-3 px-4">
           Shedule an appointment
         </Button>

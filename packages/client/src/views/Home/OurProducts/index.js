@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
+import { fatchProducts } from 'src/state/ducks/products';
 import ProductCard from 'src/components/ProductCard';
 import SectionTitle from 'src/components/SectionTitle';
 
 const OurProducts = () => {
-  const data = useSelector((store) => store.products);
+  const { data, loading } = useSelector((store) => store.products);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fatchProducts());
+  }, [dispatch]);
+
+  if (loading) {
+    return 'Loadding';
+  }
+
   return (
     <section className="our-product">
       <Container>
@@ -30,7 +42,11 @@ const OurProducts = () => {
                     sm={12}
                     className="product-item pb-4"
                   >
-                    <ProductCard title={item.title} text={item.text} />{' '}
+                    <ProductCard
+                      name={item.name}
+                      title={item.title}
+                      description={item.description}
+                    />{' '}
                   </Col>
                 ))}
             </Row>
