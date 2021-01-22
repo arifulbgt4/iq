@@ -1,5 +1,20 @@
+.hero-banner {
+  .react-multiple-carousel__arrow {
+    background: $primary;
+    @media (max-width: 767.98px) {
+      min-width: 30px;
+      min-height: 30px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
 .testimonial-slider {
   padding: 110px 0px;
+  @media (max-width: 1199.98px) {
+    padding: 110px 0 0px;
+  }
   h1 {
     font-size: 5rem;
     padding-top: 103px;
@@ -31,6 +46,17 @@
         display: none;
       }
     }
+    .dot-item {
+      &:first-child {
+        order: 2;
+      }
+      &:nth-child(2) {
+        order: 1;
+      }
+      &:nth-child(3) {
+        order: 3;
+      }
+    }
   }
   .inactive {
     filter: blur(0.9px);
@@ -47,6 +73,9 @@
     min-height: 23px;
     @media (min-width: 576px) {
       display: none;
+    }
+    &:focus {
+      outline: none;
     }
   }
   @media (max-width: 575.98px) {

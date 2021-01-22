@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import TabsContent from './TabsContent';
+// import TabsContent from './TabsContent';
 import TabsNavigation from './TabsNavigation';
 
 const OurTechnologyTabs = (props) => {
@@ -12,7 +12,7 @@ const OurTechnologyTabs = (props) => {
   return (
     <>
       <TabsNavigation toggle={toggle} activeTab={activeTab} />
-      <TabsContent activeTab={activeTab} />
+      {/* <TabsContent activeTab={activeTab} /> */}
     </>
   );
 };

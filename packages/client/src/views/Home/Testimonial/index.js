@@ -35,7 +35,7 @@ const Testimonial = () => {
           description='"Our vectory is in our client contentment and success"'
           border={false}
         />
-        <Row className="mb-5">
+        <Row className="mb-0 mb-md-5">
           <Col md={{ size: 8, offset: 2 }}>
             <Carousel
               className="testimonial-slider"
@@ -58,9 +58,7 @@ const Testimonial = () => {
                     className="team-member position-relative text-center pt-5"
                   >
                     <h1 className="text-center position-relative mb-5 mt-3" />
-                    <p className="text-primary pt-5 px-3 px-sm-5">
-                      {items.text}
-                    </p>
+                    <p className="pt-5 px-3 px-sm-5">{items.text}</p>
                     <h3>{items.name}</h3>
                   </div>
                 ))}

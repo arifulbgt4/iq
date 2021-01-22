@@ -2,6 +2,12 @@
   h1 {
     font-size: 83px;
     font-weight: bold;
+    @media (max-width: 1199.98px) {
+      font-size: 60px;
+    }
+    @media (max-width: 767.98px) {
+      font-size: 40px;
+    }
   }
   p {
     font-size: 25px;

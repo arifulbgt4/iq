@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { getBlogs } from 'src/api';
+
 import blogImg from 'src/assets/image/blog/blog.png';
 
 const blogPosts = [
@@ -29,12 +31,52 @@ const blogPosts = [
   },
 ];
 
+function startLoading(state) {
+  state.loading = true;
+}
+
+function loadingFailed(state, { payload }) {
+  state.data = [];
+  state.loading = false;
+  state.error = payload;
+}
+
 const blogSlice = createSlice({
   name: 'blog',
   initialState: blogPosts,
-  reducers: {},
+  reducers: {
+    getBlogsStart: startLoading,
+
+    getBlogsSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getBlogsFailure: loadingFailed,
+  },
 });
+
+export const {
+  getBlogsStart,
+  getBlogsSuccess,
+  getBlogsFailure,
+} = blogSlice.actions;
 
 export default {
   blogs: blogSlice.reducer,
+};
+
+export const fatchBlogs = () => async (dispatch) => {
+  try {
+    dispatch(getBlogsStart());
+
+    const { data } = await getBlogs();
+
+    dispatch(getBlogsSuccess(data));
+  } catch (error) {
+    dispatch(getBlogsFailure(error.toString()));
+  }
 };

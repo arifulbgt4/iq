@@ -40,7 +40,7 @@ const Slider = (props) => {
       slidesToSlide={1}
       customTransition="transform 1000ms ease-in-out"
       transitionDuration={1000}
-      arrows={false}
+      arrows={true}
       showDots={false}
       itemClass=" justify-content-center"
     >

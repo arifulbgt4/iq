@@ -7,7 +7,48 @@ export const getHeroSlider = () => {
   return axios.get(`${API_URL}/hero-sliders`);
 };
 
-// API to get hero slider
+// API to get why-choose-us
 export const getChooseUs = () => {
   return axios.get(`${API_URL}/why-choose-uses`);
+};
+
+
+// API to get about-us
+export const getAboutUs = () => {
+  return axios.get(`${API_URL}/about-us`);
+};
+
+// API to get blogs
+export const getBlogs = () => {
+  return axios.get(`${API_URL}/blogs`);
+};
+
+// API to get founder
+export const getFounder = () => {
+  return axios.get(`${API_URL}/founder`);
+};
+
+// API to get guids
+export const getGuids = () => {
+  return axios.get(`${API_URL}/guids`);
+};
+
+// API to get products
+export const getProducts = () => {
+  return axios.get(`${API_URL}/products`);
+};
+
+// API to get social-links
+export const getSocialLinks = () => {
+  return axios.get(`${API_URL}/social-links`);
+};
+
+// API to get technologies
+export const getTechnologies = () => {
+  return axios.get(`${API_URL}/technologies`);
+};
+
+// API to get testimonials
+export const getTestimonials = () => {
+  return axios.get(`${API_URL}/testimonials`);
 };

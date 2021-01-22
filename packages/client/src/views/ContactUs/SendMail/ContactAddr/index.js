@@ -11,8 +11,8 @@ const ContactAddr = () => {
   return (
     <div className="addr-main">
       <div className="addr-title">
-        <h3>Contact Info</h3>
-        <p>We’d love to hear from you! Send us a message?</p>
+        <p className="fs-1 head">Contact Info</p>
+        <p className="title">We’d love to hear from you! Send us a message?</p>
       </div>
       <div className="addr-list my-5">
         <h3>
@@ -21,9 +21,7 @@ const ContactAddr = () => {
           </span>
           <span className="">Headquarter</span>
         </h3>
-        <p className="text-primary">
-          25 First Street, 2nd Floor, Delhi, MA 02141 India
-        </p>
+        <p>25 First Street, 2nd Floor, Delhi, MA 02141 India</p>
       </div>
       <div className="addr-list my-5">
         <h3>
@@ -32,7 +30,7 @@ const ContactAddr = () => {
           </span>
           <span className="">Phone / Fax</span>
         </h3>
-        <p className="text-primary">(1+ 888 482 7768)</p>
+        <p>(1+ 888 482 7768)</p>
       </div>
       <div className="addr-list my-5">
         <h3>
@@ -41,7 +39,7 @@ const ContactAddr = () => {
           </span>
           <span className="">Fax: </span>
         </h3>
-        <p className="text-primary">+1 617 812 5820</p>
+        <p>+1 617 812 5820</p>
       </div>
     </div>
   );

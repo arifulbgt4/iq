@@ -96,9 +96,9 @@ const data = [
 ];
 const FooterMain = () => {
   return (
-    <Row className="mt-4">
-      <Col md={4}>
-        <h5 className="pe-5 text-justify me-5 details text-white fw-normal">
+    <Row className="mt-4 text-center text-md-start">
+      <Col xs={{ size: 12, order: 2 }} xl={{ size: 4, order: 1 }} className="">
+        <h5 className="pe-0 pe-xl-5 text-justify me-0 me-xl-5 details text-white fw-normal text-center">
           In publishing and graphic design, Lorem ipsum is a placeholder text
           commonly used to demonstrate the visual form of a document or a
           typeface without relying on meaningful content. Lorem ipsum may be
@@ -107,12 +107,21 @@ const FooterMain = () => {
       </Col>
       {data &&
         data.map((items) => (
-          <Col key={items.id} xl={items.id < 3 ? 2 : 4} lg={2} md={6} sm={6}>
+          <Col
+            key={items.id}
+            xl={{ size: items.id < 3 ? 2 : 4, order: 2 }}
+            lg={items.id < 3 ? 3 : 6}
+            md={items.id < 3 ? 4 : 4}
+            sm={12}
+            className={`${items.id < 3 && 'px-1 px-lg-3'}`}
+          >
             <ul className="list-unstyled p-0 m-0">
               {items.navitem &&
                 items.navitem.map((item) => (
                   <li
-                    className={`mb-3 text-capitalize ${items.id > 2 && 'w-75'}`}
+                    className={`mb-3 text-capitalize ${
+                      items.id > 2 && 'w-100 w-lg-75'
+                    }`}
                     key={item.id}
                   >
                     <FontAwesomeIcon icon={item.icons} />

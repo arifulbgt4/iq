@@ -11,20 +11,24 @@ const ContactForm = () => {
       <Form onSubmit={handleSubmit(onSubmit)} className="contact-us">
         <Row>
           <Col lg={6}>
-            <FormGroup row>
+            <FormGroup row className="my-3 my-lg-0">
               <Label htmlFor="name" className=" fs-5 text-primary fw-bold ">
                 Name*
               </Label>
               <Col md={12}>
                 <input
-                  name="firstName"
+                  name="name"
                   ref={register({
+                    required: true,
                     maxLength: 30,
                   })}
                   type="text"
                   placeholder="Enter you full name"
                   className="form-control inp"
                 />
+                {errors.name && errors.name.type === 'required' && (
+                  <span className="text-danger">Please enter your name</span>
+                )}
               </Col>
             </FormGroup>
           </Col>
@@ -38,12 +42,18 @@ const ContactForm = () => {
                 <input
                   name="mail"
                   ref={register({
+                    required: true,
                     maxLength: 30,
                   })}
                   type="email"
                   placeholder="Enter your Email Address"
                   className="form-control inp"
                 />
+                {errors.mail && errors.mail.type === 'required' && (
+                  <span className="text-danger">
+                    Please enter your email id
+                  </span>
+                )}
               </Col>
             </FormGroup>
           </Col>
@@ -57,11 +67,16 @@ const ContactForm = () => {
             <Col md={12}>
               <input
                 name="subject"
-                ref={register}
+                ref={register({ required: true })}
                 type="text"
                 placeholder="Subject"
                 className="form-control inp"
               />
+              {errors.subject && errors.subject.type === 'required' && (
+                <span className="text-danger">
+                  Please enter your matter of doubts
+                </span>
+              )}
             </Col>
           </FormGroup>
         </div>
@@ -76,20 +91,30 @@ const ContactForm = () => {
                 name="message"
                 placeholder="Type your message here..."
                 ref={register({
-                  maxLength: 200,
+                  required: true,
+                  maxLength: 800,
                 })}
                 className="form-control inp "
                 rows="4"
               />
+              {errors.message && errors.message.type === 'required' && (
+                <span className="text-danger">Please write in detail</span>
+              )}
             </Col>
           </FormGroup>
         </div>
 
-        <div className="d-flex justify-content-end">
-          <Button type="submit" color="primary" className="w-25">
-            Submit
-          </Button>
-        </div>
+        <Row className="px-2">
+          <Col className="text-center text-md-end">
+            <Button
+              type="submit"
+              color="primary"
+              className="d-md-inline-block me-1 px-5"
+            >
+              Submit
+            </Button>
+          </Col>
+        </Row>
       </Form>
     </>
   );

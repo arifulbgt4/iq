@@ -18,7 +18,6 @@ const Header = () => {
               <MenuBar />
             </div>
           </Col>
-
           <Col md={12} lg={6} className="hnav">
             <Navbar className="p-0 d-block">
               <Nav className="justify-content-end">

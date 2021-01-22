@@ -11,14 +11,19 @@ const OurProducts = () => {
     <section className="our-product">
       <Container>
         <SectionTitle color="white" title="our products" />
-        <Row className="mt-3">
-          <Col xl={{ size: 10, offset: 1 }} md={12} lg={12}>
+        <Row className="mt-3 product-row">
+          <Col
+            xl={{ size: 10, offset: 1 }}
+            lg={12}
+            md={{ size: 12, offset: 0 }}
+            sm={{ size: 10, offset: 1 }}
+            xs={12}
+          >
             <Row className="justify-content-center">
               {data &&
                 data.map((item) => (
                   <Col
                     key={item.id}
-                    xxl={4}
                     xl={4}
                     lg={6}
                     md={6}

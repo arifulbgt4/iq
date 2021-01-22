@@ -3,7 +3,7 @@ import React from 'react';
 const Animation = () => {
   return (
     <div className="position-relative mt-3 ">
-      <div className="line-wrapper py-5 mt-5">
+      <div className="line-wrapper py-5 mt-0 mt-md-5">
         <span className="line1" />
         <span className="line2" />
         <span className="line3" />

@@ -10,7 +10,7 @@ const SendMail = () => {
         <ContactAddr />
       </Col>
       <Col sm={12} md={6} lg={6} className="px-5">
-        <p className="fs-1 text-primary ">
+        <p className="fs-1">
           Have doubts? Don't Worry just <b>Contact Us.</b>
         </p>
         <ContactForm />

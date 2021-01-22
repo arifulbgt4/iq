@@ -12,7 +12,7 @@ const ContactForm = () => {
         <Row>
           <Col lg={6}>
             <FormGroup row>
-              <Label htmlFor="name" className=" fs-5 text-primary fw-bold ">
+              <Label htmlFor="name" className=" fs-5 fw-bold ">
                 Name*
               </Label>
               <Col md={12}>
@@ -31,7 +31,7 @@ const ContactForm = () => {
 
           <Col lg={6}>
             <FormGroup row>
-              <Label htmlFor="email" className="fs-5 text-primary fw-bold">
+              <Label htmlFor="email" className="fs-5 fw-bold">
                 Email*
               </Label>
               <Col md={12}>
@@ -51,7 +51,7 @@ const ContactForm = () => {
 
         <div className="mb-3  my-4">
           <FormGroup row>
-            <Label htmlFor="sub" className="fs-5 text-primary fw-bold">
+            <Label htmlFor="sub" className="fs-5 fw-bold">
               Subject*
             </Label>
             <Col md={12}>
@@ -68,7 +68,7 @@ const ContactForm = () => {
 
         <div className="mb-3  my-4">
           <FormGroup row>
-            <Label htmlFor="msg" className="fs-5 text-primary fw-bold">
+            <Label htmlFor="msg" className="fs-5 fw-bold">
               Message
             </Label>
             <Col md={12}>

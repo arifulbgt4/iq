@@ -1,7 +1,7 @@
 .section-title {
   h1 {
     font-size: 58px;
-    @media (max-width: 399px) and (min-width: 330px) {
+    @media (max-width: 767.98px) {
       font-size: 42px;
     }
     @media (max-width: 329px) {
@@ -15,12 +15,17 @@
     &.border-line {
       &::after {
         content: '';
-        position: absolute;
-        width: 100px;
-        height: 4px;
-        background: $primary;
-        bottom: 0;
-        left: 47.8%;
+        border-bottom: 3px solid;
+        width: 10%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 8px;
+        transition: all 0.5s;
+      }
+      &:hover {
+        &::after {
+          width: 40%;
+        }
       }
     }
   }

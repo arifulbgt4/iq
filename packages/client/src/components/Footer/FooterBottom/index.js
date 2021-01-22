@@ -26,8 +26,11 @@ const data = [faTwitter, faFacebookF, faInstagram, faPinterestP, faLinkedinIn];
 const FooterBottom = () => {
   return (
     <Row className="mt-4">
-      <Col md={4}>
-        <Form className="me-5 pe-5 w-75" onSubmit={(e) => e.preventDefault()}>
+      <Col lg={4}>
+        <Form
+          className="me-0 me-xl-5 pe-0 pe-xl-5 "
+          onSubmit={(e) => e.preventDefault()}
+        >
           <InputGroup className="border p-1">
             <Input
               type="email"
@@ -44,7 +47,7 @@ const FooterBottom = () => {
           </InputGroup>
         </Form>
       </Col>
-      <Col md={4} className="text-center">
+      <Col lg={4} className="text-center py-4 py-lg-0">
         <ListGroup
           horizontal
           className="list-unstyled justify-content-center flex-wrap ml-0 bg-transparent"
@@ -61,7 +64,7 @@ const FooterBottom = () => {
         </ListGroup>
         <p>2021 copyrights @ Metastock</p>
       </Col>
-      <Col md={4}>
+      <Col lg={4}>
         <ListGroup
           horizontal
           className="list-unstyled justify-content-between flex-wrap ml-0 social-icon"
