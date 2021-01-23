@@ -43,7 +43,11 @@ function loadingFailed(state, { payload }) {
 
 const blogSlice = createSlice({
   name: 'blog',
-  initialState: blogPosts,
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
   reducers: {
     getBlogsStart: startLoading,
 
