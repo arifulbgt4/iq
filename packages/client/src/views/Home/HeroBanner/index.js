@@ -69,7 +69,7 @@ const HeroBanner = () => {
         className="triangle-blank-img"
         style={{ transform: props.xy.interpolate(translate) }}
       />
-      <Container>
+      <Container fluid>
         <Slider>
           {data &&
             data.map((items) => {
@@ -77,7 +77,7 @@ const HeroBanner = () => {
 
               return (
                 <Row className="pb-5" key={items.id}>
-                  <Col md={6}>
+                  <Col md={{size:5, offset:1}}>
                     <div className="banner-content">
                       <h1 className="banner-content-heading text-capitalize fw-bolder">
                         {items.title}
