@@ -35,7 +35,7 @@ const Slider = (props) => {
       className={className}
       responsive={responsive}
       infinite={infinite}
-      autoPlay={autoPlay}
+      // autoPlay={autoPlay}
       autoPlaySpeed={4000}
       slidesToSlide={1}
       customTransition="transform 1000ms ease-in-out"

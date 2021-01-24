@@ -2,6 +2,9 @@
 .hero-banner {
   overflow: hidden;
   padding: 0 0 25rem 0;
+  @media (max-width: 1399px) and (min-width: 992px) {
+    padding: 0 0 20rem 0;
+  }
   @media (max-width: 991.98px) {
     padding: 0 0 19rem 0;
   }
@@ -11,14 +14,18 @@
       max-width: 100%;
     }
   }
-
+  .hero-banner-item {
+    @media (min-width: 992px) {
+      padding: 0 0 5rem 0;
+    }
+  }
   .banner-content {
     margin-top: 90px;
     &-heading {
       font-size: 6.625rem;
       margin-bottom: 1rem;
       @media (max-width: 1399.98px) {
-        font-size: 4rem;
+        font-size: 3rem;
       }
       @media (max-width: 575.98px) {
         font-size: 2rem;
@@ -30,6 +37,7 @@
       font-weight: normal;
       @media (max-width: 767.98px) {
         width: 100% !important;
+        font-size: 1rem;
       }
     }
   }
@@ -82,7 +90,11 @@
     position: absolute;
     margin-top: 62px;
     z-index: 1;
+    width: 90%;
     left: 0%;
+    @media (max-width: 1399px) and (min-width: 767px) {
+      left: -3%;
+    }
   }
   .cloud-img {
     position: absolute;
