@@ -5,6 +5,12 @@
       content: url(./../image/carrer/lines2.png);
       bottom: -100px;
       left: 10%;
+      @media (max-width: 1399.98px) {
+        left: -2%;
+      }
+      @media (max-width: 1199.98px) {
+        content: unset;
+      }
     }
   }
   .carrer-left {
@@ -13,12 +19,23 @@
       content: url(./../image/carrer/line1.png);
       bottom: -100px;
       left: 10%;
+      @media (max-width: 1399.98px) {
+        left: -2%;
+      }
+          @media (max-width: 1199.98px) {
+        content: unset;
+      }
     }
   }
   .carrer-items {
     .details {
-      font-size: 20px;
-      font-weight: 500;
+      p {
+        font-weight: 500;
+        font-size: 20px;
+        @media (max-width: 575.98px) {
+          font-size: 16px;
+        }
+      }
     }
     &:first-child {
       h2 {

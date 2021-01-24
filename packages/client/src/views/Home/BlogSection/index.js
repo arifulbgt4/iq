@@ -6,7 +6,7 @@ import BlogPosts from 'src/containers/BlogPosts';
 
 const BlogSection = () => {
   return (
-    <section className="blog-section py-5">
+    <section className="blog-section pt-5">
       <Container>
         <SectionTitle color="primary" title="latest blogs" border={false} />
         <BlogPosts />

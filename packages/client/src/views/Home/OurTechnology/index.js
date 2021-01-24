@@ -3,8 +3,7 @@ import { Col, Container, Row } from 'reactstrap';
 
 import SectionTitle from 'src/components/SectionTitle';
 import { Link, Element } from 'react-scroll';
-import { Sticky } from 'react-sticky';
-import { StickyContainer } from 'react-sticky';
+import { Sticky ,StickyContainer} from 'react-sticky';
 import Feature from './TabsContent/Feature';
 import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 
@@ -29,7 +28,7 @@ export default class OurTechnology extends Component {
   render() {
     return (
       <section className="our-technology py-5 my-5">
-        <Container className="py-5">
+        <Container className="py-2 py-md-5">
           <SectionTitle color="white" title="our technology" />
           <Row>
             <Col md={12}>

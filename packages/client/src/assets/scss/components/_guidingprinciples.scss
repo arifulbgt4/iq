@@ -4,6 +4,9 @@
 }
 .card-width {
   width: 60%;
+  img {
+    height: 130px;
+  }
 }
 .guiding-principle {
   padding: 12rem 0 0 0;
@@ -35,8 +38,12 @@
       p {
         text-align: justify;
         font-weight: 500;
+
         @media (max-width: 991px) and (min-width: 576px) {
           font-size: 20px !important;
+        }
+        @media (max-width: 767.98px) {
+          text-align: center;
         }
         @media (max-width: 575px) and (min-width: 400px) {
           font-size: 18px !important;

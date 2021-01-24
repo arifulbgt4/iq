@@ -1,5 +1,8 @@
 .testimonial {
   margin: 7rem 0 0 0;
+  @media (max-width: 575.98px) {
+    margin: 2rem 0 0 0;
+  }
   &::after {
     position: absolute;
     content: url(./../image/heroBanner/testimonial2.png);

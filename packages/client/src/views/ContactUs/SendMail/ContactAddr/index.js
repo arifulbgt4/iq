@@ -9,7 +9,7 @@ import {
 
 const ContactAddr = () => {
   return (
-    <div className="addr-main">
+    <div className="addr-main text-center text-md-left">
       <div className="addr-title">
         <p className="fs-1 head">Contact Info</p>
         <p className="title">We’d love to hear from you! Send us a message?</p>

@@ -70,10 +70,15 @@
     &_title {
       font-size: 37px;
       margin-bottom: 8px;
+      @media (max-width: 575.98px){ font-size: 25px; }
+
     }
     &_description {
       text-align: justify;
       font-size: 20px;
+      @media (min-width: 576px) {
+        font-size: 16px;
+      }
       font-weight: 500;
       &::before {
         content: '';
@@ -84,6 +89,17 @@
         background: #6546fb;
         top: 10px;
         left: -14px;
+      }
+      @media (max-width: 767.98px) {
+        text-align: center;
+        &::before {
+          left: 30%;
+        }
+      }
+      @media (max-width: 440.98px) {
+        &::before {
+          left: 20%;
+        }
       }
     }
   }

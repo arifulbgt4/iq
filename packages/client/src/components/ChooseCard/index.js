@@ -8,7 +8,7 @@ const ChooseCard = (props) => {
       <div className="choose-card-img d-flex justify-content-center align-items-center">
         <img src={img} alt="choose card image" />
       </div>
-      <CardBody className="choose-card-body">
+      <CardBody className="choose-card-body text-center">
         <CardTitle
           tag="h4"
           className="choose-card-body_title text-capitalize text-center fw-bold"

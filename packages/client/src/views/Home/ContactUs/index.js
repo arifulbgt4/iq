@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
 import contactimg from 'src/assets/image/undraw.png';
-import ContactForm from './ContactForm';
+import ContactForm from 'src/components/ContactForm';
 
 const ContactUs = () => {
   return (

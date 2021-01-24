@@ -23,7 +23,7 @@ const OurProducts = () => {
     <section className="our-product">
       <Container>
         <SectionTitle color="white" title="our products" />
-        <Row className="mt-3 product-row">
+        <Row className="mt-0 mt-sm-3 product-row">
           <Col
             xl={{ size: 10, offset: 1 }}
             lg={12}

@@ -2,16 +2,35 @@
 .hero-banner {
   overflow: hidden;
   padding: 0 0 25rem 0;
+  @media (max-width: 991.98px) {
+    padding: 0 0 19rem 0;
+  }
+  @media (max-width: 575.98px) {
+    padding: 0 0 5rem 0;
+    img {
+      max-width: 100%;
+    }
+  }
+
   .banner-content {
     margin-top: 90px;
     &-heading {
       font-size: 6.625rem;
       margin-bottom: 1rem;
+      @media (max-width: 1399.98px) {
+        font-size: 4rem;
+      }
+      @media (max-width: 575.98px) {
+        font-size: 2rem;
+      }
     }
     &-description {
       font-size: 1.5rem;
       color: #383838;
       font-weight: normal;
+      @media (max-width: 767.98px) {
+        width: 100% !important;
+      }
     }
   }
   .triangle1-img {
@@ -63,7 +82,7 @@
     position: absolute;
     margin-top: 62px;
     z-index: 1;
-    left: -10%;
+    left: 0%;
   }
   .cloud-img {
     position: absolute;

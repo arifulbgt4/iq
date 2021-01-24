@@ -10,7 +10,7 @@ const ContactInfo = () => {
       <Row>
         <Col lg={{ size: 8, offset: 2 }} md={12} sm={12}>
           <Row>
-            <Col lg={6} md={6} sm={12}>
+            <Col lg={6} md={6} sm={12} className='contact-info-col'>
               <div className="contact-info-card">
                 <div className="img-redus">
                   <img src={Icon_phone} alt="Icon_phone" />

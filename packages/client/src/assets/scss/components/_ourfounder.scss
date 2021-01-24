@@ -4,7 +4,7 @@
     padding: 100px 0 50px;
   }
   @media (max-width: 575.98px) {
-    padding: 50px 0 50px;
+    padding: 50px 0 0px;
   }
 
   background: url(./../image/heroBanner/Group_founder.png) no-repeat;
@@ -59,22 +59,27 @@
     font-size: 18px !important;
   }
 }
-.our-history {
-  .history {
-    font-size: 24px;
-    @media (max-width: 575px) {
-      font-size: 18px !important;
+
+.more-details-item {
+  @media (max-width: 575px) {
+    p {
+      font-size: 16px !important;
     }
   }
-  a {
-    right: 0;
-    bottom: -7px;
+  .btn {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
   }
 }
 
 .img-cortetion {
   width: 60px;
   margin: 65px 0px -61px 41px;
+  @media (max-width: 1199.98px) {
+    margin: 0px 0px -61px 41px;
+  }
 }
 .history-heading {
   display: inline-block;

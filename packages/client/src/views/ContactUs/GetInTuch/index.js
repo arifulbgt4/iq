@@ -6,7 +6,7 @@ const index = () => {
     <>
       <Row className="align-items-center text-center text-md-start mt-4 mt-md-0">
         <Col lg={8} md={8} sm={12}>
-          <div className="tuch-text-area d-flex py-5 py-md-0">
+          <div className="tuch-text-area d-flex pt-4 pb-5 py-md-0">
             <div>
               <h1>Get in touch</h1>
               <p>

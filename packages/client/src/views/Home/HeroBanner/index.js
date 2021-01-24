@@ -77,7 +77,7 @@ const HeroBanner = () => {
 
               return (
                 <Row className="pb-5" key={items.id}>
-                  <Col md={{size:5, offset:1}}>
+                  <Col md={{size:5, offset:1}} className="text-center text-md-start">
                     <div className="banner-content">
                       <h1 className="banner-content-heading text-capitalize fw-bolder">
                         {items.title}
@@ -90,7 +90,7 @@ const HeroBanner = () => {
                       </Button>
                     </div>
                   </Col>
-                  <Col md={6} className="position-relative">
+                  <Col md={6} className="position-relative d-none d-md-block">
                     <animated.img
                       src={image}
                       alt="stock"
