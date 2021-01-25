@@ -17,7 +17,6 @@ export const getChooseUsHeader = () => {
   return axios.get(`${API_URL}/choose-us-header`);
 };
 
-
 // API to get about-us
 export const getAboutUs = () => {
   return axios.get(`${API_URL}/about-us`);
@@ -26,6 +25,11 @@ export const getAboutUs = () => {
 // API to get blogs
 export const getBlogs = () => {
   return axios.get(`${API_URL}/blogs`);
+};
+
+// API to get blogs header
+export const getBlogsHeader = () => {
+  return axios.get(`${API_URL}/blog-header`);
 };
 
 // API to get founder
