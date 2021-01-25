@@ -1,10 +1,24 @@
 import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { useSelector, useDispatch } from 'react-redux';
+import { Parallax } from 'react-skrollr';
 
 import { fatchProducts } from 'src/state/ducks/products';
 import ProductCard from 'src/components/ProductCard';
 import SectionTitle from 'src/components/SectionTitle';
+
+const scroll = {
+  left: {
+    'data-top-bottom': 'transform: translateY(-30%);',
+    'data-center-center': 'opacity: 1;',
+    'data-bottom-top': 'opacity: 0;transform: translateY(30%);',
+  },
+  right: {
+    'data-top-bottom': 'transform: translateY(-25%);',
+    'data-center-center': 'opacity: 1;',
+    'data-bottom-top': 'opacity: 0;transform: translateY(25%);',
+  },
+};
 
 const OurProducts = () => {
   const { data, loading } = useSelector((store) => store.products);
@@ -42,11 +56,15 @@ const OurProducts = () => {
                     sm={12}
                     className="product-item pb-4"
                   >
-                    <ProductCard
-                      name={item.name}
-                      title={item.title}
-                      description={item.description}
-                    />{' '}
+                    <Parallax
+                      data={item.id % 2 === 0 ? scroll.left : scroll.right}
+                    >
+                      <ProductCard
+                        name={item.name}
+                        title={item.title}
+                        description={item.description}
+                      />{' '}
+                    </Parallax>
                   </Col>
                 ))}
             </Row>

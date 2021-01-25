@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { useSelector, useDispatch } from 'react-redux';
-import { ParallaxProvider, Parallax } from 'react-skrollr';
+import { Parallax } from 'react-skrollr';
 
 import { fatchGuid } from 'src/state/ducks/guidings';
 import GuidingPrinciples from 'src/components/GuidingPrinciples';
@@ -33,42 +33,33 @@ const GuidingPrinciple = () => {
     return 'Loadding';
   }
   return (
-    <ParallaxProvider
-      init={{
-        smoothScrollingDuration: 1000,
-        smoothScrolling: true,
-        forceHeight: false,
-      }}
-      getScrollTop={(scrollTop) => console.log('scrollTop', scrollTop)}
-    >
-      <section className="guiding-principle">
-        <Container>
-          <SectionTitle title="Our Guiding Principles" border={false} />
-          <Row>
-            <Col md={12}>
-              {data &&
-                data.map((item) => {
-                  const image = process.env.API_URL + item.image.url;
+    <section className="guiding-principle">
+      <Container>
+        <SectionTitle title="Our Guiding Principles" border={false} />
+        <Row>
+          <Col md={12}>
+            {data &&
+              data.map((item) => {
+                const image = process.env.API_URL + item.image.url;
 
-                  return (
-                    <Parallax
-                      data={item.id % 2 === 0 ? scroll.left : scroll.right}
-                    >
-                      <GuidingPrinciples
-                        key={item.id}
-                        image={image}
-                        title={item.title}
-                        description={item.description}
-                        right={item.id % 2 === 0}
-                      />
-                    </Parallax>
-                  );
-                })}
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </ParallaxProvider>
+                return (
+                  <Parallax
+                    data={item.id % 2 === 0 ? scroll.left : scroll.right}
+                  >
+                    <GuidingPrinciples
+                      key={item.id}
+                      image={image}
+                      title={item.title}
+                      description={item.description}
+                      right={item.id % 2 === 0}
+                    />
+                  </Parallax>
+                );
+              })}
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 
