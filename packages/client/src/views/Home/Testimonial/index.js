@@ -51,7 +51,7 @@ const Testimonial = () => {
           border={false}
         />
         <Row className="mb-0 mb-md-5">
-          <Col md={{ size: 8, offset: 2 }}>
+          <Col md={12} lg={{ size: 8, offset: 2 }}>
             <Carousel
               className="testimonial-slider"
               responsive={responsive}
@@ -72,7 +72,9 @@ const Testimonial = () => {
                     key={i}
                     className="team-member position-relative text-center pt-5"
                   >
-                    <h1 className="text-center position-relative mb-5 mt-3" />
+                    <h1 className="text-center position-relative mb-3 mb-sm-5 mt-3">
+                      {items.title}
+                    </h1>
                     <p className="pt-5 px-3 px-sm-5">{items.text}</p>
                     <h3>{items.name}</h3>
                   </div>
