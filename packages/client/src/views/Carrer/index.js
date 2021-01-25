@@ -4,12 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { fatchCarrer } from 'src/state/ducks/carrer';
 import CarrerItem from 'src/components/CarrerItem';
-
-import image1 from 'src/assets/image/carrer/carrer1.png';
-import image2 from 'src/assets/image/carrer/carrer2.png';
-import image3 from 'src/assets/image/carrer/carrer3.png';
-import image4 from 'src/assets/image/carrer/carrer4.png';
-import image5 from 'src/assets/image/carrer/carrer5.png';
 import Apply from './Apply';
 
 const Carrer = () => {
