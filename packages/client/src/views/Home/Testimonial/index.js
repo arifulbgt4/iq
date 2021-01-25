@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useSelector, useDispatch } from 'react-redux';
 
+import { fatchTestimonialHeader } from 'src/state/ducks/testimonial';
 import CustomDot from 'src/components/CustomDots';
 import SectionTitle from 'src/components/SectionTitle';
-import { useSelector } from 'react-redux';
 
 const Testimonial = () => {
   const data = useSelector((store) => store.testimonial);
-  console.log(data);
+  const { data: testimonialHeader, loading } = useSelector(
+    (store) => store.testimonialHeader
+  );
+
+  const dispatch = useDispatch();
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1200 },
@@ -27,12 +33,21 @@ const Testimonial = () => {
       slidesToSlide: 1,
     },
   };
+
+  useEffect(() => {
+    dispatch(fatchTestimonialHeader());
+  }, [dispatch]);
+
+  if (loading) {
+    return 'Loadding';
+  }
+
   return (
     <section className="testimonial position-relative">
       <Container>
         <SectionTitle
-          title="Testimonial"
-          description='"Our vectory is in our client contentment and success"'
+          title={testimonialHeader?.title}
+          description={testimonialHeader?.description}
           border={false}
         />
         <Row className="mb-0 mb-md-5">
