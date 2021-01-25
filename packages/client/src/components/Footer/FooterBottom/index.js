@@ -28,7 +28,7 @@ const FooterBottom = () => {
     <Row className="mt-4">
       <Col lg={4}>
         <Form
-          className="me-0 me-xl-5 pe-0 pe-xl-5 "
+          className="me-0 me-xl-5 pe-0 pe-xl-5 email"
           onSubmit={(e) => e.preventDefault()}
         >
           <InputGroup className="border p-1">
