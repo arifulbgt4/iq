@@ -48,6 +48,11 @@ export const getProducts = () => {
   return axios.get(`${API_URL}/products`);
 };
 
+// API to get products header
+export const getProductsHeader = () => {
+  return axios.get(`${API_URL}/products-header`);
+};
+
 // API to get social-links
 export const getSocialLinks = () => {
   return axios.get(`${API_URL}/social-links`);

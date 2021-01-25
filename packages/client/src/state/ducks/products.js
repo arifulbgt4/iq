@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { getProducts } from 'src/api';
+import { getProducts,getProductsHeader } from 'src/api';
 
 function startLoading(state) {
   state.loading = true;
@@ -34,14 +34,43 @@ const productSlice = createSlice({
   },
 });
 
+const productHeaderSlice = createSlice({
+  name: 'productsHeader',
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
+  reducers: {
+    getProductsHeaderStart: startLoading,
+
+    getProductsHeaderSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getProductsHeaderFailure: loadingFailed,
+  },
+});
+
 export const {
   getProductsStart,
   getProductsSuccess,
   getProductsFailure,
 } = productSlice.actions;
 
+export const {
+  getProductsHeaderStart,
+  getProductsHeaderSuccess,
+  getProductsHeaderFailure,
+} = productHeaderSlice.actions;
+
 export default {
   products: productSlice.reducer,
+  productsHeader: productHeaderSlice.reducer,
 };
 
 export const fatchProducts = () => async (dispatch) => {
@@ -53,5 +82,17 @@ export const fatchProducts = () => async (dispatch) => {
     dispatch(getProductsSuccess(data));
   } catch (error) {
     dispatch(getProductsFailure(error.toString()));
+  }
+};
+
+export const fatchProductsHeader = () => async (dispatch) => {
+  try {
+    dispatch(getProductsHeaderStart());
+
+    const { data } = await getProductsHeader();
+
+    dispatch(getProductsHeaderSuccess(data));
+  } catch (error) {
+    dispatch(getProductsHeaderFailure(error.toString()));
   }
 };
