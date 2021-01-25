@@ -81,3 +81,8 @@ export const getTestimonials = () => {
 export const getTestimonialHeader = () => {
   return axios.get(`${API_URL}/testimonial-header`);
 };
+
+// API to get carrer
+export const getCarrer = () => {
+  return axios.get(`${API_URL}/carrers`);
+};
