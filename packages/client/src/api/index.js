@@ -58,6 +58,11 @@ export const getTechnologies = () => {
   return axios.get(`${API_URL}/technologies`);
 };
 
+// API to get technologies header
+export const getTechnologiesHeader = () => {
+  return axios.get(`${API_URL}/technology-header`);
+};
+
 // API to get testimonials
 export const getTestimonials = () => {
   return axios.get(`${API_URL}/testimonials`);

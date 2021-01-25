@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { getTechnologies } from 'src/api';
+import { getTechnologies, getTechnologiesHeader } from 'src/api';
 
 function startLoading(state) {
   state.loading = true;
@@ -13,7 +13,7 @@ function loadingFailed(state, { payload }) {
 }
 
 const technologySlice = createSlice({
-  name: 'Technology',
+  name: 'technology',
   initialState: {
     data: {},
     loading: true,
@@ -34,14 +34,43 @@ const technologySlice = createSlice({
   },
 });
 
+const technologyHeaderSlice = createSlice({
+  name: 'technologyHeader',
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
+  reducers: {
+    getTechnologyHeaderStart: startLoading,
+
+    getTechnologyHeaderSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getTechnologyHeaderFailure: loadingFailed,
+  },
+});
+
 export const {
   getTechnologyStart,
   getTechnologySuccess,
   getTechnologyFailure,
 } = technologySlice.actions;
 
+export const {
+  getTechnologyHeaderStart,
+  getTechnologyHeaderSuccess,
+  getTechnologyHeaderFailure,
+} = technologyHeaderSlice.actions;
+
 export default {
   technology: technologySlice.reducer,
+  technologyHeader: technologyHeaderSlice.reducer,
 };
 
 export const fatchTechnology = () => async (dispatch) => {
@@ -53,5 +82,17 @@ export const fatchTechnology = () => async (dispatch) => {
     dispatch(getTechnologySuccess(data));
   } catch (error) {
     dispatch(getTechnologyFailure(error.toString()));
+  }
+};
+
+export const fatchTechnologyHeader = () => async (dispatch) => {
+  try {
+    dispatch(getTechnologyHeaderStart());
+
+    const { data } = await getTechnologiesHeader();
+
+    dispatch(getTechnologyHeaderSuccess(data));
+  } catch (error) {
+    dispatch(getTechnologyHeaderFailure(error.toString()));
   }
 };
