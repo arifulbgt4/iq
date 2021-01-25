@@ -1,6 +1,7 @@
 .hero-banner {
   .react-multiple-carousel__arrow {
     background: $primary;
+    top: 40%;
     @media (max-width: 767.98px) {
       min-width: 30px;
       min-height: 30px;
@@ -12,13 +13,20 @@
   .react-multiple-carousel__arrow--right {
     right: calc(1% + 1px);
   }
-  .react-multiple-carousel__arrow--left{
+  .react-multiple-carousel__arrow--left {
     left: calc(1% + 1px);
   }
- .react-multi-carousel-item {
-        padding: 0 40px 60px 40px;
-    @media (max-width: 767.98px) { padding: 0 0px; }
-
+  .react-multi-carousel-item {
+    padding: 100px 0px 400px;
+    @media (max-width: 1339.98px) {
+      padding: 100px 0px 300px;
+    }
+    @media (max-width: 767.98px) {
+      padding: 50px 0px 200px;
+    }
+    @media (max-width: 575.98px) {
+      padding: 50px 0px 100px;
+    }
   }
 }
 .testimonial-slider {

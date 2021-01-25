@@ -74,15 +74,19 @@ const HeroBanner = () => {
           {data &&
             data.map((items) => {
               const image = process.env.API_URL + items.image.url;
-
               return (
                 <Row className="hero-banner-item" key={items.id}>
-                  <Col md={{size:5, offset:1}} className="text-center text-md-start">
+                  <Col
+                    md={{ size: 5, offset: 1 }}
+                    lg={{ size: 5, offset: 1 }}
+                    xl={{ size: 6, offset: 0 }}
+                    className="text-center text-md-start"
+                  >
                     <div className="banner-content">
                       <h1 className="banner-content-heading text-capitalize fw-bolder">
                         {items.title}
                       </h1>
-                      <p className="banner-content-description text-capitalize w-75">
+                      <p className="banner-content-description text-capitalize">
                         {items.description}
                       </p>
                       <Button className="rounded-pill px-4" color="primary">
@@ -90,7 +94,12 @@ const HeroBanner = () => {
                       </Button>
                     </div>
                   </Col>
-                  <Col md={6} className="position-relative d-none d-md-block">
+                  <Col
+                    md={6}
+                    lg={5}
+                    xl={6}
+                    className="position-relative d-none d-md-block"
+                  >
                     <animated.img
                       src={image}
                       alt="stock"
