@@ -8,16 +8,11 @@ import ProductCard from 'src/components/ProductCard';
 import SectionTitle from 'src/components/SectionTitle';
 
 const scroll = {
-  left: {
-    'data-top-bottom': 'transform: translateY(-30%);',
+data: {
+    'data-top-bottom': 'transform: translateY(-20%);',
     'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translateY(30%);',
-  },
-  right: {
-    'data-top-bottom': 'transform: translateY(-25%);',
-    'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translateY(25%);',
-  },
+    'data-bottom-top': 'opacity: 0;transform: translateY(10%);',
+  }
 };
 
 const OurProducts = () => {
@@ -57,7 +52,7 @@ const OurProducts = () => {
                     className="product-item pb-4"
                   >
                     <Parallax
-                      data={item.id % 2 === 0 ? scroll.left : scroll.right}
+                      data={scroll.data}
                     >
                       <ProductCard
                         name={item.name}

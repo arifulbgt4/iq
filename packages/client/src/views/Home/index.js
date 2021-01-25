@@ -1,5 +1,6 @@
 import React from 'react';
-import { ParallaxProvider, Parallax } from 'react-skrollr';
+import { ParallaxProvider } from 'react-skrollr';
+
 import OurFounder from './OurFounder';
 import GuidingPrinciple from './GuidingPrinciples';
 import HeroBanner from './HeroBanner';
@@ -15,9 +16,13 @@ const Home = () => {
   return (
     <ParallaxProvider
       init={{
-        smoothScrollingDuration: 1000,
+        smoothScrollingDuration: 900,
         smoothScrolling: true,
         forceHeight: false,
+        render: function (data) {
+          //Log the current scroll position.
+          console.log('scroll', data.curTop);
+        },
       }}
       getScrollTop={(scrollTop) => console.log('scrollTop', scrollTop)}
     >

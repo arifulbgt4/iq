@@ -44,10 +44,9 @@ const GuidingPrinciple = () => {
 
                 return (
                   <Parallax
-                    data={item.id % 2 === 0 ? scroll.left : scroll.right}
+                   key={item.id} data={item.id % 2 === 0 ? scroll.left : scroll.right}
                   >
                     <GuidingPrinciples
-                      key={item.id}
                       image={image}
                       title={item.title}
                       description={item.description}
