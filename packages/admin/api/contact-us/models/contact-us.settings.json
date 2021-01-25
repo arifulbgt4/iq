@@ -1,30 +1,27 @@
 {
-  "kind": "singleType",
-  "collectionName": "Contact",
+  "kind": "collectionType",
+  "collectionName": "contact_uses",
   "info": {
-    "name": "Contact Us"
+    "name": "Contact us"
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "email": {
       "type": "email",
       "required": true
     },
     "subject": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "message": {
-      "type": "richtext",
-      "required": true
+      "type": "richtext"
     }
   }
 }
