@@ -12534,6 +12534,13 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
+react-skrollr@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-skrollr/-/react-skrollr-1.0.4.tgz#5f8a4426bba789e70e78d2f27283149aef9e694c"
+  integrity sha1-X4pEJruniecOeNLycoMUmu+eaUw=
+  dependencies:
+    skrollr "0.6.26"
+
 react-spring@^8.0.27:
   version "8.0.27"
   resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
@@ -13767,6 +13774,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+skrollr@0.6.26:
+  version "0.6.26"
+  resolved "https://registry.yarnpkg.com/skrollr/-/skrollr-0.6.26.tgz#65d1aafcc69fc6d27e6cff0f086c25b31b20ab18"
+  integrity sha1-ZdGq/MafxtJ+bP8PCGwlsxsgqxg=
 
 slash@^2.0.0:
   version "2.0.0"
