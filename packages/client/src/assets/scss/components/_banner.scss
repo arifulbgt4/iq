@@ -79,12 +79,28 @@
     top: 395px;
     left: 70px;
   }
+  @media (min-width: 768px) {
+    .stock-img-content {
+      position: absolute !important;
+      right: 0;
+      top: 0 !important;
+      bottom: 0 !important;
+      background: $white !important;
+      .stock-img {
+        top: 10% !important;
+      }
+    }
+  }
+
   .stock-img {
     position: absolute;
-
     z-index: 1;
     width: 90%;
     left: 0%;
+    @media (max-width: 767.98px) {
+      position: relative;
+      width: 100%;
+    }
     @media (max-width: 1399px) and (min-width: 767px) {
       left: -3%;
     }

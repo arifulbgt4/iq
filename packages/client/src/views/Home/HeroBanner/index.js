@@ -3,6 +3,7 @@ import { Col, Container, Row, Button } from 'reactstrap';
 import { useSpring, animated } from 'react-spring';
 import { useSelector, useDispatch } from 'react-redux';
 
+import stock from 'src/assets/image/heroBanner/stock.png';
 import triangleImg from 'src/assets/image/heroBanner/triangle.png';
 import starImg from 'src/assets/image/heroBanner/star.png';
 import plusImg from 'src/assets/image/heroBanner/plus.png';
@@ -69,49 +70,57 @@ const HeroBanner = () => {
         style={{ transform: props.xy.interpolate(translate) }}
       />
       <Container fluid>
-        <Slider>
-          {data &&
-            data.map((items) => {
-              const image = process.env.API_URL + items.image.url;
-              return (
-                <Row className="hero-banner-item" key={items.id}>
-                  <Col
-                    md={{ size: 5, offset: 1 }}
-                    lg={{ size: 5, offset: 1 }}
-                    xl={{ size: 6, offset: 0 }}
-                    className="text-center text-md-start"
-                  >
-                    <div className="banner-content">
-                      <h1 className="banner-content-heading text-capitalize fw-bolder">
-                        {items.title}
-                      </h1>
-                      <p className="banner-content-description text-capitalize">
-                        {items.description}
-                      </p>
-                      <Button className="rounded-pill px-4" color="primary">
-                        Shedule an appointment
-                      </Button>
-                    </div>
-                  </Col>
-                  <Col
-                    md={6}
-                    lg={5}
-                    xl={6}
-                    className="position-relative d-none d-md-block"
-                  >
-                    <animated.img
-                      src={image}
-                      alt="stock"
-                      className="stock-img img-fluid"
-                      style={{ transform: props.xy.interpolate(translate) }}
-                    />
-                  </Col>
-                </Row>
-              );
-            })}
-        </Slider>
+        <Row>
+          <Col
+            sm={12}
+            md={12}
+            lg={12}
+            xl={12}
+          >
+            <Slider>
+              <Row>
+                <Col md={{ size: 5, offset: 1}} lg={{ size: 6, offset: 0}} className="slider-left-content">
+                  {data &&
+                    data.map((items) => {
+                      const image = process.env.API_URL + items.image.url;
+                      return (
+                        <div className="banner-content text-center text-md-start">
+                          <h1 className="banner-content-heading text-capitalize fw-bolder">
+                            {items.title}
+                          </h1>
+                          <p className="banner-content-description text-capitalize">
+                            {items.description}
+                          </p>
+                          <Button className="rounded-pill px-4" color="primary">
+                            Shedule an appointment
+                          </Button>
+                        </div>
+                      );
+                    })}
+                </Col>
+              </Row>
+            </Slider>
+          </Col>
+          <Col
+            xs={{size:6,offset:3}}
+            md={{ size: 6, offset: 0 }}
+            lg={{ size: 6, offset: 0 }}
+            xl={{ size: 6, offset: 0}}
+            className=" d-block stock-img-content"
+          >
+            <animated.img
+              src={stock}
+              alt="stock"
+              className="stock-img img-fluid"
+              style={{
+                transform: props.xy.interpolate(translate),
+
+              }}
+            />
+          </Col>
+        </Row>
       </Container>
-       <div className="cloud-img d-block ml-1 position-relative" />
+      <div className="cloud-img d-block ml-1 position-relative" />
       <animated.img
         src={triangleImg}
         alt="triangle"
