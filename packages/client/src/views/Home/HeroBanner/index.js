@@ -71,19 +71,17 @@ const HeroBanner = () => {
       />
       <Container fluid>
         <Row>
-          <Col
-            sm={12}
-            md={12}
-            lg={12}
-            xl={12}
-          >
+          <Col sm={12} md={12} lg={12} xl={12}>
             <Slider>
-              <Row>
-                <Col md={{ size: 5, offset: 1}} lg={{ size: 6, offset: 0}} className="slider-left-content">
-                  {data &&
-                    data.map((items) => {
-                      const image = process.env.API_URL + items.image.url;
-                      return (
+              {data &&
+                data.map((items) => {
+                  return (
+                    <Row key={items.id}>
+                      <Col
+                        md={{ size: 5, offset: 1 }}
+                        lg={{ size: 6, offset: 0 }}
+                        className="slider-left-content"
+                      >
                         <div className="banner-content text-center text-md-start">
                           <h1 className="banner-content-heading text-capitalize fw-bolder">
                             {items.title}
@@ -95,17 +93,17 @@ const HeroBanner = () => {
                             Shedule an appointment
                           </Button>
                         </div>
-                      );
-                    })}
-                </Col>
-              </Row>
+                      </Col>
+                    </Row>
+                  );
+                })}
             </Slider>
           </Col>
           <Col
-            xs={{size:6,offset:3}}
+            xs={{ size: 6, offset: 3 }}
             md={{ size: 6, offset: 0 }}
             lg={{ size: 6, offset: 0 }}
-            xl={{ size: 6, offset: 0}}
+            xl={{ size: 6, offset: 0 }}
             className=" d-block stock-img-content"
           >
             <animated.img
@@ -114,7 +112,6 @@ const HeroBanner = () => {
               className="stock-img img-fluid"
               style={{
                 transform: props.xy.interpolate(translate),
-
               }}
             />
           </Col>
