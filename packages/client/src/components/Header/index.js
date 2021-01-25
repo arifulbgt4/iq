@@ -73,12 +73,12 @@ const Header = () => {
           <Col
             md={12}
             lg={3}
-            className="text-end align-self-center justify-content-around d-flex hbtns"
+            className="text-end align-self-center justify-content-end d-flex hbtns"
           >
-            <Button outline className="rounded-pill px-4 " color="primary">
+            <Button outline className="rounded-pill px-4 me-3 " color="primary">
               Login
             </Button>
-            <Button outline className="rounded-pill px-4" color="primary">
+            <Button className="rounded-pill px-4" color="primary">
               Back To office
             </Button>
           </Col>
