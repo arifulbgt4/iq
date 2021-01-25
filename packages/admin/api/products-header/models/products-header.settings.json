@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "products_headers",
+  "info": {
+    "name": "Products Header"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
