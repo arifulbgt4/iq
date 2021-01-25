@@ -10,6 +10,7 @@ import whyChooseUs from './whyChooseUs';
 import founder from './founder';
 import technology from './technology';
 import aboutUs from './aboutUs';
+import carrer from './carrer';
 
 export default combineReducers({
   ...ui,
@@ -22,4 +23,5 @@ export default combineReducers({
   ...founder,
   ...technology,
   ...aboutUs,
+  ...carrer,
 });

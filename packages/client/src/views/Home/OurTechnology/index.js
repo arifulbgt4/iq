@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-
-import SectionTitle from 'src/components/SectionTitle';
 import { Link, Element } from 'react-scroll';
-import { Sticky ,StickyContainer} from 'react-sticky';
+import { Sticky, StickyContainer } from 'react-sticky';
+
+import SectionHeader from './SectionHeader';
 import Feature from './TabsContent/Feature';
+
 import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 
 const categories = [
@@ -29,7 +30,7 @@ export default class OurTechnology extends Component {
     return (
       <section className="our-technology py-5 my-5">
         <Container className="py-2 py-md-5">
-          <SectionTitle color="white" title="our technology" />
+          <SectionHeader />
           <Row>
             <Col md={12}>
               <StickyContainer>

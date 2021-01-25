@@ -1,35 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { getBlogs } from 'src/api';
-
-import blogImg from 'src/assets/image/blog/blog.png';
-
-const blogPosts = [
-  {
-    id: 1,
-    img: blogImg,
-    title: 'blog title here',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `,
-    bloggerName: 'arif',
-    createDate: 'october 30, 2019',
-  },
-  {
-    id: 2,
-    img: blogImg,
-    title: 'blog title here',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `,
-    bloggerName: 'sunny',
-    createDate: 'october 30, 2019',
-  },
-  {
-    id: 3,
-    img: blogImg,
-    title: 'blog title here',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `,
-    bloggerName: 'antor',
-    createDate: 'october 30, 2019',
-  },
-];
+import { getBlogs, getBlogsHeader } from 'src/api';
 
 function startLoading(state) {
   state.loading = true;
@@ -63,14 +34,43 @@ const blogSlice = createSlice({
   },
 });
 
+const blogHeaderSlice = createSlice({
+  name: 'blogHeader',
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
+  reducers: {
+    getBlogsHeaderStart: startLoading,
+
+    getBlogsHeaderSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getBlogsHeaderFailure: loadingFailed,
+  },
+});
+
 export const {
   getBlogsStart,
   getBlogsSuccess,
   getBlogsFailure,
 } = blogSlice.actions;
 
+export const {
+  getBlogsHeaderStart,
+  getBlogsHeaderSuccess,
+  getBlogsHeaderFailure,
+} = blogHeaderSlice.actions;
+
 export default {
   blogs: blogSlice.reducer,
+  blogsHeader: blogHeaderSlice.reducer,
 };
 
 export const fatchBlogs = () => async (dispatch) => {
@@ -82,5 +82,17 @@ export const fatchBlogs = () => async (dispatch) => {
     dispatch(getBlogsSuccess(data));
   } catch (error) {
     dispatch(getBlogsFailure(error.toString()));
+  }
+};
+
+export const fatchBlogsHeader = () => async (dispatch) => {
+  try {
+    dispatch(getBlogsHeaderStart());
+
+    const { data } = await getBlogsHeader();
+
+    dispatch(getBlogsHeaderSuccess(data));
+  } catch (error) {
+    dispatch(getBlogsHeaderFailure(error.toString()));
   }
 };

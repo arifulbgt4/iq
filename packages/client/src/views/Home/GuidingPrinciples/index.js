@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'reactstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import { fatchGuid } from 'src/state/ducks/guidings';
+import { fatchGuid, fatchGuidHeader } from 'src/state/ducks/guidings';
 import GuidingPrinciples from 'src/components/GuidingPrinciples';
 import SectionTitle from 'src/components/SectionTitle';
 
@@ -22,20 +22,24 @@ const scroll = {
 
 const GuidingPrinciple = () => {
   const { data, loading } = useSelector((store) => store.guidings);
+  const { data: guidingsHeader, loading: headerLoading } = useSelector(
+    (store) => store.guidingsHeader
+  );
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fatchGuid());
+    dispatch(fatchGuidHeader());
   }, [dispatch]);
 
-  if (loading) {
+  if (loading || headerLoading) {
     return 'Loadding';
   }
   return (
     <section className="guiding-principle">
       <Container>
-        <SectionTitle title="Our Guiding Principles" border={false} />
+        <SectionTitle title={guidingsHeader?.title} border={false} />
         <Row>
           <Col md={12}>
             {data &&

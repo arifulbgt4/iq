@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'reactstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import { fatchProducts } from 'src/state/ducks/products';
+import { fatchProducts, fatchProductsHeader } from 'src/state/ducks/products';
 import ProductCard from 'src/components/ProductCard';
 import SectionTitle from 'src/components/SectionTitle';
 
@@ -17,21 +17,25 @@ data: {
 
 const OurProducts = () => {
   const { data, loading } = useSelector((store) => store.products);
+  const { data: productsHeader, loading: headerLoading } = useSelector(
+    (store) => store.productsHeader
+  );
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fatchProducts());
+    dispatch(fatchProductsHeader());
   }, [dispatch]);
 
-  if (loading) {
+  if (loading || headerLoading) {
     return 'Loadding';
   }
 
   return (
     <section className="our-product">
       <Container>
-        <SectionTitle color="white" title="our products" />
+        <SectionTitle color="white" title={productsHeader?.title} />
         <Row className="mt-0 mt-sm-3 product-row">
           <Col
             xl={{ size: 10, offset: 1 }}

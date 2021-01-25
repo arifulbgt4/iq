@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { getGuids } from 'src/api';
+import { getGuids, getGuidsHeader } from 'src/api';
 
 function startLoading(state) {
   state.loading = true;
@@ -34,14 +34,43 @@ const guidingSlice = createSlice({
   },
 });
 
+const guidingHeaderSlice = createSlice({
+  name: 'gudingsHeader',
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
+  reducers: {
+    getGuidHeaderStart: startLoading,
+
+    getGuidHeaderSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getGuidHeaderFailure: loadingFailed,
+  },
+});
+
 export const {
   getGuidStart,
   getGuidSuccess,
   getGuidFailure,
 } = guidingSlice.actions;
 
+export const {
+  getGuidHeaderStart,
+  getGuidHeaderSuccess,
+  getGuidHeaderFailure,
+} = guidingHeaderSlice.actions;
+
 export default {
   guidings: guidingSlice.reducer,
+  guidingsHeader: guidingHeaderSlice.reducer,
 };
 
 export const fatchGuid = () => async (dispatch) => {
@@ -53,5 +82,17 @@ export const fatchGuid = () => async (dispatch) => {
     dispatch(getGuidSuccess(data));
   } catch (error) {
     dispatch(getGuidFailure(error.toString()));
+  }
+};
+
+export const fatchGuidHeader = () => async (dispatch) => {
+  try {
+    dispatch(getGuidHeaderStart());
+
+    const { data } = await getGuidsHeader();
+
+    dispatch(getGuidHeaderSuccess(data));
+  } catch (error) {
+    dispatch(getGuidHeaderFailure(error.toString()));
   }
 };
