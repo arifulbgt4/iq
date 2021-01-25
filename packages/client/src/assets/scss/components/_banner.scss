@@ -81,6 +81,7 @@
   }
   .stock-img {
     position: absolute;
+
     z-index: 1;
     width: 90%;
     left: 0%;
@@ -89,15 +90,19 @@
     }
   }
   .cloud-img {
+    bottom: 50px;
+    min-height: 300px;
+    @media (min-width: 1640px) {
+      bottom: 100px;
+    }
     &::after {
       content: '';
       position: absolute;
       right: 0;
-      top: 0px;
       background-image: url(./../image/heroBanner/cloud.png);
       background-repeat: repeat-x;
       min-height: 466px;
-      background-position: 0 20%, 0 95%, 0 0, 0 100%, 0 0;
+      background-position: 0 0%, 0 95%, 0 0, 0 100%, 0 0;
       width: 100%;
       animation: 90s para reverse infinite linear;
     }

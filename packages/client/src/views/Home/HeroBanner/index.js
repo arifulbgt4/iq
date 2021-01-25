@@ -3,7 +3,6 @@ import { Col, Container, Row, Button } from 'reactstrap';
 import { useSpring, animated } from 'react-spring';
 import { useSelector, useDispatch } from 'react-redux';
 
-import cloudImg from 'src/assets/image/heroBanner/cloud.png';
 import triangleImg from 'src/assets/image/heroBanner/triangle.png';
 import starImg from 'src/assets/image/heroBanner/star.png';
 import plusImg from 'src/assets/image/heroBanner/plus.png';
@@ -107,14 +106,12 @@ const HeroBanner = () => {
                       style={{ transform: props.xy.interpolate(translate) }}
                     />
                   </Col>
-                  <Col xs={12}>
-                    <div className="cloud-img d-block ml-1 position-relative" />
-                  </Col>
                 </Row>
               );
             })}
         </Slider>
       </Container>
+       <div className="cloud-img d-none d-sm-block ml-1 position-relative" />
       <animated.img
         src={triangleImg}
         alt="triangle"

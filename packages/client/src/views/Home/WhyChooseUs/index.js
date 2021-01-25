@@ -6,7 +6,7 @@ import StepsToChoose from 'src/containers/StepsToChoose';
 
 const WhyChooseUs = () => {
   return (
-    <section className="why-choose-us py-4 py-sm-5">
+    <section className="why-choose-us pb-4 pb-sm-5">
       <Container>
         <SectionTitle
           title="why choose us"
