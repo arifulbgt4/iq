@@ -1,9 +1,18 @@
 import React, { useEffect } from 'react';
 import { Col, Row } from 'reactstrap';
 import { useDispatch, useSelector } from 'react-redux';
+import { Parallax } from 'react-skrollr';
 
 import { fatchchooseUs } from 'src/state/ducks/whyChooseUs';
 import ChooseCard from 'src/components/ChooseCard';
+
+const scroll = {
+  data: {
+    'data-top-bottom': 'transform: translateY(-20%);',
+    'data-center-center': 'opacity: 1;',
+    'data-bottom-top': 'opacity: 0;transform: translateY(20%);',
+  },
+};
 
 const StepsToChoose = () => {
   const { data, loading } = useSelector((store) => store.chooseUs);
@@ -26,12 +35,14 @@ const StepsToChoose = () => {
 
           return (
             <Col md={4} key={step.id}>
-              <ChooseCard
-                id={step.id}
-                img={image}
-                title={step.title}
-                description={step.description}
-              />
+              <Parallax data={scroll.data}>
+                <ChooseCard
+                  id={step.id}
+                  img={image}
+                  title={step.title}
+                  description={step.description}
+                />
+              </Parallax>
             </Col>
           );
         })}
