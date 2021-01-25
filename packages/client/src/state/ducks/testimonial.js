@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { getTestimonials } from 'src/api';
+import { getTestimonials, getTestimonialHeader } from 'src/api';
 
 const data = [
   {
@@ -56,14 +56,43 @@ const testimonailSlice = createSlice({
   },
 });
 
+const testimonailHeaderSlice = createSlice({
+  name: 'testimonialHeader',
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
+  reducers: {
+    getTestimonialHeaderStart: startLoading,
+
+    getTestimonialHeaderSuccess: (state, { payload }) => {
+      return {
+        data: payload,
+        loading: false,
+        error: null,
+      };
+    },
+
+    getTestimonialHeaderFailure: loadingFailed,
+  },
+});
+
 export const {
   getTestimonialsStart,
   getTestimonialsSuccess,
   getTestimonialsFailure,
 } = testimonailSlice.actions;
 
+export const {
+  getTestimonialHeaderStart,
+  getTestimonialHeaderSuccess,
+  getTestimonialHeaderFailure,
+} = testimonailHeaderSlice.actions;
+
 export default {
   testimonial: testimonailSlice.reducer,
+  testimonialHeader: testimonailHeaderSlice.reducer,
 };
 
 export const fatchTestimonials = () => async (dispatch) => {
@@ -75,5 +104,17 @@ export const fatchTestimonials = () => async (dispatch) => {
     dispatch(getTestimonialsSuccess(data));
   } catch (error) {
     dispatch(getTestimonialsFailure(error.toString()));
+  }
+};
+
+export const fatchTestimonialHeader = () => async (dispatch) => {
+  try {
+    dispatch(getTestimonialHeaderStart());
+
+    const { data } = await getTestimonialHeader();
+
+    dispatch(getTestimonialHeaderSuccess(data));
+  } catch (error) {
+    dispatch(getTestimonialHeaderFailure(error.toString()));
   }
 };

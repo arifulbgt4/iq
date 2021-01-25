@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_headers",
+  "info": {
+    "name": "Blog Header"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
