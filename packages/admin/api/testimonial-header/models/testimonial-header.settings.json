@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "testimonial_headers",
+  "info": {
+    "name": "Testimonial Header"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

@@ -52,3 +52,8 @@ export const getTechnologies = () => {
 export const getTestimonials = () => {
   return axios.get(`${API_URL}/testimonials`);
 };
+
+// API to get testimonial header
+export const getTestimonialHeader = () => {
+  return axios.get(`${API_URL}/testimonial-header`);
+};

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/testimonial-header",
+      "handler": "testimonial-header.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/testimonial-header",
+      "handler": "testimonial-header.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/testimonial-header",
+      "handler": "testimonial-header.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
