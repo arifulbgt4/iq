@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "guid_headers",
+  "info": {
+    "name": "Guid Header"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
