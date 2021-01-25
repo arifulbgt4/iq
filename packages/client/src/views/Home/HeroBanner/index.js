@@ -107,12 +107,14 @@ const HeroBanner = () => {
                       style={{ transform: props.xy.interpolate(translate) }}
                     />
                   </Col>
+                  <Col xs={12}>
+                    <div className="cloud-img d-block ml-1 position-relative" />
+                  </Col>
                 </Row>
               );
             })}
         </Slider>
       </Container>
-      <img src={cloudImg} alt="cloud" className="cloud-img" />
       <animated.img
         src={triangleImg}
         alt="triangle"

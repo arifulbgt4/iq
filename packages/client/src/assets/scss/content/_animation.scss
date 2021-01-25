@@ -39,3 +39,10 @@ $color: $info;
     height: 260px;
   }
 }
+
+// para
+@keyframes para {
+  100% {
+    background-position: -5000px 20%, -800px 95%, 500px 0, 1000px 100%, 400px 0;
+  }
+}
