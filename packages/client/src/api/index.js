@@ -12,6 +12,11 @@ export const getChooseUs = () => {
   return axios.get(`${API_URL}/why-choose-uses`);
 };
 
+// API to get why-choose-us header
+export const getChooseUsHeader = () => {
+  return axios.get(`${API_URL}/choose-us-header`);
+};
+
 
 // API to get about-us
 export const getAboutUs = () => {
