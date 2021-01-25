@@ -111,7 +111,7 @@ const HeroBanner = () => {
             })}
         </Slider>
       </Container>
-       <div className="cloud-img d-none d-sm-block ml-1 position-relative" />
+       <div className="cloud-img d-block ml-1 position-relative" />
       <animated.img
         src={triangleImg}
         alt="triangle"

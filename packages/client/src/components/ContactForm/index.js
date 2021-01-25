@@ -7,12 +7,22 @@ const ContactForm = () => {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <>
+    <Col
+      lg={6}
+      md={12}
+      className="px-3 px-sm-0 px-md-5 px-lg-3 px-xl-5 contact-us-content"
+    >
+      <p className="fs-1 text-center text-md-start mb-0 md-sm-3">
+        Have doubts? Don't Worry just <b>Contact Us.</b>
+      </p>
       <Form onSubmit={handleSubmit(onSubmit)} className="contact-us">
         <Row>
           <Col lg={6}>
             <FormGroup row className="my-3 my-lg-0">
-              <Label htmlFor="name" className=" fs-5 text-primary fw-bold ">
+              <Label
+                htmlFor="name"
+                className=" fs-5 text-primary fw-bold  pb-2"
+              >
                 Name*
               </Label>
               <Col md={12}>
@@ -32,10 +42,9 @@ const ContactForm = () => {
               </Col>
             </FormGroup>
           </Col>
-
           <Col lg={6}>
             <FormGroup row>
-              <Label htmlFor="email" className="fs-5 text-primary fw-bold">
+              <Label htmlFor="email" className="fs-5 text-primary fw-bold pb-2">
                 Email*
               </Label>
               <Col md={12}>
@@ -58,51 +67,46 @@ const ContactForm = () => {
             </FormGroup>
           </Col>
         </Row>
+        <FormGroup row className="mb-3  my-4">
+          <Label htmlFor="sub" className="fs-5 text-primary fw-bold pb-2">
+            Subject*
+          </Label>
+          <Col md={12}>
+            <input
+              name="subject"
+              ref={register({ required: true })}
+              type="text"
+              placeholder="Subject"
+              className="form-control inp"
+            />
+            {errors.subject && errors.subject.type === 'required' && (
+              <span className="text-danger">
+                Please enter your matter of doubts
+              </span>
+            )}
+          </Col>
+        </FormGroup>
 
-        <div className="mb-3  my-4">
-          <FormGroup row>
-            <Label htmlFor="sub" className="fs-5 text-primary fw-bold">
-              Subject*
-            </Label>
-            <Col md={12}>
-              <input
-                name="subject"
-                ref={register({ required: true })}
-                type="text"
-                placeholder="Subject"
-                className="form-control inp"
-              />
-              {errors.subject && errors.subject.type === 'required' && (
-                <span className="text-danger">
-                  Please enter your matter of doubts
-                </span>
-              )}
-            </Col>
-          </FormGroup>
-        </div>
-
-        <div className="mb-3  my-4">
-          <FormGroup row>
-            <Label htmlFor="msg" className="fs-5 text-primary fw-bold">
-              Message
-            </Label>
-            <Col md={12}>
-              <textarea
-                name="message"
-                placeholder="Type your message here..."
-                ref={register({
-                  required: true,
-                  maxLength: 800,
-                })}
-                className="form-control inp "
-                rows="4"
-              />
-              {errors.message && errors.message.type === 'required' && (
-                <span className="text-danger">Please write in detail</span>
-              )}
-            </Col>
-          </FormGroup>
-        </div>
+        <FormGroup row className="mb-3  my-4">
+          <Label htmlFor="msg" className="fs-5 text-primary fw-bold pb-2">
+            Message
+          </Label>
+          <Col md={12}>
+            <textarea
+              name="message"
+              placeholder="Type your message here..."
+              ref={register({
+                required: true,
+                maxLength: 800,
+              })}
+              className="form-control inp "
+              rows="4"
+            />
+            {errors.message && errors.message.type === 'required' && (
+              <span className="text-danger">Please write in detail</span>
+            )}
+          </Col>
+        </FormGroup>
 
         <Row className="px-2">
           <Col className="text-center text-md-end">
@@ -116,7 +120,7 @@ const ContactForm = () => {
           </Col>
         </Row>
       </Form>
-    </>
+    </Col>
   );
 };
 
