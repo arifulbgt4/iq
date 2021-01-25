@@ -79,7 +79,7 @@ const Header = () => {
               Login
             </Button>
             <Button className="rounded-pill px-4" color="primary">
-              Back To office
+              Back Office
             </Button>
           </Col>
         </Row>

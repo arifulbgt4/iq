@@ -4,9 +4,9 @@ import { Parallax } from 'react-skrollr';
 
 const scroll = {
   data: {
-    'data-top-bottom': 'opacity: 0.5;transform: scale(1.5);',
-    'data-center-center': 'opacity: 0.8;transform: scale(1.2)',
-    'data-bottom-top': 'opacity:0.2;transform: scale(0.8);',
+    'data-top-bottom': 'opacity: 0.5;transform: scale(0.8);',
+    'data-center-center': 'opacity: 1;transform: scale(1.2)',
+    'data-bottom-top': 'opacity:0.4;transform: scale(1.5);',
   },
 };
 const SectionTitle = (props) => {
