@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "choose_us_headers",
+  "info": {
+    "name": "Choose Us header"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
