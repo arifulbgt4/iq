@@ -1,6 +1,10 @@
 .blog-section {
   @media (min-width: 1400px) {
-    height: 100vh;
+    background: url(./../image/blog/blog_bg.png) no-repeat;
+     background-position: 80% 80%;
+    .blog-content {
+      height: 80vh;
+    }
   }
   @media (max-width: 1399px) and (min-width: 992px) {
     .blog-col {

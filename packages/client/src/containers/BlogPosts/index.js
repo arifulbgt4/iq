@@ -21,7 +21,7 @@ const BlogPosts = () => {
   console.log('data', data);
 
   return (
-    <Row className="d-flex justify-content-center">
+    <Row className="d-flex justify-content-center align-items-center blog-content">
       {Array.isArray(data) &&
         data.map((item) => {
           const image = process.env.API_URL + item.image.url;
