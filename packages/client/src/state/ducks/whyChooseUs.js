@@ -36,7 +36,7 @@ const chooseUsSlice = createSlice({
 
 
 const chooseUsHeaderSlice = createSlice({
-  name: 'chooseUs',
+  name: 'chooseUsHeader',
   initialState: {
     data: {},
     loading: true,

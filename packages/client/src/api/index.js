@@ -38,6 +38,11 @@ export const getGuids = () => {
   return axios.get(`${API_URL}/guids`);
 };
 
+// API to get guids header
+export const getGuidsHeader = () => {
+  return axios.get(`${API_URL}/guid-header`);
+};
+
 // API to get products
 export const getProducts = () => {
   return axios.get(`${API_URL}/products`);
