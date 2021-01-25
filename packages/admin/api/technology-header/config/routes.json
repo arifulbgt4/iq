@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/technology-header",
+      "handler": "technology-header.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/technology-header",
+      "handler": "technology-header.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/technology-header",
+      "handler": "technology-header.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

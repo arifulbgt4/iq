@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "technology_headers",
+  "info": {
+    "name": "Technology Header"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

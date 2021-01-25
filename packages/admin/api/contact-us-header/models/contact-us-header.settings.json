@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_us_headers",
+  "info": {
+    "name": "Contact Us Header",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
