@@ -19,9 +19,10 @@ const scroll = {
 };
 
 const ContactForm = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, reset } = useForm();
   const onSubmit = (data) => {
     createContact(data.name, data.email, data.subject, data.message);
+    reset();
   };
   return (
     <Col
