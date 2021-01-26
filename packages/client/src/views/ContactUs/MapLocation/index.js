@@ -1,14 +1,25 @@
 import React from 'react';
 import LocationMap from 'src/components/LocationMap';
-
 import { Col, Row } from 'reactstrap';
+import { Parallax } from 'react-skrollr';
+
+const scroll = {
+  data: {
+    'data-top-bottom': 'opacity: 1; transform: translate(0, 0%);',
+    'data-center-center': 'opacity: 1; ',
+    'data-bottom-top': 'opacity: 0;transform: translate(0, 70%);',
+  },
+};
+
 const MapLocation = () => {
   return (
     <Row>
       <Col lg={{ size: 10, offset: 1 }} md={12} sm={12}>
-        <div className="py-5 filter-me">
-          <LocationMap height={442} />
-        </div>
+        <Parallax data={scroll.data}>
+          <div className="py-5 filter-me">
+            <LocationMap height={442} />
+          </div>
+        </Parallax>
       </Col>
     </Row>
   );

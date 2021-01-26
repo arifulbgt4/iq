@@ -10,25 +10,10 @@ const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const scroll = {
-  data: {
-    'data-top-bottom': 'opacity: 1; ',
-    'data-center-center': 'opacity: 1; transform: translate(0%, 0%);',
-    'data-bottom-top': 'opacity: 0;transform: translate(-10%, 20%);',
-  },
   data2: {
     'data-top-bottom': 'opacity: 1; ',
     'data-center-center': 'opacity: 1; transform: translate(-5%, 0%);',
     'data-bottom-top': 'opacity: 0;transform: translate(10%, 0%);',
-  },
-  data3: {
-    'data-top-bottom': 'opacity: 1; transform: translate(0%, 50%);',
-    'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translate(0%, 0%);',
-  },
-  data4: {
-    'data-top-bottom': 'opacity: 1; transform: translate(0%, 0%);',
-    'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translate(0%, 50%);',
   },
 };
 
@@ -69,19 +54,8 @@ const Founder = (props) => {
           src="https://antor.thememaster.net/AllImage/cotetion.png"
           alt="a"
         />
-        {description && (
-          <Parallax data={scroll.data3}>
-            {' '}
-            <p className="m-0  info-text ">{description}</p>{' '}
-          </Parallax>
-        )}
-        {name && (
-          <Parallax data={scroll.data4}>
-            {' '}
-            <p className="fw-bold">- {name}</p>{' '}
-          </Parallax>
-        )}
-
+        {description && <p className="m-0  info-text ">{description}</p>}
+        {name && <p className="fw-bold">- {name}</p>}
         <div className="text-center mt-3">
           <Parallax data={scroll.data2}>
             <p className="history-heading fw-bold">
@@ -91,12 +65,10 @@ const Founder = (props) => {
         </div>
         {history && (
           <div className="more-details-item">
-            <Parallax data={scroll.data4}>
-              <p>{history} </p>
-              <Link to="#" className="bg-primary p-1 p-sm-2">
-                Read Nore
-              </Link>
-            </Parallax>
+            <p>{history} </p>
+            <Link to="#" className="bg-primary p-1 p-sm-2">
+              Read Nore
+            </Link>
           </div>
         )}
       </Col>

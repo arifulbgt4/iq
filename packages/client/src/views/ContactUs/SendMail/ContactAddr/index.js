@@ -15,8 +15,8 @@ const scroll = {
     'data-bottom-top': 'opacity: 0;transform: translate(0%, 300%);',
   },
   data2: {
-    'data-top-bottom': 'opacity: 1; transform:translate(0%, 0%);',
-    'data-center-center': 'opacity: 0;',
+    'data-top-bottom': 'opacity: 1; ',
+    'data-center-center': 'opacity: 1; transform:translate(0%, 0%);',
     'data-bottom-top': 'opacity: 0;transform: translate(-100%, -200%);',
   },
 };
