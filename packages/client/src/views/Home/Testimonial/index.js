@@ -5,7 +5,10 @@ import 'react-multi-carousel/lib/styles.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import { fatchTestimonialHeader } from 'src/state/ducks/testimonial';
+import {
+  fatchTestimonialHeader,
+  fatchTestimonials,
+} from 'src/state/ducks/testimonial';
 import CustomDot from 'src/components/CustomDots';
 import SectionTitle from 'src/components/SectionTitle';
 
@@ -28,8 +31,8 @@ const scroll = {
 };
 
 const Testimonial = () => {
-  const data = useSelector((store) => store.testimonial);
-  const { data: testimonialHeader, loading } = useSelector(
+  const { data, loading } = useSelector((store) => store.testimonial);
+  const { data: testimonialHeader, loading: loadingHeader } = useSelector(
     (store) => store.testimonialHeader
   );
 
@@ -55,9 +58,10 @@ const Testimonial = () => {
 
   useEffect(() => {
     dispatch(fatchTestimonialHeader());
+    dispatch(fatchTestimonials());
   }, [dispatch]);
 
-  if (loading) {
+  if (loading || loadingHeader) {
     return 'Loadding';
   }
 
@@ -86,9 +90,9 @@ const Testimonial = () => {
               customDot={<CustomDot />}
             >
               {data &&
-                data.map((items, i) => (
+                data.map((items) => (
                   <div
-                    key={i}
+                    key={items.id}
                     className="team-member position-relative text-center pt-5"
                   >
                     <Parallax data={scroll.data3}>
@@ -97,7 +101,7 @@ const Testimonial = () => {
                       </h1>
                     </Parallax>
                     <Parallax data={scroll.data}>
-                      <p className="pt-5 px-3 px-sm-5">{items.text}</p>
+                      <p className="pt-5 px-3 px-sm-5">{items.description}</p>
                     </Parallax>
                     <Parallax data={scroll.data2}>
                       <h3>{items.name}</h3>

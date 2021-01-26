@@ -43,7 +43,11 @@ function loadingFailed(state, { payload }) {
 
 const testimonailSlice = createSlice({
   name: 'testimonial',
-  initialState: data,
+  initialState: {
+    data: {},
+    loading: true,
+    error: null,
+  },
   reducers: {
     getTestimonialsStart: startLoading,
 

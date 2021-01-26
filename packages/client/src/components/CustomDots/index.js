@@ -11,7 +11,7 @@ const scroll = {
 };
 
 const CustomDot = ({ onMove, index, onClick, active }) => {
-  const data = useSelector((store) => store.testimonial);
+  const { data } = useSelector((store) => store.testimonial);
   return (
     <li
       className={`${active ? 'active' : 'inactive'} mx-2 rounded-pill dot-item`}
@@ -19,18 +19,18 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
     >
       {/* {index + 1} */}
       {data &&
-        data.map(
-          (item, i) =>
-            index + 1 === item.id && (
-              <Parallax data={scroll.data}>
+        data.map((item) => {
+          const image = process.env.API_URL + item.image.url;
+          if (index + 1 === item.id) {
+            return (
+              <Parallax key={item.id} data={scroll.data}>
                 <figure
-                  key={i}
                   className={`rounded-pill ${
                     active && 'border p-1 bg-primary'
                   } `}
                 >
                   <img
-                    src={item.img}
+                    src={image}
                     alt=""
                     height="136px"
                     className="rounded-pill"
@@ -38,8 +38,9 @@ const CustomDot = ({ onMove, index, onClick, active }) => {
                   />
                 </figure>
               </Parallax>
-            )
-        )}
+            );
+          }
+        })}
     </li>
   );
 };
