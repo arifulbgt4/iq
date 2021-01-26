@@ -13,14 +13,31 @@ const scroll = {
 
 const Feature = (props) => {
   const { id, title } = props;
+  const prevScrollY = useRef(0);
   const ref = useRef();
   useEffect(() => {
-    if (ref.current) {
-      console.log('ref', ref.current.clientHeight, id);
-    }
-  }, [ref]);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      // console.log(currentScrollY);
+      // if (
+      //   ref.current.offsetTop < currentScrollY ||
+      //   ref.current.clientHeight + ref.current.offsetTop > currentScrollY
+      // ) {
+      //   console.log('object', id);
+      // }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollY, ref]);
   return (
-    <div ref={ref} className="feature">
+    <div
+      ref={ref}
+      className="feature"
+      onMouseEnter={(e) => {
+        console.log('en');
+      }}
+    >
       <Card
         body
         className="feature-left text-capitalize bg-transparent border-0 text-center text-lg-start"
