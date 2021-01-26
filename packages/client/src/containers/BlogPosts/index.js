@@ -10,7 +10,7 @@ import BlogCard from 'src/components/BlogCard';
 const scroll = {
   data: {
     'data-top-bottom': 'opacity: 1;',
-    'data-center-center': 'opacity: 1;  transform: translate(0%, -50%);',
+    'data-center-center': 'opacity: 1;  transform: translate(0%, -30%);',
     'data-bottom-top': 'opacity: 0;transform: translate(0%, 50%);',
   },
 };
