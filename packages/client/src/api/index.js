@@ -96,3 +96,13 @@ export const createContact = (name, email, subject, message) => {
     message,
   });
 };
+
+// Api to post send mail
+export const sendMail = (name, email, subject, message) => {
+  return axios.post(`${API_URL}/contact-uses/email`, {
+    name,
+    email,
+    subject,
+    message,
+  });
+};
