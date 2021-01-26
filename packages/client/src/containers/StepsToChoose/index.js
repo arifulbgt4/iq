@@ -8,9 +8,9 @@ import ChooseCard from 'src/components/ChooseCard';
 
 const scroll = {
   data: {
-    'data-top-bottom': 'opacity: 0; transform: translateY(-20%);',
-    'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translateY(20%);',
+    'data-top-bottom': 'opacity: 0; ',
+    'data-center-center': 'opacity: 1; transform: translateY(0%);',
+    'data-bottom-top': 'opacity: 0;transform: translateY(40%);',
   },
 };
 

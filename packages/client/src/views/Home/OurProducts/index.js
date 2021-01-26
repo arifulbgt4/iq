@@ -10,8 +10,8 @@ import SectionTitle from 'src/components/SectionTitle';
 const scroll = {
   data: {
     'data-top-bottom': '',
-    'data-center-center': 'opacity: 1; transform: translate(0%, -100%);',
-    'data-bottom-top': 'opacity: 1;transform: translate(0%, 100%);',
+    'data-center-center': 'opacity: 1; transform: translate(0%, -50%);',
+    'data-bottom-top': 'opacity: 1;transform: translate(0%, 50%);',
   },
 };
 
