@@ -1,8 +1,9 @@
 import React from 'react';
-
 import { useForm } from 'react-hook-form';
 import { Button, Col, Row, Form, FormGroup, Label } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
+
+import { createContact } from 'src/api';
 
 const scroll = {
   data: {
@@ -19,7 +20,9 @@ const scroll = {
 
 const ContactForm = () => {
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    createContact(data.name, data.email, data.subject, data.message);
+  };
   return (
     <Col
       lg={6}
@@ -71,7 +74,7 @@ const ContactForm = () => {
                 </Label>
                 <Col md={12}>
                   <input
-                    name="mail"
+                    name="email"
                     ref={register({
                       required: true,
                       maxLength: 30,

@@ -86,3 +86,13 @@ export const getTestimonialHeader = () => {
 export const getCarrer = () => {
   return axios.get(`${API_URL}/carrers`);
 };
+
+// Api to post contact details
+export const createContact = (name, email, subject, message) => {
+  return axios.post(`${API_URL}/contact-uses`, {
+    name,
+    email,
+    subject,
+    message,
+  });
+};
