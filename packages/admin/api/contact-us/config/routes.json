@@ -33,6 +33,19 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/contact-uses/email",
+      "handler": "email.send",
+      "config": {
+        "policies": [],
+        "description": "Send an email",
+        "tag": {
+          "plugin": "email",
+          "name": "Email"
+        }
+      }
+    },
+    {
       "method": "PUT",
       "path": "/contact-uses/:id",
       "handler": "contact-us.update",
