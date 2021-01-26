@@ -19,10 +19,6 @@ const Home = () => {
         smoothScrollingDuration: 900,
         smoothScrolling: true,
         forceHeight: false,
-        render: function (data) {
-          //Log the current scroll position.
-          console.log('scroll', data.curTop);
-        },
       }}
       getScrollTop={(scrollTop) => console.log('scrollTop', scrollTop)}
     >

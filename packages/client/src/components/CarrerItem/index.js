@@ -1,5 +1,19 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
+import { Parallax } from 'react-skrollr';
+
+const scroll = {
+  data: {
+    'data-top-bottom': '',
+    'data-center-center': 'opacity: 1; transform: translate(0%, 0%); ',
+    'data-bottom-top': 'opacity: 0;transform: translate(-50%, 50%);',
+  },
+  data2: {
+    'data-top-bottom': 'opacity: 1;',
+    'data-center-center': 'opacity: 1;  transform:translate(0%, 0%);',
+    'data-bottom-top': 'opacity: 1;transform: translate(0%, 50%);',
+  },
+};
 
 const CarrerItem = (props) => {
   const { img, title, children, id } = props;
@@ -16,10 +30,12 @@ const CarrerItem = (props) => {
         md={6}
         sm={12}
       >
-        <div>
-          <h2 className="mb-4 font-weight-normal">{title}</h2>
-          <div className="details mb-4">{children}</div>
-        </div>
+        <Parallax data={ id % 2 === 0 ? scroll.data2 : scroll.data}>
+          <div>
+            <h2 className="mb-4 font-weight-normal">{title}</h2>
+            <div className="details mb-4">{children}</div>
+          </div>
+        </Parallax>
       </Col>
       <Col
         className={`pd-0 hidden-xs text-center text-md-left ${
@@ -28,11 +44,13 @@ const CarrerItem = (props) => {
         md={6}
         sm={12}
       >
-        <div className={`text-start`}>
-          <figure>
-            <img src={img} alt="" className="img-fluid" />
-          </figure>
-        </div>
+        <Parallax data={ id % 2 === 0 ? scroll.data : scroll.data2}>
+          <div className={`text-start`}>
+            <figure>
+              <img src={img} alt="" className="img-fluid" />
+            </figure>
+          </div>
+        </Parallax>
       </Col>
     </Row>
   );
