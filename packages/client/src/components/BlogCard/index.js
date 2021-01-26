@@ -12,6 +12,7 @@ import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 import calc from 'src/utils/calc';
+import MoreDetails from 'src/containers/BlogPosts/ReadMore';
 
 const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
@@ -47,9 +48,7 @@ const BlogCard = (props) => {
         >
           {title}
         </CardTitle>
-        <CardText className="blog-card-body_description pt-2 text-capitalize">
-          {description}
-        </CardText>
+        <MoreDetails text={description} maxLength={100} />
         <div className="blog-card-body_details mb-4">
           <CardSubtitle tag="span" className="me-5">
             <FontAwesomeIcon icon={faUserCircle} className="icon" />
@@ -61,7 +60,7 @@ const BlogCard = (props) => {
           </CardSubtitle>
         </div>
         <div className="blog-card-button d-flex justify-content-end">
-          <Link to="#" className="btn btn-primary">
+          <Link to={`/blog/${id}`} className="btn btn-primary">
             Read More
           </Link>
         </div>

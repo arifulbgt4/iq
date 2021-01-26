@@ -2,9 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 
-
-import BlogItem from './BlogItem';
-
+import BlogCard from 'src/components/BlogCard';
 
 const Blog = () => {
   const postData = useSelector((store) => store.blogpost);
@@ -14,7 +12,7 @@ const Blog = () => {
         {Array.isArray(postData) &&
           postData.map((item) => (
             <Col key={item.id} md={6} className="p-5">
-              <BlogItem {...item} />{' '}
+              <BlogCard {...item} />{' '}
             </Col>
           ))}
       </Row>

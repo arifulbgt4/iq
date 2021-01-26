@@ -27,12 +27,15 @@ const BlogDetails = (props) => {
       <Row>
         <Col>
           <Card>
-            <CardImg src={blog.image} alt="blog" className="img-fluid"></CardImg>
-            <CardText className="text-primary mb-3 text-uppercase">
-              {blog.date}
-            </CardText>
-            <CardBody>
-              <CardTitle>{blog.title}</CardTitle>
+            <CardImg src={blog.img} alt="blog" className="img-fluid"></CardImg>
+            <CardTitle tag="h2" className="py-3 border text-center">
+              {blog.title}
+            </CardTitle>
+            <CardBody className="px-4">
+              <CardText tag="h6" className="text-primary mb-3 text-uppercase pt-3">
+                {blog.createDate}
+              </CardText>
+              <h4 >{blog.bloggerName}</h4>
               <CardText>{blog.description}</CardText>{' '}
             </CardBody>
           </Card>
