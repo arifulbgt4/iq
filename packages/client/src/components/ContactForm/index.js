@@ -7,8 +7,8 @@ import { Parallax } from 'react-skrollr';
 const scroll = {
   data: {
     'data-top-bottom': 'opacity: 1; transform: translate(0%, 0%);',
-    'data-center-center': 'opacity: 0;',
-    'data-bottom-top': 'opacity: 0;transform: translate(30%, 0%);',
+    'data-center-center': 'opacity: 0.5;',
+    'data-bottom-top': 'opacity: 0;transform: translate(0%, 20%);',
   },
   data2: {
     'data-top-bottom': 'opacity: 1; transform:translate(0%, 0%);',

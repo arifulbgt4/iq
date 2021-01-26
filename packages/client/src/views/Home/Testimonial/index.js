@@ -3,10 +3,29 @@ import { Col, Container, Row } from 'reactstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useSelector, useDispatch } from 'react-redux';
+import { Parallax } from 'react-skrollr';
 
 import { fatchTestimonialHeader } from 'src/state/ducks/testimonial';
 import CustomDot from 'src/components/CustomDots';
 import SectionTitle from 'src/components/SectionTitle';
+
+const scroll = {
+  data: {
+    'data-top-bottom': 'opacity: 1; transform: translate(5%, 0%);',
+    'data-center-center': 'opacity: 0.7;',
+    'data-bottom-top': 'opacity: 0;transform: translate(-13%, 0%);',
+  },
+  data2: {
+    'data-top-bottom': 'opacity: 1; transform: translate(0%, 0%);',
+    'data-center-center': 'opacity: 0.7;',
+    'data-bottom-top': 'opacity: 0;transform: translate(0%, 100%);',
+  },
+  data3: {
+    'data-top-bottom': 'opacity: 1; transform: translate(-5%, 0%);',
+    'data-center-center': 'opacity: 0.4;',
+    'data-bottom-top': 'opacity: 0;transform: translate(20%, 20%);',
+  },
+};
 
 const Testimonial = () => {
   const data = useSelector((store) => store.testimonial);
@@ -72,11 +91,17 @@ const Testimonial = () => {
                     key={i}
                     className="team-member position-relative text-center pt-5"
                   >
-                    <h1 className="text-center position-relative mb-3 mb-sm-5 mt-3">
-                      {items.title}
-                    </h1>
-                    <p className="pt-5 px-3 px-sm-5">{items.text}</p>
-                    <h3>{items.name}</h3>
+                    <Parallax data={scroll.data3}>
+                      <h1 className="text-center position-relative mb-3 mb-sm-5 mt-3">
+                        {items.title}
+                      </h1>
+                    </Parallax>
+                    <Parallax data={scroll.data}>
+                      <p className="pt-5 px-3 px-sm-5">{items.text}</p>
+                    </Parallax>
+                    <Parallax data={scroll.data2}>
+                      <h3>{items.name}</h3>
+                    </Parallax>
                   </div>
                 ))}
             </Carousel>
