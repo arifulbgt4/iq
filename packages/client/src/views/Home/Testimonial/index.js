@@ -21,9 +21,9 @@ const scroll = {
     'data-bottom-top': 'opacity: 0;transform: translate(0%, 100%);',
   },
   data3: {
-    'data-top-bottom': 'opacity: 1; transform: translate(-5%, 0%);',
+    'data-top-bottom': 'opacity: 1; transform: translate(0%, 0%);',
     'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translate(20%, 20%);',
+    'data-bottom-top': 'opacity: 0;transform: translate(0%, 20%);',
   },
 };
 
