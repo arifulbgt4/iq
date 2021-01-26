@@ -11,7 +11,7 @@ const Blog = () => {
       <Row>
         {Array.isArray(postData) &&
           postData.map((item) => (
-            <Col key={item.id} md={6} className="p-5">
+            <Col key={item.id} md={4} className="p-5">
               <BlogCard {...item} />{' '}
             </Col>
           ))}
