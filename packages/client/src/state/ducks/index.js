@@ -11,6 +11,7 @@ import founder from './founder';
 import technology from './technology';
 import aboutUs from './aboutUs';
 import carrer from './carrer';
+import blogpost from './blogpost';
 
 export default combineReducers({
   ...ui,
@@ -24,4 +25,5 @@ export default combineReducers({
   ...technology,
   ...aboutUs,
   ...carrer,
+  ...blogpost,
 });

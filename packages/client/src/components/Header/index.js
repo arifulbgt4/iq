@@ -43,9 +43,9 @@ const Header = () => {
                   <NavLink
                     exact
                     className="nav-link text-capitalize text-secondary"
-                    to="/valus"
+                    to="/blog"
                   >
-                    Valus
+                    Blog
                   </NavLink>
                 </NavItem>
                 <NavItem>

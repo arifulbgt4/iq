@@ -14,7 +14,8 @@ const Docs = lazy(() => import('../Documentation'));
 const Home = lazy(() => import('../Home'));
 const Carrer = lazy(() => import('../Carrer'));
 const ContactUs = lazy(() => import('../ContactUs'));
-
+const Blog = lazy(() => import('../Blog'));
+const BligDetails = lazy(() => import('../BlogDetails'));
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
   return (
@@ -53,6 +54,28 @@ const App = () => {
                 withTitle({
                   component: ContactUs,
                   title: 'contact',
+                  ...props,
+                })
+              }
+            />
+            <Route
+              exact
+              path="/blog"
+              render={(props) =>
+                withTitle({
+                  component: Blog,
+                  title: 'blog',
+                  ...props,
+                })
+              }
+            />
+            <Route
+              exact
+              path="/blog/:id"
+              render={(props) =>
+                withTitle({
+                  component: BligDetails,
+                  title: 'blogdetails',
                   ...props,
                 })
               }
