@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { Link, Element } from 'react-scroll';
 import { Sticky, StickyContainer } from 'react-sticky';
 
 import SectionHeader from './SectionHeader';
@@ -14,26 +13,41 @@ const categories = [
   { id: 3, name: 'Feature3', title: 'Feature 3' },
   { id: 4, name: 'Feature4', title: 'Feature 4' },
 ];
-export default class OurTechnology extends Component {
-  constructor(props) {
-    super(props);
-    categories.forEach((category) => {
-      this[category.id] = React.createRef();
-    });
-  }
+const OurTechnology = () => {
+  const prevScrollY = useRef(0);
+  const ref = useRef();
+  const [goingUp, setGoingUp] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-  scrollToCategory = (id) => {
-    this[id].current.scrollIntoView({ inline: 'center' });
-  };
+      if (ref.current.offsetTop <= currentScrollY) {
+        // window.scrollTo(0, ref.current.offsetTop + )
+        // console.log('object', ref.current.offsetTop, currentScrollY);
+      }
+      // if (prevScrollY.current < currentScrollY && goingUp) {
+      //   setGoingUp(false);
+      // }
+      // if (prevScrollY.current > currentScrollY && !goingUp) {
+      //   setGoingUp(true);
+      // }
 
-  render() {
-    return (
-      <section className="our-technology py-5 my-5">
-        <Container className="py-2 py-md-5">
-          <SectionHeader />
-          <Row>
-            <Col md={12}>
-              <StickyContainer>
+      // prevScrollY.current = currentScrollY;
+      // console.log(goingUp, currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollY, ref]);
+
+  return (
+    <section ref={ref} className="our-technology py-5 my-5 stop-scrolling">
+      <Container className="py-2 py-md-5">
+        <SectionHeader />
+        <Row>
+          <Col md={12}>
+            {/* <StickyContainer>
                 <Sticky disableCompensation topOffset={0}>
                   {({ style, isSticky }) => (
                     <div
@@ -71,48 +85,49 @@ export default class OurTechnology extends Component {
                     </div>
                   )}
                 </Sticky>
-                <StickyContainer>
-                  <Row>
-                    <Col md={6}>
-                      <div>
-                        {categories.map((category) => (
-                          <div
-                            name={category.id.toString()}
-                            className={category.id}
-                            key={'display' + category.id}
-                          >
-                            {<Feature title={category.title} />}
-                          </div>
-                        ))}
+                <StickyContainer> */}
+            <StickyContainer>
+              <Row>
+                <Col md={6} className="technology-scroll ">
+                  <div style={{ position: 'relative' }}>
+                    {categories.map((category) => (
+                      <div
+                        name={category.id.toString()}
+                        className={category.id}
+                        key={'display' + category.id}
+                      >
+                        {<Feature id={category.id} title={category.title} />}
                       </div>
-                    </Col>
-                    <Col md={6} className="d-none d-md-block">
-                      <Sticky disableCompensation topOffset={10}>
-                        {({ style, isSticky }) => (
-                          <div
-                            style={style}
-                            className={`feature-image mt-4 ${
-                              isSticky ? 'sticky-image' : 'non-sticky'
-                            }`}
-                          >
-                            <figure className="feature-right m-0">
-                              <img
-                                src={featureRightImg}
-                                alt="feature right image"
-                                className="img-fluid"
-                              />
-                            </figure>
-                          </div>
-                        )}
-                      </Sticky>
-                    </Col>
-                  </Row>
-                </StickyContainer>
-              </StickyContainer>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    );
-  }
-}
+                    ))}
+                  </div>
+                </Col>
+                <Col md={6} className="d-none d-md-block">
+                  <Sticky disableCompensation topOffset={10}>
+                    {({ style, isSticky }) => (
+                      <div
+                        style={style}
+                        className={`feature-image sticky-image`}
+                      >
+                        <figure className="feature-right m-0">
+                          <img
+                            src={featureRightImg}
+                            alt="feature right image"
+                            className="img-fluid"
+                          />
+                        </figure>
+                      </div>
+                    )}
+                  </Sticky>
+                </Col>
+              </Row>
+            </StickyContainer>
+            {/* </StickyContainer>
+              </StickyContainer> */}
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+export default OurTechnology;
