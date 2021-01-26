@@ -12,7 +12,7 @@ const scroll = {
 };
 
 const Feature = (props) => {
-  const { id, title } = props;
+  const { id, title, feature, description } = props;
   const prevScrollY = useRef(0);
   const ref = useRef();
   useEffect(() => {
@@ -31,13 +31,7 @@ const Feature = (props) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollY, ref]);
   return (
-    <div
-      ref={ref}
-      className="feature"
-      onMouseEnter={(e) => {
-        console.log('en');
-      }}
-    >
+    <div ref={ref} className="feature">
       <Card
         body
         className="feature-left text-capitalize bg-transparent border-0 text-center text-lg-start"
@@ -47,25 +41,22 @@ const Feature = (props) => {
             tag="h5"
             className="feature-left-subtitle mb-2 pb-1 text-white"
           >
-            {title}
+            {feature}
           </CardSubtitle>
         </Parallax>
         <Parallax data={scroll.data}>
           <CardTitle tag="h1" className="feature-left-title pb-1 text-white">
-            Example @
+            {title}
           </CardTitle>
         </Parallax>
         <Parallax data={scroll.data}>
           <CardText className="feature-left-text text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's
+            {description}
           </CardText>
         </Parallax>
         <Parallax data={scroll.data}>
           <div className="feature-left-button d-flex mt-3 justify-content-center justify-content-lg-start">
-            <Link to="#" className="btn btn-secondary text-white">
+            <Link to="/contact" className="btn btn-secondary text-white">
               contact us
             </Link>
           </div>

@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { Sticky, StickyContainer } from 'react-sticky';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { fatchTechnology } from 'src/state/ducks/technology';
 import SectionHeader from './SectionHeader';
 import Feature from './TabsContent/Feature';
 
@@ -16,9 +18,19 @@ const categories = [
 const OurTechnology = () => {
   const ref = useRef();
   const [imageID, setImageID] = useState(1);
+  const { data, loading } = useSelector((store) => store.technology);
+  const dispathc = useDispatch();
   // useEffect(() => {
   //   console.log('dd', ref.current.offsetTop);
   // }, [ref]);
+
+  useEffect(() => {
+    dispathc(fatchTechnology());
+  }, [dispathc]);
+
+  if (loading) {
+    return 'Loading';
+  }
 
   return (
     <section ref={ref} className="our-technology py-5 my-5 stop-scrolling">
@@ -28,15 +40,19 @@ const OurTechnology = () => {
           <Row>
             <Col md={6} className="technology-scroll ">
               <div style={{ position: 'relative' }}>
-                {categories.map((category) => (
-                  <div
-                    name={category.id.toString()}
-                    className={category.id}
-                    key={'display' + category.id}
-                  >
-                    {<Feature id={category.id} title={category.title} />}
-                  </div>
-                ))}
+                {data &&
+                  data.map((category) => (
+                    <div className={category.id} key={'display' + category.id}>
+                      {
+                        <Feature
+                          id={category.id}
+                          title={category.title}
+                          feature={category.feature}
+                          description={category.description}
+                        />
+                      }
+                    </div>
+                  ))}
               </div>
             </Col>
             <Col md={6} className="d-none d-md-block">
