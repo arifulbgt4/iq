@@ -9,14 +9,14 @@ import SectionTitle from 'src/components/SectionTitle';
 
 const scroll = {
   left: {
-    'data-top-bottom': 'transform: translateX(-50%);',
-    'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translateX(0%);',
+    'data-top-bottom': 'opacity: 1;',
+    'data-center-center': 'opacity: 1; transform: translate(-40%, 0%);',
+    'data-bottom-top': 'opacity: 0;transform: translate(0%, -20%);',
   },
   right: {
-    'data-top-bottom': 'transform: translateX(50%);',
-    'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translateX(0%);',
+    'data-top-bottom': '',
+    'data-center-center': 'opacity: 1; transform: translate(40%, 0%);',
+    'data-bottom-top': 'opacity: 0;transform: translate(0%, -20%);',
   },
 };
 

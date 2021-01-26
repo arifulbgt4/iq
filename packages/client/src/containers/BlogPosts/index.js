@@ -9,9 +9,9 @@ import BlogCard from 'src/components/BlogCard';
 
 const scroll = {
   data: {
-    'data-top-bottom': 'opacity: 1; transform: translate(0%, -50%);',
-    'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translate(0%, 0%);',
+    'data-top-bottom': 'opacity: 1;',
+    'data-center-center': 'opacity: 1;  transform: translate(0%, -50%);',
+    'data-bottom-top': 'opacity: 0;transform: translate(0%, 50%);',
   },
 };
 

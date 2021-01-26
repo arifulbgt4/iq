@@ -11,8 +11,8 @@ import SectionTitle from 'src/components/SectionTitle';
 
 const scroll = {
   data: {
-    'data-top-bottom': 'opacity: 1; transform: translate(5%, 0%);',
-    'data-center-center': 'opacity: 1;',
+    'data-top-bottom': 'opacity: 1; ',
+    'data-center-center': 'opacity: 1; transform: translate(0%, 0%);',
     'data-bottom-top': 'opacity: 0;transform: translate(-13%, 0%);',
   },
   data2: {
