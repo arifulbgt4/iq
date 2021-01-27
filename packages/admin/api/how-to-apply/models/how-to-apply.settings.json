@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "how_to_applies",
+  "info": {
+    "name": "How to Apply"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
