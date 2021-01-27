@@ -22,7 +22,7 @@ const Navigations = () => {
             <div className="d-flex align-items-center hlogo">
               {!loading && (
                 <Link to="/" className="mb-0 h4 text-decoration-none text-dark">
-                  <img width={40} src={logo} alt="logo" />
+                  <img width={50} src={logo} alt="logo" />
                   <span className="text-primary ms-2">{data.name}</span>
                 </Link>
               )}

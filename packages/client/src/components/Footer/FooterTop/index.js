@@ -21,8 +21,7 @@ const FooterTop = () => {
         className="d-flex justify-content-between justify-content-lg-center justify-content-xl-start mb-0 mb-md-3 mb-xl-0"
       >
         <h4 className="mb-0 text-white ">
-          <img width={40} src={logo} alt="logo" />
-          <span className="text-info ms-2">{data.name}</span>
+          <img width={50} src={logo} alt="logo" />
         </h4>
         <div className="list-unstyled d-flex d-lg-none align-items-center me-0 me-md-5 pe-0 pe-md-4">
           <FontAwesomeIcon icon={faCubes} style={{ fontSize: 25 }} />
