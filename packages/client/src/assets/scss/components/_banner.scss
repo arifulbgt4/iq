@@ -1,4 +1,4 @@
-// hero banner
+
 .hero-banner {
   overflow: hidden;
   .banner-content {
@@ -92,25 +92,155 @@
     }
   }
 
-  .stock-img {
-    position: absolute;
-    animation: boat 6s linear infinite;
-    z-index: 1;
-    width: 90%;
-    left: 0%;
-    @media (max-width: 767.98px) {
-      position: relative;
-      width: 100%;
+  .stock-img-content {
+    @media (min-width: 1736px) {
+      width: 940px;
     }
-    @media (max-width: 1399px) and (min-width: 767px) {
-      left: -3%;
+    .stock-img-item {
+      position: relative;
+      top: 70%;
+      @media (max-width: 1735.98px) {
+        top: 50%;
+      }
+      @media (max-width: 1199.98px) {
+        top: 60%;
+      }
+      @media (max-width: 767.98px) {
+        margin-top: 170px;
+      }
+    }
+    .stock-img1 {
+      position: absolute;
+      left: 25%;
+      height: 200px;
+      bottom: 70%;
+      @media (max-width: 1735.98px) {
+        height: 100px;
+        bottom: 55%;
+      }
+      @media (max-width: 991.98px) {
+        height: 60px;
+      }
+    }
+    .stock-img2 {
+      position: absolute;
+      left: 25%;
+      height: 500px;
+      @media (max-width: 1735.98px) {
+        height: 250px;
+      }
+      @media (max-width: 991.98px) {
+        height: 180px;
+      }
+      bottom: 30%;
+    }
+    .stock-img3 {
+      position: absolute;
+
+      left: 10%;
+      height: 550px;
+      @media (max-width: 1735.98px) {
+        height: 285px;
+      }
+      @media (max-width: 991.98px) {
+        height: 230px;
+      }
+      bottom: 30%;
+    }
+    .stock-img4 {
+      position: absolute;
+      left: 0;
+      height: 550px;
+      @media (max-width: 1735.98px) {
+        height: 285px;
+      }
+      @media (max-width: 991.98px) {
+        height: 230px;
+      }
+      bottom: 30%;
+    }
+    .stock-img5 {
+      position: absolute;
+      bottom: 30%;
+      left: 60%;
+      height: 600px;
+      @media (max-width: 1735.98px) {
+        height: 300px;
+        left: 40%;
+      }
+      @media (max-width: 991.98px) {
+        height: 250px;
+      }
+    }
+    .stock-img6 {
+      position: absolute;
+      bottom: 30%;
+      left: 70%;
+      height: 400px;
+      @media (max-width: 1735.98px) {
+        height: 200px;
+        left: 50%;
+      }
+      @media (max-width: 1399.98px) { left: 57%;}
+
+      @media (max-width: 991.98px) {
+        height: 150px;
+        left: 65%;
+      }
+      @media (max-width: 767.98px) {  left: 50%; }
+
+    }
+    .stock-img7 {
+      position: absolute;
+      bottom: 50%;
+      left: 70%;
+      height: 250px;
+      @media (max-width: 1735.98px) {
+        height: 125px;
+        left: 40%;
+        bottom: 45%;
+      }
+      @media (max-width: 991.98px) {
+        height: 80px;
+      }
+    }
+    .stock-img8 {
+      position: absolute;
+      left: 50%;
+      height: 200px;
+      bottom: 30%;
+      @media (max-width: 1735.98px) {
+        height: 100px;
+        left: 37%;
+      }
+      @media (max-width: 991.98px) {
+        height: 60px;
+      }
+    }
+    .stock-img9 {
+      position: absolute;
+
+      left: 10%;
+      height: 300px;
+      bottom: 30%;
+      @media (max-width: 1735.98px) {
+        height: 150px;
+      }
+      @media (max-width: 991.98px) {
+        height: 100px;
+      }
     }
   }
+
   .cloud-img {
     bottom: 50px;
     min-height: 200px;
     @media (min-width: 1640px) {
       bottom: 100px;
+    }
+    @media (max-width: 767.98px) {
+      bottom: -16px;
+      min-height: 160px;
     }
     &::after {
       content: '';

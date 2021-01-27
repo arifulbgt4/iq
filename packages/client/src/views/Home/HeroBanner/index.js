@@ -9,18 +9,35 @@ import starImg from 'src/assets/image/heroBanner/star.png';
 import plusImg from 'src/assets/image/heroBanner/plus.png';
 import eggShapeImg from 'src/assets/image/heroBanner/egg-shape.png';
 import triangleBlankImg from 'src/assets/image/heroBanner/triangle-blank.png';
+import stock1 from 'src/assets/image/heroBanner/Asset1.png';
+import stock2 from 'src/assets/image/heroBanner/Asset2.png';
+import stock3 from 'src/assets/image/heroBanner/Asset3.png';
+import stock4 from 'src/assets/image/heroBanner/Asset4.png';
+import stock5 from 'src/assets/image/heroBanner/Asset5.png';
+import stock6 from 'src/assets/image/heroBanner/Asset6.png';
+import stock7 from 'src/assets/image/heroBanner/Asset7.png';
+import stock8 from 'src/assets/image/heroBanner/Asset8.png';
+import stock9 from 'src/assets/image/heroBanner/Asset9.png';
+
 import Slider from 'src/components/Slider';
 import { fatchHeroBanner } from 'src/state/ducks/herobanner';
 
-const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
+const calc = (x, y) => [x - window.innerWidth/1.2, y - window.innerHeight / 2];
 
 const translate = (x, y) => `translate3d(${x / 10}px, ${y / 10}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 7}px,${y / 9}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 8 + 10}px,${y / 8 - 10}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 5}px,${y / 5}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 10.5}px,${y / 7.5}px,0)`;
+const trans5 = (x, y) => `translate3d(${x / 7.5}px,${y / 7.5}px,0)`;
+const trans6 = (x, y) => `translate3d(${x / 5.5}px,${y / 4.8}px,0)`;
+const trans7 = (x, y) => `translate3d(${x / 6.5}px,${y / 8.5}px,0)`;
 
 const HeroBanner = () => {
   const dispatch = useDispatch();
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
-    config: { mass: 10, tension: 550, friction: 160 },
+    config: { mass: 30, tension: 500, friction: 80 },
   }));
 
   const { data, loading } = useSelector((store) => store.heroBanner);
@@ -79,7 +96,8 @@ const HeroBanner = () => {
                     <Row key={items.id}>
                       <Col
                         md={{ size: 5, offset: 1 }}
-                        lg={{ size: 6, offset: 0 }}
+                        lg={{ size: 5, offset: 0 }}
+                        xl={{ size: 6, offset: 0 }}
                         className="slider-left-content"
                       >
                         <div className="banner-content text-center text-md-start">
@@ -100,20 +118,88 @@ const HeroBanner = () => {
             </Slider>
           </Col>
           <Col
-            xs={{ size: 6, offset: 3 }}
+            xs={{ size: 12, offset: 0}}
+            sm={{ size: 10, offset: 2}}
             md={{ size: 6, offset: 0 }}
             lg={{ size: 6, offset: 0 }}
             xl={{ size: 6, offset: 0 }}
-            className=" d-block stock-img-content"
+            className=" d-block stock-img-content justify-content-center"
           >
-            <animated.img
-              src={stock}
-              alt="stock"
-              className="stock-img img-fluid"
-              style={{
-                transform: props.xy.interpolate(translate),
-              }}
-            />
+            <div className="stock-img-item">
+              <animated.img
+                src={stock4}
+                alt="stock"
+                className="stock-img4"
+                style={{
+                  transform: props.xy.interpolate(trans1),
+                }}
+              />
+              <animated.img
+                src={stock5}
+                alt="stock"
+                className="stock-img5"
+                style={{
+                  transform: props.xy.interpolate(trans2),
+                }}
+              />
+              <animated.img
+                src={stock1}
+                alt="stock"
+                className="stock-img1"
+                style={{
+                  transform: props.xy.interpolate(trans3),
+                }}
+              />
+              <animated.img
+                src={stock2}
+                alt="stock"
+                className="stock-img2"
+                style={{
+                  transform: props.xy.interpolate(trans4),
+                }}
+              />
+              <animated.img
+                src={stock3}
+                alt="stock"
+                className="stock-img3"
+                style={{
+                  transform: props.xy.interpolate(translate),
+                }}
+              />
+
+              <animated.img
+                src={stock6}
+                alt="stock"
+                className="stock-img6"
+                style={{
+                  transform: props.xy.interpolate(trans1),
+                }}
+              />
+              <animated.img
+                src={stock7}
+                alt="stock"
+                className="stock-img7"
+                style={{
+                  transform: props.xy.interpolate(trans6),
+                }}
+              />
+              <animated.img
+                src={stock8}
+                alt="stock"
+                className="stock-img8"
+                style={{
+                  transform: props.xy.interpolate(trans7),
+                }}
+              />
+              <animated.img
+                src={stock9}
+                alt="stock"
+                className="stock-img9"
+                style={{
+                  transform: props.xy.interpolate(trans5),
+                }}
+              />
+            </div>
           </Col>
         </Row>
       </Container>
