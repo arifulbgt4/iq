@@ -30,7 +30,7 @@ const Navigations = () => {
               <MenuBar />
             </div>
           </Col>
-          <Col md={7} lg={6} className="hnav">
+          <Col md={7} lg={5} xl={5} className="hnav col-xxl-6">
             <Navbar className="p-0 d-block">
               <Nav className="justify-content-end">
                 <NavItem>
@@ -83,14 +83,15 @@ const Navigations = () => {
           </Col>
           <Col
             md={5}
-            lg={3}
-            className="text-end align-self-center justify-content-end d-flex hbtns"
+            lg={4}
+            xl={4}
+            className="col-xxl-3 text-end align-self-center justify-content-end d-flex hbtns"
           >
-            <Button outline className="rounded-pill px-4 me-3 " color="primary">
-              Login
+            <Button className="rounded-pill px-4 me-3 " color="primary">
+              Trade Now
             </Button>
-            <Button className="rounded-pill px-4" color="primary">
-              Back Office
+            <Button outline className="rounded-pill px-4" color="primary">
+              My IQ A?C
             </Button>
           </Col>
         </Row>
