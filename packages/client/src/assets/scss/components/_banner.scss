@@ -1,9 +1,9 @@
-
 .hero-banner {
   overflow: hidden;
   .banner-content {
-    @media (min-width: 1200px) {
-      margin-left: 100px;
+    @media (min-width: 1199px) {
+      margin-left: 65px;
+      padding-right: 62px;
     }
     &-heading {
       @media (min-width: 1640px) {
@@ -21,10 +21,6 @@
       font-size: 1.5rem;
       color: #383838;
       font-weight: normal;
-      @media (min-width: 1260px) {
-        width: 75%;
-      }
-
       @media (max-width: 1199.98px) {
         font-size: 1rem;
         width: 100% !important;
@@ -93,11 +89,112 @@
   }
 
   .stock-img-content {
+    @media (max-width: 1735.98px) {
+      bottom: 150px !important;
+    }
+    @media (max-width: 767.98px) {
+      margin-top: 237px;
+      position: relative;
+      bottom: 0px !important;
+    }
+    @media (max-width: 575.98px) {
+      left: 20%px;
+    }
+    @media (max-width: 375.98px) {
+      left: -23px;
+    }
+
+    .line-wrapper2 {
+      span {
+        width: 80px;
+        @media (max-width: 1735.98px) {
+          width: 40px;
+        }
+        @media (max-width: 991.98px) {
+          width: 25px;
+        }
+
+        height: 60px;
+        border-radius: 5px;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: absolute;
+      }
+      position: absolute;
+      bottom: 30%;
+      left: 18%;
+      .line1 {
+        background: $soft-blue;
+        animation: animate5 20s linear infinite;
+        bottom: 0px;
+
+        left: 60px;
+        @media (max-width: 1735.98px) {
+          left: 5px;
+          height: 200px;
+          animation: animate6 21.2s linear infinite;
+        }
+        @media (max-width: 991.98px) {
+          left: 50px;
+        }
+      }
+      .line2 {
+        background: $soft-blue;
+        animation: animate5 20.4s linear infinite;
+        bottom: 0px;
+        left: 180px;
+        @media (max-width: 1735.98px) {
+          left: 70px;
+          animation: animate6 22.1s linear infinite;
+        }
+        @media (max-width: 991.98px) {
+          left: 90px;
+        }
+      }
+      .line3 {
+        background: $soft-blue;
+        animation: animate5 22.6s linear infinite;
+        bottom: 0px;
+        left: 300px;
+        @media (max-width: 1735.98px) {
+          left: 130px;
+          animation: animate6 23.2s linear infinite;
+        }
+        @media (max-width: 991.98px) {
+          left: 130px;
+        }
+      }
+      .line4 {
+        background: $soft-blue;
+        animation: animate5 23.8s linear infinite;
+        bottom: 0px;
+        left: 420px;
+        @media (max-width: 1735.98px) {
+          left: 195px;
+          animation: animate6 24.3s linear infinite;
+        }
+        @media (max-width: 991.98px) {
+          left: 170px;
+        }
+      }
+      .line5 {
+        background: $soft-blue;
+        animation: animate5 21s linear infinite;
+        bottom: 0px;
+        left: 520px;
+        @media (max-width: 1735.98px) {
+          left: 260px;
+          animation: animate6 25.5s linear infinite;
+        }
+        @media (max-width: 991.98px) {
+          left: 210px;
+        }
+      }
+    }
     @media (min-width: 1736px) {
       width: 940px;
     }
     .stock-img-item {
-      position: relative;
       top: 70%;
       @media (max-width: 1735.98px) {
         top: 50%;
@@ -105,14 +202,11 @@
       @media (max-width: 1199.98px) {
         top: 60%;
       }
-      @media (max-width: 767.98px) {
-        margin-top: 170px;
-      }
     }
     .stock-img1 {
       position: absolute;
       left: 25%;
-      height: 200px;
+      height: 180px;
       bottom: 70%;
       @media (max-width: 1735.98px) {
         height: 100px;
@@ -125,7 +219,7 @@
     .stock-img2 {
       position: absolute;
       left: 25%;
-      height: 500px;
+      height: 450px;
       @media (max-width: 1735.98px) {
         height: 250px;
       }
@@ -136,21 +230,23 @@
     }
     .stock-img3 {
       position: absolute;
-
       left: 10%;
-      height: 550px;
+      height: 500px;
       @media (max-width: 1735.98px) {
         height: 285px;
       }
       @media (max-width: 991.98px) {
         height: 230px;
       }
+      @media (max-width: 390.98px) {
+        height: 200px;
+      }
       bottom: 30%;
     }
     .stock-img4 {
       position: absolute;
       left: 0;
-      height: 550px;
+      height: 500px;
       @media (max-width: 1735.98px) {
         height: 285px;
       }
@@ -163,7 +259,7 @@
       position: absolute;
       bottom: 30%;
       left: 60%;
-      height: 600px;
+      height: 550px;
       @media (max-width: 1735.98px) {
         height: 300px;
         left: 40%;
@@ -176,38 +272,61 @@
       position: absolute;
       bottom: 30%;
       left: 70%;
-      height: 400px;
+      height: 350px;
       @media (max-width: 1735.98px) {
         height: 200px;
         left: 50%;
       }
-      @media (max-width: 1399.98px) { left: 57%;}
+      @media (max-width: 1399.98px) {
+        left: 57%;
+      }
 
       @media (max-width: 991.98px) {
         height: 150px;
         left: 65%;
       }
-      @media (max-width: 767.98px) {  left: 50%; }
-
+      @media (max-width: 767.98px) {
+        left: 45%;
+      }
+      @media (max-width: 575.98px) {
+        left: 50%;
+      }
+      @media (max-width: 400.98px) {
+        left: 70%;
+        height: 100px;
+      }
     }
     .stock-img7 {
       position: absolute;
-      bottom: 50%;
-      left: 70%;
-      height: 250px;
+      bottom: 30%;
+      left: 65%;
+      height: 210px;
+      animation: mover 25s infinite alternate;
+      @media (max-width: 1735.98px) {
+        animation: mover2 25s infinite alternate;
+      }
       @media (max-width: 1735.98px) {
         height: 125px;
-        left: 40%;
-        bottom: 45%;
+        left: 50%;
       }
       @media (max-width: 991.98px) {
         height: 80px;
+        left: 65%;
+      }
+      @media (max-width: 767.98px) {
+        left: 45%;
+      }
+      @media (max-width: 575.98px) {
+        left: 60%;
+      }
+      @media (max-width: 396.98px) {
+        left: 70%;
       }
     }
     .stock-img8 {
       position: absolute;
       left: 50%;
-      height: 200px;
+      height: 180px;
       bottom: 30%;
       @media (max-width: 1735.98px) {
         height: 100px;
@@ -221,7 +340,7 @@
       position: absolute;
 
       left: 10%;
-      height: 300px;
+      height: 260px;
       bottom: 30%;
       @media (max-width: 1735.98px) {
         height: 150px;
@@ -239,8 +358,8 @@
       bottom: 100px;
     }
     @media (max-width: 767.98px) {
-      bottom: -16px;
-      min-height: 160px;
+      bottom: 47px;
+      min-height: 123px;
     }
     &::after {
       content: '';

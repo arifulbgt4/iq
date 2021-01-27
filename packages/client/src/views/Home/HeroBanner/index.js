@@ -22,7 +22,10 @@ import stock9 from 'src/assets/image/heroBanner/Asset9.png';
 import Slider from 'src/components/Slider';
 import { fatchHeroBanner } from 'src/state/ducks/herobanner';
 
-const calc = (x, y) => [x - window.innerWidth/1.2, y - window.innerHeight / 2];
+const calc = (x, y) => [
+  x - window.innerWidth / 1.2,
+  y - window.innerHeight / 2,
+];
 
 const translate = (x, y) => `translate3d(${x / 10}px, ${y / 10}px,0)`;
 const trans1 = (x, y) => `translate3d(${x / 7}px,${y / 9}px,0)`;
@@ -118,11 +121,10 @@ const HeroBanner = () => {
             </Slider>
           </Col>
           <Col
-            xs={{ size: 12, offset: 0}}
-            sm={{ size: 10, offset: 2}}
+            xs={{ size: 11, offset: 1}}
+            sm={{ size: 10, offset: 2 }}
             md={{ size: 6, offset: 0 }}
-            lg={{ size: 6, offset: 0 }}
-            xl={{ size: 6, offset: 0 }}
+
             className=" d-block stock-img-content justify-content-center"
           >
             <div className="stock-img-item">
@@ -130,74 +132,57 @@ const HeroBanner = () => {
                 src={stock4}
                 alt="stock"
                 className="stock-img4"
-                style={{
-                  transform: props.xy.interpolate(trans1),
-                }}
+
               />
               <animated.img
                 src={stock5}
                 alt="stock"
                 className="stock-img5"
-                style={{
-                  transform: props.xy.interpolate(trans2),
-                }}
+
               />
               <animated.img
                 src={stock1}
                 alt="stock"
                 className="stock-img1"
-                style={{
-                  transform: props.xy.interpolate(trans3),
-                }}
+
               />
-              <animated.img
-                src={stock2}
-                alt="stock"
-                className="stock-img2"
-                style={{
-                  transform: props.xy.interpolate(trans4),
-                }}
-              />
+              <div className="line-wrapper2 ">
+                <span className="line1" />
+                <span className="line2" />
+                <span className="line3" />
+                <span className="line4" />
+                <span className="line5" />
+              </div>
               <animated.img
                 src={stock3}
                 alt="stock"
                 className="stock-img3"
-                style={{
-                  transform: props.xy.interpolate(translate),
-                }}
+
               />
 
               <animated.img
                 src={stock6}
                 alt="stock"
                 className="stock-img6"
-                style={{
-                  transform: props.xy.interpolate(trans1),
-                }}
+
               />
               <animated.img
                 src={stock7}
                 alt="stock"
                 className="stock-img7"
-                style={{
-                  transform: props.xy.interpolate(trans6),
-                }}
+
               />
               <animated.img
                 src={stock8}
                 alt="stock"
                 className="stock-img8"
-                style={{
-                  transform: props.xy.interpolate(trans7),
-                }}
+
               />
               <animated.img
                 src={stock9}
                 alt="stock"
                 className="stock-img9"
-                style={{
-                  transform: props.xy.interpolate(trans5),
-                }}
+
               />
             </div>
           </Col>
