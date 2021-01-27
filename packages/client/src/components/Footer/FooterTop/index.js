@@ -11,7 +11,7 @@ const FooterTop = () => {
     return 'Loading';
   }
 
-  const logo = process.env.API_URL + data.logo_one.url;
+  const logo = process.env.API_URL + data.logo_two.url;
 
   return (
     <Row className="py-4">
