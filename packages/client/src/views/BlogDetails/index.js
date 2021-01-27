@@ -9,7 +9,10 @@ import {
   CardText,
   CardImg,
   CardTitle,
+  CardSubtitle,
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -23,19 +26,36 @@ const BlogDetails = (props) => {
   const blog = blogs && blogs.filter((item) => item.id === parseInt(id))[0];
 
   return (
-    <Container className="blog-details py-5">
+    <Container className="py-5">
       <Row>
         <Col>
-          <Card>
-            <CardImg src={blog.img} alt="blog" className="img-fluid"></CardImg>
-            <CardTitle tag="h2" className="py-3 border text-center">
-              {blog.title}
-            </CardTitle>
-            <CardBody className="px-4">
-              <CardText tag="h6" className="text-primary mb-3 text-uppercase pt-3">
-                {blog.createDate}
-              </CardText>
-              <h4 >{blog.bloggerName}</h4>
+          <Card className="blog-details">
+            <figure>
+              <CardImg
+                src={blog.img}
+                alt="blog"
+                className="img-fluid"
+              ></CardImg>
+            </figure>
+            <CardBody className="p-4 px-5">
+              <CardTitle tag="h2" className="py-3 border-bottom">
+                {blog.title}
+
+                <div className="blog-details-body_details mb-2">
+                  <CardSubtitle tag="span" className="me-5">
+                    <FontAwesomeIcon icon={faUserCircle} className="icon" />
+                    <small className="name text-capitalize ms-2">
+                      {blog.bloggerName}
+                    </small>
+                  </CardSubtitle>
+                  <CardSubtitle tag="span" className="ps-4">
+                    <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
+                    <small className="date text-capitalize ms-2">
+                      {blog.createDate}
+                    </small>
+                  </CardSubtitle>
+                </div>
+              </CardTitle>
               <CardText>{blog.description}</CardText>{' '}
             </CardBody>
           </Card>
