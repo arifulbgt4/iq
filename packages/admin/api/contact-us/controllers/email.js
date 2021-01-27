@@ -1,9 +1,9 @@
-module.exports = ({ env }) => ({
-  send: async (ctx) => {
+module.exports = {
+  index: async (ctx) => {
     const options = ctx.request.body;
     try {
       await strapi.plugins.email.services.email.send({
-        to: env('SENDGRID_TO_MAIL'),
+        to: process.env.SENDGRID_TO_MAIL,
         from: options.email,
         subject: options.subject,
         text: options.message,
@@ -18,4 +18,4 @@ module.exports = ({ env }) => ({
     // Send 200 `ok`
     ctx.send('Email sent');
   },
-});
+};

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/27/2021 5:43:02 AM"
+    "x-generation-date": "01/27/2021 1:35:30 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2842,7 +2842,7 @@
     "/contact-uses/email": {
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Send an email",
         "responses": {
           "200": {
             "description": "response",
@@ -2891,7 +2891,7 @@
         },
         "summary": "",
         "tags": [
-          "Unclassified"
+          "Email - Email"
         ],
         "requestBody": {
           "description": "",
@@ -11536,9 +11536,6 @@
     },
     {
       "name": "Carrer"
-    },
-    {
-      "name": "Unclassified"
     },
     {
       "name": "Founder"

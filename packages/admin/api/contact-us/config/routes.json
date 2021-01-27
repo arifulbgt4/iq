@@ -35,7 +35,7 @@
     {
       "method": "POST",
       "path": "/contact-uses/email",
-      "handler": "email.send",
+      "handler": "email.index",
       "config": {
         "policies": [],
         "description": "Send an email",
