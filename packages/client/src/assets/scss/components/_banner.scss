@@ -5,14 +5,20 @@
       margin-left: 65px;
       padding-right: 62px;
     }
-    &-heading {
-      @media (min-width: 1640px) {
+    .small-text {
+      @media (min-width: 1680px) {
         font-size: 6.625rem;
       }
       margin-bottom: 1rem;
       @media (max-width: 1399.98px) {
         font-size: 3rem;
       }
+      @media (max-width: 810.98px) {
+        font-size: 2rem;
+      }
+    }
+    .large-text {
+      font-size: 2,5rem;
       @media (max-width: 810.98px) {
         font-size: 2rem;
       }
@@ -113,7 +119,6 @@
         @media (max-width: 991.98px) {
           width: 25px;
         }
-
         height: 60px;
         border-radius: 5px;
         animation-iteration-count: infinite;
@@ -125,9 +130,8 @@
       left: 18%;
       .line1 {
         background: $soft-blue;
-        animation: animate5 20s linear infinite;
+        animation: animate5 18s linear infinite;
         bottom: 0px;
-
         left: 60px;
         @media (max-width: 1735.98px) {
           left: 5px;
@@ -140,7 +144,7 @@
       }
       .line2 {
         background: $soft-blue;
-        animation: animate5 20.4s linear infinite;
+        animation: animate5 17.9s linear infinite;
         bottom: 0px;
         left: 180px;
         @media (max-width: 1735.98px) {
@@ -153,7 +157,7 @@
       }
       .line3 {
         background: $soft-blue;
-        animation: animate5 22.6s linear infinite;
+        animation: animate5 17.6s linear infinite;
         bottom: 0px;
         left: 300px;
         @media (max-width: 1735.98px) {
@@ -166,7 +170,7 @@
       }
       .line4 {
         background: $soft-blue;
-        animation: animate5 23.8s linear infinite;
+        animation: animate5 17s linear infinite;
         bottom: 0px;
         left: 420px;
         @media (max-width: 1735.98px) {
@@ -179,7 +183,7 @@
       }
       .line5 {
         background: $soft-blue;
-        animation: animate5 21s linear infinite;
+        animation: animate5 17.4s linear infinite;
         bottom: 0px;
         left: 520px;
         @media (max-width: 1735.98px) {
@@ -207,7 +211,7 @@
       position: absolute;
       left: 25%;
       height: 180px;
-      bottom: 70%;
+      bottom: 65%;
       @media (max-width: 1735.98px) {
         height: 100px;
         bottom: 55%;
@@ -301,9 +305,9 @@
       bottom: 30%;
       left: 65%;
       height: 210px;
-      animation: mover 25s infinite alternate;
+      animation: mover 20s infinite alternate;
       @media (max-width: 1735.98px) {
-        animation: mover2 25s infinite alternate;
+        animation: mover2 17s infinite alternate;
       }
       @media (max-width: 1735.98px) {
         height: 125px;

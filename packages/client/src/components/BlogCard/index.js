@@ -12,7 +12,7 @@ import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 import calc from 'src/utils/calc';
-import MoreDetails from 'src/containers/BlogPosts/ReadMore';
+import MoreDetails from 'src/components/ReadMore';
 
 const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;

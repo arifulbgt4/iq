@@ -21,6 +21,7 @@ import stock9 from 'src/assets/image/heroBanner/Asset9.png';
 
 import Slider from 'src/components/Slider';
 import { fatchHeroBanner } from 'src/state/ducks/herobanner';
+import LargerText from './LergerText';
 
 const calc = (x, y) => [
   x - window.innerWidth / 1.2,
@@ -104,9 +105,7 @@ const HeroBanner = () => {
                         className="slider-left-content"
                       >
                         <div className="banner-content text-center text-md-start">
-                          <h1 className="banner-content-heading text-capitalize fw-bolder">
-                            {items.title}
-                          </h1>
+                          <LargerText text={items.title} maxLength={23} />
                           <p className="banner-content-description text-capitalize">
                             {items.description}
                           </p>
