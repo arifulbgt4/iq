@@ -1,8 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "blogs",
+  "kind": "singleType",
+  "collectionName": "websits",
   "info": {
-    "name": "Blogs",
+    "name": "Website",
     "description": ""
   },
   "options": {
@@ -11,19 +11,10 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
-    "author": {
-      "type": "string"
-    },
-    "date": {
-      "type": "date"
-    },
-    "image": {
+    "logo_one": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -34,8 +25,16 @@
       "plugin": "upload",
       "required": false
     },
-    "large_description": {
-      "type": "richtext"
+    "logo_two": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

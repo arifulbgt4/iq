@@ -27,12 +27,18 @@ const BlogPosts = () => {
   if (loading) {
     return 'Loadding';
   }
-  console.log('data', data);
+  let blogs;
+
+  if (data.length >= 3) {
+    blogs = data.slice(0, 3);
+  } else {
+    blogs = data;
+  }
 
   return (
     <Row className="d-flex justify-content-center align-items-center blog-content">
-      {Array.isArray(data) &&
-        data.map((item) => {
+      {Array.isArray(blogs) &&
+        blogs.map((item) => {
           const image = process.env.API_URL + item.image.url;
           return (
             <Col

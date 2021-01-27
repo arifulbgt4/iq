@@ -78,8 +78,11 @@ export const fatchBlogs = () => async (dispatch) => {
     dispatch(getBlogsStart());
 
     const { data } = await getBlogs();
-
-    dispatch(getBlogsSuccess(data));
+    let blogs;
+    if (data.length > 0) {
+      blogs = data.reverse();
+    }
+    dispatch(getBlogsSuccess(blogs));
   } catch (error) {
     dispatch(getBlogsFailure(error.toString()));
   }

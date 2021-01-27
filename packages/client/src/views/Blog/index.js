@@ -5,16 +5,26 @@ import { useSelector } from 'react-redux';
 import BlogCard from 'src/components/BlogCard';
 
 const Blog = () => {
-  const postData = useSelector((store) => store.blogpost);
+  const { data } = useSelector((store) => store.blogs);
   return (
     <Container className="blog-page">
       <Row>
-        {Array.isArray(postData) &&
-          postData.map((item) => (
-            <Col key={item.id} md={4} className="p-5">
-              <BlogCard {...item} />{' '}
-            </Col>
-          ))}
+        {Array.isArray(data) &&
+          data.map((item) => {
+            const image = process.env.API_URL + item.image.url;
+            return (
+              <Col key={item.id} md={6} lg={4} xl={4} className="p-5 col-xxl-3">
+                <BlogCard
+                  id={item.id}
+                  img={image}
+                  title={item.title}
+                  description={item.description}
+                  bloggerName={item.author}
+                  createDate={item.date}
+                />
+              </Col>
+            );
+          })}
       </Row>
     </Container>
   );

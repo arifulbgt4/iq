@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/websit",
+      "handler": "websit.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/websit",
+      "handler": "websit.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/websit",
+      "handler": "websit.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
