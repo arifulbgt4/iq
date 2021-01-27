@@ -27,6 +27,11 @@ export const getBlogs = () => {
   return axios.get(`${API_URL}/blogs`);
 };
 
+// API to get blogs find one
+export const getBlogById = (id) => {
+  return axios.get(`${API_URL}/blogs/${id}`);
+};
+
 // API to get blogs header
 export const getBlogsHeader = () => {
   return axios.get(`${API_URL}/blog-header`);
