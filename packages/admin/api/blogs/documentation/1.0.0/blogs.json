@@ -602,6 +602,9 @@
               }
             }
           },
+          "large_description": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -622,6 +625,9 @@
           "date": {
             "type": "string",
             "format": "date"
+          },
+          "large_description": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

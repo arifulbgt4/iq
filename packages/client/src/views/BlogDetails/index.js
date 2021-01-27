@@ -69,7 +69,10 @@ const BlogDetails = () => {
                   </CardSubtitle>
                 </div>
               </CardTitle>
-              <CardText>{blog.description}</CardText>{' '}
+              <CardText>{blog.description}</CardText>
+              {blog?.large_description && (
+                <CardText>{blog.large_description}</CardText>
+              )}
             </CardBody>
           </Card>
         </Col>
