@@ -62,7 +62,7 @@ const App = () => {
               render={(props) =>
                 withTitle({
                   component: ContactUs,
-                  title: 'contact',
+                  title: 'Contact',
                   ...props,
                 })
               }
@@ -73,7 +73,7 @@ const App = () => {
               render={(props) =>
                 withTitle({
                   component: Blog,
-                  title: 'blog',
+                  title: 'Blog',
                   ...props,
                 })
               }
