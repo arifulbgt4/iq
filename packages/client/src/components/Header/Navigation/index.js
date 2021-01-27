@@ -91,7 +91,7 @@ const Navigations = () => {
               Trade Now
             </Button>
             <Button outline className="rounded-pill px-4" color="primary">
-              My IQ A?C
+              My IQ A/C
             </Button>
           </Col>
         </Row>

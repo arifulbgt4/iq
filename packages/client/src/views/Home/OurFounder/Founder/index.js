@@ -69,7 +69,7 @@ const Founder = (props) => {
             <div className="text-end">
 
             <Link to="#" className="bg-primary p-1 p-sm-2">
-              Read Nore
+              Read More
             </Link>
             </div>
           </div>
