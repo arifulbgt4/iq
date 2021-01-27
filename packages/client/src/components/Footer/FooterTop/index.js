@@ -1,9 +1,18 @@
+import React from 'react';
 import { faCubes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import { Col, Input, Row } from 'reactstrap';
+import { useSelector } from 'react-redux';
 
 const FooterTop = () => {
+  const { data, loading } = useSelector((store) => store.websiteDetails);
+
+  if (loading) {
+    return 'Loading';
+  }
+
+  const logo = process.env.API_URL + data.logo_one.url;
+
   return (
     <Row className="py-4">
       <Col
@@ -12,7 +21,8 @@ const FooterTop = () => {
         className="d-flex justify-content-between justify-content-lg-center justify-content-xl-start mb-0 mb-md-3 mb-xl-0"
       >
         <h4 className="mb-0 text-white ">
-          <span className="text-info">IQ</span>Stock
+          <img width={40} src={logo} alt="logo" />
+          <span className="text-info ms-2">{data.name}</span>
         </h4>
         <div className="list-unstyled d-flex d-lg-none align-items-center me-0 me-md-5 pe-0 pe-md-4">
           <FontAwesomeIcon icon={faCubes} style={{ fontSize: 25 }} />

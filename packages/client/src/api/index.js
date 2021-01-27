@@ -92,6 +92,11 @@ export const getCarrer = () => {
   return axios.get(`${API_URL}/carrers`);
 };
 
+// API to get website details
+export const getWebsiteDetails = () => {
+  return axios.get(`${API_URL}/websit`);
+};
+
 // Api to post contact details
 export const createContact = (name, email, subject, message) => {
   return axios.post(`${API_URL}/contact-uses`, {

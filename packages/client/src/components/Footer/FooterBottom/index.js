@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 import {
   Col,
   Form,
@@ -24,6 +25,13 @@ import {
 const data = [faTwitter, faFacebookF, faInstagram, faPinterestP, faLinkedinIn];
 
 const FooterBottom = () => {
+  const { data: website, loading } = useSelector(
+    (store) => store.websiteDetails
+  );
+
+  if (loading) {
+    return 'Loading';
+  }
   return (
     <Row className="mt-4">
       <Col lg={4}>
@@ -62,7 +70,7 @@ const FooterBottom = () => {
             <Link to="#">Press</Link>
           </ListGroupItem>
         </ListGroup>
-        <p>2021 copyrights @ Metastock</p>
+        <p>2021 copyrights @ {website.name}</p>
       </Col>
       <Col lg={4}>
         <ListGroup

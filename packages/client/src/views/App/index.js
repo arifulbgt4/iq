@@ -1,8 +1,10 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import 'src/assets/scss/style.scss';
 
+import { fatchWebsiteDetails } from 'src/state/ducks/ui';
 import Fallback from 'src/components/Fallback';
 import NotFound from 'src/components/404';
 import withTitle from 'src/components/TitleComponent';
@@ -16,8 +18,15 @@ const Carrer = lazy(() => import('../Carrer'));
 const ContactUs = lazy(() => import('../ContactUs'));
 const Blog = lazy(() => import('../Blog'));
 const BligDetails = lazy(() => import('../BlogDetails'));
+
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fatchWebsiteDetails());
+  }, [dispatch]);
+
   return (
     <>
       <Router>
