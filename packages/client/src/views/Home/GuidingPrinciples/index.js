@@ -48,7 +48,8 @@ const GuidingPrinciple = () => {
 
                 return (
                   <Parallax
-                   key={item.id} data={item.id % 2 === 0 ? scroll.left : scroll.right}
+                    key={item.id}
+                    data={item.id % 2 === 0 ? scroll.left : scroll.right}
                   >
                     <GuidingPrinciples
                       image={image}
@@ -59,6 +60,11 @@ const GuidingPrinciple = () => {
                   </Parallax>
                 );
               })}
+          </Col>
+          <Col xs={12}>
+            <p className="text-center bottom-details">
+              “We are an organisation of our word, we keep our promises to you.”
+            </p>
           </Col>
         </Row>
       </Container>
