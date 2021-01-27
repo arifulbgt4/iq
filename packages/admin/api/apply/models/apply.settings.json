@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applies",
+  "info": {
+    "name": "Apply"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    },
+    "qualification": {
+      "type": "richtext"
+    },
+    "institution": {
+      "type": "richtext"
+    },
+    "about_us": {
+      "type": "string"
+    }
+  }
+}
