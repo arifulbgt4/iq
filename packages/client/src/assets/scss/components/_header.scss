@@ -7,13 +7,23 @@ header {
     .nav {
       .nav-item {
         .nav-link {
+          position: relative;
           font-weight: 500;
+          padding-top: 32px;
+          padding-bottom: 32px;
           @media (max-width: 991.98px) {
             padding: 0.5rem 10px;
           }
-
           &.active {
             color: $primary !important;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 36px;
+              border-bottom: 3px solid #244991;
+              bottom: 0;
+              left: 24%;
+            }
           }
         }
       }
@@ -21,7 +31,7 @@ header {
   }
   @media screen and (min-width: 992px) and (max-width: 1200px) {
     .hbtns {
-      width: 30%;
+      width: 32%;
     }
     .hnav {
       width: 40%;
@@ -47,6 +57,7 @@ header {
       .btn {
         margin-right: 5px;
         margin-left: 5px;
+       padding: 5px 10px !important;
       }
     }
   }

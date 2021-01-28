@@ -1,5 +1,8 @@
 .hero-banner {
   overflow: hidden;
+  @media (min-width: 1400px) {
+    height: 90vh;
+  }
   .banner-content {
     @media (min-width: 1199px) {
       margin-left: 65px;
@@ -18,7 +21,7 @@
       }
     }
     .large-text {
-      font-size: 2,5rem;
+      font-size: 2, 5rem;
       @media (max-width: 810.98px) {
         font-size: 2rem;
       }

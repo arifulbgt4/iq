@@ -1,5 +1,8 @@
 .testimonial {
   margin: 4rem 0 0 0;
+  @media (min-width: 1400px) {
+    height: 100vh;
+  }
   @media (max-width: 575.98px) {
     margin: 2rem 0 0 0;
   }

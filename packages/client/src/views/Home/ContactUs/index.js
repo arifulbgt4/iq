@@ -7,8 +7,8 @@ import ContactForm from 'src/components/ContactForm';
 
 const scroll = {
   data2: {
-    'data-top-bottom': 'opacity: 1; transform: translate(20%, 0%);',
-    'data-center-center': 'opacity: 0.7;',
+    'data-top-bottom': 'opacity: 1; ',
+    'data-center-center': 'opacity: 1; transform: translate(0%, 0%);',
     'data-bottom-top': 'opacity: 0;transform: translate(-20%, 0%);',
   },
 };

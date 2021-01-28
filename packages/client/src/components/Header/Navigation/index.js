@@ -15,7 +15,7 @@ const Navigations = () => {
   const logo = process.env.API_URL + data.logo_one.url;
 
   return (
-    <div className="header-nav border-bottom shadow-sm py-4">
+    <div className="header-nav border-bottom shadow-sm py-3 py-sm-2  py-md-0">
       <Container>
         <Row className=" align-items-center">
           <Col md={12} lg={3} sm={12} className="hiconclm pb-0 pb-md-2 pb-lg-0">
@@ -30,7 +30,7 @@ const Navigations = () => {
               <MenuBar />
             </div>
           </Col>
-          <Col md={7} lg={5} xl={5} className="hnav col-xxl-6">
+          <Col md={7} lg={5} xl={5} className="hnav col-xxl-6 pb-0 pb-sm-3 pb-lg-0">
             <Navbar className="p-0 d-block">
               <Nav className="justify-content-end">
                 <NavItem>
@@ -85,7 +85,7 @@ const Navigations = () => {
             md={5}
             lg={4}
             xl={4}
-            className="col-xxl-3 text-end align-self-center justify-content-end d-flex hbtns"
+            className="col-xxl-3 text-end align-self-center justify-content-end d-flex hbtns pb-sm-3 pb-lg-0"
           >
             <Button className="rounded-pill px-4 me-3 " color="primary">
               Trade Now

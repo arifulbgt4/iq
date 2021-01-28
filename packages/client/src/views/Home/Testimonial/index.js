@@ -100,6 +100,7 @@ const Testimonial = () => {
                         {items.title}
                       </h1>
                     </Parallax>
+                    {/* <p className="line"></p> */}
                     <Parallax data={scroll.data}>
                       <p className="pt-5 px-3 px-sm-5">{items.description}</p>
                     </Parallax>
