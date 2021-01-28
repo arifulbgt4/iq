@@ -1,11 +1,44 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+} from 'reactstrap';
+import { useForm } from 'react-hook-form';
+
 import { applyCarrer } from 'src/api';
 
 const ApplyForm = (props) => {
   const { className } = props;
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
+
+  const { register, handleSubmit, errors, reset } = useForm();
+
+  // handleSubmit method
+  const onSubmit = async (data) => {
+    try {
+      const res = applyCarrer(
+        data.name,
+        data.number,
+        data.email,
+        data.qualification,
+        data.institution,
+        data.about_us
+      );
+      reset();
+      toggle();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <Button
@@ -16,21 +49,125 @@ const ApplyForm = (props) => {
         Apply Now
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>Apply</ModalHeader>
+        <ModalHeader tag="h2" toggle={toggle}>
+          Apply
+        </ModalHeader>
         <ModalBody>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          <Form onSubmit={handleSubmit(onSubmit)} className="contact-us">
+            <FormGroup>
+              <Label className=" fs-5 text-primary fw-bold  pb-2">Name</Label>
+              <Input
+                type="text"
+                name="name"
+                className="form-control inp"
+                innerRef={register({
+                  required: true,
+                })}
+              />
+              {errors.name && errors.name.type === 'required' && (
+                <p className="text-danger">Empty , Input your Name</p>
+              )}
+            </FormGroup>
+            ​
+            <FormGroup>
+              <Label className=" fs-5 text-primary fw-bold  pb-2">Number</Label>
+              <Input
+                type="number"
+                name="number"
+                className="form-control inp"
+                innerRef={register({
+                  required: true,
+                })}
+              />
+              {errors.number && errors.number.type === 'required' && (
+                <p className="text-danger">Empty , Input your Number</p>
+              )}
+            </FormGroup>
+            ​
+            <FormGroup>
+              <Label className=" fs-5 text-primary fw-bold  pb-2">
+                {' '}
+                Email{' '}
+              </Label>
+              <Input
+                type="email"
+                name="email"
+                className="form-control inp"
+                innerRef={register({
+                  required: true,
+                })}
+              />
+              {errors.email && errors.email.type === 'required' && (
+                <p className="text-danger">Empty , Input your Email</p>
+              )}
+            </FormGroup>
+            ​
+            <FormGroup>
+              <Label className=" fs-5 text-primary fw-bold  pb-2">
+                {' '}
+                Qualification{' '}
+              </Label>
+              <Input
+                type="text"
+                name="qualification"
+                className="form-control inp"
+                innerRef={register({
+                  required: true,
+                })}
+              />
+              {errors.qualification &&
+                errors.qualification.type === 'required' && (
+                  <p className="text-danger">
+                    Empty , Input your Qualification
+                  </p>
+                )}
+            </FormGroup>
+            ​
+            <FormGroup>
+              <Label className=" fs-5 text-primary fw-bold  pb-2">
+                {' '}
+                institution{' '}
+              </Label>
+              <Input
+                type="text"
+                name="institution"
+                className="form-control inp"
+                innerRef={register({
+                  required: true,
+                })}
+              />
+              {errors.institution && errors.institution.type === 'required' && (
+                <p className="text-danger">Empty , Input your institution</p>
+              )}
+            </FormGroup>
+            ​
+            <FormGroup>
+              <Label className=" fs-5 text-primary fw-bold  pb-2">
+                Where did you hear about us
+              </Label>
+              <Input
+                type="text"
+                name="about_us"
+                className="form-control inp"
+                innerRef={register({
+                  required: true,
+                })}
+              />
+              {errors.about_us && errors.about_us.type === 'required' && (
+                <p className="text-danger">Empty , Input your About Us</p>
+              )}
+            </FormGroup>
+            ​ ​
+            <Button
+              type="submit"
+              size="lg"
+              color="primary"
+              className="my-4 float-end"
+            >
+              Apply
+            </Button>
+          </Form>
         </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={toggle}>
-            Apply
-          </Button>
-        </ModalFooter>
       </Modal>
     </div>
   );

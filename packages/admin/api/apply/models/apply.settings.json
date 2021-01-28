@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "applies",
   "info": {
-    "name": "Apply"
+    "name": "Apply",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,13 +20,13 @@
     "email": {
       "type": "email"
     },
+    "about_us": {
+      "type": "string"
+    },
     "qualification": {
-      "type": "richtext"
+      "type": "string"
     },
     "institution": {
-      "type": "richtext"
-    },
-    "about_us": {
       "type": "string"
     }
   }
