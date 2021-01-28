@@ -7,12 +7,12 @@ import Icon_chatbubbles from 'src/assets/image/contactUs/Icon_chatbubbles.png';
 
 const scroll = {
   data: {
-    'data-top-bottom': 'transform: translate(-100%, -40%);',
+    'data-top-bottom': 'transform: translate(-50%, -40%);',
     'data-center-center': 'opacity: 1;',
     'data-bottom-top': 'opacity: 0;transform: translate(0%, 0%);',
   },
   data2: {
-    'data-top-bottom': 'transform:translate(100%, -40%);',
+    'data-top-bottom': 'transform:translate(50%, -40%);',
     'data-center-center': 'opacity: 1;',
     'data-bottom-top': 'opacity: 0;transform: translate(0%, 0%);',
   },
