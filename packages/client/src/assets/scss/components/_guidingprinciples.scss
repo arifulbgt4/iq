@@ -14,10 +14,10 @@
     padding: 6rem 0 0 0;
   }
   @media (max-width: 767.98px) {
-    padding: 4rem 0 0 0;
+    padding: 5rem 0 0 0;
   }
   @media (max-width: 575.98px) {
-    padding: 3rem 0 0 0;
+    padding: 6rem 0 0 0;
   }
   .bottom-details {
     font-size: 40px;
@@ -27,6 +27,9 @@
   }
   background: url(./../image/guidingbg.png) no-repeat;
   &-card {
+    @media (max-width: 575px) {
+      margin: 1rem 0 2rem !important;
+    }
     &_description {
       @media (max-width: 767px) {
         margin-left: 0 !important;
@@ -38,23 +41,20 @@
           font-size: 36px !important;
         }
         @media (max-width: 575px) {
-          font-size: 32px !important;
+          font-size: 28px !important;
         }
         @media (max-width: 399px) {
-          font-size: 30px !important;
+          font-size: 26px !important;
         }
       }
       p {
         text-align: justify;
         font-weight: 500;
 
-        @media (max-width: 991px) and (min-width: 576px) {
+        @media (max-width: 1200px) and (min-width: 768px) {
           font-size: 20px !important;
         }
-        @media (max-width: 767.98px) {
-          text-align: center;
-        }
-        @media (max-width: 575px) and (min-width: 400px) {
+        @media (max-width: 767px) and (min-width: 400px) {
           font-size: 18px !important;
         }
         @media (max-width: 399px) {
@@ -72,6 +72,9 @@
     text-align: center;
     .custrom-img {
       margin-bottom: 35px;
+      @media (max-width: 575px) {
+        margin-bottom: 25px;
+      }
     }
   }
 }
