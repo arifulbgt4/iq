@@ -34,7 +34,7 @@ const HeroBanner = () => {
                   return (
                     <div
                       key={items.id}
-                      className="banner-content text-center text-md-start"
+                      className="banner-content text-center"
                     >
                       <LargerText text={items.title} maxLength={23} />
                       <p className="banner-content-description text-capitalize">
