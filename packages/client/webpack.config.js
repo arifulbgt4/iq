@@ -109,7 +109,9 @@ module.exports = {
     }),
     new EnvironmentPlugin({ ...process['env'] }),
   ],
-  devtool: process.env.NODE_ENV === 'development' && 'inline-source-map',
+  devtool:
+    process.env.NODE_ENV === 'development' &&
+    'eval-nosources-cheap-module-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     filename: 'index.html',
