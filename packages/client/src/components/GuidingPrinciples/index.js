@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 const GuidingPrinciples = (props) => {
   const { image, title, description, right } = props;
@@ -12,7 +13,7 @@ const GuidingPrinciples = (props) => {
         <img className="px-4 custrom-img " src={image} alt="idea" />
         <div className="guiding-principle-card_description text-capitalize ms-3">
           <h2 className="fw-bold">{title}</h2>
-          <p>{description}</p>
+          <ReactMarkdown>{description}</ReactMarkdown>
         </div>
       </div>
     </div>
