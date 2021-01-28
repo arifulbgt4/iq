@@ -10,17 +10,15 @@
     position: absolute;
     content: url(./../image/heroBanner/testimonial2.png);
     bottom: 15%;
-    @media (min-width: 1700.99px) {
-      right: -43%;
+    right: -800px;
+    @media (max-width: 1450.98px) {
+      right: -900px;
     }
-    @media (max-width: 1700.98px) {
-      right: -55%;
+    @media (max-width: 991.98px) {
+      right: -950px;
     }
-    @media (max-width: 1600.98px) {
-      right: -65%;
-    }
-    @media (max-width: 1300.98px) {
-      content: '';
+    @media (max-width: 767.98px) {
+      content: unset;
     }
     transform: scale(0.7);
   }
@@ -28,22 +26,18 @@
     position: absolute;
     content: url(./../image/heroBanner/testimonial.png);
     top: -20%;
-    @media (min-width: 1700.99px) {
-      left: -40%;
-    }
-    @media (max-width: 1700.98px) {
-      left: -52%;
-    }
-    @media (max-width: 1600.98px) {
-      left: -62%;
-    }
-    @media (max-width: 1399.98px) {
-      left: -65%;
+    left: -800px;
+    @media (max-width: 1199.98px) {
+      left: -850px;
     }
 
-    @media (max-width: 1300.98px) {
-      content: '';
+    @media (max-width: 991.98px) {
+      left: -900px;
     }
+    @media (max-width: 767.98px) {
+      content: unset;
+    }
+
     bottom: 0;
     transform: scale(0.7);
   }
