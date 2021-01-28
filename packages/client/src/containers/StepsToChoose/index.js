@@ -23,7 +23,7 @@ const StepsToChoose = () => {
           const image = process.env.API_URL + step.image.url;
 
           return (
-            <Col md={4} key={step.id}>
+            <Col xl={4} lg={6} md={6} sm={12} xs={12} key={step.id}>
               <Parallax data={scroll.data}>
                 <ChooseCard
                   id={step.id}

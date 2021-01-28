@@ -81,6 +81,9 @@
     &_title {
       font-size: 37px;
       margin-bottom: 8px;
+      @media (max-width: 991px) {
+        font-size: 30px;
+      }
       @media (max-width: 575.98px) {
         font-size: 25px;
       }

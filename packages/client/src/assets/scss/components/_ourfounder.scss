@@ -1,7 +1,7 @@
 .our-founder {
-  padding: 300px 0 100px;
-  @media (max-width: 1399px) and (min-width: 767px){
-     padding: 100px 0 100px;
+  padding: 250px 0 100px;
+  @media (max-width: 1000px) and (min-width: 767px) {
+    padding: 200px 0 80px;
   }
   @media (max-width: 767.98px) {
     padding: 50px 0 50px;
@@ -10,7 +10,7 @@
     padding: 50px 0 0px;
   }
 
-  background: url(./../image/heroBanner/Group_founder.png) no-repeat;
+  background: url(./../image/heroBanner/Group_founder.png) no-repeat top;
   &-image {
     position: relative;
     @media (max-width: 1199px) {
@@ -58,14 +58,22 @@
   font-size: 25px;
   font-style: italic;
   line-height: 30px;
+  text-align: justify;
+  @media (max-width: 767px) {
+    font-size: 22px !important;
+  }
   @media (max-width: 575px) {
     font-size: 18px !important;
   }
 }
 
 .more-details-item {
-  @media (max-width: 575px) {
-    p {
+  p {
+    text-align: justify;
+    @media (max-width: 767px) {
+      font-size: 20px !important;
+    }
+    @media (max-width: 575px) {
       font-size: 16px !important;
     }
   }
