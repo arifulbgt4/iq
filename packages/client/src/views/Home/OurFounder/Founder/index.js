@@ -49,11 +49,6 @@ const Founder = (props) => {
         )}
       </Col>
       <Col xl={8} sm={12} xs={12} className="text-center text-xl-start">
-        <img
-          className="img-cortetion"
-          src="https://antor.thememaster.net/AllImage/cotetion.png"
-          alt="a"
-        />
         {description && <p className="m-0  info-text ">{description}</p>}
         {name && <p className="fw-bold">- {name}</p>}
         <div className="text-center mt-3">
@@ -67,7 +62,6 @@ const Founder = (props) => {
           <div className="more-details-item">
             <p>{history} </p>
             <div className="text-end">
-
             <Link to="/blog" className="bg-primary p-1 p-sm-2">
               Read More
             </Link>
