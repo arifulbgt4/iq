@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import { useSelector } from 'react-redux';
 import { ParallaxProvider } from 'react-skrollr';
+import ReactMarkdown from 'react-markdown';
 
 import CarrerItem from 'src/components/CarrerItem';
 import Apply from './Apply';
@@ -30,7 +31,7 @@ const Carrer = () => {
                 title={item.title}
                 id={item.id}
               >
-                <p>{item.description}</p>
+                <ReactMarkdown>{item.description}</ReactMarkdown>
               </CarrerItem>
             );
           })}

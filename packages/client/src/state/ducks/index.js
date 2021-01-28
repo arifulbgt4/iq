@@ -13,6 +13,7 @@ import aboutUs from './aboutUs';
 import carrer from './carrer';
 import blogpost from './blogpost';
 import actionApi from './actionApi';
+import apply from './apply';
 
 export default combineReducers({
   ...ui,
@@ -28,4 +29,5 @@ export default combineReducers({
   ...carrer,
   ...blogpost,
   ...actionApi,
+  ...apply,
 });

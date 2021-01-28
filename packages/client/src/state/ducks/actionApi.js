@@ -18,6 +18,7 @@ import {
   getWebsiteDetails,
   getChooseUs,
   getChooseUsHeader,
+  getApply,
 } from 'src/api';
 
 import { getAboutUsSuccess } from './aboutUs';
@@ -34,6 +35,7 @@ import {
 import { getWebsiteDetailsSuccess } from './ui';
 import { getchooseUsSuccess, getchooseUsHeaderSuccess } from './whyChooseUs';
 import { getHeroBannerSuccess } from './herobanner';
+import { getApplaySuccess } from './apply';
 
 function startLoading(state) {
   state.loading = true;
@@ -108,9 +110,12 @@ export const fatchApi = () => async (dispatch) => {
     dispatch(getchooseUsSuccess(chooseUs));
     const { data: chooseUsHeader } = await getChooseUsHeader();
     dispatch(getchooseUsHeaderSuccess(chooseUsHeader));
+    const { data: apply } = await getApply();
+    dispatch(getApplaySuccess(apply));
 
     dispatch(getApiSuccess());
   } catch (error) {
+    console.log(error);
     dispatch(getApiFailure(error.toString()));
   }
 };

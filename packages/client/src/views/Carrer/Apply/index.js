@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, Col, Row } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
+import { useSelector } from 'react-redux';
+import ReactMarkdown from 'react-markdown';
 
 import ApplyForm from './ApplyForm';
 
@@ -12,17 +14,13 @@ const scroll = {
   },
 };
 const Apply = () => {
+  const { data } = useSelector((store) => store.applay);
   return (
     <Row className="px-0 px-md-5 py-5 text-center text-md-start">
       <Col>
         <Parallax data={scroll.data}>
-          <h2>How To Apply</h2>
-          <p>
-            Click the link below to fill the application form. Our applications
-            are reviewed every week/every 2 weeks/every month. If you seem like
-            the right fit for us, we'll contact you through email regarding
-            further details!
-          </p>
+          <h2>{data.title}</h2>
+          <ReactMarkdown>{data.description}</ReactMarkdown>
           <ApplyForm />
         </Parallax>
       </Col>
