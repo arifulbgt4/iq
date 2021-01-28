@@ -112,6 +112,6 @@ export const fatchApi = () => async (dispatch) => {
 
     dispatch(getApiSuccess());
   } catch (error) {
-    dispatch(geApiFailure(error.toString()));
+    dispatch(getApiFailure(error.toString()));
   }
 };
