@@ -30,7 +30,7 @@ const Navigations = () => {
               <MenuBar />
             </div>
           </Col>
-          <Col md={7} lg={5} xl={5} className="hnav col-xxl-6 pb-0 pb-sm-3 pb-lg-0">
+          <Col md={7} lg={5} xl={5} className="hnav col-xxl-6 pb-2 pb-sm-3 pb-lg-0">
             <Navbar className="p-0 d-block">
               <Nav className="justify-content-end">
                 <NavItem>
