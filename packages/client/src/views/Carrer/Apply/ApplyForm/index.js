@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { applyCarrer } from 'src/api';
 
 const ApplyForm = (props) => {
   const { className } = props;

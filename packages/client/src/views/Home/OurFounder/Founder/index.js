@@ -68,7 +68,7 @@ const Founder = (props) => {
             <p>{history} </p>
             <div className="text-end">
 
-            <Link to="#" className="bg-primary p-1 p-sm-2">
+            <Link to="/blog" className="bg-primary p-1 p-sm-2">
               Read More
             </Link>
             </div>
