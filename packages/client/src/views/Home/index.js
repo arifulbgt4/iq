@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { ParallaxProvider } from 'react-skrollr';
 
 import OurFounder from './OurFounder';
@@ -13,12 +13,17 @@ import Testimonial from './Testimonial';
 import OurTechnology from './OurTechnology';
 
 const Home = () => {
+  const [scrollData, setData] = useState(null);
+  console.log('setdata',scrollData)
   return (
     <ParallaxProvider
       init={{
         smoothScrollingDuration: 900,
         smoothScrolling: true,
         forceHeight: false,
+          render: function (data) {
+            setData(data.curTop);
+        },
       }}
       getScrollTop={(scrollTop) => console.log('scrollTop', scrollTop)}
     >
@@ -26,7 +31,7 @@ const Home = () => {
       <WhyChooseUs />
       <GuidingPrinciple />
       <OurFounder />
-      <OurTechnology />
+      <OurTechnology scrollData={ scrollData}/>
       <AboutUs />
       <OurProducts />
       <BlogSection />

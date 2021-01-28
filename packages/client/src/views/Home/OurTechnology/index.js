@@ -14,7 +14,7 @@ const categories = [
   { id: 3, name: 'Feature3', title: 'Feature 3' },
   { id: 4, name: 'Feature4', title: 'Feature 4' },
 ];
-const OurTechnology = () => {
+const OurTechnology = (props) => {
   const ref = useRef();
   const [imageID, setImageID] = useState(1);
   const { data, loading } = useSelector((store) => store.technology);
@@ -22,7 +22,7 @@ const OurTechnology = () => {
   // useEffect(() => {
   //   console.log('dd', ref.current.offsetTop);
   // }, [ref]);
-
+  const { scrollData } = props;
   return (
     <section ref={ref} className="our-technology py-5 my-5 stop-scrolling">
       <Container className="py-2 py-md-5">
@@ -56,6 +56,8 @@ const OurTechnology = () => {
                         alt="feature right image"
                         className="img-fluid"
                       />
+                      {scrollData == 3900 &&
+                        data.map((item) => <p className="text-white">{item.title}</p>)}
                     </figure>
                   </div>
                 )}
