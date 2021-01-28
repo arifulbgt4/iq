@@ -37,7 +37,7 @@ const BlogPosts = () => {
               sm={12}
               xs={12}
               key={item.id}
-              style={{ padding: '0 5rem' }}
+              style={{ padding: '0 5rem',zIndex:1000 }}
               className="blog-col"
             >
               <Parallax data={scroll.data}>
