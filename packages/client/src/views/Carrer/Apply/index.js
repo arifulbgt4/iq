@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Col, Row } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
 
+import ApplyForm from './ApplyForm';
+
 const scroll = {
   data: {
     'data-top-bottom': '',
@@ -21,12 +23,7 @@ const Apply = () => {
             the right fit for us, we'll contact you through email regarding
             further details!
           </p>
-          <Button
-            color="primary"
-            className=" d-inline-block d-md-block  ms-auto rounded-pill px-5"
-          >
-            Apply Now
-          </Button>
+          <ApplyForm />
         </Parallax>
       </Col>
     </Row>

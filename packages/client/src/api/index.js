@@ -116,3 +116,22 @@ export const sendMail = (name, email, subject, message) => {
     message,
   });
 };
+
+// Api to post Apply
+export const applyCarrer = (
+  name,
+  number,
+  email,
+  qualification,
+  institution,
+  about_us
+) => {
+  return axios.post(`${API_URL}/applies`, {
+    name,
+    number,
+    email,
+    qualification,
+    institution,
+    about_us,
+  });
+};
