@@ -9,10 +9,9 @@ const BlogSection = () => {
   const { data } = useSelector((store) => store.blogsHeader);
 
   return (
-    <section className="blog-section pt-5">
+    <section className="blog-section pt-6">
       <Container>
         <SectionTitle color="primary" title={data?.title} border={false} />
-
         <BlogPosts />
       </Container>
     </section>

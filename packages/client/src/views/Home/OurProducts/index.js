@@ -19,7 +19,7 @@ const OurProducts = () => {
   const { data: productsHeader } = useSelector((store) => store.productsHeader);
 
   return (
-    <section className="our-product">
+    <section className="our-product pt-6">
       <Container>
         <SectionTitle color="white" title={productsHeader?.title} />
         <Row className="mt-0 mt-sm-3 product-row">

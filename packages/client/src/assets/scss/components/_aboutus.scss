@@ -1,7 +1,8 @@
 .about-us {
+  margin-top: 100px;
   @media (min-width: 1400px) {
     .about-us-row {
-      height: 85vh;
+      padding: 150px 0 100px;
       align-items: center;
     }
     .section-title {
@@ -34,7 +35,7 @@
     @media (max-width: 475.98px) {
       border-width: 5px 10px;
       border-radius: 10px !important;
-       height: 250px;
+      height: 250px;
       width: 500px;
     }
 
