@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'reactstrap';
 import { Sticky, StickyContainer } from 'react-sticky';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { fatchTechnology } from 'src/state/ducks/technology';
 import SectionHeader from './SectionHeader';
 import Feature from './TabsContent/Feature';
 
@@ -23,14 +22,6 @@ const OurTechnology = () => {
   // useEffect(() => {
   //   console.log('dd', ref.current.offsetTop);
   // }, [ref]);
-
-  useEffect(() => {
-    dispathc(fatchTechnology());
-  }, [dispathc]);
-
-  if (loading) {
-    return 'Loading';
-  }
 
   return (
     <section ref={ref} className="our-technology py-5 my-5 stop-scrolling">

@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Row } from 'reactstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import { fatchchooseUs } from 'src/state/ducks/whyChooseUs';
 import ChooseCard from 'src/components/ChooseCard';
 
 const scroll = {
@@ -15,17 +14,7 @@ const scroll = {
 };
 
 const StepsToChoose = () => {
-  const { data, loading } = useSelector((store) => store.chooseUs);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fatchchooseUs());
-  }, [dispatch]);
-
-  if (loading) {
-    return 'Loadding';
-  }
+  const { data } = useSelector((store) => store.chooseUs);
 
   return (
     <Row className="mt-3 justify-content-center">

@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import { fatchProducts, fatchProductsHeader } from 'src/state/ducks/products';
 import ProductCard from 'src/components/ProductCard';
 import SectionTitle from 'src/components/SectionTitle';
 
@@ -16,21 +15,8 @@ const scroll = {
 };
 
 const OurProducts = () => {
-  const { data, loading } = useSelector((store) => store.products);
-  const { data: productsHeader, loading: headerLoading } = useSelector(
-    (store) => store.productsHeader
-  );
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fatchProducts());
-    dispatch(fatchProductsHeader());
-  }, [dispatch]);
-
-  if (loading || headerLoading) {
-    return 'Loadding';
-  }
+  const { data } = useSelector((store) => store.products);
+  const { data: productsHeader } = useSelector((store) => store.productsHeader);
 
   return (
     <section className="our-product">

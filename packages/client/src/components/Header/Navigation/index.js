@@ -6,11 +6,7 @@ import { useSelector } from 'react-redux';
 import MenuBar from './MenuBar';
 
 const Navigations = () => {
-  const { data, loading } = useSelector((store) => store.websiteDetails);
-
-  if (loading) {
-    return 'Loading';
-  }
+  const { data } = useSelector((store) => store.websiteDetails);
 
   const logo = process.env.API_URL + data.logo_one.url;
 
@@ -20,17 +16,20 @@ const Navigations = () => {
         <Row className=" align-items-center">
           <Col md={12} lg={3} sm={12} className="hiconclm pb-0 pb-md-2 pb-lg-0">
             <div className="d-flex align-items-center hlogo">
-              {!loading && (
-                <Link to="/" className="mb-0 h4 text-decoration-none text-dark">
-                  <img width={50} src={logo} alt="logo" />
-                  <span className="text-primary ms-2">{data.name}</span>
-                </Link>
-              )}
+              <Link to="/" className="mb-0 h4 text-decoration-none text-dark">
+                <img width={50} src={logo} alt="logo" />
+                <span className="text-primary ms-2">{data.name}</span>
+              </Link>
 
               <MenuBar />
             </div>
           </Col>
-          <Col md={7} lg={5} xl={5} className="hnav col-xxl-6 pb-2 pb-sm-3 pb-lg-0">
+          <Col
+            md={7}
+            lg={5}
+            xl={5}
+            className="hnav col-xxl-6 pb-2 pb-sm-3 pb-lg-0"
+          >
             <Navbar className="p-0 d-block">
               <Nav className="justify-content-end">
                 <NavItem>

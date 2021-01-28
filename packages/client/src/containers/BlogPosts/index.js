@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Row } from 'reactstrap';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
-
-import { fatchBlogs } from 'src/state/ducks/blog';
 
 import BlogCard from 'src/components/BlogCard';
 
@@ -16,17 +14,8 @@ const scroll = {
 };
 
 const BlogPosts = () => {
-  const { data, loading } = useSelector((store) => store.blogs);
+  const { data } = useSelector((store) => store.blogs);
 
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fatchBlogs());
-  }, [dispatch]);
-
-  if (loading) {
-    return 'Loadding';
-  }
   let blogs;
 
   if (data.length >= 3) {

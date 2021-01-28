@@ -1,10 +1,10 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import 'src/assets/scss/style.scss';
 
-import { fatchWebsiteDetails } from 'src/state/ducks/ui';
+import { fatchApi } from 'src/state/ducks/actionApi';
 import Fallback from 'src/components/Fallback';
 import NotFound from 'src/components/404';
 import withTitle from 'src/components/TitleComponent';
@@ -21,11 +21,18 @@ const BligDetails = lazy(() => import('../BlogDetails'));
 
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
+
+  const { loading, error } = useSelector((store) => store.api);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fatchWebsiteDetails());
+    dispatch(fatchApi());
   }, [dispatch]);
+
+  if (loading) {
+    return <Fallback />;
+  }
 
   return (
     <>

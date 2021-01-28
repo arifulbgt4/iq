@@ -1,24 +1,13 @@
 import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { fatchAboutUs } from 'src/state/ducks/aboutUs';
 import SectionTitle from 'src/components/SectionTitle';
 
 const AboutUs = () => {
-  const { data, loading } = useSelector((store) => store.aboutUs);
+  const { data } = useSelector((store) => store.aboutUs);
 
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fatchAboutUs());
-  }, [dispatch]);
-
-  if (loading) {
-    return 'Loadding';
-  }
   const { title, description } = data;
-  console.log('data', data);
 
   return (
     <Container className="about-us">

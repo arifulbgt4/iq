@@ -5,11 +5,7 @@ import { Col, Input, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 
 const FooterTop = () => {
-  const { data, loading } = useSelector((store) => store.websiteDetails);
-
-  if (loading) {
-    return 'Loading';
-  }
+  const { data } = useSelector((store) => store.websiteDetails);
 
   const logo = process.env.API_URL + data.logo_two.url;
 

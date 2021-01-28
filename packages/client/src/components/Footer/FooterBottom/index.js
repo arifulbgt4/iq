@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import {
   Col,
   Form,
@@ -25,13 +25,8 @@ import {
 const data = [faTwitter, faFacebookF, faInstagram, faPinterestP, faLinkedinIn];
 
 const FooterBottom = () => {
-  const { data: website, loading } = useSelector(
-    (store) => store.websiteDetails
-  );
+  const { data: website } = useSelector((store) => store.websiteDetails);
 
-  if (loading) {
-    return 'Loading';
-  }
   return (
     <Row className="mt-4">
       <Col lg={4}>

@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import { fatchGuid, fatchGuidHeader } from 'src/state/ducks/guidings';
 import GuidingPrinciples from 'src/components/GuidingPrinciples';
 import SectionTitle from 'src/components/SectionTitle';
 
@@ -21,21 +20,9 @@ const scroll = {
 };
 
 const GuidingPrinciple = () => {
-  const { data, loading } = useSelector((store) => store.guidings);
-  const { data: guidingsHeader, loading: headerLoading } = useSelector(
-    (store) => store.guidingsHeader
-  );
+  const { data } = useSelector((store) => store.guidings);
+  const { data: guidingsHeader } = useSelector((store) => store.guidingsHeader);
 
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fatchGuid());
-    dispatch(fatchGuidHeader());
-  }, [dispatch]);
-
-  if (loading || headerLoading) {
-    return 'Loadding';
-  }
   return (
     <section className="guiding-principle">
       <Container>

@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import {
-  fatchTestimonialHeader,
-  fatchTestimonials,
-} from 'src/state/ducks/testimonial';
 import CustomDot from 'src/components/CustomDots';
 import SectionTitle from 'src/components/SectionTitle';
 
@@ -31,12 +27,10 @@ const scroll = {
 };
 
 const Testimonial = () => {
-  const { data, loading } = useSelector((store) => store.testimonial);
-  const { data: testimonialHeader, loading: loadingHeader } = useSelector(
+  const { data } = useSelector((store) => store.testimonial);
+  const { data: testimonialHeader } = useSelector(
     (store) => store.testimonialHeader
   );
-
-  const dispatch = useDispatch();
 
   const responsive = {
     desktop: {
@@ -55,15 +49,6 @@ const Testimonial = () => {
       slidesToSlide: 1,
     },
   };
-
-  useEffect(() => {
-    dispatch(fatchTestimonialHeader());
-    dispatch(fatchTestimonials());
-  }, [dispatch]);
-
-  if (loading || loadingHeader) {
-    return 'Loadding';
-  }
 
   return (
     <section className="testimonial position-relative">

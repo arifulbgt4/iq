@@ -1,24 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container } from 'reactstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { ParallaxProvider } from 'react-skrollr';
 
-import { fatchCarrer } from 'src/state/ducks/carrer';
 import CarrerItem from 'src/components/CarrerItem';
 import Apply from './Apply';
 
 const Carrer = () => {
-  const { data, loading } = useSelector((store) => store.carrer);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fatchCarrer());
-  }, [dispatch]);
-
-  if (loading) {
-    return 'Loadding';
-  }
+  const { data } = useSelector((store) => store.carrer);
 
   return (
     <ParallaxProvider

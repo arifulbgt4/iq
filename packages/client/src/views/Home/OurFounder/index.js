@@ -1,23 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container } from 'reactstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { fatchFounder } from 'src/state/ducks/founder';
 import SectionTitle from 'src/components/SectionTitle';
 import Founder from './Founder';
 
 const OurFounder = () => {
-  const { data, loading } = useSelector((store) => store.founder);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fatchFounder());
-  }, [dispatch]);
-
-  if (loading) {
-    return 'Loadding';
-  }
+  const { data } = useSelector((store) => store.founder);
 
   const { title, name, description, history } = data;
   const image = process.env.API_URL + data.image.url;

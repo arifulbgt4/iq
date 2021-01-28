@@ -20,7 +20,6 @@ import stock8 from 'src/assets/image/heroBanner/Asset8.png';
 import stock9 from 'src/assets/image/heroBanner/Asset9.png';
 
 import Slider from 'src/components/Slider';
-import { fatchHeroBanner } from 'src/state/ducks/herobanner';
 import LargerText from './LergerText';
 
 const calc = (x, y) => [
@@ -38,21 +37,12 @@ const trans6 = (x, y) => `translate3d(${x / 5.5}px,${y / 4.8}px,0)`;
 const trans7 = (x, y) => `translate3d(${x / 6.5}px,${y / 8.5}px,0)`;
 
 const HeroBanner = () => {
-  const dispatch = useDispatch();
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
     config: { mass: 30, tension: 500, friction: 80 },
   }));
 
-  const { data, loading } = useSelector((store) => store.heroBanner);
-
-  useEffect(() => {
-    dispatch(fatchHeroBanner());
-  }, [dispatch]);
-
-  if (loading) {
-    return 'Loadding';
-  }
+  const { data } = useSelector((store) => store.heroBanner);
 
   return (
     <section
@@ -120,31 +110,15 @@ const HeroBanner = () => {
             </Slider>
           </Col>
           <Col
-            xs={{ size: 11, offset: 1}}
+            xs={{ size: 11, offset: 1 }}
             sm={{ size: 10, offset: 2 }}
             md={{ size: 6, offset: 0 }}
-
             className=" d-block stock-img-content justify-content-center"
           >
             <div className="stock-img-item">
-              <animated.img
-                src={stock4}
-                alt="stock"
-                className="stock-img4"
-
-              />
-              <animated.img
-                src={stock5}
-                alt="stock"
-                className="stock-img5"
-
-              />
-              <animated.img
-                src={stock1}
-                alt="stock"
-                className="stock-img1"
-
-              />
+              <animated.img src={stock4} alt="stock" className="stock-img4" />
+              <animated.img src={stock5} alt="stock" className="stock-img5" />
+              <animated.img src={stock1} alt="stock" className="stock-img1" />
               <div className="line-wrapper2 ">
                 <span className="line1" />
                 <span className="line2" />
@@ -152,37 +126,12 @@ const HeroBanner = () => {
                 <span className="line4" />
                 <span className="line5" />
               </div>
-              <animated.img
-                src={stock3}
-                alt="stock"
-                className="stock-img3"
+              <animated.img src={stock3} alt="stock" className="stock-img3" />
 
-              />
-
-              <animated.img
-                src={stock6}
-                alt="stock"
-                className="stock-img6"
-
-              />
-              <animated.img
-                src={stock7}
-                alt="stock"
-                className="stock-img7"
-
-              />
-              <animated.img
-                src={stock8}
-                alt="stock"
-                className="stock-img8"
-
-              />
-              <animated.img
-                src={stock9}
-                alt="stock"
-                className="stock-img9"
-
-              />
+              <animated.img src={stock6} alt="stock" className="stock-img6" />
+              <animated.img src={stock7} alt="stock" className="stock-img7" />
+              <animated.img src={stock8} alt="stock" className="stock-img8" />
+              <animated.img src={stock9} alt="stock" className="stock-img9" />
             </div>
           </Col>
         </Row>
