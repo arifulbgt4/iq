@@ -19,10 +19,11 @@ header {
             &::after {
               content: '';
               position: absolute;
-              width: 36px;
+
               border-bottom: 3px solid #244991;
               bottom: 0;
-              left: 24%;
+              left: 30%;
+              right: 30%;
             }
           }
         }
@@ -57,7 +58,7 @@ header {
       .btn {
         margin-right: 5px;
         margin-left: 5px;
-       padding: 5px 10px !important;
+        padding: 5px 10px !important;
       }
     }
   }
