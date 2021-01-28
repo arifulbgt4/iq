@@ -27,29 +27,20 @@ const HeroBanner = () => {
     <section className="hero-banner position-relative">
       <Container fluid>
         <Row>
-          <Col sm={12} md={12} lg={12} xl={12}>
+          <Col sm={12} md={6} lg={6} xl={6}>
             <Slider>
               {data &&
                 data.map((items) => {
                   return (
-                    <Row key={items.id}>
-                      <Col
-                        md={{ size: 5, offset: 1 }}
-                        lg={{ size: 5, offset: 0 }}
-                        xl={{ size: 6, offset: 0 }}
-                        className="slider-left-content"
-                      >
-                        <div className="banner-content text-center text-md-start">
-                          <LargerText text={items.title} maxLength={23} />
-                          <p className="banner-content-description text-capitalize">
-                            {items.description}
-                          </p>
-                          <Button className="rounded-pill px-4" color="primary">
-                            Shedule an appointment
-                          </Button>
-                        </div>
-                      </Col>
-                    </Row>
+                    <div className="banner-content text-center text-md-start">
+                      <LargerText text={items.title} maxLength={23} />
+                      <p className="banner-content-description text-capitalize">
+                        {items.description}
+                      </p>
+                      <Button className="rounded-pill px-4" color="primary">
+                        Shedule an appointment
+                      </Button>
+                    </div>
                   );
                 })}
             </Slider>
