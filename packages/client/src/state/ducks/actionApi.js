@@ -73,7 +73,6 @@ export default {
 export const fatchApi = () => async (dispatch) => {
   try {
     dispatch(getApiStart());
-    console.log('object');
 
     const { data: blogs } = await getBlogs();
     dispatch(getBlogsSuccess(blogs));

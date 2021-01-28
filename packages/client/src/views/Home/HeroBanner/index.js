@@ -32,7 +32,10 @@ const HeroBanner = () => {
               {data &&
                 data.map((items) => {
                   return (
-                    <div className="banner-content text-center text-md-start">
+                    <div
+                      key={items.id}
+                      className="banner-content text-center text-md-start"
+                    >
                       <LargerText text={items.title} maxLength={23} />
                       <p className="banner-content-description text-capitalize">
                         {items.description}
