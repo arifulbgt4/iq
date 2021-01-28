@@ -37,13 +37,7 @@ footer {
   .line-wrapper {
     position: absolute;
     top: 50%;
-    left: 3%;
-    @media (max-width: 1700.98px) {
-      left: -3%;
-    }
-    @media (max-width: 991.98px) {
-      left: -5%;
-    }
+    left: -3.2%;
     @media (max-width: 767.98px) {
       left: -10%;
       top: 10% !important;
@@ -224,6 +218,30 @@ footer {
       animation: animate4 3s linear infinite;
       top: 200px;
       left: 1680px;
+    }
+    .line29 {
+      background: $soft-blue;
+      animation: animate4 4.2s linear infinite;
+      top: 200px;
+      left: 1740px;
+    }
+    .line30 {
+      background: $soft-blue;
+      animation: animate4 4.2s linear infinite;
+      top: 200px;
+      left: 1800px;
+    }
+    .line31 {
+      background: $soft-blue;
+      animation: animate4 3.2s linear infinite;
+      top: 200px;
+      left: 1860px;
+    }
+    .line32{
+      background: $soft-blue;
+      animation: animate4 3.9s linear infinite;
+      top: 200px;
+      left: 1920px;
     }
   }
   .footer-top,

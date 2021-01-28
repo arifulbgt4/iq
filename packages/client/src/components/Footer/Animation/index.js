@@ -32,6 +32,10 @@ const Animation = () => {
         <span className="line26" />
         <span className="line27" />
         <span className="line28" />
+        <span className="line29" />
+        <span className="line30" />
+        <span className="line31" />
+        <span className="line32" />
       </div>
     </div>
   );
