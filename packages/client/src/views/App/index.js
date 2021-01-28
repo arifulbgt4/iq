@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { Alert } from 'reactstrap';
 
 import 'src/assets/scss/style.scss';
 
@@ -32,6 +33,10 @@ const App = () => {
 
   if (loading) {
     return <Fallback />;
+  }
+
+  if (error) {
+    return <Alert color="danger">Server error</Alert>;
   }
 
   return (
