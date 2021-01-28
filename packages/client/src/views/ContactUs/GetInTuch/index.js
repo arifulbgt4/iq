@@ -6,9 +6,9 @@ import Contact from 'src/assets/image/contactUs/Contact.png';
 
 const scroll = {
   data: {
-    'data-top-bottom': 'transform: translate(-100%, 0%);',
+    'data-top-bottom': 'transform: translate(-30%, 0%);',
     'data-center-center': 'opacity: 1;',
-    'data-bottom-top': 'opacity: 0;transform: translate(100%, 0%);',
+    'data-bottom-top': 'opacity: 0;transform: translate(30%, 0%);',
   },
   data2: {
     'data-top-bottom': 'opacity: 1; transform:translate(-20%, 0%);',
