@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Container, Row, Button } from 'reactstrap';
 import { useSpring, animated } from 'react-spring';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import stock from 'src/assets/image/heroBanner/stock.png';
-import triangleImg from 'src/assets/image/heroBanner/triangle.png';
-import starImg from 'src/assets/image/heroBanner/star.png';
-import plusImg from 'src/assets/image/heroBanner/plus.png';
-import eggShapeImg from 'src/assets/image/heroBanner/egg-shape.png';
-import triangleBlankImg from 'src/assets/image/heroBanner/triangle-blank.png';
 import stock1 from 'src/assets/image/heroBanner/Asset1.png';
-import stock2 from 'src/assets/image/heroBanner/Asset2.png';
 import stock3 from 'src/assets/image/heroBanner/Asset3.png';
 import stock4 from 'src/assets/image/heroBanner/Asset4.png';
 import stock5 from 'src/assets/image/heroBanner/Asset5.png';
@@ -22,20 +15,6 @@ import stock9 from 'src/assets/image/heroBanner/Asset9.png';
 import Slider from 'src/components/Slider';
 import LargerText from './LergerText';
 
-const calc = (x, y) => [
-  x - window.innerWidth / 1.2,
-  y - window.innerHeight / 2,
-];
-
-const translate = (x, y) => `translate3d(${x / 10}px, ${y / 10}px,0)`;
-const trans1 = (x, y) => `translate3d(${x / 7}px,${y / 9}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 8 + 10}px,${y / 8 - 10}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 5}px,${y / 5}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 10.5}px,${y / 7.5}px,0)`;
-const trans5 = (x, y) => `translate3d(${x / 7.5}px,${y / 7.5}px,0)`;
-const trans6 = (x, y) => `translate3d(${x / 5.5}px,${y / 4.8}px,0)`;
-const trans7 = (x, y) => `translate3d(${x / 6.5}px,${y / 8.5}px,0)`;
-
 const HeroBanner = () => {
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
@@ -45,41 +24,7 @@ const HeroBanner = () => {
   const { data } = useSelector((store) => store.heroBanner);
 
   return (
-    <section
-      className="hero-banner position-relative"
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-    >
-      <animated.img
-        src={triangleImg}
-        alt="triangle"
-        className="triangle1-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
-      <animated.img
-        src={starImg}
-        alt="star"
-        className="star1-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
-      <animated.img
-        src={plusImg}
-        alt="plus"
-        className="plus1-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
-
-      <animated.img
-        src={eggShapeImg}
-        alt=""
-        className="egg-shape-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
-      <animated.img
-        src={triangleBlankImg}
-        alt=""
-        className="triangle-blank-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
+    <section className="hero-banner position-relative">
       <Container fluid>
         <Row>
           <Col sm={12} md={12} lg={12} xl={12}>
@@ -137,30 +82,6 @@ const HeroBanner = () => {
         </Row>
       </Container>
       <div className="cloud-img d-block ml-1 position-relative" />
-      <animated.img
-        src={triangleImg}
-        alt="triangle"
-        className="triangle2-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
-      <animated.img
-        src={plusImg}
-        alt="plus"
-        className="plus2-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
-      <animated.img
-        src={starImg}
-        alt="star"
-        className="star2-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
-      <animated.img
-        src={starImg}
-        alt="star"
-        className="star3-img"
-        style={{ transform: props.xy.interpolate(translate) }}
-      />
     </section>
   );
 };
