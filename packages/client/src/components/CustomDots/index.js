@@ -13,35 +13,35 @@ const scroll = {
 const CustomDot = ({ onMove, index, onClick, active }) => {
   const { data } = useSelector((store) => store.testimonial);
   return (
-    <li
-      className={`${active ? 'active' : 'inactive'} mx-2 rounded-pill dot-item`}
-      onClick={() => onClick()}
-    >
-      {/* {index + 1} */}
-      {data &&
-        data.map((item) => {
-          const image = process.env.API_URL + item.image.url;
-          if (index + 1 === item.id) {
-            return (
-              <Parallax key={item.id} data={scroll.data}>
-                <figure
-                  className={`rounded-pill ${
-                    active && 'border p-1 bg-primary'
-                  } `}
-                >
-                  <img
-                    src={image}
-                    alt=""
-                    height="136px"
-                    className="rounded-pill"
-                    width="136px"
-                  />
-                </figure>
-              </Parallax>
-            );
-          }
-        })}
-    </li>
+    data &&
+    data.map((item) => {
+      const image = process.env.API_URL + item.image.url;
+      if (index + 1 === item.id) {
+        return (
+          <li
+            className={`${
+              active ? 'active' : 'inactive'
+            } mx-2 rounded-pill dot-item`}
+            onClick={() => onClick()}
+            key={item.id}
+          >
+            <Parallax data={scroll.data}>
+              <figure
+                className={`rounded-pill ${active && 'border p-1 bg-primary'} `}
+              >
+                <img
+                  src={image}
+                  alt=""
+                  height="136px"
+                  className="rounded-pill"
+                  width="136px"
+                />
+              </figure>
+            </Parallax>
+          </li>
+        );
+      }
+    })
   );
 };
 
