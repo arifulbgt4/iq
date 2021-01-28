@@ -11,7 +11,7 @@ const Navigations = () => {
   const logo = process.env.API_URL + data.logo_one.url;
 
   return (
-    <div className="header-nav border-bottom shadow-sm py-3 py-sm-2  py-md-0">
+    <div className="header-nav border-bottom shadow-sm py-3 py-md-2  py-md-0">
       <Container>
         <Row className=" align-items-center">
           <Col md={12} lg={3} sm={12} className="hiconclm pb-0 pb-md-2 pb-lg-0">
