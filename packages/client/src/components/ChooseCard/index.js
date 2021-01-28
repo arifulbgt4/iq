@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardBody, CardText, CardTitle } from 'reactstrap';
+import ReactMarkdown from 'react-markdown'
 
 const ChooseCard = (props) => {
   const { id, img, title, description } = props;
@@ -15,9 +16,9 @@ const ChooseCard = (props) => {
         >
           {title}
         </CardTitle>
-        <CardText className="choose-card-body_description text-capitalize position-relative">
+        <ReactMarkdown className="choose-card-body_description text-capitalize position-relative">
           {description}
-        </CardText>
+        </ReactMarkdown>
       </CardBody>
     </div>
   );
