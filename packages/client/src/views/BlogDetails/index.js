@@ -14,8 +14,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 import { getBlogById } from 'src/api';
 
@@ -69,9 +69,9 @@ const BlogDetails = () => {
                   </CardSubtitle>
                 </div>
               </CardTitle>
-              <CardText>{blog.description}</CardText>
+              <ReactMarkdown>{blog.description}</ReactMarkdown>
               {blog?.large_description && (
-                <CardText>{blog.large_description}</CardText>
+                <ReactMarkdown>{blog.large_description}</ReactMarkdown>
               )}
             </CardBody>
           </Card>
