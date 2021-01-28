@@ -5,12 +5,10 @@ import Navigations from './Navigation';
 
 const Header = () => {
   return (
-    <>
-      <header>
-        <HeeaderTop />
-        <Navigations />
-      </header>
-    </>
+    <header>
+      <HeeaderTop />
+      <Navigations />
+    </header>
   );
 };
 
