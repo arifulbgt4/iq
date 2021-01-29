@@ -2,7 +2,7 @@
   position: relative;
   padding: 300px 0 100px;
   @media (max-width: 1399.98px) {
-    padding: 150px 0 100px;
+    padding: 210px 0 100px;
   }
 
   @media (max-width: 1000px) and (min-width: 767px) {
@@ -15,7 +15,9 @@
     padding: 50px 0 0px;
   }
   .section-title {
-    padding: 66px 0 0;
+    @media (max-width: 1399.98px) {
+      padding: 66px 0 0;
+    }
     h1 {
       margin: 0 !important;
     }
