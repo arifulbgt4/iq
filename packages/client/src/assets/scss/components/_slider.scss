@@ -53,70 +53,41 @@
     }
   }
 }
-.testimonial-slider {
+.testimonial {
   padding: 50px 0px;
-  h1 {
-    padding: 103px 0 40px;
-    &::after {
-      content: '';
-      border: 1px solid $primary;
-      width: 1px;
-      height: 100px;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      right: 0;
-      margin: 0px auto;
-      opacity: 0.4;
-    }
-    &::before {
-      content: url(./../image/cotation.png);
-      position: absolute;
-      top: 145px;
-      left: 0;
-      right: 0;
-      margin: 0px auto;
-    }
-  }
-  .react-multi-carousel-dot-list {
-    top: 0px;
-    bottom: unset !important;
-    .inactive {
-      @media (max-width: 575.98px) {
-        display: none;
+  .team-member {
+    h1 {
+      padding: 0px 0 40px;
+      &::after {
+        content: '';
+        border: 1px solid $primary;
+        width: 1px;
+        height: 100px;
+        position: absolute;
+        top: -29px;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        opacity: 0.4;
       }
-    }
-    .dot-item {
-      &:first-child {
-        order: 2;
-      }
-      &:nth-child(2) {
-        order: 1;
-      }
-      &:nth-child(3) {
-        order: 3;
+      &::before {
+        content: url(./../image/cotation.png);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
       }
     }
   }
-  .inactive {
-    filter: blur(0.9px);
+  .slick-slide {
+    opacity: 0.5;
   }
-  .react-multiple-carousel__arrow--right {
-    right: calc(0% + 1px);
+  .slick-current {
+    opacity: 1 !important;
   }
-  .react-multiple-carousel__arrow--left {
-    left: calc(0% + 1px);
-  }
-  .react-multiple-carousel__arrow {
-    background: $primary;
-    min-width: 23px;
-    min-height: 23px;
-    @media (min-width: 576px) {
-      display: none;
-    }
-    &:focus {
-      outline: none;
-    }
+  .testimonial-image {
+    margin: 0 92px;
   }
   @media (max-width: 575.98px) {
     p {

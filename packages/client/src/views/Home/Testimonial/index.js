@@ -6,17 +6,16 @@ import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
 import SectionTitle from 'src/components/SectionTitle';
-import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
 
 const scroll = {
   data: {
     'data-top-bottom': 'opacity: 1; ',
-    'data-center-center': 'opacity: 1; transform: translate(0%, 0%);',
+    'data-center-center': 'opacity: 1; transform: translate(1%, 0%);',
     'data-bottom-top': 'opacity: 0;transform: translate(-13%, 0%);',
   },
   data2: {
-    'data-top-bottom': 'opacity: 1; transform: translate(0%, 0%);',
-    'data-center-center': 'opacity: 1;',
+    'data-top-bottom': 'opacity: 1; ',
+    'data-center-center': 'opacity: 1; transform: translate(0%, 0%);',
     'data-bottom-top': 'opacity: 0;transform: translate(0%, 100%);',
   },
   data3: {
@@ -37,14 +36,6 @@ const Testimonial = () => {
 
   const slider1 = useRef(null);
   const slider2 = useRef(null);
-
-  //  constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //       nav1: null,
-  //       nav2: null
-  //     };
-  //   }
 
   useEffect(() => {
     setNav1(slider1.current);
@@ -73,45 +64,23 @@ const Testimonial = () => {
               swipeToSlide={true}
               focusOnSelect={true}
             >
-              <div>
-                <h3>1</h3>
-              </div>
-              <div>
-                <h3>2</h3>
-              </div>
-              <div>
-                <h3>3</h3>
-              </div>
-              <div>
-                <h3>4</h3>
-              </div>
-              <div>
-                <h3>5</h3>
-              </div>
+              {data &&
+                data.map((item) => {
+                  const image = process.env.API_URL + item.image.url;
+                  return (
+                    <div className="rounded-pill testimonial-image">
+                      <img
+                        src={image}
+                        alt=""
+                        height="136px"
+                        width="136px"
+                        className="rounded-pill"
+                      />
+                    </div>
+                  );
+                })}
             </Slider>
             <Slider asNavFor={nav1} ref={slider2}>
-              <div>
-                <h3>1</h3>
-              </div>
-              <div>
-                <h3>2</h3>
-              </div>
-              <div>
-                <h3>3</h3>
-              </div>
-              <div>
-                <h3>4</h3>
-              </div>
-              <div>
-                <h3>5</h3>
-              </div>
-            </Slider>
-          </Col>
-          {/* <Col md={12} lg={{ size: 8, offset: 2 }}>
-            <Slider
-              asNavFor={this.state.nav2}
-              ref={(slider) => (this.slider1 = slider)}
-            >
               {data &&
                 data.map((items) => (
                   <div
@@ -132,24 +101,7 @@ const Testimonial = () => {
                   </div>
                 ))}
             </Slider>
-            <Slider
-              asNavFor={this.state.nav1}
-              ref={(slider) => (this.slider2 = slider)}
-              slidesToShow={3}
-              swipeToSlide={true}
-              focusOnSelect={true}
-            >
-              {data &&
-                data.map((item) => {
-                  const image = process.env.API_URL + item.image.url;
-                  return (
-                    <div>
-                      <img src={image} alt="" />
-                    </div>
-                  );
-                })}
-            </Slider>
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </section>
