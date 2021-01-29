@@ -68,7 +68,10 @@ const Testimonial = () => {
                 data.map((item) => {
                   const image = process.env.API_URL + item.image.url;
                   return (
-                    <div className="rounded-pill testimonial-image">
+                    <div
+                      key={item.id}
+                      className="rounded-pill testimonial-image"
+                    >
                       <img
                         src={image}
                         alt=""

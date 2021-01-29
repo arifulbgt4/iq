@@ -2,21 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import {
   Player,
   ControlBar,
-  ReplayControl,
-  ForwardControl,
-  CurrentTimeDisplay,
   PlaybackRateMenuButton,
-  VolumeMenuButton,
-  PlayToggle,
   BigPlayButton,
 } from 'video-react';
 
 const Video = (props) => {
-  const { poster, source } = props;
+  // const { poster, source } = props;
   const player = useRef(null);
-  useEffect(() => {
-    console.log('player', player.current.actions);
-  }, [player]);
+  // useEffect(() => {
+  //   // console.log('player', player.current.actions);
+  // }, [player]);
 
   return (
     <div className="about-us-video d-flex justify-content-center align-items-center">
