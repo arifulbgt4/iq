@@ -1,5 +1,6 @@
 .our-founder {
-  padding: 330px 0 100px;
+  position: relative;
+  padding: 300px 0 100px;
   @media (max-width: 1399.98px) {
     padding: 200px 0 100px;
   }
@@ -13,8 +14,30 @@
   @media (max-width: 575.98px) {
     padding: 50px 0 0px;
   }
-
-  background: url(./../image/heroBanner/Group_founder.png) no-repeat top;
+  .section-title {
+    h1 {
+      margin: 0 !important;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 18%;
+    left: -27px;
+    right: -28px;
+    background: #f9f9fa;
+    top: 8%;
+    transform: rotate(355deg);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background: #f9f9fa;
+    top: 17%;
+  }
   &-image {
     position: relative;
     @media (max-width: 1199px) {
@@ -64,6 +87,7 @@
   line-height: 30px;
   text-align: justify;
   padding: 60px 0 0 0;
+  margin-top: 76px !important;
   @media (max-width: 1399.98px) {
     padding: 40px 0 0px;
   }
@@ -71,18 +95,33 @@
   @media (max-width: 767px) {
     font-size: 22px !important;
     padding: 20px 0 0;
-    margin-top:30px !important;
+    margin-top: 30px !important;
   }
   @media (max-width: 575px) {
     font-size: 18px !important;
   }
-  &:after {
+  &::after {
     content: '"';
     position: absolute;
     top: 0px;
-    left: 110px;
+    left: 49px;
     font-size: 55px;
     font-weight: 500;
+    @media (max-width: 991.98px) {
+      left: 18px;
+    }
+  }
+  &::before {
+    content: '"';
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    font-size: 255px;
+    font-weight: 500;
+    opacity: 0.2;
+    @media (max-width: 991.98px) {
+      font-size: 150px;
+    }
   }
 }
 
