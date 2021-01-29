@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect,useState}from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+
 import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-import CustomDot from 'src/components/CustomDots';
+
 import SectionTitle from 'src/components/SectionTitle';
 
 const scroll = {
@@ -26,29 +25,31 @@ const scroll = {
   },
 };
 
+
+
 const Testimonial = () => {
   const { data } = useSelector((store) => store.testimonial);
   const { data: testimonialHeader } = useSelector(
     (store) => store.testimonialHeader
   );
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1200 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1199, min: 576 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    mobile: {
-      breakpoint: { max: 575, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
+//  constructor(props) {
+//     super(props);
+//     this.state = {
+//       nav1: null,
+//       nav2: null
+//     };
+//   }
+
+  useEffect(() => {
+
+})
+  componentDidMount() {
+    this.setState({
+      nav1: this.slider1,
+      nav2: this.slider2
+    });
+  }
 
   return (
     <section className="testimonial position-relative">
@@ -60,20 +61,10 @@ const Testimonial = () => {
         />
         <Row className="mb-0 mb-md-5">
           <Col md={12} lg={{ size: 8, offset: 2 }}>
-            <Carousel
-              className="testimonial-slider"
-              responsive={responsive}
-              infinite
-              // autoPlay
-              autoPlaySpeed={4000}
-              slidesToSlide={1}
-              customTransition="transform 1000ms ease-in-out"
-              transitionDuration={1000}
-              arrows={true}
-              showDots
-              itemClass="justify-content-center"
-              customDot={<CustomDot />}
-            >
+            <Slider
+          asNavFor={this.state.nav2}
+          ref={slider => (this.slider1 = slider)}
+        >
               {data &&
                 data.map((items) => (
                   <div
@@ -85,7 +76,6 @@ const Testimonial = () => {
                         {items.title}
                       </h1>
                     </Parallax>
-                    {/* <p className="line"></p> */}
                     <Parallax data={scroll.data}>
                       <p className="pt-5 px-3 px-sm-5">{items.description}</p>
                     </Parallax>
@@ -94,12 +84,31 @@ const Testimonial = () => {
                     </Parallax>
                   </div>
                 ))}
-            </Carousel>
+            </Slider>
+               <Slider
+          asNavFor={this.state.nav1}
+          ref={slider => (this.slider2 = slider)}
+          slidesToShow={3}
+          swipeToSlide={true}
+          focusOnSelect={true}
+            >
+              {data &&
+                data.map((item) => {
+                  const image = process.env.API_URL + item.image.url;
+                  return (
+                    <div>
+                      <img src={image} alt=""/>
+                    </div>
+                  )
+                }
+                )}
+        </Slider>
           </Col>
         </Row>
       </Container>
     </section>
   );
 };
+
 
 export default Testimonial;

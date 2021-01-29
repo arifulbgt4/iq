@@ -40,6 +40,7 @@
     "react-scroll": "^1.8.1",
     "react-scroll-section": "^3.0.2",
     "react-skrollr": "^1.0.4",
+    "react-slick": "^0.28.0",
     "react-spring": "^8.0.27",
     "react-sticky": "^6.0.3",
     "reactstrap": "^8.5.1",
