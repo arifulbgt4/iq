@@ -76,6 +76,17 @@
       .video-react-video {
         top: -10px !important;
       }
+      .video-react-big-play-button {
+        background: #2fb2f9 !important;
+        border: 0 !important;
+        height: 2.5em !important;
+        width: 2.5em !important;
+        border-radius: 100% !important;
+        &::before {
+          top: 15px !important;
+          left: 1px !important;
+        }
+      }
     }
   }
 }
