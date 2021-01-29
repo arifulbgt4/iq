@@ -13,6 +13,7 @@ const OurFounder = () => {
 
   return (
     <section className="our-founder">
+      <div className="dropdown-mark"/>
       <Container>
         {title && <SectionTitle title={title} border={false} />}
         <Founder
