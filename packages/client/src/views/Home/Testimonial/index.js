@@ -1,11 +1,12 @@
-import React, { useEffect,useState}from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Col, Container, Row } from 'reactstrap';
+import Slider from 'react-slick';
 
 import { useSelector } from 'react-redux';
 import { Parallax } from 'react-skrollr';
 
-
 import SectionTitle from 'src/components/SectionTitle';
+import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
 
 const scroll = {
   data: {
@@ -25,31 +26,33 @@ const scroll = {
   },
 };
 
-
-
 const Testimonial = () => {
   const { data } = useSelector((store) => store.testimonial);
   const { data: testimonialHeader } = useSelector(
     (store) => store.testimonialHeader
   );
 
-//  constructor(props) {
-//     super(props);
-//     this.state = {
-//       nav1: null,
-//       nav2: null
-//     };
-//   }
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
+
+  const slider1 = useRef(null);
+  const slider2 = useRef(null);
+
+  //  constructor(props) {
+  //     super(props);
+  //     this.state = {
+  //       nav1: null,
+  //       nav2: null
+  //     };
+  //   }
 
   useEffect(() => {
+    setNav1(slider1.current);
+  }, [slider1]);
 
-})
-  componentDidMount() {
-    this.setState({
-      nav1: this.slider1,
-      nav2: this.slider2
-    });
-  }
+  useEffect(() => {
+    setNav2(slider2.current);
+  }, [slider2]);
 
   return (
     <section className="testimonial position-relative">
@@ -62,9 +65,53 @@ const Testimonial = () => {
         <Row className="mb-0 mb-md-5">
           <Col md={12} lg={{ size: 8, offset: 2 }}>
             <Slider
-          asNavFor={this.state.nav2}
-          ref={slider => (this.slider1 = slider)}
-        >
+              asNavFor={nav2}
+              ref={slider1}
+              slidesToShow={3}
+              centerMode
+              className="center"
+              swipeToSlide={true}
+              focusOnSelect={true}
+            >
+              <div>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+              <div>
+                <h3>5</h3>
+              </div>
+            </Slider>
+            <Slider asNavFor={nav1} ref={slider2}>
+              <div>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+              <div>
+                <h3>5</h3>
+              </div>
+            </Slider>
+          </Col>
+          {/* <Col md={12} lg={{ size: 8, offset: 2 }}>
+            <Slider
+              asNavFor={this.state.nav2}
+              ref={(slider) => (this.slider1 = slider)}
+            >
               {data &&
                 data.map((items) => (
                   <div
@@ -85,30 +132,28 @@ const Testimonial = () => {
                   </div>
                 ))}
             </Slider>
-               <Slider
-          asNavFor={this.state.nav1}
-          ref={slider => (this.slider2 = slider)}
-          slidesToShow={3}
-          swipeToSlide={true}
-          focusOnSelect={true}
+            <Slider
+              asNavFor={this.state.nav1}
+              ref={(slider) => (this.slider2 = slider)}
+              slidesToShow={3}
+              swipeToSlide={true}
+              focusOnSelect={true}
             >
               {data &&
                 data.map((item) => {
                   const image = process.env.API_URL + item.image.url;
                   return (
                     <div>
-                      <img src={image} alt=""/>
+                      <img src={image} alt="" />
                     </div>
-                  )
-                }
-                )}
-        </Slider>
-          </Col>
+                  );
+                })}
+            </Slider>
+          </Col> */}
         </Row>
       </Container>
     </section>
   );
 };
-
 
 export default Testimonial;
