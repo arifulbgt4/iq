@@ -21,6 +21,7 @@ const AboutUs = () => {
       <Row className="mt-2 mt-xl-0 mb-5 mb-xl-0 about-us-row">
         <Col md={12}>
           <div className="d-flex justify-content-center">
+
             <Video />
           </div>
         </Col>
