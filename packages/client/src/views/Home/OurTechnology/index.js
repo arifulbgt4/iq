@@ -36,7 +36,11 @@ const OurTechnology = () => {
               <div style={{ position: 'relative' }}>
                 {data &&
                   data.map((category) => (
-                    <div className={category.id} key={'display' + category.id}>
+                    <div
+                      key={category.id}
+                      className={category.id}
+                      key={'display' + category.id}
+                    >
                       {
                         <ScrollAnimation
                           delay={-500}
@@ -72,7 +76,10 @@ const OurTechnology = () => {
                           const image = process.env.API_URL + item.image.url;
                           return (
                             item.id === desktop && (
-                              <div className="desktop-item position-absolute">
+                              <div
+                                key={item.id}
+                                className="desktop-item position-absolute"
+                              >
                                 <img src={image} alt="" />
                               </div>
                             )

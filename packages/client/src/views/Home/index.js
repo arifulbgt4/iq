@@ -22,7 +22,7 @@ const Home = () => {
       }}
       getScrollTop={(scrollTop) => console.log('scrollTop', scrollTop)}
     >
-      <HeroBanner />
+      {/* <HeroBanner /> */}
       <WhyChooseUs />
       <GuidingPrinciple />
       <OurFounder />
@@ -30,7 +30,7 @@ const Home = () => {
       <AboutUs />
       <OurProducts />
       <BlogSection />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <ContactUs />
     </ParallaxProvider>
   );
