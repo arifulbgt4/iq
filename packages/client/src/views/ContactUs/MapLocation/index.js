@@ -16,7 +16,7 @@ const MapLocation = () => {
     <Row>
       <Col lg={{ size: 10, offset: 1 }} md={12} sm={12}>
         <Parallax data={scroll.data}>
-          <div className="py-5 filter-me">
+          <div className="py-0 py-sm-5 filter-me">
             <LocationMap height={442} />
           </div>
         </Parallax>
