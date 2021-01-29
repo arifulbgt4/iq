@@ -22,7 +22,7 @@ const ContactInfo = () => {
   return (
     <div className="posation">
       <Row>
-        <Col lg={{ size: 8, offset: 2 }} md={12} sm={12}>
+        <Col xl={{ size: 8, offset: 2 }} lg={12} md={12} sm={12}>
           <Row>
             <Col lg={6} md={6} sm={12} className="contact-info-col">
               <Parallax data={scroll.data}>
