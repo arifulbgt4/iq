@@ -6,7 +6,7 @@ import ContactForm from 'src/components/ContactForm';
 const SendMail = () => {
   return (
     <Row className="my-3 my-md-5">
-      <Col sm={12} md={12} lg={6} className="ms-md-auto">
+      <Col xs={{size:12,order:1}} md={12} lg={{size:6,order:0}} className="ms-md-auto">
         <ContactAddr />
       </Col>
       <ContactForm />

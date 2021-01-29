@@ -34,7 +34,7 @@ const ContactAddr = () => {
           </p>
         </Parallax>
       </div>
-      <div className="addr-list my-5">
+      <div className="addr-list my-3 my-lg-5">
         <h3>
           <span className="mx-2">
             <FontAwesomeIcon className="fs-4" icon={faMapMarkerAlt} />
@@ -47,7 +47,7 @@ const ContactAddr = () => {
           <p>25 First Street, 2nd Floor, Delhi, MA 02141 India</p>
         </Parallax>
       </div>
-      <div className="addr-list my-5">
+      <div className="addr-list my-3 my-lg-5">
         <h3>
           <span className="mx-2">
             <FontAwesomeIcon className="fs-4" icon={faPhoneAlt} />
@@ -60,7 +60,7 @@ const ContactAddr = () => {
           <p>(1+ 888 482 7768)</p>
         </Parallax>
       </div>
-      <div className="addr-list my-5">
+      <div className="addr-list my-3 my-lg-5">
         <h3>
           <span className="mx-2">
             <FontAwesomeIcon className="fs-4" icon={faFax} />
