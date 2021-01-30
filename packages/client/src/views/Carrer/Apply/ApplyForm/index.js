@@ -54,7 +54,7 @@ const ApplyForm = (props) => {
         <ModalBody>
           <Form onSubmit={handleSubmit(onSubmit)} className="apply-form">
             <FormGroup>
-              <Label className=" text-primary">Name</Label>
+              <Label className="fw-bold text-primary">Name</Label>
               <Input
                 type="text"
                 name="name"
@@ -69,7 +69,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" text-primary">Number</Label>
+              <Label className="fw-bold text-primary">Number</Label>
               <Input
                 type="number"
                 name="number"
@@ -84,7 +84,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" text-primary">Email</Label>
+              <Label className="fw-bold text-primary">Email</Label>
               <Input
                 type="email"
                 name="email"
@@ -99,7 +99,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" text-primary">
+              <Label className="fw-bold text-primary">
                 Qualification
               </Label>
               <Input
@@ -119,7 +119,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" text-primary">
+              <Label className="fw-bold text-primary">
                 Institution
               </Label>
               <Input
@@ -136,7 +136,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" text-primary">
+              <Label className="fw-bold text-primary">
                 Where did you hear about us
               </Label>
               <Input
@@ -156,7 +156,7 @@ const ApplyForm = (props) => {
               type="submit"
               size="lg"
               color="primary"
-              className="my-4 float-end"
+              className="mt-4 float-end"
             >
               Apply
             </Button>
