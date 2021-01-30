@@ -1,0 +1,17 @@
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        button {
+          background: transparent !important;
+          border: 0 !important;
+          outline: 0;
+          span {
+            font-size: 36px !important;
+            color: $danger;
+          }
+        }
+      }
+    }
+  }
+}

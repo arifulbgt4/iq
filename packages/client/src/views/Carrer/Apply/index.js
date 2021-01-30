@@ -13,8 +13,10 @@ const scroll = {
     'data-bottom-top': 'opacity: 0;transform: translate(0%, 70%);',
   },
 };
+
 const Apply = () => {
   const { data } = useSelector((store) => store.applay);
+
   return (
     <Row className="px-0 px-md-5 py-5 text-center text-md-start">
       <Col>

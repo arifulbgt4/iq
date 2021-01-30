@@ -4,7 +4,6 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Form,
   FormGroup,
   Label,
@@ -16,10 +15,10 @@ import { applyCarrer } from 'src/api';
 
 const ApplyForm = (props) => {
   const { className } = props;
+  const { register, handleSubmit, errors, reset } = useForm();
+
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
-
-  const { register, handleSubmit, errors, reset } = useForm();
 
   // handleSubmit method
   const onSubmit = async (data) => {
@@ -53,7 +52,7 @@ const ApplyForm = (props) => {
           Apply
         </ModalHeader>
         <ModalBody>
-          <Form onSubmit={handleSubmit(onSubmit)} className="contact-us">
+          <Form onSubmit={handleSubmit(onSubmit)} className="apply-form">
             <FormGroup>
               <Label className=" fs-5 text-primary fw-bold  pb-2">Name</Label>
               <Input
