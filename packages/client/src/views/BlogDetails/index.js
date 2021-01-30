@@ -49,12 +49,12 @@ const BlogDetails = () => {
   return (
     <Container className="py-5">
       <Row>
-        <Col sm={{ size: 8, offset: 2 }}>
+        <Col md={{ size: 8, offset: 2 }} sm={{ size: 10, offset: 1 }}>
           <Card className="blog-details">
             <figure>
               <CardImg src={image} alt="blog" className="img-fluid"></CardImg>
             </figure>
-            <CardBody className="p-4 px-5">
+            <CardBody className="py-2 py-sm-3 py-md-4 px-3 px-sm-4 px-md-5">
               <CardTitle tag="h2" className="py-3 border-bottom mb-4">
                 {blog.title}
 
@@ -80,11 +80,12 @@ const BlogDetails = () => {
             </CardBody>
             <CardFooter className="bg-transparent d-flex justify-content-end me-3 border-0">
               <Button
+                outline
+                color="primary"
                 size="sm"
-                className="bg-transparent border-0 text-capitalize"
+                className=" text-capitalize fw-bold mb-1"
               >
-                {' '}
-                <FontAwesomeIcon icon={faShare} /> &nbsp; share{' '}
+                <FontAwesomeIcon icon={faShare} /> &nbsp;share
               </Button>
             </CardFooter>
           </Card>
