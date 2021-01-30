@@ -1,4 +1,5 @@
 .about-us {
+  overflow: hidden;
   margin-top: 100px;
   @media (max-width: 767px) {
     margin-top: 50px;
@@ -26,6 +27,7 @@
     font-weight: 500;
   }
   .about-us-video {
+    transition: all 0.3s ease;
     height: 450px;
     width: 715px;
     border-color: rgba(38, 37, 106, 0.9);
@@ -70,6 +72,32 @@
     }
   }
 }
+.video-area {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 999999;
+  &.full {
+    overflow: hidden;
+    .about-us-video {
+      height: 100vh;
+      width: 100%;
+      border-color: transparent;
+      border-width: 0;
+      .video-react-video {
+        top: 0;
+        height: 100vh;
+        transition: all 0.3s ease;
+      }
+      .video-react-controls-enabled {
+        position: relative;
+        height: 100%;
+        padding: 0 !important;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 765px) and (max-width: 991px) {
   .sub-btn-row {
     justify-content: center !important;

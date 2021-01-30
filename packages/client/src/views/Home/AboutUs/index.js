@@ -10,21 +10,19 @@ const AboutUs = () => {
   const { title, description } = data;
 
   return (
-    <Container className="about-us">
-      <SectionTitle
-        title={title}
-        description={description}
-        border={false}
-        color="primary"
-      />
-      <Row className="mt-2 mt-xl-0 mb-5 mb-xl-0 about-us-row">
-        <Col md={12}>
-          <div className="d-flex justify-content-center">
-            <Video />
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <section className="about-us">
+      <Container fluid>
+        <SectionTitle
+          title={title}
+          description={description}
+          border={false}
+          color="primary"
+        />
+      </Container>
+      <div className="mt-2 mt-xl-0 mb-5 mb-xl-0 about-us-row">
+        <Video />
+      </div>
+    </section>
   );
 };
 
