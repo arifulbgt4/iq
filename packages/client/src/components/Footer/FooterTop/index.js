@@ -3,9 +3,7 @@ import { Col, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 
 const FooterTop = () => {
-  const { data } = useSelector((store) => store.websiteDetails);
-
-  const logo = process.env.API_URL + data.logo_two.url;
+  const { data: website } = useSelector((store) => store.websiteDetails);
 
   return (
     <Row className="py-4">
@@ -14,9 +12,7 @@ const FooterTop = () => {
         lg={12}
         className="d-flex justify-content-center justify-content-lg-center justify-content-xl-start mb-0 mb-md-3 mb-xl-0"
       >
-        <h4 className="mb-0 text-white ">
-          <img width={50} src={logo} alt="logo" />
-        </h4>
+        <h4 className="mb-0 text-white ">{website.name}</h4>
       </Col>
       <Col md={12} lg={12} xl={8} className="d-none d-md-block">
         <ul className="d-flex justify-content-between align-items-center m-0 p-0">

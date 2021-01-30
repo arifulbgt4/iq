@@ -237,7 +237,7 @@ footer {
       top: 200px;
       left: 1860px;
     }
-    .line32{
+    .line32 {
       background: $soft-blue;
       animation: animate4 3.9s linear infinite;
       top: 200px;
@@ -247,6 +247,11 @@ footer {
   .footer-top,
   .footer-main {
     z-index: 999;
+  }
+  .footer-main {
+    h5 {
+      transform: translateY(24px) !important;
+    }
   }
   .canvas-animation {
     position: absolute;
