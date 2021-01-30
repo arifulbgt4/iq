@@ -56,7 +56,6 @@ const Testimonial = () => {
           dots: false,
           centerMode: true,
           className: 'center',
-          // centerPadding: '',
         },
       },
       {

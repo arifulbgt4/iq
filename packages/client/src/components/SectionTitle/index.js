@@ -11,6 +11,7 @@ const scroll = {
 };
 const SectionTitle = (props) => {
   const { color, title, description, border = true } = props;
+
   return (
     <Row className="section-title position-relative">
       <Col md={12}>

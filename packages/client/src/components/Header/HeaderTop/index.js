@@ -1,14 +1,8 @@
-import { faFontAwesome } from '@fortawesome/free-brands-svg-icons';
-import {
-  faEnvelope,
-  faMobile,
-  faPhone,
-} from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { Col, Row, ListGroup, ListGroupItem, Container } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
+import { Col, Row, ListGroup, ListGroupItem, Container } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebookF,
   faInstagram,
@@ -40,13 +34,16 @@ const data = [
   },
 ];
 
-
 const HeeaderTop = () => {
   return (
     <div className="header-top py-1">
       <Container>
         <Row className="align-items-center">
-          <Col  md={8} sm={12} className="d-flex flex-wrap justify-content-center justify-content-md-start">
+          <Col
+            md={8}
+            sm={12}
+            className="d-flex flex-wrap justify-content-center justify-content-md-start"
+          >
             <div className="phone me-3 text-white">
               <FontAwesomeIcon icon={faPhone} />
               <span className="ms-2"> + 0000 11 22 33</span>
@@ -56,7 +53,11 @@ const HeeaderTop = () => {
               <span className="ms-2">youremail@gmail.com</span>
             </div>
           </Col>
-          <Col md={4} sm={12} className="d-flex justify-content-center justify-content-md-end">
+          <Col
+            md={4}
+            sm={12}
+            className="d-flex justify-content-center justify-content-md-end"
+          >
             <ListGroup
               horizontal
               className="list-unstyled align-items-center flex-wrap ml-0 social-icon"

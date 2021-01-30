@@ -1,4 +1,5 @@
 import React from 'react';
+
 import preloader from 'src/assets/image/preloader.gif';
 
 const Fallback = () => {

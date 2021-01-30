@@ -9,7 +9,6 @@ const Slider = (props) => {
     tablet = 1,
     mobile = 1,
     infinite = true,
-    autoPlay = true,
     className = '',
   } = props;
 
@@ -30,12 +29,12 @@ const Slider = (props) => {
       slidesToSlide: 1,
     },
   };
+
   return (
     <Carousel
       className={className}
       responsive={responsive}
       infinite={infinite}
-      // autoPlay={autoPlay}
       autoPlaySpeed={4000}
       slidesToSlide={1}
       customTransition="transform 1000ms ease-in-out"

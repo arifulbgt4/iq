@@ -17,6 +17,7 @@ const scroll = {
 
 const CarrerItem = (props) => {
   const { img, title, children, id } = props;
+
   return (
     <Row
       className={`align-items-center my-2 py-2 my-lg-5 py-lg-4 position-relative carrer-items text-center text-md-start ${
@@ -30,7 +31,7 @@ const CarrerItem = (props) => {
         md={6}
         sm={12}
       >
-        <Parallax data={ id % 2 === 0 ? scroll.data2 : scroll.data}>
+        <Parallax data={id % 2 === 0 ? scroll.data2 : scroll.data}>
           <div>
             <h2 className="mb-4 font-weight-normal">{title}</h2>
             <div className="details mb-4">{children}</div>
@@ -44,7 +45,7 @@ const CarrerItem = (props) => {
         md={6}
         sm={12}
       >
-        <Parallax data={ id % 2 === 0 ? scroll.data : scroll.data2}>
+        <Parallax data={id % 2 === 0 ? scroll.data : scroll.data2}>
           <div className={`text-start`}>
             <figure>
               <img src={img} alt="" className="img-fluid" />

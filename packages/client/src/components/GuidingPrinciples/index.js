@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 
 const GuidingPrinciples = (props) => {
   const { image, title, description, right } = props;
+
   return (
     <div
       className={`guiding-principle-card mx-2 d-flex mb-5 ${

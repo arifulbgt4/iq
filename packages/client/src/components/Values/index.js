@@ -1,8 +1,11 @@
 import React from 'react';
-import ValuesCard from './ValuesCard';
 import { Container, Row, Col } from 'reactstrap';
+
+import ValuesCard from './ValuesCard';
+
 import piler from 'src/assets/image/piler.png';
 import bitcoin from 'src/assets/image/bitcoin.png';
+
 const Values = () => {
   return (
     <Container>

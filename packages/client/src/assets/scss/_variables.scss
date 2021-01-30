@@ -26,7 +26,9 @@ $spacers: (
   6: $spacer * 5,
 );
 
+//
 // Link
+//
 $link-color: $white;
 $link-decoration: none;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);

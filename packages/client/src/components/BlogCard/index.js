@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  CardBody,
-  CardImg,
-  CardSubtitle,
-  CardText,
-  CardTitle,
-} from 'reactstrap';
+import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
+import { CardBody, CardImg, CardSubtitle, CardTitle } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 import calc from 'src/utils/calc';
 import MoreDetails from 'src/components/ReadMore';
@@ -27,6 +21,7 @@ const BlogCard = (props) => {
       friction: 40,
     },
   }));
+
   return (
     <animated.div
       className="blog-card shadow bg-white"

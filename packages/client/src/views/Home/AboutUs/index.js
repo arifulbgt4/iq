@@ -7,7 +7,6 @@ import Video from './Video';
 
 const AboutUs = () => {
   const { data } = useSelector((store) => store.aboutUs);
-
   const { title, description } = data;
 
   return (

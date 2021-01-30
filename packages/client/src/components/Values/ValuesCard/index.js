@@ -22,6 +22,7 @@ const ValuesCard = () => {
       friction: 40,
     },
   }));
+
   return (
     <animated.div
       className="values-card card mt-4"

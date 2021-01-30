@@ -10,7 +10,7 @@ const scroll = {
   },
 };
 
-const CustomDot = ({ onMove, index, onClick, active }) => {
+const CustomDot = ({ index, onClick, active }) => {
   const { data } = useSelector((store) => store.testimonial);
   return (
     data &&

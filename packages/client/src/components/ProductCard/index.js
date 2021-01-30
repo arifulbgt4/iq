@@ -14,7 +14,7 @@ const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const ProductCard = (props) => {
-  const { title, description,name } = props;
+  const { title, description, name } = props;
   const [property, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: {
@@ -23,6 +23,7 @@ const ProductCard = (props) => {
       friction: 40,
     },
   }));
+
   return (
     <animated.div
       className="product shadow bg-white"

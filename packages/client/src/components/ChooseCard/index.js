@@ -1,9 +1,10 @@
 import React from 'react';
-import { CardBody, CardText, CardTitle } from 'reactstrap';
-import ReactMarkdown from 'react-markdown'
+import { CardBody, CardTitle } from 'reactstrap';
+import ReactMarkdown from 'react-markdown';
 
 const ChooseCard = (props) => {
-  const { id, img, title, description } = props;
+  const { img, title, description } = props;
+
   return (
     <div className="choose-card position-relative">
       <div className="choose-card-img d-flex justify-content-center align-items-center">

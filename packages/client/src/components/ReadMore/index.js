@@ -1,4 +1,3 @@
-// External Component
 import React, { useState } from 'react';
 import { CardText } from 'reactstrap';
 

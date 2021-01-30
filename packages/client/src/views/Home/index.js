@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { Button } from 'reactstrap';
 import { ParallaxProvider } from 'react-skrollr';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import OurFounder from './OurFounder';
 import GuidingPrinciple from './GuidingPrinciples';
@@ -11,9 +14,6 @@ import OurProducts from './OurProducts';
 import WhyChooseUs from './WhyChooseUs';
 import Testimonial from './Testimonial';
 import OurTechnology from './OurTechnology';
-import { Button } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -29,8 +29,8 @@ const Home = () => {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   window.addEventListener('scroll', checkScrollTop);
+
   return (
     <ParallaxProvider
       init={{

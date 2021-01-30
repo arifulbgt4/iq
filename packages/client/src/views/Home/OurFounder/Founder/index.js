@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 import { useSpring, animated } from 'react-spring';
@@ -62,9 +62,9 @@ const Founder = (props) => {
           <div className="more-details-item">
             <p>{history} </p>
             <div className="text-end">
-            <Link to="/blog" className="bg-primary p-1 p-sm-2">
-              Read More
-            </Link>
+              <Link to="/blog" className="bg-primary p-1 p-sm-2">
+                Read More
+              </Link>
             </div>
           </div>
         )}

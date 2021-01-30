@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { Sticky, StickyContainer } from 'react-sticky';
-import { useDispatch, useSelector } from 'react-redux';
-import 'animate.css/animate.min.css';
+import { useSelector } from 'react-redux';
 import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
 
 import SectionHeader from './SectionHeader';
 import Feature from './TabsContent/Feature';
@@ -12,11 +12,9 @@ import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 
 const OurTechnology = () => {
   const ref = useRef();
-
-  const { data, loading } = useSelector((store) => store.technology);
-  const dispathc = useDispatch();
-
+  const { data } = useSelector((store) => store.technology);
   const [desktop, setDesktop] = useState(null);
+
   return (
     <section ref={ref} className="our-technology py-5 my-5 stop-scrolling">
       <Container className="py-2 py-md-5">
@@ -36,7 +34,7 @@ const OurTechnology = () => {
                         <ScrollAnimation
                           delay={-500}
                           animateIn="flipInX"
-                          afterAnimatedIn={function afterAnimatedIn(v) {
+                          afterAnimatedIn={function afterAnimatedIn() {
                             setDesktop(category.id);
                           }}
                         >
@@ -54,7 +52,7 @@ const OurTechnology = () => {
             </Col>
             <Col md={6} className="d-none d-md-block">
               <Sticky disableCompensation topOffset={10}>
-                {({ style, isSticky }) => (
+                {({ style }) => (
                   <div style={style} className={`feature-image sticky-image`}>
                     <div className="feature-right m-0 position-relative">
                       <img

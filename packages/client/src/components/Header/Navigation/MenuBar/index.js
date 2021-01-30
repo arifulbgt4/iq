@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from 'reactstrap';
 import { Link, NavLink } from 'react-router-dom';
-
 import MultilevelSidebar from 'react-multilevel-sidebar';
 import 'react-multilevel-sidebar/src/Sidebar.css';
-
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import logo from 'src/assets/image/logo.png';
 

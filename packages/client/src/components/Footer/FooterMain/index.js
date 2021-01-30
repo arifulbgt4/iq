@@ -6,9 +6,7 @@ import {
   faCube,
   faEnvelope,
   faLocationArrow,
-  faMapMarked,
   faPhone,
-  faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 const data = [
@@ -94,6 +92,7 @@ const data = [
     ],
   },
 ];
+
 const FooterMain = () => {
   return (
     <Row className="mt-4 text-center text-md-start">

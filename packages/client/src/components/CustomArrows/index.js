@@ -1,10 +1,10 @@
 import * as React from 'react';
+import { Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowCircleRight,
   faArrowCircleLeft,
 } from '@fortawesome/free-solid-svg-icons';
-import { Button } from 'reactstrap';
 
 const CustomButtonGroupAsArrows = ({ next, previous }) => {
   return (

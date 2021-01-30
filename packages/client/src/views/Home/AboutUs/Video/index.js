@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import {
   Player,
   ControlBar,
@@ -6,19 +6,14 @@ import {
   BigPlayButton,
 } from 'video-react';
 
-const Video = (props) => {
-  // const { poster, source } = props;
+const Video = () => {
   const player = useRef(null);
-  // useEffect(() => {
-  //   // console.log('player', player.current.actions);
-  // }, [player]);
 
   return (
     <div className="about-us-video d-flex justify-content-center align-items-center">
       <Player
         ref={player}
         poster="https://video-react.js.org/assets/poster.png"
-        // src={source}
       >
         <BigPlayButton position="center" />
         <source

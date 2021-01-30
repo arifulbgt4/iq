@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Alert } from 'reactstrap';
 
-import 'src/assets/scss/style.scss';
-
 import { fatchApi } from 'src/state/ducks/actionApi';
+
 import Fallback from 'src/components/Fallback';
 import NotFound from 'src/components/404';
 import withTitle from 'src/components/TitleComponent';
@@ -19,6 +18,9 @@ const Carrer = lazy(() => import('../Carrer'));
 const ContactUs = lazy(() => import('../ContactUs'));
 const Blog = lazy(() => import('../Blog'));
 const BligDetails = lazy(() => import('../BlogDetails'));
+
+// Style
+import 'src/assets/scss/style.scss';
 
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');

@@ -1,7 +1,5 @@
 import React from 'react';
-import { faCubes } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Col, Input, Row } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 
 const FooterTop = () => {

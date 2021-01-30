@@ -1,12 +1,13 @@
-// External Components
 import React, { useEffect, useState } from 'react';
+import { withRouter } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 import {
   Row,
   Col,
   Container,
   Card,
   CardBody,
-  CardText,
   CardImg,
   CardTitle,
   CardSubtitle,
@@ -19,9 +20,6 @@ import {
   faShare,
   faUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
-import { withRouter } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
 
 import { getBlogById } from 'src/api';
 

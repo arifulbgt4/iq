@@ -1,6 +1,6 @@
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
+import { Col, Container, Row } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
 
 import GuidingPrinciples from 'src/components/GuidingPrinciples';

@@ -12,24 +12,16 @@ const scroll = {
 };
 
 const Feature = (props) => {
-  const { id, title, feature, description } = props;
+  const { title, feature, description } = props;
   const prevScrollY = useRef(0);
   const ref = useRef();
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      // console.log(currentScrollY);
-      // if (
-      //   ref.current.offsetTop < currentScrollY ||
-      //   ref.current.clientHeight + ref.current.offsetTop > currentScrollY
-      // ) {
-      //   console.log('object', id);
-      // }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
 
+  useEffect(() => {
+    const handleScroll = () => {};
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollY, ref]);
+
   return (
     <div ref={ref} className="feature">
       <Card

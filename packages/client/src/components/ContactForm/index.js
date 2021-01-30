@@ -29,6 +29,7 @@ const ContactForm = () => {
       console.log(error);
     }
   };
+
   return (
     <Col
       lg={6}
