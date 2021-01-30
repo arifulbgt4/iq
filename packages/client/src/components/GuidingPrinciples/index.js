@@ -14,7 +14,9 @@ const GuidingPrinciples = (props) => {
         <img className="px-4 custrom-img " src={image} alt="idea" />
         <div className="guiding-principle-card_description text-capitalize ms-3">
           <h2 className="fw-bold">{title}</h2>
-          <ReactMarkdown>{description}</ReactMarkdown>
+          <div className="text-start">
+            <ReactMarkdown>{description}</ReactMarkdown>
+          </div>
         </div>
       </div>
     </div>
