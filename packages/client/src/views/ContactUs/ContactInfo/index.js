@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Button } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
 
 import Icon_phone from 'src/assets/image/contactUs/Icon_phone.png';
@@ -53,10 +53,8 @@ const ContactInfo = () => {
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry.{' '}
                     </p>
-                    <div class="d-grid gap-2">
-                      <button class="btn btn-primary" type="button">
-                        Contact Us
-                      </button>
+                    <div className="d-grid gap-2">
+                      <Button color="primary">Contact Us</Button>
                     </div>
                   </div>
                 </div>

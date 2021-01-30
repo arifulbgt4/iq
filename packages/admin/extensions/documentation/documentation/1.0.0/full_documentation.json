@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/27/2021 11:21:40 PM"
+    "x-generation-date": "01/30/2021 6:33:25 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -12523,6 +12523,21 @@
               }
             }
           },
+          "description": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "integer"
+          },
+          "fax": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -12532,6 +12547,21 @@
       "NewWebsit": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "integer"
+          },
+          "fax": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string"
+          },
+          "address": {
             "type": "string"
           },
           "published_at": {
