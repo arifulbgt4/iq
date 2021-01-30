@@ -1,7 +1,9 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Alert } from 'reactstrap';
+import { Alert, Button } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import { fatchApi } from 'src/state/ducks/actionApi';
 
@@ -25,9 +27,24 @@ import 'src/assets/scss/style.scss';
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
 
-  const { loading, error } = useSelector((store) => store.api);
+  const [showScroll, setShowScroll] = useState(false);
 
+  const { loading, error } = useSelector((store) => store.api);
   const dispatch = useDispatch();
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 400) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 400) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.addEventListener('scroll', checkScrollTop);
 
   useEffect(() => {
     dispatch(fatchApi());
@@ -127,6 +144,15 @@ const App = () => {
             />
           </Switch>
           <Footer />
+          <div className="d-flex justify-content-end me-5">
+            <Button
+              className="scrollTop"
+              onClick={scrollTop}
+              style={{ height: 40, display: showScroll ? 'flex' : 'none' }}
+            >
+              <FontAwesomeIcon icon={faArrowUp} />
+            </Button>
+          </div>
         </Suspense>
       </Router>
     </>
