@@ -29,7 +29,7 @@ const Founder = (props) => {
   }));
 
   return (
-    <Row className="align-items-center position-relative">
+    <Row className="align-items-center position-relative founder">
       <Col xl={4} sm={12} xs={12}>
         {image && (
           <Parallax data={scroll.data}>

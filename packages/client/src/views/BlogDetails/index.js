@@ -17,7 +17,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCalendarAlt,
-  faShare,
+  faShareAlt,
   faUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -85,7 +85,7 @@ const BlogDetails = () => {
                 size="sm"
                 className=" text-capitalize fw-bold mb-1"
               >
-                <FontAwesomeIcon icon={faShare} /> &nbsp;share
+                <FontAwesomeIcon icon={faShareAlt} /> &nbsp;share
               </Button>
             </CardFooter>
           </Card>
