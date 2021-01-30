@@ -62,9 +62,9 @@
         content: '';
         border: 1px solid $primary;
         width: 1px;
-        height: 100px;
         position: absolute;
-        top: -29px;
+        top: -30px;
+        bottom: 30px;
         left: 0;
         right: 0;
         margin: 0px auto;
@@ -73,7 +73,7 @@
       &::before {
         content: url(./../image/cotation.png);
         position: absolute;
-        top: 50px;
+        top: 70%;
         left: 0;
         right: 0;
         margin: 0px auto;
