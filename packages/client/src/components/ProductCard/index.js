@@ -7,6 +7,7 @@ import {
   CardSubtitle,
   Button,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 import calc from 'src/utils/calc';
 
@@ -37,7 +38,12 @@ const ProductCard = (props) => {
           {title}
         </CardSubtitle>
         <h2 className="fw-normal">Details</h2>
-        <CardText className="details">{description}</CardText>
+        <CardText className="details">
+          {description}
+          <Link to="#" className="btn btn-link p-0 color-primary ps-1">
+            Read more
+          </Link>
+        </CardText>
         <Button color="primary" outline className="rounded-pill mt-3 px-4">
           Shedule an appointment
         </Button>

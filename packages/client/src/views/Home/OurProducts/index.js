@@ -46,7 +46,7 @@ const OurProducts = () => {
                         name={item.name}
                         title={item.title}
                         description={item.description}
-                      />{' '}
+                      />
                     </Col>
                   ))}
               </Row>

@@ -11,3 +11,9 @@
     @include button-outline-variant($value);
   }
 }
+
+.btn{
+  &:focus{
+    box-shadow: none !important;
+  }
+}
