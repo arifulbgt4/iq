@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Button } from 'reactstrap';
 import { Link, NavLink } from 'react-router-dom';
 import MultilevelSidebar from 'react-multilevel-sidebar';
 import 'react-multilevel-sidebar/src/Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-
-import logo from 'src/assets/image/logo.png';
 
 const options = [
   {
@@ -52,9 +51,9 @@ const options = [
           <NavLink
             exact
             className="nav-link text-capitalize text-secondary"
-            to="/valus"
+            to="/blog"
           >
-            Valus
+            blog
           </NavLink>
         ),
       },
@@ -136,6 +135,10 @@ const MenuBar = () => {
     setOpen(false);
   };
 
+  const { data: siteLogo } = useSelector((store) => store.websiteDetails);
+
+  const logo = process.env.API_URL + siteLogo.logo_two.url;
+
   return (
     <>
       <MultilevelSidebar
@@ -145,8 +148,13 @@ const MenuBar = () => {
         onToggle={handleClick}
         header={
           <div className="text-left pl-4 pb-2 d-flex justify-content-between">
-            <Link to="/">
-              <img src={logo} alt="menu-logo" className="my-1 ms-4 ps-1" />{' '}
+            <Link to="/" className="mt-1">
+              <img
+                src={logo}
+                alt="menu-logo"
+                className="my-1 ms-4 ps-1"
+                style={{ width: '50px' }}
+              />{' '}
             </Link>
             <Button
               onClick={() => setOpen(false)}
