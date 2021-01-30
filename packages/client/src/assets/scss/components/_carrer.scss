@@ -22,13 +22,14 @@
       @media (max-width: 1399.98px) {
         left: -2%;
       }
-          @media (max-width: 1199.98px) {
+      @media (max-width: 1199.98px) {
         content: unset;
       }
     }
   }
   .carrer-items {
     .details {
+      text-align: justify;
       p {
         font-weight: 500;
         font-size: 20px;
@@ -41,7 +42,6 @@
       h2 {
         font-size: 73px;
         font-weight: bold;
-        // @media (max-width: 991.98px) { font-size: 40px; }
       }
     }
     &:last-child {
