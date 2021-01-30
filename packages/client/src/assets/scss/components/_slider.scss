@@ -100,20 +100,37 @@
     }
     .slick-next {
       right: -50px;
+      background: $primary;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
       @media (max-width: 575.98px) {
         right: -6px;
+      }
+      &::before {
+        content: '\e825';
       }
     }
     .slick-prev {
       left: -50px;
+      background: $primary;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
       @media (max-width: 575.98px) {
         left: -10px;
+      }
+      &::before {
+        content: '\e824';
       }
     }
     button {
       &::before {
-        color: $primary;
-        font-size: 43px;
+        font-family: revicons;
+        color: $white;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 700;
         @media (max-width: 575.98px) {
           font-size: 20px;
         }
