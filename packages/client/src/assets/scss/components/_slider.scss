@@ -80,14 +80,33 @@
       }
     }
   }
-  .slick-slide {
-    opacity: 0.5;
+  .nav-slide {
+    width: 186px !important;
   }
-  .slick-current {
-    opacity: 1 !important;
-  }
-  .testimonial-image {
-    margin: 0 92px;
+  .center {
+    .slick-slide {
+      opacity: 0.5;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .slick-current {
+      opacity: 1 !important;
+      img {
+        border: 5px solid $primary;
+      }
+    }
+    .slick-next {
+      right: 0;
+    }
+    .slick-prev {
+      left: 0;
+    }
+    button {
+      &::before {
+        color: $primary;
+      }
+    }
   }
   @media (max-width: 575.98px) {
     p {

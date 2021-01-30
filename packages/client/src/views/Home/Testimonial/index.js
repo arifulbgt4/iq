@@ -45,6 +45,62 @@ const Testimonial = () => {
     setNav2(slider2.current);
   }, [slider2]);
 
+  var settings = {
+    responsive: [
+      {
+        breakpoint: 1900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          centerMode: true,
+          className: 'center',
+          // centerPadding: '',
+        },
+      },
+      {
+        breakpoint: 1550,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          centerMode: true,
+          className: 'center',
+          centerPadding: '5px',
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 1199.99,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 767.98,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 2,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+    ],
+  };
   return (
     <section className="testimonial position-relative">
       <Container>
@@ -54,15 +110,19 @@ const Testimonial = () => {
           border={false}
         />
         <Row className="mb-0 mb-md-5">
-          <Col md={12} lg={{ size: 8, offset: 2 }}>
+          <Col md={12} xl={{ size: 4, offset: 4 }} md={{ size: 10, offset: 1 }}>
             <Slider
+              {...settings}
               asNavFor={nav2}
               ref={slider1}
               slidesToShow={3}
-              centerMode
-              className="center"
+              centerMode={true}
+              className="center "
               swipeToSlide={true}
               focusOnSelect={true}
+              centerPadding="3px"
+              rows={1}
+              arrows={false}
             >
               {data &&
                 data.map((item) => {
@@ -83,7 +143,9 @@ const Testimonial = () => {
                   );
                 })}
             </Slider>
-            <Slider asNavFor={nav1} ref={slider2}>
+          </Col>
+          <Col md={12} lg={{ size: 8, offset: 2 }}>
+            <Slider asNavFor={nav1} ref={slider2} arrows={false}>
               {data &&
                 data.map((items) => (
                   <div
