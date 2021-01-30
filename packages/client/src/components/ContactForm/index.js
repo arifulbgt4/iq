@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Button, Col, Row, Form, FormGroup, Label } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
+import { toast } from 'react-toastify';
 
 import { createContact, sendMail } from 'src/api';
 
@@ -24,6 +25,15 @@ const ContactForm = () => {
     try {
       await createContact(data.name, data.email, data.subject, data.message);
       reset();
+      toast('🦄 Mail send successfully!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       await sendMail(data.name, data.email, data.subject, data.message);
     } catch (error) {
       console.log(error);

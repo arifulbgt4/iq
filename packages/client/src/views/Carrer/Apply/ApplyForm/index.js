@@ -10,6 +10,7 @@ import {
   Input,
 } from 'reactstrap';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 import { applyCarrer } from 'src/api';
 
@@ -33,13 +34,22 @@ const ApplyForm = (props) => {
       );
       reset();
       toggle();
+      toast('🦄  Apply successfully!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <div>
+    <>
       <Button
         color="primary"
         className=" d-inline-block d-md-block  ms-auto rounded-pill px-5"
@@ -99,9 +109,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className="fw-bold text-primary">
-                Qualification
-              </Label>
+              <Label className="fw-bold text-primary">Qualification</Label>
               <Input
                 type="text"
                 name="qualification"
@@ -119,9 +127,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className="fw-bold text-primary">
-                Institution
-              </Label>
+              <Label className="fw-bold text-primary">Institution</Label>
               <Input
                 type="text"
                 name="institution"
@@ -163,7 +169,7 @@ const ApplyForm = (props) => {
           </Form>
         </ModalBody>
       </Modal>
-    </div>
+    </>
   );
 };
 

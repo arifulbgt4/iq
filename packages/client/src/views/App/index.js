@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Alert, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { fatchApi } from 'src/state/ducks/actionApi';
 
@@ -60,6 +62,17 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Router>
         <Suspense fallback={<Fallback />}>
           <Header />
