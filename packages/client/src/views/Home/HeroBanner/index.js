@@ -3,18 +3,11 @@ import { Col, Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 
 import HeroContent from 'src/components/HeroContent';
+import Slider from 'src/components/Slider';
 
 import stock1 from 'src/assets/image/heroBanner/Asset1.png';
-import stock3 from 'src/assets/image/heroBanner/Asset3.png';
-import stock4 from 'src/assets/image/heroBanner/Asset4.png';
-import stock5 from 'src/assets/image/heroBanner/Asset5.png';
-import stock6 from 'src/assets/image/heroBanner/Asset6.png';
 import stock7 from 'src/assets/image/heroBanner/Asset7.png';
-import stock8 from 'src/assets/image/heroBanner/Asset8.png';
-import stock9 from 'src/assets/image/heroBanner/Asset9.png';
 import hero from 'src/assets/image/hero.png';
-
-import Slider from 'src/components/Slider';
 
 const HeroBanner = () => {
   const { data } = useSelector((store) => store.heroBanner);
