@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Container, Row, Button } from 'reactstrap';
-import { useSpring, animated } from 'react-spring';
 import { useSelector } from 'react-redux';
 
 import stock1 from 'src/assets/image/heroBanner/Asset1.png';
@@ -13,14 +12,10 @@ import stock8 from 'src/assets/image/heroBanner/Asset8.png';
 import stock9 from 'src/assets/image/heroBanner/Asset9.png';
 
 import Slider from 'src/components/Slider';
+
 import LargerText from './LergerText';
 
 const HeroBanner = () => {
-  const [props, set] = useSpring(() => ({
-    xy: [0, 0],
-    config: { mass: 30, tension: 500, friction: 80 },
-  }));
-
   const { data } = useSelector((store) => store.heroBanner);
 
   return (
@@ -32,10 +27,7 @@ const HeroBanner = () => {
               {data &&
                 data.map((items) => {
                   return (
-                    <div
-                      key={items.id}
-                      className="banner-content text-center"
-                    >
+                    <div key={items.id} className="banner-content text-center">
                       <LargerText text={items.title} maxLength={23} />
                       <p className="banner-content-description text-capitalize">
                         {items.description}
@@ -55,9 +47,9 @@ const HeroBanner = () => {
             className=" d-block stock-img-content justify-content-center"
           >
             <div className="stock-img-item">
-              <animated.img src={stock4} alt="stock" className="stock-img4" />
-              <animated.img src={stock5} alt="stock" className="stock-img5" />
-              <animated.img src={stock1} alt="stock" className="stock-img1" />
+              <img src={stock4} alt="stock" className="stock-img4" />
+              <img src={stock5} alt="stock" className="stock-img5" />
+              <img src={stock1} alt="stock" className="stock-img1" />
               <div className="line-wrapper2 ">
                 <span className="line1" />
                 <span className="line2" />
@@ -65,12 +57,11 @@ const HeroBanner = () => {
                 <span className="line4" />
                 <span className="line5" />
               </div>
-              <animated.img src={stock3} alt="stock" className="stock-img3" />
-
-              <animated.img src={stock6} alt="stock" className="stock-img6" />
-              <animated.img src={stock7} alt="stock" className="stock-img7" />
-              <animated.img src={stock8} alt="stock" className="stock-img8" />
-              <animated.img src={stock9} alt="stock" className="stock-img9" />
+              <img src={stock3} alt="stock" className="stock-img3" />
+              <img src={stock6} alt="stock" className="stock-img6" />
+              <img src={stock7} alt="stock" className="stock-img7" />
+              <img src={stock8} alt="stock" className="stock-img8" />
+              <img src={stock9} alt="stock" className="stock-img9" />
             </div>
           </Col>
         </Row>
