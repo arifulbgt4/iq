@@ -32,12 +32,10 @@ const GuidingPrinciple = () => {
             {data &&
               data.map((item) => {
                 const image = process.env.API_URL + item.image.url;
+                const animate = item.id % 2 === 0 ? scroll.left : scroll.right;
 
                 return (
-                  <Parallax
-                    key={item.id}
-                    data={item.id % 2 === 0 ? scroll.left : scroll.right}
-                  >
+                  <Parallax key={item.id} data={animate}>
                     <GuidingPrinciples
                       image={image}
                       title={item.title}
