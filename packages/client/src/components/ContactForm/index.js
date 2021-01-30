@@ -100,7 +100,7 @@ const ContactForm = () => {
             </FormGroup>
           </Col>
         </Row>
-        <FormGroup row className="mb-3  my-4">
+        <FormGroup row className="my-2">
           <Parallax data={scroll.data}>
             <Label htmlFor="sub" className="fs-5 text-primary fw-bold pb-2">
               Subject*
@@ -122,7 +122,7 @@ const ContactForm = () => {
           </Parallax>
         </FormGroup>
 
-        <FormGroup row className="mb-3  my-4">
+        <FormGroup row className="mb-2">
           <Parallax data={scroll.data}>
             <Label htmlFor="msg" className="fs-5 text-primary fw-bold pb-2">
               Message

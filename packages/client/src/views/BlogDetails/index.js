@@ -79,9 +79,12 @@ const BlogDetails = () => {
               )}
             </CardBody>
             <CardFooter className="bg-transparent d-flex justify-content-end me-3 border-0">
-              <Button size="sm" className="bg-transparent border-0">
+              <Button
+                size="sm"
+                className="bg-transparent border-0 text-capitalize"
+              >
                 {' '}
-                <FontAwesomeIcon icon={faShare} />{' '}
+                <FontAwesomeIcon icon={faShare} /> &nbsp; share{' '}
               </Button>
             </CardFooter>
           </Card>
