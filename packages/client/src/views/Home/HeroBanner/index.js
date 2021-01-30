@@ -1,6 +1,8 @@
 import React from 'react';
-import { Col, Container, Row, Button } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
+
+import HeroContent from 'src/components/HeroContent';
 
 import stock1 from 'src/assets/image/heroBanner/Asset1.png';
 import stock3 from 'src/assets/image/heroBanner/Asset3.png';
@@ -14,8 +16,6 @@ import hero from 'src/assets/image/hero.png';
 
 import Slider from 'src/components/Slider';
 
-import LargerText from './LergerText';
-
 const HeroBanner = () => {
   const { data } = useSelector((store) => store.heroBanner);
 
@@ -28,15 +28,11 @@ const HeroBanner = () => {
               {data &&
                 data.map((items) => {
                   return (
-                    <div key={items.id} className="banner-content text-center">
-                      <LargerText text={items.title} maxLength={23} />
-                      <p className="banner-content-description text-capitalize">
-                        {items.description}
-                      </p>
-                      <Button className="rounded-pill px-4" color="primary">
-                        Shedule an appointment
-                      </Button>
-                    </div>
+                    <HeroContent
+                      key={items.id}
+                      title={items.title}
+                      description={items.description}
+                    />
                   );
                 })}
             </Slider>

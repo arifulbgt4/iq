@@ -13,6 +13,10 @@
   textarea {
     min-height: calc(0.5em + 9.75rem + 44px);
   }
+  span {
+    margin-top: 4px !important;
+    font-size: 14px !important;
+  }
   .inp {
     &:focus {
       box-shadow: none !important;

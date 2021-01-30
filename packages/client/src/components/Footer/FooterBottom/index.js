@@ -1,24 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import {
-  Col,
-  Form,
-  Input,
-  Row,
-  ListGroup,
-  ListGroupItem,
-  InputGroup,
-  InputGroupAddon,
-  Button,
-} from 'reactstrap';
+import { Col, Row, ListGroup, ListGroupItem } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
   faPinterestP,
-  faTelegram,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -29,28 +18,7 @@ const FooterBottom = () => {
 
   return (
     <Row className="mt-4">
-      <Col lg={4}>
-        <Form
-          className="me-0 me-xl-5 pe-0 pe-xl-5 email"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <InputGroup className="border p-1">
-            <Input
-              type="email"
-              name="email"
-              placeholder="Enter Your Mail"
-              className="bg-transparent border-0"
-            />
-            <InputGroupAddon addonType="append">
-              <Button className="bg-transparent border-0 text-white">
-                {' '}
-                <FontAwesomeIcon icon={faTelegram} style={{ fontSize: 25 }} />
-              </Button>
-            </InputGroupAddon>
-          </InputGroup>
-        </Form>
-      </Col>
-      <Col lg={4} className="text-center py-4 py-lg-0">
+      <Col lg={{ size: 4, offset: 4 }} className="text-center py-4 py-lg-0">
         <ListGroup
           horizontal
           className="list-unstyled justify-content-center flex-wrap ml-0 bg-transparent"

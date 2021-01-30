@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCube,
@@ -94,9 +95,16 @@ const data = [
 ];
 
 const FooterMain = () => {
+  const { data: siteLogo } = useSelector((store) => store.websiteDetails);
+
+  const logo = process.env.API_URL + siteLogo.logo_two.url;
+
   return (
     <Row className="mt-4 text-center text-md-start">
       <Col xs={{ size: 12, order: 2 }} xl={{ size: 4, order: 1 }} className="">
+        <h4 className="mb-0 text-white pe-0 pe-xl-5 me-0 me-xl-5 text-center">
+          <img width={50} src={logo} alt="logo" />
+        </h4>
         <h5 className="pe-0 pe-xl-5 text-justify me-0 me-xl-5 details text-white fw-normal text-center">
           In publishing and graphic design, Lorem ipsum is a placeholder text
           commonly used to demonstrate the visual form of a document or a
