@@ -54,7 +54,7 @@ const ApplyForm = (props) => {
         <ModalBody>
           <Form onSubmit={handleSubmit(onSubmit)} className="apply-form">
             <FormGroup>
-              <Label className=" fs-5 text-primary fw-bold  pb-2">Name</Label>
+              <Label className=" text-primary">Name</Label>
               <Input
                 type="text"
                 name="name"
@@ -69,7 +69,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" fs-5 text-primary fw-bold  pb-2">Number</Label>
+              <Label className=" text-primary">Number</Label>
               <Input
                 type="number"
                 name="number"
@@ -84,10 +84,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" fs-5 text-primary fw-bold  pb-2">
-                {' '}
-                Email{' '}
-              </Label>
+              <Label className=" text-primary">Email</Label>
               <Input
                 type="email"
                 name="email"
@@ -102,9 +99,8 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" fs-5 text-primary fw-bold  pb-2">
-                {' '}
-                Qualification{' '}
+              <Label className=" text-primary">
+                Qualification
               </Label>
               <Input
                 type="text"
@@ -123,9 +119,8 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" fs-5 text-primary fw-bold  pb-2">
-                {' '}
-                institution{' '}
+              <Label className=" text-primary">
+                Institution
               </Label>
               <Input
                 type="text"
@@ -141,7 +136,7 @@ const ApplyForm = (props) => {
             </FormGroup>
             ​
             <FormGroup>
-              <Label className=" fs-5 text-primary fw-bold  pb-2">
+              <Label className=" text-primary">
                 Where did you hear about us
               </Label>
               <Input

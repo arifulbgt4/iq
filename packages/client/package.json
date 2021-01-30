@@ -37,7 +37,6 @@
     "react-perfect-scrollbar": "^1.5.8",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scroll": "^1.8.1",
     "react-scroll-section": "^3.0.2",
     "react-skrollr": "^1.0.4",
     "react-slick": "^0.28.0",
