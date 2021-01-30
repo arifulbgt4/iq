@@ -147,6 +147,12 @@
     .card-title {
       font-weight: bold;
       margin: 0 0 4rem 0;
+      @media (max-width: 767px) {
+        margin: 0 0 2rem 0;
+        @media (max-width: 575px) {
+          margin: 0 0 1.2rem 0;
+        }
+      }
     }
     .details {
       font-size: 14px;

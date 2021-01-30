@@ -33,7 +33,7 @@ const ProductCard = (props) => {
     >
       <CardBody className="text-center">
         <CardTitle tag="h2">{name}</CardTitle>
-        <CardSubtitle tag="h1" className="my-5 ">
+        <CardSubtitle tag="h1" className="my-2 my-sm-3 my-md-5 ">
           {title}
         </CardSubtitle>
         <h2 className="fw-normal">Details</h2>
