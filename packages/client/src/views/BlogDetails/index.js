@@ -49,17 +49,17 @@ const BlogDetails = () => {
   return (
     <Container className="py-5">
       <Row>
-        <Col>
+        <Col sm={{ size: 8, offset: 2 }}>
           <Card className="blog-details">
             <figure>
               <CardImg src={image} alt="blog" className="img-fluid"></CardImg>
             </figure>
             <CardBody className="p-4 px-5">
-              <CardTitle tag="h2" className="py-3 border-bottom">
+              <CardTitle tag="h2" className="py-3 border-bottom mb-4">
                 {blog.title}
 
-                <div className="blog-details-body_details mb-2">
-                  <CardSubtitle tag="span" className="me-5">
+                <div className="blog-details-body_details">
+                  <CardSubtitle tag="span">
                     <FontAwesomeIcon icon={faUserCircle} className="icon" />
                     <small className="name text-capitalize ms-2">
                       {blog.author}
