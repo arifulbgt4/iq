@@ -10,9 +10,15 @@ import {
   CardImg,
   CardTitle,
   CardSubtitle,
+  CardFooter,
+  Button,
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCalendarAlt,
+  faShare,
+  faUserCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -74,6 +80,12 @@ const BlogDetails = () => {
                 <ReactMarkdown>{blog.large_description}</ReactMarkdown>
               )}
             </CardBody>
+            <CardFooter className="bg-transparent d-flex justify-content-end me-3 border-0">
+              <Button size="sm" className="bg-transparent border-0">
+                {' '}
+                <FontAwesomeIcon icon={faShare} />{' '}
+              </Button>
+            </CardFooter>
           </Card>
         </Col>
       </Row>

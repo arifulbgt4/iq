@@ -65,4 +65,10 @@
     font-size: 18px;
     padding-top: 15px;
   }
+  .btn {
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
 }
