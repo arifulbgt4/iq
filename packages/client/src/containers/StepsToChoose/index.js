@@ -9,7 +9,7 @@ const scroll = {
   data: {
     'data-top-bottom': 'opacity: 0; ',
     'data-center-center': 'opacity: 1; transform: translateY(0%);',
-    'data-bottom-top': 'opacity: 0;transform: translateY(40%);',
+    'data-bottom-top': 'opacity: 0.5;transform: translateY(30%);',
   },
 };
 
@@ -18,7 +18,7 @@ const StepsToChoose = () => {
 
   return (
     <Row className="mt-3 justify-content-center">
-      {Array.isArray(data) &&
+      {data &&
         data.map((step) => {
           const image = process.env.API_URL + step.image.url;
 
