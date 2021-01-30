@@ -10,21 +10,12 @@ import Feature from './TabsContent/Feature';
 
 import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 
-// const categories = [
-//   { id: 1, name: 'Feature1', title: 'Feature 1' },
-//   { id: 2, name: 'Feature2', title: 'Feature 2' },
-//   { id: 3, name: 'Feature3', title: 'Feature 3' },
-//   { id: 4, name: 'Feature4', title: 'Feature 4' },
-// ];
-
 const OurTechnology = () => {
   const ref = useRef();
-  const [imageID, setImageID] = useState(1);
+
   const { data, loading } = useSelector((store) => store.technology);
   const dispathc = useDispatch();
-  // useEffect(() => {
-  //   console.log('dd', ref.current.offsetTop);
-  // }, [ref]);
+
   const [desktop, setDesktop] = useState(null);
   return (
     <section ref={ref} className="our-technology py-5 my-5 stop-scrolling">

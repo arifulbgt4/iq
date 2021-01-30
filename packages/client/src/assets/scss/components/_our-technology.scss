@@ -45,7 +45,7 @@
       color: $white !important;
       top: 8.5%;
       left: 7.5%;
-      color: #fff !important;
+      color: $white !important;
       right: 11%;
       text-align: center;
       bottom: 28%;
@@ -55,54 +55,4 @@
       }
     }
   }
-  // .technology-nav {
-  //   transition: all 1s ease;
-  //   z-index: 1000;
-  //   ul {
-  //     transition: all 1s ease;
-  //     background: linear-gradient(
-  //       to right,
-  //       rgba(33, 37, 106, 0.98) 39%,
-  //       rgba(36, 73, 145, 0.86) 100%
-  //     );
-  //     border-bottom: 2px solid white !important;
-  //     flex-wrap: wrap !important;
-  //     padding: 0 !important;
-  //     display: flex;
-  //     flex-direction: row !important;
-  //     overflow: hidden;
-  //     align-items: center;
-  //     height: 70px;
-  //     @media (max-width: 478.98px) {
-  //       height: 100px;
-  //     }
-
-  //     li {
-  //       margin-right: 20px;
-  //       a {
-  //         margin-bottom: 0;
-  //         border: 0;
-  //         padding: 0px 10px 22px;
-  //         @media (max-width: 575.98px) {
-  //           padding: 0px 10px 5px;
-  //         }
-
-  //         &.activeCategoryLink {
-  //           color: white !important;
-  //           border-bottom: 3px solid white !important;
-  //           border-left: 0;
-  //           border-right: 0;
-  //           border-top: 0;
-  //           background: none !important;
-  //         }
-  //         &:hover {
-  //           border: 0;
-  //         }
-  //         &:focus {
-  //           outline: 0 !important;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }

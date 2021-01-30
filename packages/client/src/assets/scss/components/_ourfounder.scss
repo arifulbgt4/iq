@@ -28,7 +28,7 @@
     height: 18%;
     left: -27px;
     right: -28px;
-    background: #f9f9fa;
+    background: $gray;
     top: 8%;
     transform: rotate(355deg);
   }
@@ -38,7 +38,7 @@
     height: 100%;
     left: 0;
     right: 0;
-    background: #f9f9fa;
+    background: $gray;
     top: 17%;
   }
   .dropdown-mark {
@@ -51,7 +51,7 @@
       height: 0;
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
-      border-top: 30px solid #fff;
+      border-top: 30px solid $white;
       z-index: 999;
     }
   }
@@ -80,7 +80,7 @@
       position: absolute;
       height: 140px;
       width: 140px;
-      background: #6a6998;
+      background: soft-blue-100;
       top: -66px;
       @media (max-width: 1199px) {
         display: none;

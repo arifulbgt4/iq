@@ -8,12 +8,12 @@
   }
   .sidebar-main-content {
     .sidebar-body {
-      border-top: 1px solid #eee;
+      border-top: 1px solid $gray-100;
       .form-control {
         height: 40px;
       }
       li {
-        border-top: 1px solid #eee;
+        border-top: 1px solid $gray-100;
         font-size: 14px;
         font-weight: 600;
         height: 64px !important;
@@ -21,7 +21,7 @@
           padding: 20px 70px 20px 14px;
         }
         &:hover {
-          background: #fff;
+          background: $white;
         }
       }
       .second {
@@ -29,9 +29,9 @@
         box-shadow: none !important;
         .sidebar-main-content {
           .first-back-btn {
-            background: #fff;
+            background: $white;
             text-align: left;
-            color: #000;
+            color: $black;
             font-size: 14px;
             font-weight: 600;
             svg {
