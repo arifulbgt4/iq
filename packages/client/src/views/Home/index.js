@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ParallaxProvider } from 'react-skrollr';
 
 import OurFounder from './OurFounder';
@@ -11,8 +11,26 @@ import OurProducts from './OurProducts';
 import WhyChooseUs from './WhyChooseUs';
 import Testimonial from './Testimonial';
 import OurTechnology from './OurTechnology';
+import { Button } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 400) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 400) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.addEventListener('scroll', checkScrollTop);
   return (
     <ParallaxProvider
       init={{
@@ -32,6 +50,15 @@ const Home = () => {
       <BlogSection />
       <Testimonial />
       <ContactUs />
+      <div className="d-flex justify-content-end me-5">
+        <Button
+          className="scrollTop"
+          onClick={scrollTop}
+          style={{ height: 40, display: showScroll ? 'flex' : 'none' }}
+        >
+          <FontAwesomeIcon icon={faArrowUp} />
+        </Button>
+      </div>
     </ParallaxProvider>
   );
 };
