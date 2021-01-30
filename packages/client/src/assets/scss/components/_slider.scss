@@ -89,22 +89,34 @@
       align-items: center;
       justify-content: center;
       display: flex;
+      transform: scale(0.99);
     }
     .slick-current {
       opacity: 1 !important;
+      transform: scale(1) !important;
       img {
         border: 5px solid $primary;
       }
     }
     .slick-next {
-      right: 0;
+      right: -50px;
+      @media (max-width: 575.98px) {
+        right: -6px;
+      }
     }
     .slick-prev {
-      left: 0;
+      left: -50px;
+      @media (max-width: 575.98px) {
+        left: -10px;
+      }
     }
     button {
       &::before {
         color: $primary;
+        font-size: 43px;
+        @media (max-width: 575.98px) {
+          font-size: 20px;
+        }
       }
     }
   }

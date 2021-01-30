@@ -1,7 +1,7 @@
 .hero-banner {
   overflow: hidden;
   @media (min-width: 1400px) {
-    height: 90vh;
+    height: 100vh;
   }
   .banner-content {
     @media (min-width: 1199px) {
@@ -187,9 +187,6 @@
   .cloud-img {
     bottom: 50px;
     min-height: 200px;
-    @media (min-width: 1640px) {
-      bottom: 100px;
-    }
     @media (max-width: 767.98px) {
       bottom: 47px;
       min-height: 123px;
