@@ -35,6 +35,21 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "fax": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "richtext"
     }
   }
 }
