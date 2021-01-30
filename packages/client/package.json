@@ -38,6 +38,7 @@
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scroll-section": "^3.0.2",
+    "react-scroll-to-top": "^1.0.5",
     "react-skrollr": "^1.0.4",
     "react-slick": "^0.28.0",
     "react-spring": "^8.0.27",
