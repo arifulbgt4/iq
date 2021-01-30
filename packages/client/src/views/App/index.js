@@ -147,6 +147,7 @@ const App = () => {
           <div className="d-flex justify-content-end me-5">
             <Button
               className="scrollTop"
+              color="primary"
               onClick={scrollTop}
               style={{ height: 40, display: showScroll ? 'flex' : 'none' }}
             >
