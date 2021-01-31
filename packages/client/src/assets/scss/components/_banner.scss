@@ -3,6 +3,19 @@
   @media (min-width: 1400px) {
     height: 100vh;
   }
+  padding: 100px 0px 150px;
+  @media (max-width: 1339.98px) {
+    padding: 60px 0px 60px;
+  }
+  @media (max-width: 1199.98px) {
+    padding: 50px 0px 60px !important;
+  }
+  @media (max-width: 767.98px) {
+    padding: 50px 0px 0px !important;
+  }
+  @media (max-width: 575.98px) {
+  }
+
   .banner-content {
     @media (min-width: 1199px) {
       margin-left: 65px;
@@ -185,10 +198,10 @@
   }
 
   .cloud-img {
-    bottom: 50px;
+    bottom: 0px;
     min-height: 200px;
     @media (max-width: 767.98px) {
-      bottom: 47px;
+      bottom: 45px;
       min-height: 123px;
     }
     &::after {

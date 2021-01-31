@@ -32,19 +32,11 @@
     }
   }
   .react-multi-carousel-item {
-    padding: 100px 0px 150px;
-    @media (max-width: 1339.98px) {
-      padding: 100px 0px 60px;
-    }
-    @media (max-width: 1199.98px) {
-      padding: 100px 25px 60px 40px !important;
-    }
-
     @media (max-width: 767.98px) {
-      padding: 35px 25px 60px 40px !important;
+      padding: 0px 25px 60px 40px !important;
     }
     @media (max-width: 575.98px) {
-      padding: 35px 19px 60px 15px !important;
+      padding: 0px 19px 60px 15px !important;
     }
   }
   .slider-left-content {
