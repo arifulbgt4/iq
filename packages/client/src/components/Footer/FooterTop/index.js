@@ -14,18 +14,14 @@ const FooterTop = () => {
       >
         <h4 className="mb-0 text-white ">{website.name}</h4>
       </Col>
-      <Col md={12} lg={12} xl={8} className="d-none d-md-block">
-        <ul className="d-flex justify-content-between align-items-center m-0 p-0">
-          <li className="list-unstyled">
-            <h5 className="text-white">Quick Links</h5>{' '}
-          </li>
-          <li className="list-unstyled">
-            <h5 className="text-white">About US</h5>{' '}
-          </li>
-          <li className="list-unstyled me-5 me-lg-0">
-            <h5 className="text-white me-5 me-lg-0"> Contact US</h5>
-          </li>
-        </ul>
+      <Col md={4} lg={4} xl={2} className="d-none d-md-block">
+        <h5 className="text-white">Quick Links</h5>{' '}
+      </Col>
+      <Col md={4} lg={4} xl={2} className="d-none d-md-block">
+        <h5 className="text-white">About US</h5>{' '}
+      </Col>
+      <Col md={4} lg={4} xl={4} className="d-none d-md-block">
+        <h5 className="text-white me-5 me-lg-0"> Contact US</h5>
       </Col>
     </Row>
   );

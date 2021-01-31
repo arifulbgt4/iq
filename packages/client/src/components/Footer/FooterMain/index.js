@@ -114,8 +114,8 @@ const FooterMain = () => {
           <Col
             key={items.id}
             xl={{ size: items.id < 3 ? 2 : 4, order: 2 }}
-            lg={items.id < 3 ? 3 : 6}
-            md={items.id < 3 ? 4 : 4}
+            lg={4}
+            md={4}
             sm={12}
             className={`${items.id < 3 && 'px-1 px-lg-3'}`}
           >
