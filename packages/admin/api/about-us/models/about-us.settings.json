@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "about_uses",
   "info": {
-    "name": "About Us"
+    "name": "About Us",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,7 +18,22 @@
       "type": "richtext"
     },
     "video": {
-      "type": "string"
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "video_poster": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
