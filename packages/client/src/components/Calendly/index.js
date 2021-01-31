@@ -32,7 +32,7 @@ const utm = {
 };
 
 const Calendly = (props) => {
-  const { url, outline = false } = props;
+  const { url, outline = false, className = '' } = props;
 
   const openPopup = () => openPopupWidget({ url, prefill, pageSettings, utm });
 
@@ -42,7 +42,7 @@ const Calendly = (props) => {
         url && openPopup();
       }}
       outline={outline}
-      className="rounded-pill px-4"
+      className={`rounded-pill px-4 ${className && className}`}
       color="primary"
     >
       Shedule an appointment

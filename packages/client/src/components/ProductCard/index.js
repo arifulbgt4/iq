@@ -10,12 +10,14 @@ import {
 import { Link } from 'react-router-dom';
 
 import calc from 'src/utils/calc';
+import Calendly from '../Calendly';
 
 const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const ProductCard = (props) => {
-  const { title, description, name } = props;
+  const { title, description, name, url } = props;
+
   const [property, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: {
@@ -44,13 +46,7 @@ const ProductCard = (props) => {
             Read more
           </Link>
         </CardText>
-        <Button
-          color="primary"
-          outline
-          className="rounded-pill mt-3 px-4 shedule-btn"
-        >
-          Shedule an appointment
-        </Button>
+        <Calendly className="shedule-btn" outline url={url} />
       </CardBody>
     </animated.div>
   );
