@@ -4,8 +4,7 @@ import Calendly from 'src/components/Calendly';
 import LergerText from '../LergerText';
 
 const HeroContent = (props) => {
-  const { title, description } = props;
-  const url = 'https://calendly.com/arifulbgt4/15min';
+  const { title, description, url } = props;
 
   return (
     <div className="banner-content text-center">
