@@ -6,6 +6,8 @@ import MultilevelSidebar from 'react-multilevel-sidebar';
 import 'react-multilevel-sidebar/src/Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import SocialLinks from 'src/components/SocialLinks';
+import ContactAddress from 'src/components/ContactAddress';
 
 const options = [
   {
@@ -16,7 +18,7 @@ const options = [
         name: (
           <NavLink
             exact
-            className="nav-link text-capitalize text-secondary"
+            className="nav-link text-capitalize text-primary"
             to="/"
           >
             Home
@@ -33,7 +35,7 @@ const options = [
         name: (
           <NavLink
             exact
-            className="nav-link text-capitalize text-secondary"
+            className="nav-link text-capitalize text-primary"
             to="/carrer"
           >
             Carrer
@@ -50,7 +52,7 @@ const options = [
         name: (
           <NavLink
             exact
-            className="nav-link text-capitalize text-secondary"
+            className="nav-link text-capitalize text-primary"
             to="/blog"
           >
             blog
@@ -67,7 +69,7 @@ const options = [
         name: (
           <NavLink
             exact
-            className="nav-link text-capitalize text-secondary"
+            className="nav-link text-capitalize text-primary"
             to="/contact"
           >
             Contact Us
@@ -84,7 +86,7 @@ const options = [
         name: (
           <NavLink
             exact
-            className="nav-link text-capitalize text-secondary"
+            className="nav-link text-capitalize text-primary"
             to="/docs"
           >
             Docs
@@ -101,7 +103,7 @@ const options = [
         name: (
           <NavLink
             exact
-            className="nav-link text-capitalize text-secondary"
+            className="nav-link text-capitalize text-primary"
             to="/docs"
           >
             Login
@@ -118,11 +120,25 @@ const options = [
         name: (
           <NavLink
             exact
-            className="nav-link text-capitalize text-secondary"
+            className="nav-link text-capitalize text-primary"
             to="/docs"
           >
             Back To office
           </NavLink>
+        ),
+      },
+    ],
+  },
+  {
+    hideBorder: true,
+    content: [
+      {
+        id: 7,
+        name: (
+          <div className="mt-5 pt-4 menubar-address ps-3">
+            <ContactAddress textColor="text-primary" />
+            <SocialLinks textColor="text-primary" />
+          </div>
         ),
       },
     ],

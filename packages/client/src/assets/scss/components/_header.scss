@@ -80,4 +80,15 @@ header {
       display: none !important;
     }
   }
+  .sidebar-main {
+    z-index: 10000 !important;
+  }
+  .menubar-address {
+    .contact-address {
+      justify-content: start !important;
+    }
+    .social-links {
+      justify-content: start !important;
+    }
+  }
 }
