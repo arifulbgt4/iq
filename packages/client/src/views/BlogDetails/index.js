@@ -20,6 +20,18 @@ import {
   faShareAlt,
   faUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  EmailShareButton,
+  EmailIcon,
+} from 'react-share';
 
 import { getBlogById } from 'src/api';
 
@@ -45,6 +57,8 @@ const BlogDetails = () => {
   }
 
   const image = process.env.API_URL + blog.image.url;
+
+  const shareUrl = window.location.href;
 
   return (
     <Container className="py-5">
@@ -79,14 +93,31 @@ const BlogDetails = () => {
               )}
             </CardBody>
             <CardFooter className="bg-transparent d-flex justify-content-end me-3 border-0">
-              <Button
-                outline
-                color="primary"
-                size="sm"
-                className=" text-capitalize fw-bold mb-1"
-              >
-                <FontAwesomeIcon icon={faShareAlt} /> &nbsp;share
-              </Button>
+              <FacebookShareButton url={shareUrl}>
+                <div className="p-1">
+                  <FacebookIcon size={32} round className="ms-1" />
+                </div>
+              </FacebookShareButton>
+              <WhatsappShareButton url={shareUrl}>
+                <div className="p-1">
+                  <WhatsappIcon size={32} round />
+                </div>
+              </WhatsappShareButton>
+              <LinkedinShareButton url={shareUrl}>
+                <div className="p-1">
+                  <LinkedinIcon size={32} round />
+                </div>
+              </LinkedinShareButton>
+              <TwitterShareButton url={shareUrl}>
+                <div className="p-1">
+                  <TwitterIcon size={32} round />
+                </div>
+              </TwitterShareButton>
+              <EmailShareButton url={shareUrl}>
+                <div className="p-1">
+                  <EmailIcon size={32} round />
+                </div>
+              </EmailShareButton>
             </CardFooter>
           </Card>
         </Col>
