@@ -33,6 +33,7 @@ const OurTechnology = () => {
                       {
                         <ScrollAnimation
                           delay={-500}
+                          duration={0.0}
                           animateIn="flipInX"
                           afterAnimatedIn={function afterAnimatedIn() {
                             setDesktop(category.id);
