@@ -58,6 +58,13 @@
   .team-member {
     h1 {
       padding: 0px 0 40px;
+      @media (max-width: 991.98px) {
+        font-size: 25px;
+        padding: 0px 65px 40px;
+      }
+      @media (max-width: 767.98px) {
+        padding: 0px 0px 40px;
+      }
       &::after {
         content: '';
         border: 1px solid $primary;
