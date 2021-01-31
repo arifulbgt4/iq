@@ -44,7 +44,11 @@ const ProductCard = (props) => {
             Read more
           </Link>
         </CardText>
-        <Button color="primary" outline className="rounded-pill mt-3 px-4">
+        <Button
+          color="primary"
+          outline
+          className="rounded-pill mt-3 px-4 shedule-btn"
+        >
           Shedule an appointment
         </Button>
       </CardBody>
