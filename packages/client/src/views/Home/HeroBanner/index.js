@@ -31,8 +31,8 @@ const HeroBanner = () => {
             </Slider>
           </Col>
           <Col
-            xs={{ size: 11, offset: 1 }}
-            sm={{ size: 10, offset: 2 }}
+            xs={{ size: 12, offset: 0 }}
+            sm={{ size: 10, offset: 1 }}
             md={{ size: 6, offset: 0 }}
             className=" d-block stock-img-content justify-content-center"
           >
