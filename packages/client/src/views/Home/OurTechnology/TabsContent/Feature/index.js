@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardTitle, CardText, CardSubtitle } from 'reactstrap';
+import { Card, CardTitle, CardText, CardSubtitle, CardImg } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
+import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 
 const scroll = {
   data: {
@@ -12,7 +13,7 @@ const scroll = {
 };
 
 const Feature = (props) => {
-  const { title, feature, description } = props;
+  const { title, feature, description, image } = props;
   const prevScrollY = useRef(0);
   const ref = useRef();
 
@@ -53,6 +54,16 @@ const Feature = (props) => {
             </Link>
           </div>
         </Parallax>
+        <div className="feature-bottom m-0 position-relative d-block d-md-none mt-4">
+          <img
+            src={featureRightImg}
+            alt="feature right image"
+            className="img-fluid"
+          />
+          <div className="desktop-item position-absolute">
+            <img src={image} alt="" />
+          </div>
+        </div>
       </Card>
     </div>
   );

@@ -24,31 +24,35 @@ const OurTechnology = () => {
             <Col md={6} className="technology-scroll ">
               <div style={{ position: 'relative' }}>
                 {data &&
-                  data.map((category) => (
-                    <div
-                      key={category.id}
-                      className={category.id}
-                      key={'display' + category.id}
-                    >
-                      {
-                        <ScrollAnimation
-                          delay={-500}
-                          duration={0.3}
-                          animateIn="flipInX"
-                          afterAnimatedIn={function afterAnimatedIn(v) {
-                            v && setDesktop(category.id);
-                          }}
-                        >
-                          <Feature
-                            id={category.id}
-                            title={category.title}
-                            feature={category.feature}
-                            description={category.description}
-                          />
-                        </ScrollAnimation>
-                      }
-                    </div>
-                  ))}
+                  data.map((category) => {
+                    const image = process.env.API_URL + category.image.url;
+                    return (
+                      <div
+                        key={category.id}
+                        className={category.id}
+                        key={'display' + category.id}
+                      >
+                        {
+                          <ScrollAnimation
+                            delay={-500}
+                            duration={0.3}
+                            animateIn="flipInX"
+                            afterAnimatedIn={function afterAnimatedIn(v) {
+                              v && setDesktop(category.id);
+                            }}
+                          >
+                            <Feature
+                              id={category.id}
+                              title={category.title}
+                              feature={category.feature}
+                              description={category.description}
+                              image={image}
+                            />
+                          </ScrollAnimation>
+                        }
+                      </div>
+                    );
+                  })}
               </div>
             </Col>
             <Col md={6} className="d-none d-md-block">
