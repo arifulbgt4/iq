@@ -64,4 +64,7 @@ header {
       }
     }
   }
+  .sidebar-main {
+    z-index: 10000 !important;
+  }
 }

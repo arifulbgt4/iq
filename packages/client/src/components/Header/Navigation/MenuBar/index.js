@@ -164,6 +164,7 @@ const MenuBar = () => {
         options={options}
         wrapperClassName="header-menu-bar"
         onToggle={handleClick}
+        onItemClick={handleClick}
         header={
           <div className="text-left pl-4 pb-2 d-flex justify-content-between">
             <Link to="/" className="mt-1">
