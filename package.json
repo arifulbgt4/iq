@@ -6,9 +6,12 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "lerna run build",
+    "start": "concurrently \"yarn start:client\" \"yarn dev:admin\"",
     "dev": "concurrently \"yarn dev:client\" \"yarn dev:admin\"",
     "build:admin": "lerna run build --stream --ignore @realworld/client",
     "start:admin": "lerna exec --stream --scope=@realworld/admin -- yarn start",
+    "start:client": "lerna exec --stream --scope=@realworld/client -- yarn start",
     "dev:client": "lerna exec --stream --scope=@realworld/client -- yarn dev",
     "dev:admin": "lerna exec --stream --scope=@realworld/admin -- yarn develop",
     "lint": "lerna exec --bail=false -- eslint . --fix"

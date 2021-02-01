@@ -4,26 +4,26 @@ const http = require('http');
 const path = require('path');
 const isDocker = require('is-docker');
 
-const { REACT_BACKEND_PROD_API } = process.env;
+const REACT_BACKEND_PROD_API = process.env.REACT_BACKEND_PROD_API;
 
 const app = express();
 
-// if (!isDocker()) {
-//   app.use(
-//     '/api',
-//     createProxyMiddleware({
-//       target: REACT_BACKEND_PROD_API,
-//       changeOrigin: true,
+if (!isDocker()) {
+  app.use(
+    '/admin',
+    createProxyMiddleware({
+      target: REACT_BACKEND_PROD_API,
+      changeOrigin: true,
 
-//       // rewrite path
-//       // so http://localhost:1234/api/instances
-//       // becomes http://localhost:3000/instances
-//       pathRewrite: {
-//         '^/api': '/',
-//       },
-//     })
-//   );
-// }
+      // rewrite path
+      // so http://localhost:1234/api/instances
+      // becomes http://localhost:3000/instances
+      pathRewrite: {
+        '^/api': '/',
+      },
+    })
+  );
+}
 
 const port = process.env.PORT || 3000;
 
