@@ -56,6 +56,7 @@ const Testimonial = () => {
           dots: false,
           centerMode: true,
           className: 'center',
+          autoplay: true,
         },
       },
       {
@@ -122,6 +123,9 @@ const Testimonial = () => {
               centerPadding="3px"
               rows={1}
               arrows={false}
+              autoplay={true}
+              autoplaySpeed={5000}
+              speed={1000}
             >
               {data &&
                 data.map((item) => {
@@ -144,7 +148,7 @@ const Testimonial = () => {
             </Slider>
           </Col>
           <Col md={12} lg={{ size: 8, offset: 2 }}>
-            <Slider asNavFor={nav1} ref={slider2} arrows={false}>
+            <Slider asNavFor={nav1} ref={slider2} arrows={false} speed={1000}>
               {data &&
                 data.map((items) => (
                   <div
