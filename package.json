@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "start": "concurrently \"yarn start:client\" \"yarn start:admin\"",
+    "start": "concurrently \"yarn start:client\" \"yarn dev:admin\"",
     "dev": "concurrently \"yarn dev:client\" \"yarn dev:admin\"",
     "build:admin": "lerna run build --stream --ignore @realworld/client",
     "start:admin": "lerna exec --stream --scope=@realworld/admin -- yarn start",
