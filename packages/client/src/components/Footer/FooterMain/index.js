@@ -106,7 +106,7 @@ const FooterMain = () => {
     <Row className="mt-4 text-center text-md-start">
       <Col xs={12} xl={4} lg={12}>
         <div className="mb-0 text-white pe-0 pe-xl-5 me-0 me-xl-5 text-center">
-          <img src={logo} alt="logo" height="150px" />
+          <img src={logo} alt="logo" height="150px" className="img-fluid" />
         </div>
         <h5 className="pe-0 pe-xl-5 text-justify me-0 me-xl-5 details text-white fw-normal text-center mb-4">
           {siteData.description && siteData.description}
