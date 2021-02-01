@@ -22,7 +22,7 @@ const Navigations = () => {
             xs={6}
             className="hiconclm pb-0 pb-md-2 pb-lg-0"
           >
-            <div className="d-flex align-items-center hlogo justify-content-start justify-content-sm-center ">
+            <div className="d-flex align-items-center hlogo justify-content-start justify-content-sm-center justify-content-lg-start">
               <Link to="/" className="mb-0 h4 text-decoration-none text-dark">
                 <img width={50} src={logo} alt="logo" />
                 <span className="text-primary ms-2">{data.name}</span>
