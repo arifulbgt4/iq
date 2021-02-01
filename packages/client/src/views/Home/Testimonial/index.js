@@ -10,13 +10,13 @@ import SectionTitle from 'src/components/SectionTitle';
 const scroll = {
   data: {
     'data-top-bottom': 'opacity: 1; ',
-    'data-center-center': 'opacity: 1; transform: translate(1%, 0%);',
-    'data-bottom-top': 'opacity: 0;transform: translate(-13%, 0%);',
+    'data-center-center': 'opacity: 1; transform: translate(0%, 0%);',
+    'data-bottom-top': 'opacity: 0.3;transform: translate(0%, 10%);',
   },
   data2: {
     'data-top-bottom': 'opacity: 1; ',
     'data-center-center': 'opacity: 1; transform: translate(0%, 0%);',
-    'data-bottom-top': 'opacity: 0;transform: translate(0%, 100%);',
+    'data-bottom-top': 'opacity: 0.4;transform: translate(0%, 40%);',
   },
   data3: {
     'data-top-bottom': 'opacity: 1; transform: translate(0%, 0%);',
@@ -131,18 +131,20 @@ const Testimonial = () => {
                 data.map((item) => {
                   const image = process.env.API_URL + item.image.url;
                   return (
-                    <div
-                      key={item.id}
-                      className="rounded-pill testimonial-image"
-                    >
-                      <img
-                        src={image}
-                        alt=""
-                        height="136px"
-                        width="136px"
-                        className="rounded-pill"
-                      />
-                    </div>
+                    <Parallax data={scroll.data}>
+                      <div
+                        key={item.id}
+                        className="rounded-pill testimonial-image"
+                      >
+                        <img
+                          src={image}
+                          alt=""
+                          height="136px"
+                          width="136px"
+                          className="rounded-pill"
+                        />
+                      </div>
+                    </Parallax>
                   );
                 })}
             </Slider>
