@@ -7,7 +7,6 @@ import Video from './Video';
 
 const AboutUs = () => {
   const { data } = useSelector((store) => store.aboutUs);
-  console.log('🚀 ~ file: index.js ~ line 10 ~ AboutUs ~ data', data);
   const { title, description, video, video_poster } = data;
 
   const videoUrl = process.env.API_URL + video.url;
