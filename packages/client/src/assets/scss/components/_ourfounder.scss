@@ -130,10 +130,10 @@
     font-size: 18px !important;
   }
   &::after {
-    content: '"';
+    content: '“';
     position: absolute;
     top: 0px;
-    left: 49px;
+    left: 41px;
     font-size: 55px;
     font-weight: 500;
     @media (max-width: 991.98px) {
@@ -141,9 +141,9 @@
     }
   }
   &::before {
-    content: '"';
+    content: '“';
     position: absolute;
-    top: 0px;
+    top: 35px;
     left: -10px;
     font-size: 255px;
     font-weight: 500;
