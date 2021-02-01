@@ -13,6 +13,7 @@ import {
 const data = [
   {
     id: 1,
+    title: 'Quicks Links',
     navitem: [
       {
         id: 1,
@@ -42,6 +43,7 @@ const data = [
   },
   {
     id: 2,
+    title: 'About Us',
     navitem: [
       {
         id: 1,
@@ -71,6 +73,7 @@ const data = [
   },
   {
     id: 3,
+    title: 'Contact Us',
     navitem: [
       {
         id: 1,
@@ -101,11 +104,11 @@ const FooterMain = () => {
 
   return (
     <Row className="mt-4 text-center text-md-start">
-      <Col xs={{ size: 12, order: 2 }} xl={{ size: 4, order: 1 }} className="">
-        <h4 className="mb-0 text-white pe-0 pe-xl-5 me-0 me-xl-5 text-center">
-          <img className="img-fluid" src={logo} alt="logo" />
-        </h4>
-        <h5 className="pe-0 pe-xl-5 text-justify me-0 me-xl-5 details text-white fw-normal text-center">
+      <Col xs={12} xl={4} lg={12}>
+        <div className="mb-0 text-white pe-0 pe-xl-5 me-0 me-xl-5 text-center">
+          <img src={logo} alt="logo" height="150px" />
+        </div>
+        <h5 className="pe-0 pe-xl-5 text-justify me-0 me-xl-5 details text-white fw-normal text-center mb-4">
           {siteData.description && siteData.description}
         </h5>
       </Col>
@@ -113,13 +116,18 @@ const FooterMain = () => {
         data.map((items) => (
           <Col
             key={items.id}
-            xl={{ size: items.id < 3 ? 2 : 4, order: 2 }}
+            xl={items.id < 3 ? 2 : 4}
             lg={4}
             md={4}
             sm={12}
-            className={`${items.id < 3 && 'px-1 px-lg-3'}`}
+            className={`${items.id < 3 && 'px-1 px-lg-3'} mt-3 mt-xl-0`}
           >
             <ul className="list-unstyled p-0 m-0">
+              <li>
+                <h4 className="text-white mb-3 text-capitalize">
+                  {items.title}
+                </h4>
+              </li>
               {items.navitem &&
                 items.navitem.map((item) => (
                   <li

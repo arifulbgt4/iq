@@ -17,11 +17,15 @@ const FooterBottom = () => {
   const { data: website } = useSelector((store) => store.websiteDetails);
 
   return (
-    <Row className="mt-4">
-      <Col lg={{ size: 4, offset: 4 }} className="text-center py-4 py-lg-0">
+    <Row className="mt-0 mt-md-4">
+      <Col
+        xl={{ size: 4, offset: 4 }}
+        md={6}
+        className="text-center text-md-start py-4 py-lg-0"
+      >
         <ListGroup
           horizontal
-          className="list-unstyled justify-content-center flex-wrap ml-0 bg-transparent"
+          className="list-unstyled justify-content-center justify-content-md-start flex-wrap ml-0 bg-transparent"
         >
           <ListGroupItem className="pe-2 p-0 mb-2 border-start-0 border-top-0 border-bottom-0 border-end bg-transparent">
             <Link to="#">Privecy</Link>
@@ -35,7 +39,7 @@ const FooterBottom = () => {
         </ListGroup>
         <p>2021 copyrights @ {website.name}</p>
       </Col>
-      <Col lg={4}>
+      <Col xl={4} md={6}>
         <ListGroup
           horizontal
           className="list-unstyled justify-content-between flex-wrap ml-0 social-icon"
