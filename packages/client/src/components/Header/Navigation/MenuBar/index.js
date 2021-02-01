@@ -166,7 +166,7 @@ const MenuBar = () => {
         onToggle={handleClick}
         onItemClick={handleClick}
         header={
-          <div className="text-left pl-4 pb-2 d-flex justify-content-between">
+          <div className="text-left pl-4 py-3 d-flex justify-content-between">
             <Link to="/" className="mt-1">
               <img
                 src={logo}
