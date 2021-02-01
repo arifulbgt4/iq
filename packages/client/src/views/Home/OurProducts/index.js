@@ -46,6 +46,7 @@ const OurProducts = () => {
                         name={item.name}
                         title={item.title}
                         description={item.description}
+                        url={item.calendly_url}
                       />
                     </Col>
                   ))}

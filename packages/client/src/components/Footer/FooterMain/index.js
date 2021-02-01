@@ -103,7 +103,7 @@ const FooterMain = () => {
     <Row className="mt-4 text-center text-md-start">
       <Col xs={{ size: 12, order: 2 }} xl={{ size: 4, order: 1 }} className="">
         <h4 className="mb-0 text-white pe-0 pe-xl-5 me-0 me-xl-5 text-center">
-          <img width={80} src={logo} alt="logo" />
+          <img className="img-fluid" src={logo} alt="logo" />
         </h4>
         <h5 className="pe-0 pe-xl-5 text-justify me-0 me-xl-5 details text-white fw-normal text-center">
           {siteData.description && siteData.description}

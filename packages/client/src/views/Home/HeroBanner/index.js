@@ -25,6 +25,7 @@ const HeroBanner = () => {
                       key={items.id}
                       title={items.title}
                       description={items.description}
+                      url={items.calendly_url}
                     />
                   );
                 })}
