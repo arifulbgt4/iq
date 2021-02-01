@@ -40,11 +40,7 @@ header {
     }
   }
   @media screen and (min-width: 992px) and (max-width: 1200px) {
-    .hbtns {
-      width: 35%;
-    }
     .hnav {
-      width: 40%;
       padding-left: 0px;
       padding-right: 0px;
     }
@@ -55,9 +51,6 @@ header {
   }
 
   @media screen and (min-width: 459px) and (max-width: 991px) {
-    .hlogo {
-      justify-content: center;
-    }
     .nav {
       width: 100%;
       justify-content: center !important;
@@ -69,26 +62,6 @@ header {
         margin-left: 5px;
         padding: 5px 10px !important;
       }
-    }
-  }
-
-  @media screen and (max-width: 459px) {
-    .hnav {
-      display: none;
-    }
-    .hbtns {
-      display: none !important;
-    }
-  }
-  .sidebar-main {
-    z-index: 10000 !important;
-  }
-  .menubar-address {
-    .contact-address {
-      justify-content: start !important;
-    }
-    .social-links {
-      justify-content: start !important;
     }
   }
 }

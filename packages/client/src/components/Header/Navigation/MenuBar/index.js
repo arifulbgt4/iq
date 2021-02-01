@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import SocialLinks from 'src/components/SocialLinks';
 import ContactAddress from 'src/components/ContactAddress';
+import ButtonsGroup from 'src/components/ButtButtonsGroup';
 
 const options = [
   {
@@ -136,6 +137,7 @@ const options = [
         id: 7,
         name: (
           <div className="mt-5 pt-4 menubar-address ps-3">
+            <ButtonsGroup />
             <ContactAddress textColor="text-primary" />
             <SocialLinks textColor="text-primary" />
           </div>
@@ -188,7 +190,8 @@ const MenuBar = () => {
       {/* using in our button to open the sidebar */}
       <Button
         onClick={() => setOpen(true)}
-        className="bar  bg-transparent border-0 d-xl-none d-lg-none d-md-none d-inline-block text-primary ml-auto  mr-sm-2 p-sm-0"
+        className="bar  bg-transparent border-0
+        d-inline-block d-sm-none text-primary ml-auto  mr-sm-2 p-sm-0"
       >
         <FontAwesomeIcon icon={faBars} />
       </Button>
