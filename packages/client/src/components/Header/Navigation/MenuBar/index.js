@@ -37,9 +37,9 @@ const options = [
           <NavLink
             exact
             className="nav-link text-capitalize text-primary"
-            to="/carrer"
+            to="/career"
           >
-            Carrer
+            Career
           </NavLink>
         ),
       },

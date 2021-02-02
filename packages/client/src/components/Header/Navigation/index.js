@@ -53,9 +53,9 @@ const Navigations = () => {
                   <NavLink
                     exact
                     className="nav-link text-capitalize text-secondary"
-                    to="/carrer"
+                    to="/career"
                   >
-                    Carrer
+                    Career
                   </NavLink>
                 </NavItem>
                 <NavItem>

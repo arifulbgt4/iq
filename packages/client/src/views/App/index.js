@@ -75,11 +75,11 @@ const App = () => {
             />
             <Route
               exact
-              path="/carrer"
+              path="/career"
               render={(props) =>
                 withTitle({
                   component: Carrer,
-                  title: 'Carrer',
+                  title: 'career',
                   ...props,
                 })
               }
