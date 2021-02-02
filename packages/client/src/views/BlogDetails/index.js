@@ -87,7 +87,6 @@ const BlogDetails = () => {
                   </CardSubtitle>
                 </div>
               </CardTitle>
-              <ReactMarkdown>{blog.description}</ReactMarkdown>
               {blog?.large_description && (
                 <ReactMarkdown>{blog.large_description}</ReactMarkdown>
               )}
