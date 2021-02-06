@@ -83,57 +83,6 @@ const options = [
     hideBorder: true,
     content: [
       {
-        id: 5,
-        name: (
-          <NavLink
-            exact
-            className="nav-link text-capitalize text-primary"
-            to="/docs"
-          >
-            Docs
-          </NavLink>
-        ),
-      },
-    ],
-  },
-  {
-    hideBorder: true,
-    content: [
-      {
-        id: 6,
-        name: (
-          <NavLink
-            exact
-            className="nav-link text-capitalize text-primary"
-            to="/docs"
-          >
-            Login
-          </NavLink>
-        ),
-      },
-    ],
-  },
-  {
-    hideBorder: true,
-    content: [
-      {
-        id: 7,
-        name: (
-          <NavLink
-            exact
-            className="nav-link text-capitalize text-primary"
-            to="/docs"
-          >
-            Back To office
-          </NavLink>
-        ),
-      },
-    ],
-  },
-  {
-    hideBorder: true,
-    content: [
-      {
         id: 7,
         name: (
           <div className="mt-5 pt-4 menubar-address ps-3">

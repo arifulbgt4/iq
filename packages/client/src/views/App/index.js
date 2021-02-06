@@ -16,7 +16,6 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 
 // Pages
-const Docs = lazy(() => import('../Documentation'));
 const Home = lazy(() => import('../Home'));
 const Carrer = lazy(() => import('../Carrer'));
 const ContactUs = lazy(() => import('../ContactUs'));
@@ -129,17 +128,7 @@ const App = () => {
                 })
               }
             />
-            {/* Doc Page */}
-            <Route
-              path="/docs"
-              render={(props) =>
-                withTitle({
-                  component: Docs,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            />
+
 
             {/* Default 404 */}
             <Route
