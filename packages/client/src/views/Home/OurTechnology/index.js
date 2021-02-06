@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { Sticky, StickyContainer } from 'react-sticky';
+import { useStickyroll } from '@stickyroll/hooks';
+import Sticky from 'react-sticky-el';
 import { useSelector } from 'react-redux';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
@@ -10,82 +11,63 @@ import Feature from './TabsContent/Feature';
 
 import featureRightImg from 'src/assets/image/ourTechnology/iMac.png';
 
+const headlines = [
+  'Hello World!',
+  'Hello React!',
+  'Hello Stickyroll!',
+  "Let's continue with the next lesson!",
+];
+
 const OurTechnology = () => {
-  const ref = useRef();
   const { data } = useSelector((store) => store.technology);
   const [desktop, setDesktop] = useState(null);
 
+  const [
+    wrapper,
+    { height, currentPage, pageCount, pageIndex, progress },
+  ] = useStickyroll({
+    pages: data,
+  });
+
+  const image = process.env.API_URL + data[pageIndex].image.url;
   return (
-    <section ref={ref} className="our-technology py-5 my-5 stop-scrolling">
+    <section
+      ref={wrapper}
+      style={{ height }}
+      className="our-technology py-5 my-5 stop-scrolling sticky-wrap"
+    >
       <Container className="py-2 py-md-5">
         <SectionHeader />
-        <StickyContainer>
+        <Sticky boundaryElement=".sticky-wrap">
           <Row>
             <Col md={6} className="technology-scroll ">
               <div style={{ position: 'relative' }}>
-                {data &&
-                  data.map((category) => {
-                    const image = process.env.API_URL + category.image.url;
-                    return (
-                      <div
-                        key={category.id}
-                        className={category.id}
-                        key={'display' + category.id}
-                      >
-                        {
-                          <ScrollAnimation
-                            delay={-500}
-                            duration={0.3}
-                            animateIn="flipInX"
-                            afterAnimatedIn={function afterAnimatedIn(v) {
-                              v && setDesktop(category.id);
-                            }}
-                          >
-                            <Feature
-                              id={category.id}
-                              title={category.title}
-                              feature={category.feature}
-                              description={category.description}
-                              image={image}
-                            />
-                          </ScrollAnimation>
-                        }
-                      </div>
-                    );
-                  })}
+                <Feature
+                  id={pageIndex}
+                  title={data[pageIndex].title}
+                  feature={data[pageIndex].feature}
+                  description={data[pageIndex].description}
+                  image={image}
+                />
               </div>
             </Col>
-            <Col md={6} className="d-none d-md-block">
-              <Sticky disableCompensation topOffset={10}>
-                {({ style }) => (
-                  <div style={style} className={`feature-image sticky-image`}>
-                    <div className="feature-right m-0 position-relative">
-                      <img
-                        src={featureRightImg}
-                        alt="feature right image"
-                        className="img-fluid"
-                      />
-                      {Array.isArray(data) &&
-                        data.map((item) => {
-                          const image = process.env.API_URL + item.image.url;
-                          return (
-                            item.id === desktop && (
-                              <div
-                                key={item.id}
-                                className="desktop-item position-absolute"
-                              >
-                                <img src={image} alt="" />
-                              </div>
-                            )
-                          );
-                        })}
-                    </div>
+            <Col className="col-md-6 d-none d-md-block">
+              <div className={`feature-image sticky-image`}>
+                <div className="feature-right m-0 position-relative">
+                  <img
+                    src={featureRightImg}
+                    alt="feature right image"
+                    className="img-fluid"
+                  />
+
+                  <div  className="desktop-item position-absolute">
+                    <img src={image} alt="" />
                   </div>
-                )}
-              </Sticky>
+                </div>
+              </div>
             </Col>
           </Row>
-        </StickyContainer>
+        </Sticky>
       </Container>
     </section>
   );

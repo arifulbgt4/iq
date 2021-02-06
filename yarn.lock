@@ -2704,6 +2704,46 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
+"@stickyroll/context@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@stickyroll/context/-/context-1.2.0.tgz#6b8e45b427e611a892d9de8562ff545a984d2fc6"
+  integrity sha512-LPG5mHaynNcLhbnLdIG0xUR1JjsuySeAIZ/PgsctbLAAer1f3lJAdZGlXDpVcn/L3PDOwV16zt7ObtbCx6kPiQ==
+
+"@stickyroll/frame@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@stickyroll/frame/-/frame-1.2.0.tgz#641870028b59e29ee4d1c64226856668bf69008f"
+  integrity sha512-GDI34hheWL9Jk4pwKYLIHtXRuzCG1V5jcfu2o9o4Pf490yOCXQ47zXTcByMDOuoNskmZOX5hdMXvLaF2zctv5g==
+  dependencies:
+    "@stickyroll/context" "^1.2.0"
+    "@stickyroll/tracker" "^1.2.0"
+    "@stickyroll/utils" "^1.2.0"
+
+"@stickyroll/hooks@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@stickyroll/hooks/-/hooks-1.2.0.tgz#9651a3175e408a24be0ca8538c398d3149e9fca0"
+  integrity sha512-2a9O1lkafLmQiISPU/YzC0dqcXhq68wLT3p2sZt7CEmOdNq6/kM6rEB9aGMxmwZNc36SSKfJ8+36fjxvtTLIcg==
+
+"@stickyroll/stickyroll@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@stickyroll/stickyroll/-/stickyroll-1.2.0.tgz#a4a1f0cb94a7492fc57748e80be24b2ddf266896"
+  integrity sha512-HVP/BXrdHmTbPUyXnd6URaf6PP7Bg8QYqTlzHMz5jg2WoMGjCtepvNGStpddFRa/I0rWmeZL6DVk43N31z2PdA==
+  dependencies:
+    "@stickyroll/context" "^1.2.0"
+    "@stickyroll/frame" "^1.2.0"
+    "@stickyroll/tracker" "^1.2.0"
+
+"@stickyroll/tracker@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@stickyroll/tracker/-/tracker-1.2.0.tgz#aeda91b4d30a9aca399bb7cb894b227e65233985"
+  integrity sha512-UCUkDa6vG0ZYsnsEHnSog8flLLhNdG//a0h8e9dY9ie50SWDEZk2J21+T2Gzlc49HINtEuP37NhuWuarqwZt0A==
+  dependencies:
+    "@stickyroll/utils" "^1.2.0"
+
+"@stickyroll/utils@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@stickyroll/utils/-/utils-1.2.0.tgz#76ca6064cf944ebaa8adee2dfe74f4cde91a0971"
+  integrity sha512-gt1hYn/km3J+sUjRPYanf2aM9LkndpsKon5fCpZU997VIh3iQjAGMFxdBl9QtSnMf61qAfnqdSS8HvuIPPMp8Q==
+
 "@svgr/babel-plugin-add-jsx-attribute@^5.4.0":
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-5.4.0.tgz#81ef61947bb268eb9d50523446f9c638fb355906"
@@ -6460,7 +6500,7 @@ eslint-plugin-react-hooks@^4.1.2:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
 
-eslint-plugin-react@^7.21.4:
+eslint-plugin-react@^7.19.0, eslint-plugin-react@^7.21.4:
   version "7.22.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.22.0.tgz#3d1c542d1d3169c45421c1215d9470e341707269"
   integrity sha512-p30tuX3VS+NWv9nQot9xIGAHBXR0+xJVaZriEsHoJrASGCJZDJ8JLNM0YqKqI0AKm6Uxaa1VUHoNEibxRCMQHA==
@@ -7091,6 +7131,11 @@ flatted@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
+
+flow-bin@^0.120.1:
+  version "0.120.1"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.120.1.tgz#ab051d6df71829b70a26a2c90bb81f9d43797cae"
+  integrity sha512-KgE+d+rKzdXzhweYVJty1QIOOZTTbtnXZf+4SLnmArLvmdfeLreQOZpeLbtq5h79m7HhDzX/HkUkoyu/fmSC2A==
 
 flush-write-stream@^1.0.0:
   version "1.1.1"
@@ -12257,7 +12302,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@>=15.7.2, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -12890,6 +12935,15 @@ react-spring@^8.0.27:
   dependencies:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
+
+react-sticky-el@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/react-sticky-el/-/react-sticky-el-2.0.5.tgz#db942dd3ed35a29429e92a947515a129c02d7e76"
+  integrity sha512-Tj+Cy6xdmiPR1li9Wu2KmZ2CxW7C/q1H3ls9HKqNnA1zPysB8DzBXDyEoAJDXh08TDyk4pf/4VftWKW4DrOEpA==
+  dependencies:
+    eslint-plugin-react "^7.19.0"
+    flow-bin "^0.120.1"
+    prop-types ">=15.7.2"
 
 react-sticky@^6.0.3:
   version "6.0.3"
