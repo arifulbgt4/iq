@@ -43,6 +43,7 @@ const OurProducts = () => {
                       className="product-item pb-4"
                     >
                       <ProductCard
+                        id={item.id}
                         name={item.name}
                         title={item.title}
                         description={item.description}

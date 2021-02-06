@@ -22,6 +22,7 @@ const Carrer = lazy(() => import('../Carrer'));
 const ContactUs = lazy(() => import('../ContactUs'));
 const Blog = lazy(() => import('../Blog'));
 const BligDetails = lazy(() => import('../BlogDetails'));
+const ProductDetails = lazy(() => import('../ProductDetails'));
 
 // Style
 import 'src/assets/scss/style.scss';
@@ -112,7 +113,18 @@ const App = () => {
               render={(props) =>
                 withTitle({
                   component: BligDetails,
-                  title: 'blogdetails',
+                  title: 'Blog',
+                  ...props,
+                })
+              }
+            />
+            <Route
+              exact
+              path="/product/:id"
+              render={(props) =>
+                withTitle({
+                  component: ProductDetails,
+                  title: 'Product',
                   ...props,
                 })
               }

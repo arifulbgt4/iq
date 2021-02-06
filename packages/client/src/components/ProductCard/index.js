@@ -16,7 +16,7 @@ const trans = (x, y, s) =>
   `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const ProductCard = (props) => {
-  const { title, description, name, url } = props;
+  const { title, description, name, url, id } = props;
 
   const [property, set] = useSpring(() => ({
     xys: [0, 0, 1],
@@ -42,7 +42,10 @@ const ProductCard = (props) => {
         <h2 className="fw-normal">Details</h2>
         <CardText className="details">
           {description}
-          <Link to="#" className="btn btn-link p-0 color-primary ps-1">
+          <Link
+            to={`/product/${id}`}
+            className="btn btn-link p-0 color-primary ps-1"
+          >
             Read more
           </Link>
         </CardText>

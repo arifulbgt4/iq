@@ -534,6 +534,9 @@
           "calendly_url": {
             "type": "string"
           },
+          "large_description": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -552,6 +555,9 @@
             "type": "string"
           },
           "calendly_url": {
+            "type": "string"
+          },
+          "large_description": {
             "type": "string"
           },
           "published_at": {

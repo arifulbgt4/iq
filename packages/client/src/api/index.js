@@ -56,6 +56,10 @@ export const getGuidsHeader = () => {
 export const getProducts = () => {
   return axios.get(`${API_URL}/products`);
 };
+// API to get products
+export const getProductById = (id) => {
+  return axios.get(`${API_URL}/products/${id}`);
+};
 
 // API to get products header
 export const getProductsHeader = () => {

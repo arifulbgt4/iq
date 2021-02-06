@@ -22,6 +22,9 @@
     },
     "calendly_url": {
       "type": "string"
+    },
+    "large_description": {
+      "type": "richtext"
     }
   }
 }
