@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Alert } from 'reactstrap';
 import ScrollToTop from 'react-scroll-to-top';
+import ReactGA from 'react-ga';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,6 +26,9 @@ const ProductDetails = lazy(() => import('../ProductDetails'));
 
 // Style
 import 'src/assets/scss/style.scss';
+
+ReactGA.initialize(process.env.UA_TRACKING_ID); // add your tracking id here.
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => {
   document.body.setAttribute('data-theme', 'dark');
@@ -128,7 +132,6 @@ const App = () => {
                 })
               }
             />
-
 
             {/* Default 404 */}
             <Route
