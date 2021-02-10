@@ -59,7 +59,7 @@ const OurTechnology = () => {
               <Sticky disableCompensation topOffset={10}>
                 {({ style }) => (
                   <div style={style} className={`feature-image sticky-image`}>
-                    <div className="feature-right m-0 position-relative">
+                    {/* <div className="feature-right m-0 position-relative">
                       <img
                         src={featureRightImg}
                         alt="feature right image"
@@ -79,7 +79,24 @@ const OurTechnology = () => {
                             )
                           );
                         })}
-                    </div>
+                    </div> */}
+                    <div className="device device-imac-pro">
+                      <div className="device-frame">
+                      {Array.isArray(data) &&
+                        data.map((item) => {
+                          const image = process.env.API_URL + item.image.url;
+                          return (
+                            item.id === desktop && (
+
+                              <img className="device-content" src={image} />
+
+                            )
+                          );
+                        })}
+
+    </div>
+    <div className="device-power"></div>
+  </div>
                   </div>
                 )}
               </Sticky>
