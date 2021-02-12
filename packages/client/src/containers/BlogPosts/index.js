@@ -28,7 +28,7 @@ const BlogPosts = () => {
     <Row className="d-flex justify-content-center align-items-center blog-content">
       {Array.isArray(blogs) &&
         blogs.map((item) => {
-          const image = process.env.API_URL + item.image.url;
+          const image = process.env.REACT_APP_API_URL + item.image.url;
           return (
             <Col
               xl={4}

@@ -5,6 +5,9 @@ import { Alert } from 'reactstrap';
 import ScrollToTop from 'react-scroll-to-top';
 import ReactGA from 'react-ga';
 
+// Style
+import 'src/assets/scss/style.scss';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,8 +27,7 @@ const Blog = lazy(() => import('../Blog'));
 const BligDetails = lazy(() => import('../BlogDetails'));
 const ProductDetails = lazy(() => import('../ProductDetails'));
 
-// Style
-import 'src/assets/scss/style.scss';
+
 
 ReactGA.initialize(process.env.UA_TRACKING_ID); // add your tracking id here.
 ReactGA.pageview(window.location.pathname + window.location.search);

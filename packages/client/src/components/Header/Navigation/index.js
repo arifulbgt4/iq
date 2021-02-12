@@ -9,7 +9,7 @@ import ButtonsGroup from 'src/components/ButtButtonsGroup';
 const Navigations = () => {
   const { data } = useSelector((store) => store.websiteDetails);
 
-  const logo = process.env.API_URL + data.logo_one.url;
+  const logo = process.env.REACT_APP_API_URL + data.logo_one.url;
 
   return (
     <div className="header-nav border-bottom shadow-sm py-3 py-md-2  py-lg-0">

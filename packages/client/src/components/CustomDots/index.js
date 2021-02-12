@@ -15,7 +15,7 @@ const CustomDot = ({ index, onClick, active }) => {
   return (
     data &&
     data.map((item) => {
-      const image = process.env.API_URL + item.image.url;
+      const image = process.env.REACT_APP_API_URL + item.image.url;
       if (index + 1 === item.id) {
         return (
           <li

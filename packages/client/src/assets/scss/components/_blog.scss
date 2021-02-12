@@ -1,6 +1,6 @@
 .blog-section {
   @media (min-width: 1400px) {
-    background: url(./../image/blog/blog_bg.png) no-repeat;
+    background: url(../../image/blog/blog_bg.png) no-repeat;
     background-position: 80% 80%;
     .blog-content {
       height: 80vh;
@@ -31,7 +31,7 @@
       padding: 0 0.4rem !important;
     }
   }
-  background: url(./../image/blog/blog_bg.png) no-repeat bottom;
+  background: url(../../image/blog/blog_bg.png) no-repeat bottom;
 }
 
 // blog details

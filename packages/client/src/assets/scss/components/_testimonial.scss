@@ -8,7 +8,7 @@
   }
   &::after {
     position: absolute;
-    content: url(./../image/heroBanner/testimonial2.png);
+    content: url(../../image/heroBanner/testimonial2.png);
     bottom: 15%;
     right: -800px;
     @media (max-width: 1450.98px) {
@@ -27,7 +27,7 @@
   }
   &::before {
     position: absolute;
-    content: url(./../image/heroBanner/testimonial.png);
+    content: url(../../image/heroBanner/testimonial.png);
     top: -20%;
     left: -800px;
     @media (max-width: 1199.98px) {

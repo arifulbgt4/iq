@@ -9,7 +9,7 @@ const OurFounder = () => {
   const { data } = useSelector((store) => store.founder);
 
   const { title, name, description, history } = data;
-  const image = process.env.API_URL + data.image.url;
+  const image = process.env.REACT_APP_API_URL + data.image.url;
 
   return (
     <section className="our-founder">

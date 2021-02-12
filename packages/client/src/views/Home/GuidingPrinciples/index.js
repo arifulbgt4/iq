@@ -31,7 +31,7 @@ const GuidingPrinciple = () => {
           <Col md={12}>
             {data &&
               data.map((item) => {
-                const image = process.env.API_URL + item.image.url;
+                const image = process.env.REACT_APP_API_URL + item.image.url;
                 const animate = item.id % 2 === 0 ? scroll.left : scroll.right;
 
                 return (

@@ -56,7 +56,7 @@ const BlogDetails = () => {
     return 'Loading';
   }
 
-  const image = process.env.API_URL + blog.image.url;
+  const image = process.env.REACT_APP_API_URL + blog.image.url;
 
   const shareUrl = window.location.href;
 

@@ -100,7 +100,7 @@ const data = [
 const FooterMain = () => {
   const { data: siteData } = useSelector((store) => store.websiteDetails);
 
-  const logo = process.env.API_URL + siteData.logo_two.url;
+  const logo = process.env.REACT_APP_API_URL + siteData.logo_two.url;
 
   return (
     <Row className="mt-4 text-center text-md-start">

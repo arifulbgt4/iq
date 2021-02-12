@@ -9,8 +9,8 @@ const AboutUs = () => {
   const { data } = useSelector((store) => store.aboutUs);
   const { title, description, video, video_poster } = data;
 
-  const videoUrl = process.env.API_URL + video.url;
-  const posterUrl = process.env.API_URL + video_poster.url;
+  const videoUrl = process.env.REACT_APP_API_URL + video.url;
+  const posterUrl = process.env.REACT_APP_API_URL + video_poster.url;
 
   return (
     <section className="about-us">

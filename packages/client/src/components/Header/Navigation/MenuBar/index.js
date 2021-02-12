@@ -104,7 +104,7 @@ const MenuBar = () => {
 
   const { data: siteLogo } = useSelector((store) => store.websiteDetails);
 
-  const logo = process.env.API_URL + siteLogo.logo_two.url;
+  const logo = process.env.REACT_APP_API_URL + siteLogo.logo_two.url;
 
   return (
     <>

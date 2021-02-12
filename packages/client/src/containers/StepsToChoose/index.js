@@ -18,7 +18,7 @@ const StepsToChoose = () => {
     <Row className="mt-3 justify-content-center">
       {data &&
         data.map((step) => {
-          const image = process.env.API_URL + step.image.url;
+          const image = process.env.REACT_APP_API_URL + step.image.url;
 
           return (
             <Col xl={4} lg={6} md={6} sm={12} xs={12} key={step.id}>

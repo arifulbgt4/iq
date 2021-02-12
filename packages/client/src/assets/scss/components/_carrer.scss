@@ -2,7 +2,7 @@
   .carrer-right {
     &::after {
       position: absolute;
-      content: url(./../image/carrer/lines2.png);
+      content: url(../../image/carrer/lines2.png);
       bottom: -100px;
       left: 10%;
       @media (max-width: 1399.98px) {
@@ -16,7 +16,7 @@
   .carrer-left {
     &::after {
       position: absolute;
-      content: url(./../image/carrer/line1.png);
+      content: url(../../image/carrer/line1.png);
       bottom: -100px;
       left: 10%;
       @media (max-width: 1399.98px) {

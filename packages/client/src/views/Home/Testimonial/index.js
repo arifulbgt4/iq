@@ -129,7 +129,7 @@ const Testimonial = () => {
             >
               {data &&
                 data.map((item) => {
-                  const image = process.env.API_URL + item.image.url;
+                  const image = process.env.REACT_APP_API_URL + item.image.url;
                   return (
                     <Parallax data={scroll.data} key={item.id}>
                       <div className="rounded-pill testimonial-image">

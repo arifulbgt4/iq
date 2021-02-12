@@ -25,7 +25,7 @@ const OurTechnology = () => {
               <div style={{ position: 'relative' }}>
                 {data &&
                   data.map((category) => {
-                    const image = process.env.API_URL + category.image.url;
+                    const image = process.env.REACT_APP_API_URL + category.image.url;
                     return (
                       <div
                         key={category.id}
@@ -67,7 +67,7 @@ const OurTechnology = () => {
                       />
                       {Array.isArray(data) &&
                         data.map((item) => {
-                          const image = process.env.API_URL + item.image.url;
+                          const image = process.env.REACT_APP_API_URL + item.image.url;
                           return (
                             item.id === desktop && (
                               <div
@@ -84,7 +84,7 @@ const OurTechnology = () => {
                       <div className="device-frame">
                       {Array.isArray(data) &&
                         data.map((item) => {
-                          const image = process.env.API_URL + item.image.url;
+                          const image = process.env.REACT_APP_API_URL + item.image.url;
                           return (
                             item.id === desktop && (
 
