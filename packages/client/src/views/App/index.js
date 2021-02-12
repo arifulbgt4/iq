@@ -6,7 +6,6 @@ import ScrollToTop from 'react-scroll-to-top';
 import ReactGA from 'react-ga';
 
 // Style
-import 'src/assets/scss/style.scss';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,6 +18,7 @@ import withTitle from 'src/components/TitleComponent';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 
+import 'src/assets/scss/style.scss';
 // Pages
 const Home = lazy(() => import('../Home'));
 const Carrer = lazy(() => import('../Carrer'));

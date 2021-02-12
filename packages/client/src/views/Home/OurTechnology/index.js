@@ -25,7 +25,8 @@ const OurTechnology = () => {
               <div style={{ position: 'relative' }}>
                 {data &&
                   data.map((category) => {
-                    const image = process.env.REACT_APP_API_URL + category.image.url;
+                    const image =
+                      process.env.REACT_APP_API_URL + category.image.url;
                     return (
                       <div
                         key={category.id}
@@ -82,21 +83,24 @@ const OurTechnology = () => {
                     </div> */}
                     <div className="device device-imac-pro">
                       <div className="device-frame">
-                      {Array.isArray(data) &&
-                        data.map((item) => {
-                          const image = process.env.REACT_APP_API_URL + item.image.url;
-                          return (
-                            item.id === desktop && (
-
-                              <img className="device-content" src={image} />
-
-                            )
-                          );
-                        })}
-
-    </div>
-    <div className="device-power"></div>
-  </div>
+                        {Array.isArray(data) &&
+                          data.map((item) => {
+                            const image =
+                              process.env.REACT_APP_API_URL + item.image.url;
+                            return (
+                              item.id === desktop && (
+                                <img
+                                  KEY={item.id}
+                                  className="device-content"
+                                  src={image}
+                                  alt="I"
+                                />
+                              )
+                            );
+                          })}
+                      </div>
+                      <div className="device-power"></div>
+                    </div>
                   </div>
                 )}
               </Sticky>

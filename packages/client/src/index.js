@@ -7,6 +7,7 @@ import App from 'src/views/App';
 import reportWebVitals from './reportWebVitals';
 import configureStore from 'src/state/store';
 
+
 const Container = () => {
   const reduxStore = configureStore(window.REDUX_INITIAL_DATA);
 
