@@ -1,9 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFax,
   faMapMarkerAlt,
+  faEnvelope,
   faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { Parallax } from 'react-skrollr';
@@ -22,6 +24,8 @@ const scroll = {
 };
 
 const ContactAddr = () => {
+  const { data: siteData } = useSelector((store) => store.websiteDetails);
+
   return (
     <div className="addr-main text-center text-md-left">
       <div className="addr-title">
@@ -44,7 +48,22 @@ const ContactAddr = () => {
           </Parallax>
         </h3>
         <Parallax data={scroll.data}>
-          <p>25 First Street, 2nd Floor, Delhi, MA 02141 India</p>
+          <p>{siteData.address}</p>
+        </Parallax>
+      </div>
+      <div className="addr-list my-3 my-lg-5">
+        <h3>
+          <span className="mx-2">
+            <FontAwesomeIcon className="fs-4" icon={faEnvelope} />
+          </span>
+          <Parallax data={scroll.data2}>
+            <span className="">Email</span>
+          </Parallax>
+        </h3>
+        <Parallax data={scroll.data}>
+          <a href={`mailto:${siteData.email}`} className="text-dark">
+            <p>{siteData.email}</p>
+          </a>
         </Parallax>
       </div>
       <div className="addr-list my-3 my-lg-5">
@@ -57,7 +76,9 @@ const ContactAddr = () => {
           </Parallax>
         </h3>
         <Parallax data={scroll.data}>
-          <p>(1+ 888 482 7768)</p>
+          <a href={`tel:${siteData.phone}`} className="text-dark">
+            <p>{siteData.phone}</p>
+          </a>
         </Parallax>
       </div>
       <div className="addr-list my-3 my-lg-5">
@@ -70,7 +91,7 @@ const ContactAddr = () => {
           </Parallax>
         </h3>
         <Parallax data={scroll.data}>
-          <p>+1 617 812 5820</p>
+          <p>{siteData.fax}</p>
         </Parallax>
       </div>
     </div>

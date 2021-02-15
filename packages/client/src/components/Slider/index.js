@@ -34,6 +34,7 @@ const Slider = (props) => {
     <Carousel
       className={className}
       responsive={responsive}
+      autoPlay={true}
       infinite={infinite}
       autoPlaySpeed={4000}
       slidesToSlide={1}

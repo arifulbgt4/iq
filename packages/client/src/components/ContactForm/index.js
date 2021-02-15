@@ -25,7 +25,7 @@ const ContactForm = () => {
     try {
       await createContact(data.name, data.email, data.subject, data.message);
       reset();
-      toast('🦄 Mail send successfully!', {
+      toast('Mail send successfully!', {
         position: 'top-right',
         autoClose: 5000,
         hideProgressBar: false,

@@ -71,30 +71,6 @@ const data = [
       },
     ],
   },
-  {
-    id: 3,
-    title: 'Contact Us',
-    navitem: [
-      {
-        id: 1,
-        name: '0/A Fatulah, Narayeanganj.  Dhaka 1400, Bnagladesh.',
-        path: '#',
-        icons: faLocationArrow,
-      },
-      {
-        id: 2,
-        name: '(+880) 199-250552',
-        path: '#',
-        icons: faPhone,
-      },
-      {
-        id: 3,
-        name: 'support@metastock.com',
-        path: '#',
-        icons: faEnvelope,
-      },
-    ],
-  },
 ];
 
 const FooterMain = () => {
@@ -148,6 +124,52 @@ const FooterMain = () => {
             </ul>
           </Col>
         ))}
+      <Col xl={4} lg={4} md={4} sm={12} className={` mt-3 mt-xl-0`}>
+        <ul className="list-unstyled p-0 m-0">
+          <li>
+            <h4 className="text-white mb-3 text-capitalize">Contact Us</h4>
+          </li>
+          <li
+            className={`mb-3 text-capitalize
+                       'w-100 w-lg-75'
+                    `}
+          >
+            <FontAwesomeIcon icon={faLocationArrow} />
+            <Link
+              to="#"
+              className="align-items-center ms-2 text-decoration-none text-capitalize"
+            >
+              {siteData.address}
+            </Link>
+          </li>
+          <li
+            className={`mb-3 text-capitalize
+                       'w-100 w-lg-75'
+                    `}
+          >
+            <FontAwesomeIcon icon={faPhone} />
+            <a
+              href={`tel:${siteData.phone}`}
+              className="align-items-center ms-2 text-decoration-none text-capitalize"
+            >
+              {siteData.phone}
+            </a>
+          </li>
+          <li
+            className={`mb-3 text-capitalize
+                       'w-100 w-lg-75'
+                    `}
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
+            <a
+              href={`mailto:${siteData.email}`}
+              className="align-items-center ms-2 text-decoration-none text-capitalize"
+            >
+              {siteData.email}
+            </a>
+          </li>
+        </ul>
+      </Col>
     </Row>
   );
 };

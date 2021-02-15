@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Button } from 'reactstrap';
 import { Parallax } from 'react-skrollr';
+import { useSelector } from 'react-redux';
 
 import Icon_phone from 'src/assets/image/contactUs/Icon_phone.png';
 import Icon_chatbubbles from 'src/assets/image/contactUs/Icon_chatbubbles.png';
@@ -19,6 +20,8 @@ const scroll = {
 };
 
 const ContactInfo = () => {
+  const { data: siteData } = useSelector((store) => store.websiteDetails);
+
   return (
     <div className="posation">
       <Row>
@@ -36,7 +39,14 @@ const ContactInfo = () => {
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry.{' '}
                     </p>
-                    <p className="number"> + 000 11 22 33</p>
+                    <p className="number">
+                      <a
+                        href={`tel:${siteData.phone}`}
+                        className="text-primary"
+                      >
+                        {siteData.phone}
+                      </a>
+                    </p>
                   </div>
                 </div>
               </Parallax>
